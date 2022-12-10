@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - GroundCheck
+  - Coin
+  - Killer
+  - Secret
+  - CameraMover
+  - Sky
+  - DeathMenu
+  - RespawnText
+  - PlayerPos
+  - Movement
+  - Loading
+  - Bullet
+  - Ground
+  - Joystick
+  - Jumper
+  - Diamond
+  - PlayerObj
+  - Level1
+  - Level2
+  - EndLevel
+  - PlayerPos2
+  - SuperBatut
+  - SavingSystem
+  - PlayerCanvas
+  - PlayerPosP
+  - PlayerSkin
+  - Mob
+  - CutSceneController
+  - Teleport
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - PostProcessing
+  - Water
+  - UI
+  - 
+  - Mob
+  - Player
+  - NotGround
+  - Ground
+  - EndLevel
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: NoneLight
+    uniqueID: 4029688457
+    locked: 0
+  - name: Buildings
+    uniqueID: 2192892495
+    locked: 0
+  - name: NPCBack
+    uniqueID: 3489318413
+    locked: 0
+  - name: BuildingsFirstPlane
+    uniqueID: 2538074565
+    locked: 0
+  - name: NPC
+    uniqueID: 3600928449
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
