@@ -8,8 +8,9 @@ public class MenuScript : MonoBehaviour
 {
 
 
-    [SerializeField] private GameObject Play, SkinsMenu, MainMenu, ServMenu, Shop, PetsMenu, PromoMenu, Loading, settingsMenu, shopMenu;
+    [SerializeField]private GameObject Play, SkinsMenu, MainMenu, ServMenu, Shop, PetsMenu, PromoMenu, Loading, settingsMenu, shopMenu;
     [SerializeField]private Image loadingImg;
+    [SerializeField]private PresentTimeReset present;
 
     public void PlayPressed()
     {
@@ -122,6 +123,7 @@ public class MenuScript : MonoBehaviour
         ServMenu.SetActive(false);
         PetsMenu.SetActive(false);
         settingsMenu.SetActive(false);
+        StartCoroutine(present.CheckPresent());
     }
 
     public void ShopPressed(){

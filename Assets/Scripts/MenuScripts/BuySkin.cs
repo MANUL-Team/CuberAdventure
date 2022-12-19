@@ -6,7 +6,7 @@ public class BuySkin : MonoBehaviour
 {
     [SerializeField] private Animator iconAnim;
     [SerializeField] private GameObject[] skins;
-    [SerializeField] private GameObject panel, sorryMessage;
+    [SerializeField] private GameObject panel, sorryMessage, cantMove;
     [SerializeField] private int id;
     private bool buying;
 
@@ -22,13 +22,20 @@ public class BuySkin : MonoBehaviour
     }
     public void Buy(){
         if(PlayerPrefs.GetInt("Diamonds") >= 100 && buying == false){
-            if(PlayerPrefs.GetInt("Skin1") == 1 && PlayerPrefs.GetInt("Skin2") == 1 && PlayerPrefs.GetInt("Skin3") == 1 && PlayerPrefs.GetInt("Skin4") == 1 && PlayerPrefs.GetInt("Skin5") == 1 && PlayerPrefs.GetInt("Skin6") == 1 && PlayerPrefs.GetInt("Skin7") == 1 && PlayerPrefs.GetInt("Skin8") == 1 && PlayerPrefs.GetInt("Skin9") == 1 && PlayerPrefs.GetInt("Skin10") == 1 && PlayerPrefs.GetInt("Skin11") == 1 && PlayerPrefs.GetInt("Skin12") == 1 && PlayerPrefs.GetInt("Skin13") == 1 && PlayerPrefs.GetInt("Skin14") == 1 && PlayerPrefs.GetInt("Skin15") == 1 ){
+            bool sorry = true;
+            for(int i = 1; i > 15; i++){
+                if(PlayerPrefs.GetInt("Skin" + i.ToString()) != 1){
+                    sorry = false;
+                }
+            }
+            if(sorry == true){
                 sorryMessage.SetActive(true);
             }
             else{
                 buying = true;
                 PlayerPrefs.SetInt("Diamonds", PlayerPrefs.GetInt("Diamonds") - 100);
                 iconAnim.SetBool("Buying", true);
+                cantMove.SetActive(true);
                 BuyingSkin();
             }
         }
@@ -38,6 +45,7 @@ public class BuySkin : MonoBehaviour
         panel.SetActive(true);
         skins[id].SetActive(true);
         iconAnim.SetBool("Buying", false);
+        cantMove.SetActive(false);
     }
     private void UnviewSkin(){
         buying = false;
