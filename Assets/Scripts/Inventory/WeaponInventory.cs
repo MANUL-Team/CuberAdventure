@@ -60,7 +60,7 @@ public class WeaponInventory : MonoBehaviour
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosR.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage);
-                enemies[i].GetComponent<MobController>().PushAway(direction, 50f);
+                enemies[i].GetComponent<MobController>().PushAway(direction, 200f);
             }
             timeBtwAttack = startTimeBtwAttack;
         } else if(PlayerPrefs.GetInt("PlayerRotation") == -1){
@@ -68,7 +68,7 @@ public class WeaponInventory : MonoBehaviour
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosL.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage);
-                enemies[i].GetComponent<MobController>().PushAway(direction, 50f);
+                enemies[i].GetComponent<MobController>().PushAway(direction, 200f);
             }
             timeBtwAttack = startTimeBtwAttack;
         }
@@ -84,13 +84,13 @@ public class WeaponInventory : MonoBehaviour
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosR.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage);
-                enemies[i].GetComponent<MobController>().PushAway(direction, 50f);
+                enemies[i].GetComponent<MobController>().PushAway(direction, 200f);
             }
             weaponL[0].SetActive(true);
             Collider2D[] enemies1 = Physics2D.OverlapCircleAll(attackPosL.position, attackRange, enemy);
             for(int i = 0; i < enemies1.Length; i++){
                 enemies1[i].GetComponent<MobController>().Damage(damage);
-                enemies[i].GetComponent<MobController>().PushAway(direction, 50f);
+                enemies[i].GetComponent<MobController>().PushAway(direction, 200f);
             }
             timeBtwAttack = startTimeBtwAttack;
         }
@@ -107,7 +107,7 @@ public class WeaponInventory : MonoBehaviour
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosR.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage * 0.75f);
-                enemies[i].GetComponent<MobController>().PushAway(direction, 50f);
+                enemies[i].GetComponent<MobController>().PushAway(direction, 200f);
             }
             timeBtwAttack = startTimeBtwAttack;
         } else if(PlayerPrefs.GetInt("PlayerRotation") == -1){
@@ -134,7 +134,7 @@ public class WeaponInventory : MonoBehaviour
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosR.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage * 1.25f);
-                enemies[i].GetComponent<MobController>().PushAway(direction, 50f);
+                enemies[i].GetComponent<MobController>().PushAway(direction, 200f);
             }
             timeBtwAttack = startTimeBtwAttack;
         } else if(PlayerPrefs.GetInt("PlayerRotation") == -1){
@@ -143,7 +143,7 @@ public class WeaponInventory : MonoBehaviour
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosL.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage * 1.25f);
-                enemies[i].GetComponent<MobController>().PushAway(direction, 50f);
+                enemies[i].GetComponent<MobController>().PushAway(direction, 200f);
             }
             timeBtwAttack = startTimeBtwAttack;
         }

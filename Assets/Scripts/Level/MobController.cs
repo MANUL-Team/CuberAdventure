@@ -77,7 +77,7 @@ public class MobController : MonoBehaviour
                 Collider2D[] playerCol = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerLayer);
                 for(int i = 0; i < playerCol.Length; i++){
                     playerCol[i].GetComponent<PlayerStats>().Damage(10f);
-                    playerCol[i].GetComponent<PlayerController>().PushAway(direction, 50f);
+                    playerCol[i].GetComponent<PlayerController>().PushAway(direction, 5000f);
                 }
                 timeBtwAttack = startTimeBtwAttack;
             }

@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
         if(hitInfo.collider != null){
             if(hitInfo.collider.CompareTag("Mob")){
                 hitInfo.collider.GetComponent<MobController>().Damage(damage * 0.6f);
-                hitInfo.collider.GetComponent<MobController>().PushAway(direction, 50f);
+                hitInfo.collider.GetComponent<MobController>().PushAway(direction, 200f);
             }
             GameObject part = Instantiate(particles, transform.position, Quaternion.identity);
             Destroy(gameObject);
