@@ -21,6 +21,7 @@ public class MenuScript : MonoBehaviour
 
     public void NewGame()
     {
+        StartCoroutine("AsyncLoadNew");
         PlayerPrefs.SetInt("Level", 1);
         PlayerPrefs.SetInt("LastLevel", 0);
         PlayerPrefs.SetInt("MaxHp", 100);
@@ -80,7 +81,6 @@ public class MenuScript : MonoBehaviour
                 PlayerPrefs.SetString("MobTimeDie" + i + a, "");
             }
         }
-        StartCoroutine("AsyncLoadNew");
     }
     public void ContinueGame(){
         StartCoroutine("AsyncLoadLoad");
