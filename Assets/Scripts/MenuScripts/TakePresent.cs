@@ -12,6 +12,7 @@ public class TakePresent : MonoBehaviour
         havent.SetActive(true);
         PlayerPrefs.SetInt("Diamonds", PlayerPrefs.GetInt("Diamonds") + 50);
         panel.SetActive(true);
+        panel.GetComponent<Animator>().SetBool("DropPresent", true);
     }
     public void Skins(){
         panel.SetActive(false);

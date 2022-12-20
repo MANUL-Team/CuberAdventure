@@ -11,7 +11,7 @@ public class PresentTimeReset : MonoBehaviour
         while(true){
             DateTime nowTime = DateTime.Now;
             if(PlayerPrefs.GetString("CollectTimePresent") != ""){
-                if(nowTime > DateTime.Parse(PlayerPrefs.GetString("CollectTimePresent")).AddHours(delay)){
+                if(nowTime > DateTime.Parse(PlayerPrefs.GetString("CollectTimePresent")).AddSeconds(delay)){
                     have.SetActive(true);
                     havent.SetActive(false);
                 }

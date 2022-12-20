@@ -7,7 +7,7 @@ public class SellItems : MonoBehaviour
     [SerializeField] private int id;
     [SerializeField] private string type;
     [SerializeField] private int price;
-    [SerializeField] private GameObject notEnough;
+    [SerializeField] private GameObject notEnough, scaleCount;
     public void Sell(){
         if(PlayerPrefs.GetInt("Item" + type + id) > 0){
             PlayerPrefs.SetInt("Item" + type + id, PlayerPrefs.GetInt("Item" + type + id) - 1);
@@ -15,5 +15,8 @@ public class SellItems : MonoBehaviour
         } else{
             notEnough.SetActive(true);
         }
+    }
+    public void OpenScaleCount(){
+        scaleCount.SetActive(true);
     }
 }
