@@ -68,21 +68,27 @@ public class MobController : MonoBehaviour
     private void DeConfusion(){
         confusion = false;
     }
-
-    private void OnCollisionStay2D(Collision2D collision){
-        if(collision.gameObject.tag == "Player"){
-            if(startTimeBtwAttack > 0){
+    void OnCollisionEnter2D(Collision2D collision) {
+        if(startTimeBtwAttack > 0){
             if(timeBtwAttack <= 0){
-                anim.SetTrigger("Attack");
-                Collider2D[] playerCol = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerLayer);
-                for(int i = 0; i < playerCol.Length; i++){
-                    playerCol[i].GetComponent<PlayerStats>().Damage(10f);
-                    playerCol[i].GetComponent<PlayerController>().PushAway(direction, 5000f);
+                if(collision.gameObject.tag == "Player"){
+                    anim.SetTrigger("Attack");
+                    Collider2D[] playerCol = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerLayer);
+                    for(int i = 0; i < playerCol.Length; i++){
+                        playerCol[i].GetComponent<PlayerStats>().Damage(10f);
+                        playerCol[i].GetComponent<PlayerController>().PushAway(direction, 5000f);
+                    }
+                    timeBtwAttack = startTimeBtwAttack;
                 }
-                timeBtwAttack = startTimeBtwAttack;
-            }
             }
         }
+        if(collision.gameObject.layer == 8 && !agressiveMob){
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>(), true);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision){
+        
     }
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.red;
@@ -141,6 +147,9 @@ public class MobController : MonoBehaviour
             if(distToPlayer < 8){
                 StartHunter();
             }
+            else if(distToPlayer <= 1){
+                
+            }
             else{
                 EndHunter();
             }
@@ -152,16 +161,16 @@ public class MobController : MonoBehaviour
     private void StartHunter(){
         if(startTimeBtwAttack > 0){
             anim.SetBool("Run", true);
-        if(transform.position.x > player.position.x){
-            speedx = -4f;
-            transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
-            direction = -1;
-        }
-        else if(transform.position.x < player.position.x){
-            speedx = 4f;
-            transform.rotation = new Quaternion(0, 180, 0, transform.rotation.w);
-            direction = 1;
-        }
+            if(transform.position.x > player.position.x){
+                speedx = -4f;
+                transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
+                direction = -1;
+            }
+            else if(transform.position.x < player.position.x){
+                speedx = 4f;
+                transform.rotation = new Quaternion(0, 180, 0, transform.rotation.w);
+                direction = 1;
+            }
         }
     }
     private void EndHunter(){
