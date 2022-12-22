@@ -51,12 +51,20 @@ public class PlayerStats : MonoBehaviour
             PlayerPrefs.SetInt("DmgBonus", lvl * 4 + (lvl-1) * 2);
             PlayerPrefs.SetInt("HpBonus", lvl * 4 + (lvl-1) * 2);
         }
+        else{
+            PlayerPrefs.SetInt("DmgBonus", 0);
+            PlayerPrefs.SetInt("HpBonus", 0);
+        }
     }
     public void LoadStats(){
         lvl = PlayerPrefs.GetInt("PlayerLevel");
         if(lvl != 1){
             PlayerPrefs.SetInt("DmgBonus", lvl * 4 + (lvl-1) * 2);
             PlayerPrefs.SetInt("HpBonus", lvl * 4 + (lvl-1) * 2);
+        }
+        else{
+            PlayerPrefs.SetInt("DmgBonus", 0);
+            PlayerPrefs.SetInt("HpBonus", 0);
         }
         maxHp = PlayerPrefs.GetInt("MaxHp") + PlayerPrefs.GetInt("HpBonus");
         exp = PlayerPrefs.GetInt("Exp");
