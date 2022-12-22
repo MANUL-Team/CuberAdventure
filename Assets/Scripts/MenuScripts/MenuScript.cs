@@ -83,7 +83,7 @@ public class MenuScript : MonoBehaviour
         }
     }
     public void ContinueGame(){
-        if(PlayerPrefs.GetInt("Level" != 0)){
+        if(PlayerPrefs.GetInt("Level") != 0){
             StartCoroutine("AsyncLoadLoad");
         }
     }
