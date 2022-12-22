@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponInventory : MonoBehaviour
 {
@@ -11,9 +12,8 @@ public class WeaponInventory : MonoBehaviour
     [SerializeField] private LayerMask enemy;
     [SerializeField] private GameObject bullet, sound;
     private GameObject bulletInst;
-
     private void Update() {
-        damage = PlayerPrefs.GetInt("PlayerDmg") + PlayerPrefs.GetInt("DmgBonus") / 3 + PlayerPrefs.GetInt("LaserDmg");
+        damage = PlayerPrefs.GetInt("PlayerDmg") + PlayerPrefs.GetInt("DmgBonus") + PlayerPrefs.GetInt("LaserDmg");
         if(PlayerPrefs.GetInt("ChangedWeapon") == 0){
             PlayerPrefs.SetInt("PlayerDmg", 1);
         }

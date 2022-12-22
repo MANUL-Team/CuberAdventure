@@ -20,6 +20,7 @@ public class MobController : MonoBehaviour
     [SerializeField] private float startTimeBtwAttack, attackRange;
     [SerializeField] private Transform attackPos;
     public RectTransform canvas;
+    public GameObject bars;
     private Animator anim;
     [SerializeField] private GameObject drop, soundDmgObj;
     [SerializeField] private int skillPoints;
@@ -34,12 +35,15 @@ public class MobController : MonoBehaviour
     public string displayDieTime;
     [SerializeField] private bool isHasDrop;
     [SerializeField] private int itemId, count;
+    [SerializeField] private Text dmgText;
     
     public void Damage(float damage){
         if(maneken == false){
-            hp = hp - damage;
+            dmgText.gameObject.SetActive(true);
+            dmgText.text = Mathf.RoundToInt(damage).ToString();
             GameObject soundDmg = Instantiate(soundDmgObj, transform.position, Quaternion.identity);
             Destroy(soundDmg, 1f);
+            hp = hp - damage;
         }
         else{
             if(right){
@@ -69,9 +73,9 @@ public class MobController : MonoBehaviour
         confusion = false;
     }
     void OnCollisionEnter2D(Collision2D collision) {
-        if(startTimeBtwAttack > 0){
-            if(timeBtwAttack <= 0){
-                if(collision.gameObject.tag == "Player"){
+        if(collision.gameObject.tag == "Player"){
+            if(startTimeBtwAttack > 0){
+                if(timeBtwAttack <= 0){
                     anim.SetTrigger("Attack");
                     Collider2D[] playerCol = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerLayer);
                     for(int i = 0; i < playerCol.Length; i++){
@@ -97,10 +101,17 @@ public class MobController : MonoBehaviour
 
     private void Start() {
         if(maneken == false){
-        anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        hp = maxHp;
+            anim = GetComponent<Animator>();
+            rb = GetComponent<Rigidbody2D>();
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            hp = maxHp;
+            StartCoroutine(HPDisplay());
+        }
+    }
+    IEnumerator HPDisplay(){
+        while(true){
+            healthBar.fillAmount = hp/maxHp;
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
@@ -122,8 +133,6 @@ public class MobController : MonoBehaviour
         }
         }
         if(maneken == false){
-        healthBar.fillAmount = hp/maxHp;
-        displayDieTime = PlayerPrefs.GetString("MobTimeDie" + id + num);
         if(hp <= 0){
             PlayerPrefs.SetInt("Exp", PlayerPrefs.GetInt("Exp") + 20);
             PlayerPrefs.SetInt("SkillPoints", PlayerPrefs.GetInt("SkillPoints") + skillPoints);
@@ -135,7 +144,7 @@ public class MobController : MonoBehaviour
             displayDieTime = PlayerPrefs.GetString("MobTimeDie" + id + num);
             GameObject blood = Instantiate(bloodEffects, GetComponent<Transform>().position, Quaternion.identity);
             Destroy(blood, 1f);
-            canvas.localScale = new Vector3(0, 0, 0);
+            bars.SetActive(false);
             gameObject.SetActive(false);
         }
         canvas.position = new Vector2(transform.position.x, transform.position.y + height);

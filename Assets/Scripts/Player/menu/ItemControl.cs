@@ -11,14 +11,20 @@ public class ItemControl : MonoBehaviour
             items[i].description.SetActive(false);
         }
     }
-    private void Update() {
-        for(int i = 0; i < items.Length; i++){
-            if(PlayerPrefs.GetInt("Item" + items[i].type + items[i].id) == 0){
-                items[i].gameObject.SetActive(false);
+    IEnumerator ItemsUpdate(){
+        while(true){
+            for(int i = 0; i < items.Length; i++){
+                if(PlayerPrefs.GetInt("Item" + items[i].type + items[i].id) == 0){
+                    items[i].gameObject.SetActive(false);
+                }
+                else{
+                    items[i].gameObject.SetActive(true);
+                }
             }
-            else{
-                items[i].gameObject.SetActive(true);
-            }
+            yield return new WaitForSeconds(0.5f);
         }
+    }
+    private void OnEnable() {
+        StartCoroutine(ItemsUpdate());
     }
 }

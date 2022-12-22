@@ -15,9 +15,14 @@ public class Item : MonoBehaviour
     
     [Header("ItemControl")]
     [SerializeField] private ItemControl itemControl;
-
-    private void Update() {
-        count.text = PlayerPrefs.GetInt("Item" + type + id).ToString();
+    IEnumerator CountUpdate(){
+        while(true){
+            count.text = PlayerPrefs.GetInt("Item" + type + id).ToString();
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
+    private void OnEnable() {
+        StartCoroutine(CountUpdate());
     }
     public void SelectItem(){
         itemControl.CloseDescriprions();

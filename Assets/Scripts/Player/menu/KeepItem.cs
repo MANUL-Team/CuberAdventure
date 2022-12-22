@@ -23,11 +23,8 @@ public class KeepItem : MonoBehaviour
             button.SetActive(false);
         }
     }
-    private void Update() {
-        collectTime = DateTime.Now;
-        DisplayTime = PlayerPrefs.GetString("CollectTimeItem"+ type + id + num);
-    }
     public void KeepItemVoid(){
+        collectTime = DateTime.Now;
         PlayerPrefs.SetInt("Item" + type + id, PlayerPrefs.GetInt("Item" + type + id) + 1);
         PlayerPrefs.SetString("CollectTimeItem"+ type + id + num, collectTime.ToString());
         DisplayTime = PlayerPrefs.GetString("CollectTimeItem"+ type + id + num);

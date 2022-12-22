@@ -47,17 +47,21 @@ public class PlayerStats : MonoBehaviour
         if(PlayerPrefs.GetInt("Exp") >= needExp){
             LevelUp();
         }
-        PlayerPrefs.SetInt("DmgBonus", (lvl-1) * lvl);
-        PlayerPrefs.SetInt("HpBonus", (lvl-1) * lvl);
+        if(lvl != 1){
+            PlayerPrefs.SetInt("DmgBonus", lvl * 4 + (lvl-1) * 2);
+            PlayerPrefs.SetInt("HpBonus", lvl * 4 + (lvl-1) * 2);
+        }
     }
     public void LoadStats(){
         lvl = PlayerPrefs.GetInt("PlayerLevel");
-        PlayerPrefs.SetInt("DmgBonus", (lvl-1) * lvl);
-        PlayerPrefs.SetInt("HpBonus", (lvl-1) * lvl);
+        if(lvl != 1){
+            PlayerPrefs.SetInt("DmgBonus", lvl * 4 + (lvl-1) * 2);
+            PlayerPrefs.SetInt("HpBonus", lvl * 4 + (lvl-1) * 2);
+        }
         maxHp = PlayerPrefs.GetInt("MaxHp") + PlayerPrefs.GetInt("HpBonus");
         exp = PlayerPrefs.GetInt("Exp");
         hpBonus = PlayerPrefs.GetInt("HpBonus");
-        dmgBonus = PlayerPrefs.GetInt("DmgBonus") / 3;
+        dmgBonus = PlayerPrefs.GetInt("DmgBonus");
         dmg = PlayerPrefs.GetInt("PlayerDmg") + PlayerPrefs.GetInt("LaserDmg");
         armor = PlayerPrefs.GetInt("ChangedArmor");
         if(armor == 0){

@@ -13,11 +13,11 @@ public class RespawnManager : MonoBehaviour
             if(PlayerPrefs.GetString("MobTimeDie"  + mobs[i].id + mobs[i].num) == ""){
                 mobs[i].hp = mobs[i].maxHp;
                 mobs[i].gameObject.SetActive(true);
-                mobs[i].canvas.localScale = new Vector3(1, 1, 1);
+                mobs[i].bars.SetActive(true);
             }
             else{
                 mobs[i].gameObject.SetActive(false);
-                mobs[i].canvas.localScale = new Vector3(0, 0, 0);
+                mobs[i].bars.SetActive(false);
             }
         }
         StartCoroutine("CheckRespawns");
@@ -43,7 +43,7 @@ public class RespawnManager : MonoBehaviour
                     if(nowTime > DateTime.Parse(PlayerPrefs.GetString("MobTimeDie"  + mobs[i].id + mobs[i].num)).AddMinutes(mobs[i].delay) && mobs[i].gameObject.activeSelf == false){
                         mobs[i].hp = mobs[i].maxHp;
                         mobs[i].gameObject.SetActive(true);
-                        mobs[i].canvas.localScale = new Vector3(1, 1, 1);
+                        mobs[i].bars.SetActive(true);
                     }
                 }
             }
