@@ -23,7 +23,7 @@ public class BuySkin : MonoBehaviour
     public void Buy(){
         if(PlayerPrefs.GetInt("Diamonds") >= 100 && buying == false){
             bool sorry = true;
-            for(int i = 1; i > 15; i++){
+            for(int i = 1; i < 15; i++){
                 if(PlayerPrefs.GetInt("Skin" + i.ToString()) != 1){
                     sorry = false;
                 }

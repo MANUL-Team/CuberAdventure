@@ -83,7 +83,9 @@ public class MenuScript : MonoBehaviour
         }
     }
     public void ContinueGame(){
-        StartCoroutine("AsyncLoadLoad");
+        if(PlayerPrefs.GetInt("Level" != 0)){
+            StartCoroutine("AsyncLoadLoad");
+        }
     }
     public void Online(){
         ServMenu.SetActive(true);
