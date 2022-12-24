@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float x;
     private Rigidbody2D rb;
-    [SerializeField] private float JumpForce = 300f;
+    [SerializeField] public float JumpForce = 300f;
 
     private GameObject obj;
     private Transform playerTransform;
@@ -34,7 +34,17 @@ public class PlayerController : MonoBehaviour
     private bool confusion;
 
     private int timeLand;
-
+    [SerializeField] private float falling;
+    private PlayerStats ps;
+    private UnderWater uw;
+    private IEnumerator Falling(){
+        while(true){
+            if(!isGrounded){
+                falling += 0.1f;
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("SuperBatut")){
             rb.velocity = new Vector2(rb.velocity.x, 30);
@@ -76,6 +86,7 @@ public class PlayerController : MonoBehaviour
             if(DoubleJumps > 0 && Time.timeScale == 1){
                 rb.velocity = new Vector2(rb.velocity.x, JumpForce);
                 DoubleJumps--;
+                falling = 0;
                 GameObject particle = Instantiate(jumpPart, transform.position, Quaternion.identity);
                 Destroy(particle, 0.5f);
             }
@@ -118,11 +129,31 @@ public class PlayerController : MonoBehaviour
         playerTransform = obj.GetComponent<Transform>();
         source = obj.GetComponent<AudioSource>();
         fallSound = source.clip;
+        ps = GetComponent<PlayerStats>();
+        uw = GetComponent<UnderWater>();
+        StartCoroutine(Falling());
     }
 
     private void Update() {
         CheckTurbine();
         CheckGusenici();
+        if(falling != 0 && isGrounded){
+            if(falling >= 1.5f && falling < 2f && !uw.loseAir){
+                ps.Damage(20f);
+                falling = 0;
+            }
+            else if(falling >= 2f && falling < 5f && !uw.loseAir){
+                ps.Damage(40f);
+                falling = 0;
+            }
+            else if(falling >= 5f && !uw.loseAir){
+                ps.Damage(200f);
+                falling = 0;
+            }
+            else{
+                falling = 0;
+            }
+        }
         if(canvas.activeSelf == true){
             moveInput = joystick.Horizontal;
         }

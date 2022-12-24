@@ -33,6 +33,7 @@ TagManager:
   - Mob
   - CutSceneController
   - Teleport
+  - Water
   layers:
   - Default
   - TransparentFX
