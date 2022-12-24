@@ -9,7 +9,6 @@ public class DeathScript : MonoBehaviour
 
     private GameObject obj;
     private Transform playerTransform;
-    [SerializeField] private Transform playerPos, playerPosP;
 
     [SerializeField] private Transform Movement;
 
@@ -53,8 +52,8 @@ public class DeathScript : MonoBehaviour
         Invoke("Onesec", 1f);
     }
     public void RespawnVoid(){
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            PlayerPrefs.SetInt("Dead", 0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        PlayerPrefs.SetInt("Dead", 0);
     }
 
     private void Awake() {
@@ -62,8 +61,6 @@ public class DeathScript : MonoBehaviour
         RespawnMenu = GameObject.FindGameObjectWithTag("DeathMenu");
     }
     private void Start() {
-        playerPos = GameObject.FindGameObjectWithTag("PlayerPos").GetComponent<Transform>();
-        playerPosP = GameObject.FindGameObjectWithTag("PlayerPosP").GetComponent<Transform>();
         RespawnMenu.SetActive(false);
         Player = GameObject.FindGameObjectWithTag("Player");
     }
