@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float x;
     private Rigidbody2D rb;
-    [SerializeField] private float JumpForce = 300f;
+    [SerializeField] public float JumpForce = 300f;
 
     private GameObject obj;
     private Transform playerTransform;
