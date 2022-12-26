@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float x;
     private Rigidbody2D rb;
-    [SerializeField] public float JumpForce = 300f;
+    [SerializeField] private float JumpForce = 300f;
 
     private GameObject obj;
     private Transform playerTransform;
@@ -37,6 +37,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float falling;
     private PlayerStats ps;
     private UnderWater uw;
+    private float fallSpeed;
+
+    public void AnyJumpForce(float jf){
+        JumpForce = jf;
+    }
     private IEnumerator Falling(){
         while(true){
             if(!isGrounded){
@@ -110,13 +115,28 @@ public class PlayerController : MonoBehaviour
     }
     private void CheckGusenici(){
         if(PlayerPrefs.GetInt("ChangedGusenici") == 0){
-            speed = 10f;
+            if(!uw.loseAir){
+                speed = 10f;
+            }
+            else{
+                speed = 5f;
+            }
         }
         else if(PlayerPrefs.GetInt("ChangedGusenici") == 1){
-            speed = 12f;
+            if(!uw.loseAir){
+                speed = 12f;
+            }
+            else{
+                speed = 6f;
+            }
         }
         else if(PlayerPrefs.GetInt("ChangedGusenici") == 2){
-            speed = 14f;
+            if(!uw.loseAir){
+                speed = 14f;
+            }
+            else{
+                speed = 7f;
+            }
         }
     }
 
@@ -137,20 +157,27 @@ public class PlayerController : MonoBehaviour
     private void Update() {
         CheckTurbine();
         CheckGusenici();
+        if(!isGrounded){
+            fallSpeed = rb.velocity.y;
+        }
         if(falling != 0 && isGrounded){
-            if(falling >= 1.5f && falling < 2f && !uw.loseAir){
+            if(fallSpeed <= -20f && fallSpeed > -25f && !uw.loseAir){
+                ps.Damage(10f);
+                fallSpeed = 0;
+                falling = 0;
+            }
+            else if(fallSpeed <= -25f && !uw.loseAir){
                 ps.Damage(20f);
-                falling = 0;
-            }
-            else if(falling >= 2f && falling < 5f && !uw.loseAir){
-                ps.Damage(40f);
-                falling = 0;
-            }
-            else if(falling >= 5f && !uw.loseAir){
-                ps.Damage(200f);
+                fallSpeed = 0;
                 falling = 0;
             }
             else{
+                fallSpeed = 0;
+                falling = 0;
+            }
+            if(falling >= 5f){
+                ps.Damage(40f);
+                fallSpeed = 0;
                 falling = 0;
             }
         }
@@ -209,6 +236,12 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         isNotGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsNotGround);
         levelEnded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, EndLevel);
+    }
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
     }
 }
 

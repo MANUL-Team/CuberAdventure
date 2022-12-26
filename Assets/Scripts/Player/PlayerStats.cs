@@ -13,6 +13,7 @@ public class PlayerStats : MonoBehaviour
     private DeathScript death;
     [SerializeField] private GameObject soundDmgObj;
     [SerializeField] private GameObject levelText;
+    private UnderWater uw;
 
     private IEnumerator health(){
         yield return new WaitForSeconds(3f);
@@ -20,13 +21,17 @@ public class PlayerStats : MonoBehaviour
         StartCoroutine("health");
     }
     public void Damage(float damage){
-        if(prot / 7 <= damage){
-            hp -= (damage - prot / 7);
+        if(damage - prot >= 0 && !uw.loseAir){
+            hp -= damage - prot;
+        }
+        else if(uw.loseAir){
+            hp -= damage;
         }
         GameObject soundDmg = Instantiate(soundDmgObj, transform.position, Quaternion.identity);
         Destroy(soundDmg, 1f);
     }
     private void Start(){
+        uw = GetComponent<UnderWater>();
         hp = PlayerPrefs.GetFloat("Hp");
         if(lvl == 1){
             PlayerPrefs.SetInt("NeedExp", 100);
