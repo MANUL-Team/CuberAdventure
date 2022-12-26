@@ -13,7 +13,7 @@ public class UnderWater : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D collision){
         if (collision.CompareTag("Water")){
-            pc.JumpForce = 8;
+            pc.AnyJumpForce(8);
             loseAir = true;
             StartCoroutine(AirLose());
             StopCoroutine(AirKeep());
@@ -21,7 +21,7 @@ public class UnderWater : MonoBehaviour
     }
     void OnTriggerExit2D (Collider2D collision){
         if (collision.CompareTag("Water")){
-            pc.JumpForce = 17;
+            pc.AnyJumpForce(17);
             loseAir = false;
             StopCoroutine(AirLose());
             StartCoroutine(AirKeep());
