@@ -9,7 +9,6 @@ public class MobController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Transform player;
-    [SerializeField] private float height;
     private float speedx, distToPlayer;
     public float hp;
     public float maxHp;
@@ -21,7 +20,7 @@ public class MobController : MonoBehaviour
     [SerializeField] private Transform attackPos;
     public RectTransform canvas;
     public GameObject bars;
-    private Animator anim;
+    [SerializeField] private Animator anim;
     [SerializeField] private GameObject drop, soundDmgObj;
     [SerializeField] private int skillPoints;
     [SerializeField] private bool maneken, right, left, isGrounded, confusion, agressiveMob, pathFinding;
@@ -32,10 +31,14 @@ public class MobController : MonoBehaviour
     [SerializeField] private AIPath ai;
     private int direction;
     public int id, num, delay;
-    public string displayDieTime;
     [SerializeField] private bool isHasDrop;
     [SerializeField] private int itemId, count;
     [SerializeField] private Text dmgText;
+    [SerializeField] private bool needGC, isTrigger;
+    [SerializeField] private Transform canvasPosition, bloodPos;
+    [SerializeField] private float damage;
+    [SerializeField] private int exp;
+    [SerializeField] private GameObject mobObj;
     
     public void Damage(float damage){
         if(maneken == false){
@@ -79,7 +82,7 @@ public class MobController : MonoBehaviour
                     anim.SetTrigger("Attack");
                     Collider2D[] playerCol = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerLayer);
                     for(int i = 0; i < playerCol.Length; i++){
-                        playerCol[i].GetComponent<PlayerStats>().Damage(10f);
+                        playerCol[i].GetComponent<PlayerStats>().Damage(damage);
                         playerCol[i].GetComponent<PlayerController>().PushAway(direction, 5000f);
                     }
                     timeBtwAttack = startTimeBtwAttack;
@@ -90,9 +93,20 @@ public class MobController : MonoBehaviour
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>(), true);
         }
     }
-
-    private void OnCollisionStay2D(Collision2D collision){
-        
+    void OnTriggerStay2D(Collider2D collision) {
+        if(collision.CompareTag("Player")){
+            if(startTimeBtwAttack > 0){
+                if(timeBtwAttack <= 0){
+                    anim.SetTrigger("Attack");
+                    Collider2D[] playerCol = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerLayer);
+                    for(int i = 0; i < playerCol.Length; i++){
+                        playerCol[i].GetComponent<PlayerStats>().Damage(damage);
+                        playerCol[i].GetComponent<PlayerController>().PushAway(direction, 5000f);
+                    }
+                    timeBtwAttack = startTimeBtwAttack;
+                }
+            }
+        }
     }
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.red;
@@ -101,70 +115,52 @@ public class MobController : MonoBehaviour
 
     private void Start() {
         if(maneken == false){
-            anim = GetComponent<Animator>();
-            rb = GetComponent<Rigidbody2D>();
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
             hp = maxHp;
-            StartCoroutine(HPDisplay());
+            rb = GetComponent<Rigidbody2D>();
         }
     }
-    IEnumerator HPDisplay(){
-        while(true){
-            healthBar.fillAmount = hp/maxHp;
-            yield return new WaitForSeconds(0.1f);
-        }
-    }
-
-    private void Update() {
-        if(agressiveMob || pathFinding){
-        if(ai.desiredVelocity.x <= -0.01f){
-            anim.SetBool("Run", true);
-            transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
-            direction = -1;
-            
-        } else if(ai.desiredVelocity.x >= 0.01f){
-            anim.SetBool("Run", true);
-            transform.rotation = new Quaternion(0, 180, 0, transform.rotation.w);
-            direction = 1;
-        }
-        else{
-            anim.SetBool("Run", false);
-            transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
-        }
-        }
-        if(maneken == false){
+    private void DeathCheck(){
         if(hp <= 0){
-            PlayerPrefs.SetInt("Exp", PlayerPrefs.GetInt("Exp") + 20);
+            PlayerPrefs.SetInt("Exp", PlayerPrefs.GetInt("Exp") + exp);
             PlayerPrefs.SetInt("SkillPoints", PlayerPrefs.GetInt("SkillPoints") + skillPoints);
             DateTime dieTime = DateTime.Now;
             PlayerPrefs.SetString("MobTimeDie" + id + num, dieTime.ToString());
             if(isHasDrop){
                 PlayerPrefs.SetInt("Item" + "Mob" + itemId, PlayerPrefs.GetInt("Item" + "Mob" + itemId) + count);
             }
-            displayDieTime = PlayerPrefs.GetString("MobTimeDie" + id + num);
-            GameObject blood = Instantiate(bloodEffects, GetComponent<Transform>().position, Quaternion.identity);
+            GameObject blood = Instantiate(bloodEffects, bloodPos.position, Quaternion.identity);
             Destroy(blood, 1f);
             bars.SetActive(false);
             gameObject.SetActive(false);
         }
-        canvas.position = new Vector2(transform.position.x, transform.position.y + height);
-        if(timeBtwAttack > 0){
-            timeBtwAttack -= Time.deltaTime;
-        }
-        distToPlayer = Vector2.Distance(transform.position, player.position);
-        if(!confusion || pathFinding){
-            if(distToPlayer < 8){
-                StartHunter();
+    }
+
+    private void Update() {
+        if(maneken == false){
+            healthBar.fillAmount = hp/maxHp;
+            DeathCheck();
+            canvas.position = new Vector2(canvasPosition.position.x, canvasPosition.position.y);
+            if(timeBtwAttack > 0){
+                timeBtwAttack -= Time.deltaTime;
             }
-            else if(distToPlayer <= 1){
-                
+            distToPlayer = Vector2.Distance(transform.position, player.position);
+            if(distToPlayer >= 20){
+                mobObj.SetActive(false);
             }
             else{
+                mobObj.SetActive(true);
+            }
+            if(!confusion && !pathFinding){
+                if(distToPlayer < 8){
+                    StartHunter();
+                }
+                else{
+                    EndHunter();
+                }
+            }else if(pathFinding){
                 EndHunter();
             }
-        }else if(pathFinding){
-            EndHunter();
-        }
         }
     }
     private void StartHunter(){
@@ -184,17 +180,17 @@ public class MobController : MonoBehaviour
     }
     private void EndHunter(){
         if(startTimeBtwAttack > 0){
-        anim.SetBool("Run", false);
-        speedx = 0;
+            anim.SetBool("Run", false);
+            speedx = 0;
         }
     }
     private void FixedUpdate() {
-        if(!confusion){
+        if(!confusion && needGC){
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         }else{
             isGrounded = false;
         }
-        if(agressiveMob){
+        if(agressiveMob && !pathFinding){
             if(isGrounded){
                 rb.velocity = new Vector2(speedx, rb.velocity.y);
             }
