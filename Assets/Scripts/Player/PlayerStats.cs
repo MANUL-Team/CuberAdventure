@@ -80,11 +80,11 @@ public class PlayerStats : MonoBehaviour
         if(armor == 0){
             prot = 0;
         } else if(armor == 1){
-            prot = 7;
+            prot = 10;
         } else if(armor == 2){
-            prot = 13;
+            prot = 25;
         } else if(armor == 3){
-            prot = 18;
+            prot = 15;
         }
         needExp = PlayerPrefs.GetInt("NeedExp");
     }
