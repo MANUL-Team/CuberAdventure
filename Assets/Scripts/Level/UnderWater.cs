@@ -33,7 +33,7 @@ public class UnderWater : MonoBehaviour
                 air = air - 3;
             }
             else{
-                ps.Damage(5f);
+                ps.Damage(2f);
             }
             yield return new WaitForSeconds(0.2f);
         }
