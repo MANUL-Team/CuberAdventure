@@ -40,44 +40,19 @@ public class MenuScript : MonoBehaviour
         PlayerPrefs.SetInt("NeedExp", 100);
         for(int i = 0; i < 50; i++){
             PlayerPrefs.SetInt("Item" + "Biologic" + i.ToString(), 0);
-        }
-        for(int i = 0; i < 50; i++){
             PlayerPrefs.SetInt("Item" + "Mob" + i.ToString(), 0);
-        }
-        for(int i = 0; i < 50; i++){
+            PlayerPrefs.SetInt("Item" + "Mineral" + i.ToString(), 0);
             PlayerPrefs.SetInt("CutScene" + i.ToString(), 0);
-        }
-        for(int i = 1; i < 50; i++){
             PlayerPrefs.SetInt("LevelEnded" + i.ToString(), 0);
-        }
-        for(int i = 0; i < 50; i++){
             PlayerPrefs.SetInt("OpenSkill" + i.ToString(), 0);
-        }
-        for(int i = 0; i < 50; i++){
             PlayerPrefs.SetInt("Money" + i.ToString(), 0);
-        }
-        for(int i = 0; i < 50; i++){
             PlayerPrefs.SetInt("Weapon" + i.ToString(), 0);
-        }
-        for(int i = 0; i < 50; i++){
             PlayerPrefs.SetInt("Armor" + i.ToString(), 0);
-        }
-        for(int i = 0; i < 50; i++){
             PlayerPrefs.SetInt("Laser" + i.ToString(), 0);
-        }
-        for(int i = 0; i < 50; i++){
             PlayerPrefs.SetInt("Turbine" + i.ToString(), 0);
-        }
-        for(int i = 0; i < 50; i++){
             PlayerPrefs.SetInt("Gusenici" + i.ToString(), 0);
-        }
-        for(int i = 0; i < 50; i++){
             for(int a = 0; a < 50; a++){
                 PlayerPrefs.SetString("CollectTimeItem" + "Biologic" + i + a, "");
-            }
-        }
-        for(int i = 0; i < 50; i++){
-            for(int a = 0; a < 50; a++){
                 PlayerPrefs.SetString("MobTimeDie" + i + a, "");
             }
         }
