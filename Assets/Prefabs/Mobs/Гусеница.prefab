@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7274633552681080137}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 3490869149036547720}
   - component: {fileID: 1985721456756141409}
   - component: {fileID: 5131526135717545025}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Bez_nazvania66_20220731175204
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7057805565780183852}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 7601747285136650547}
   - component: {fileID: 7597064827224236279}
   - component: {fileID: 5122972850355139363}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Bez_nazvania66_20220731175510
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -285,7 +285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4154193969498130076}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5090977974592497584}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2755523173355963238}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -386,7 +386,8 @@ GameObject:
   - component: {fileID: 2704603544476321606}
   - component: {fileID: 1820086277003712391}
   - component: {fileID: 1351859223124360238}
-  m_Layer: 7
+  - component: {fileID: 7054713417016365321}
+  m_Layer: 6
   m_Name: "\u0433\u0443\u0441\u0435\u043D\u0438\u0446\u0430"
   m_TagString: Mob
   m_Icon: {fileID: 0}
@@ -482,7 +483,7 @@ MonoBehaviour:
     m_Bits: 256
   startTimeBtwAttack: -1
   attackRange: 0
-  attackPos: {fileID: 0}
+  attackPos: {fileID: 5357086721363038930}
   canvas: {fileID: 8410130307880790127}
   bars: {fileID: 8445064983092016001}
   anim: {fileID: 2704603544476321607}
@@ -507,8 +508,6 @@ MonoBehaviour:
   num: 0
   delay: 2
   isHasDrop: 1
-  itemId: 1
-  count: 1
   dmgText: {fileID: 7217151908298898916}
   needGC: 1
   isTrigger: 0
@@ -561,6 +560,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.598734, y: 2.4992666}
   m_EdgeRadius: 0
+--- !u!114 &7054713417016365321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2704603544476321609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66144a02539679e43b3d228c9a79b65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drop:
+  - {fileID: 7624702161724597496, guid: e72499e232163bb419536c1eaeebd5ba, type: 3}
+  counts: 03000000
 --- !u!1 &2824118953535137682
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1836013071965307105}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +619,7 @@ GameObject:
   - component: {fileID: 2587593898960265521}
   - component: {fileID: 3271268910280763108}
   - component: {fileID: 4946027929680739129}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Bez_nazvania66_20220731175743
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -710,7 +724,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3987872547682897776}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -742,7 +756,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8032524270666045525}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -775,7 +789,7 @@ GameObject:
   - component: {fileID: 6665111764836417329}
   - component: {fileID: 2156733487220767247}
   - component: {fileID: 2405398391395208749}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Bez_nazvania66_20220731175622
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -882,7 +896,7 @@ GameObject:
   - component: {fileID: 4653968766881607312}
   - component: {fileID: 1256604330790541913}
   - component: {fileID: 5092895133961788715}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Bez_nazvania66_20220731175848
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -989,7 +1003,7 @@ GameObject:
   - component: {fileID: 2567936342068397618}
   - component: {fileID: 360286089850099579}
   - component: {fileID: 8953416685346143207}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Bez_nazvania66_20220731175402
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1094,7 +1108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1213570395347975495}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1243,7 +1257,7 @@ GameObject:
   - component: {fileID: 3388362726099546643}
   - component: {fileID: 4507448053051384167}
   - component: {fileID: 354228164317957311}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: "\u0421\u043B\u043E\u0439 1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1349,7 +1363,7 @@ GameObject:
   - component: {fileID: 3931193761101113229}
   - component: {fileID: 6773046292689040470}
   - component: {fileID: 8250887367686365137}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Bez_nazvania66_20220731175957
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,7 +1468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4047576299775201273}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1487,7 +1501,7 @@ GameObject:
   - component: {fileID: 8811380231932417946}
   - component: {fileID: 6118604395376665924}
   - component: {fileID: 6063999018155922115}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Bez_nazvania66_20220731180106
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2082,7 +2096,7 @@ GameObject:
   - component: {fileID: 943300824411567864}
   - component: {fileID: 5818324466723970728}
   - component: {fileID: 1642100516478772387}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Bez_nazvania66_20220731180131
   m_TagString: Untagged
   m_Icon: {fileID: 0}

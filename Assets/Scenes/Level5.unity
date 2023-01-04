@@ -22152,6 +22152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f3fb1a4624b8346af54138a1940cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1511377032 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5357086721363038930, guid: d05626cd5bb6a09488eedc5a349383ee, type: 3}
+  m_PrefabInstance: {fileID: 8410130307329073534}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1549820720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22877,8 +22882,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93fd68f8edd76074caf8eed9e14a3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPos: {fileID: 0}
-  playerPosP: {fileID: 0}
   Movement: {fileID: 0}
   players: []
   Respawn: {fileID: 0}
@@ -24756,6 +24759,10 @@ PrefabInstance:
       propertyPath: num
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2704603544476321606, guid: d05626cd5bb6a09488eedc5a349383ee, type: 3}
+      propertyPath: attackPos
+      value: 
+      objectReference: {fileID: 1511377032}
     - target: {fileID: 8410130307409448376, guid: d05626cd5bb6a09488eedc5a349383ee, type: 3}
       propertyPath: m_Name
       value: "\u0413\u0443\u0441\u0435\u043D\u0438\u0446\u0430"
