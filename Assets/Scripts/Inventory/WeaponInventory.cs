@@ -96,7 +96,7 @@ public class WeaponInventory : MonoBehaviour
         }
     }
     public void Skill3(){
-        attackRange = 1.15f;
+        attackRange = 3f;
         int direction = PlayerPrefs.GetInt("PlayerRotation");
         if(timeBtwAttack <= 0){
             GameObject instSound = Instantiate(sound, transform.position, Quaternion.identity);
@@ -106,7 +106,7 @@ public class WeaponInventory : MonoBehaviour
             weaponR[1].GetComponent<Animator>().SetBool("Skill3", true);
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosR.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
-                enemies[i].GetComponent<MobController>().Damage(damage * 0.75f);
+                enemies[i].GetComponent<MobController>().Damage(damage * 0.6f);
                 enemies[i].GetComponent<MobController>().PushAway(direction, 200f);
             }
             timeBtwAttack = startTimeBtwAttack;
@@ -115,7 +115,7 @@ public class WeaponInventory : MonoBehaviour
             weaponL[1].GetComponent<Animator>().SetBool("Skill3", true);
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosL.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
-                enemies[i].GetComponent<MobController>().Damage(damage * 0.75f);
+                enemies[i].GetComponent<MobController>().Damage(damage * 0.6f);
                 enemies[i].GetComponent<MobController>().PushAway(direction, 50f);
             }
             timeBtwAttack = startTimeBtwAttack;
