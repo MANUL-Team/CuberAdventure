@@ -32,13 +32,13 @@ public class MobController : MonoBehaviour
     private int direction;
     public int id, num, delay;
     [SerializeField] private bool isHasDrop;
-    [SerializeField] private int itemId, count;
     [SerializeField] private Text dmgText;
     [SerializeField] private bool needGC, isTrigger;
     [SerializeField] private Transform canvasPosition, bloodPos;
     [SerializeField] private float damage;
     [SerializeField] private int exp;
     [SerializeField] private GameObject mobObj;
+    private GiveDrop giveDrop;
     
     public void Damage(float damage){
         if(maneken == false){
@@ -89,9 +89,6 @@ public class MobController : MonoBehaviour
                 }
             }
         }
-        if(collision.gameObject.layer == 8 && !agressiveMob){
-            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>(), true);
-        }
     }
     void OnTriggerStay2D(Collider2D collision) {
         if(collision.CompareTag("Player")){
@@ -118,21 +115,30 @@ public class MobController : MonoBehaviour
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
             hp = maxHp;
             rb = GetComponent<Rigidbody2D>();
+            giveDrop = GetComponent<GiveDrop>();
         }
     }
     private void DeathCheck(){
         if(hp <= 0){
+            if(ai != null){
+                ai.canMove = false;
+            }
             PlayerPrefs.SetInt("Exp", PlayerPrefs.GetInt("Exp") + exp);
             PlayerPrefs.SetInt("SkillPoints", PlayerPrefs.GetInt("SkillPoints") + skillPoints);
             DateTime dieTime = DateTime.Now;
             PlayerPrefs.SetString("MobTimeDie" + id + num, dieTime.ToString());
             if(isHasDrop){
-                PlayerPrefs.SetInt("Item" + "Mob" + itemId, PlayerPrefs.GetInt("Item" + "Mob" + itemId) + count);
+                giveDrop.Drop();
             }
             GameObject blood = Instantiate(bloodEffects, bloodPos.position, Quaternion.identity);
             Destroy(blood, 1f);
             bars.SetActive(false);
             gameObject.SetActive(false);
+        }
+    }
+    private void OnEnable() {
+        if(ai != null){
+            ai.canMove = true;
         }
     }
 
@@ -151,7 +157,7 @@ public class MobController : MonoBehaviour
             else{
                 mobObj.SetActive(true);
             }
-            if(!confusion && !pathFinding){
+            if(!confusion && !pathFinding && agressiveMob){
                 if(distToPlayer < 8){
                     StartHunter();
                 }

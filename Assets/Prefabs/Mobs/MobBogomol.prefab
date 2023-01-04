@@ -507,6 +507,7 @@ GameObject:
   - component: {fileID: 873997716784681046}
   - component: {fileID: 406628166628878767}
   - component: {fileID: 1108343542880580425}
+  - component: {fileID: 1235273939292151159}
   m_Layer: 7
   m_Name: "\u0411\u043E\u0433\u043E\u043C\u043E\u043B"
   m_TagString: Mob
@@ -628,8 +629,6 @@ MonoBehaviour:
   num: 0
   delay: 3
   isHasDrop: 1
-  itemId: 2
-  count: 1
   dmgText: {fileID: 4508144709724226814}
   needGC: 1
   isTrigger: 0
@@ -659,6 +658,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1235273939292151159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848611411492302572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66144a02539679e43b3d228c9a79b65a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drop:
+  - {fileID: 7624702161724597496, guid: 452b0e51a16bcac458d131f2bab096f8, type: 3}
+  counts: 02000000
 --- !u!1 &873997715926562143
 GameObject:
   m_ObjectHideFlags: 0

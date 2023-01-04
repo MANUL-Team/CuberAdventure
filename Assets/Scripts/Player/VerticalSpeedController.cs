@@ -15,6 +15,9 @@ public class VerticalSpeedController : MonoBehaviour
         if(rb.velocity.y <= -maxSpeed){
             rb.velocity = new Vector2(rb.velocity.x, -maxSpeed);
         }
+        if(rb.velocity.y >= maxSpeed){
+            rb.velocity = new Vector2(rb.velocity.x, maxSpeed);
+        }
         currentSpeed = rb.velocity.y;
     }
 }
