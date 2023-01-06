@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class CraftngMenuController : MonoBehaviour
 {
+    [Header("Buttons")]
+    [SerializeField] private GameObject itemsDisplay;
+    [SerializeField] private GameObject craftButton;
+    [SerializeField] private GameObject closeButton;
+    [Header("Panels")]
+    [SerializeField] private GameObject successful;
+    [SerializeField] private GameObject notEnough;
+    [Header("Arrays")]
     [SerializeField] private GameObject[] descriptions;
-    [SerializeField] private GameObject itemsDisplay, craftButton;
     [SerializeField] private NeedToCraft[] itemsToCraft;
     [SerializeField] private ForCraftItem[] items;
+    [Header("Lists with about craft info")]
     [SerializeField] private List<Drop> forCraftItems = new List<Drop>();
     [SerializeField] private List<int> forCraftCounts = new List<int>();
-    [SerializeField] private bool canCraft;
-    [SerializeField] private GameObject successful, notEnough;
+    [SerializeField] private bool isItem;
+    private bool canCraft;
     private bool stack;
     private CraftedItem craftingItem;
     public void SelectCraftingItem(int id){
@@ -27,13 +35,12 @@ public class CraftngMenuController : MonoBehaviour
         }
         itemsDisplay.SetActive(true);
         craftButton.SetActive(true);
+        closeButton.SetActive(false);
         for(int i = 0; i < items.Length; i++){
             items[i].gameObject.SetActive(false);
         }
-        for(int i = 0; i < forCraftItems.Count; i++){
-            forCraftCounts.RemoveAt(0);
-            forCraftItems.RemoveAt(0);
-        }
+        forCraftCounts.Clear();
+        forCraftItems.Clear();
 
         for(int b = 0; b < items.Length; b++){
             for(int i = 0; i < itemsToCraft[id].needToCraft.Length; i++){
@@ -55,7 +62,7 @@ public class CraftngMenuController : MonoBehaviour
         }
         if(canCraft){
             if(stack){
-                PlayerPrefs.SetInt(craftingItem.WhatIsIt + craftingItem.id.ToString(), PlayerPrefs.GetInt(craftingItem.WhatIsIt + craftingItem.id.ToString()) + 1);
+                PlayerPrefs.SetInt("Item" + craftingItem.WhatIsIt + craftingItem.id.ToString(), PlayerPrefs.GetInt("Item" + craftingItem.WhatIsIt + craftingItem.id.ToString()) + 1);
             }
             else{
                 PlayerPrefs.SetInt(craftingItem.WhatIsIt + craftingItem.id.ToString(), 1);

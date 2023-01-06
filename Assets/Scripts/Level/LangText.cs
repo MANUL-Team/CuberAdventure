@@ -7,7 +7,7 @@ public class LangText : MonoBehaviour
 {
     private Text text;
     private int lang;
-
+    [TextArea]
     [SerializeField] private string eng, ru;
     [SerializeField] private string[] engEd, ruEd;
     [SerializeField] private bool editable, dialog;
