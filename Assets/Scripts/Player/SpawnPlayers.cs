@@ -9,8 +9,6 @@ public class SpawnPlayers : MonoBehaviour
     private GameObject obj;
     private Transform playerTransform;
     [SerializeField] private Transform LevelTeleportL, LevelTeleportP, NewSpawn;
-    [SerializeField] private int level;
-
     [SerializeField] private GameObject player;
 
     private void Awake() {
@@ -18,10 +16,10 @@ public class SpawnPlayers : MonoBehaviour
         if(PlayerPrefs.GetInt("NewSpawnTP") == 1 && NewSpawn != null){
             obj = Instantiate(player, new Vector3(NewSpawn.position.x, NewSpawn.position.y, 0), Quaternion.identity);
         }
-        else if(PlayerPrefs.GetInt("LastLevel") <= PlayerPrefs.GetInt("Level")){
+        else if(PlayerPrefs.GetInt("LastLevel") <= PlayerPrefs.GetInt("Level") && PlayerPrefs.GetInt("NewSpawnTP") == 0){
             obj = Instantiate(player, new Vector3(LevelTeleportL.position.x, LevelTeleportL.position.y, 0), Quaternion.identity);
         }
-        else if(PlayerPrefs.GetInt("LastLevel") > PlayerPrefs.GetInt("Level")){
+        else if(PlayerPrefs.GetInt("LastLevel") > PlayerPrefs.GetInt("Level") && PlayerPrefs.GetInt("NewSpawnTP") == 0){
             obj = Instantiate(player, new Vector3(LevelTeleportP.position.x, LevelTeleportP.position.y, 0), Quaternion.identity);
         }
     }

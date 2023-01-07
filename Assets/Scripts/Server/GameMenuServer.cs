@@ -7,7 +7,7 @@ using Photon.Pun;
 
 public class GameMenuServer : MonoBehaviour
 {
-    [SerializeField] private GameObject GMenu, joystick, jump, stats, map, health, attack;
+    [SerializeField] private GameObject GMenu, RD, RU, LD, LU;
     [SerializeField] private Image menu;
     [SerializeField] private Text menuText;
 
@@ -18,12 +18,10 @@ public class GameMenuServer : MonoBehaviour
     public void MenuPressed(){
         if(PlayerPrefs.GetInt("Dead") == 0){
             GMenu.SetActive(true);
-            joystick.SetActive(false);
-            jump.SetActive(false);
-            stats.SetActive(false);
-            map.SetActive(false);
-            health.SetActive(false);
-            attack.SetActive(false);
+            RD.SetActive(false);
+            RU.SetActive(false);
+            LD.SetActive(false);
+            LU.SetActive(false);
             menu.color = new Color(255, 255, 255, 0);
             menuText.color = new Color(0, 0, 0, 0);
             Time.timeScale = 0;
@@ -31,12 +29,10 @@ public class GameMenuServer : MonoBehaviour
     }
     public void Resume(){
         GMenu.SetActive(false);
-        joystick.SetActive(true);
-        jump.SetActive(true);
-        stats.SetActive(true);
-        map.SetActive(true);
-        health.SetActive(true);
-        attack.SetActive(true);
+        RD.SetActive(true);
+        RU.SetActive(true);
+        LD.SetActive(true);
+        LU.SetActive(true);
         menu.color = new Color(255, 255, 255, 255);
         menuText.color = new Color(0, 0, 0, 255);
         Time.timeScale = 1;
