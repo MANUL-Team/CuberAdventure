@@ -20,7 +20,6 @@ public class SwitchPoisionButtons : MonoBehaviour
     }
     private void Start() {
         PoisionSwitch();
-        RegenerationPoisionEnd();
     }
     private void FixedUpdate() {
         PoisionSwitch();
