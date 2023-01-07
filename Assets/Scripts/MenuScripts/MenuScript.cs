@@ -21,6 +21,7 @@ public class MenuScript : MonoBehaviour
 
     public void NewGame()
     {
+        Loading.SetActive(true);
         StartCoroutine("AsyncLoadNew");
         PlayerPrefs.SetInt("Level", 1);
         PlayerPrefs.SetInt("LastLevel", 0);
@@ -59,14 +60,15 @@ public class MenuScript : MonoBehaviour
     }
     public void ContinueGame(){
         if(PlayerPrefs.GetInt("Level") != 0){
+            Loading.SetActive(true);
             StartCoroutine("AsyncLoadLoad");
         }
     }
     public void Online(){
         ServMenu.SetActive(true);
-         Play.SetActive(false);
-         MainMenu.SetActive(false);
-         SkinsMenu.SetActive(false);
+        Play.SetActive(false);
+        MainMenu.SetActive(false);
+        SkinsMenu.SetActive(false);
     }
 
     public void Skins(){

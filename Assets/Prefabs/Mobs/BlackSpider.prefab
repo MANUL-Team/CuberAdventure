@@ -1924,7 +1924,7 @@ MonoBehaviour:
   ai: {fileID: 7843454441093457937}
   id: 4
   num: 1
-  delay: 3
+  delay: 2
   isHasDrop: 1
   dmgText: {fileID: 7843454440133419016}
   needGC: 0

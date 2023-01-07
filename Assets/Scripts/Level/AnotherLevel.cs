@@ -8,6 +8,7 @@ public class AnotherLevel : MonoBehaviour
 {
     [SerializeField] private int level;
     [SerializeField] private TeleportScript tp;
+    [SerializeField] private bool newSpawn;
 
     private void Start() {
         tp = GameObject.FindGameObjectWithTag("Teleport").GetComponent<TeleportScript>();
@@ -15,6 +16,12 @@ public class AnotherLevel : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
             tp.Teleport(level);
+            if(newSpawn){
+                PlayerPrefs.SetInt("NewSpawnTP", 1);
+            }
+            else{
+                PlayerPrefs.SetInt("NewSpawnTP", 0);
+            }
         }
     }
 }

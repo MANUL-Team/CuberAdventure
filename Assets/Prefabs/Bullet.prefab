@@ -214,7 +214,6 @@ MonoBehaviour:
   damage: 0
   waitIsSolid:
     serializedVersion: 2
-    m_Bits: 1664
+    m_Bits: 1728
   particles: {fileID: 5942769349680783963, guid: e37bd27474f3b824593132316ec4a4b1, type: 3}
   direction: 0
-  dmgCanvas: {fileID: 2476547639246323769, guid: 7622c183a1095414ab31d1e02871d282, type: 3}

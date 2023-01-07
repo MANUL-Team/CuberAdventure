@@ -308,8 +308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e26110d2d5eb864cb16e86c9a4dc45b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: Biologic
-  id: 1
+  type: Default
+  id: 2
   count: {fileID: 1796607211129131323}
   description: {fileID: 0}
   itemControl: {fileID: 0}
