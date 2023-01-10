@@ -42,16 +42,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _CausticsMovement: 0.85
+    - _CausticsMovement: 0.28
     - _CausticsPower: 1.03
-    - _CausticsScale: 1.24
+    - _CausticsScale: 2.13
     - _LineHeight: 17
     - _RefractionAmount: 0.05
     m_Colors:
-    - _CausticsColor: {r: 0.36320752, g: 0.61992484, b: 1, a: 0}
+    - _CausticsColor: {r: 0, g: 0.40828395, b: 1, a: 0}
     - _CausticsSpeed: {r: -0.26, g: 0.3, b: 0, a: 0}
     - _ColorLine: {r: 0.4009434, g: 0.6716068, b: 1, a: 0}
     - _WaterColor: {r: 33.933136, g: 33.933136, b: 33.933136, a: 0.4117647}
-    - _WaterOffset: {r: 0, g: -1, b: 0, a: 0}
-    - _WaterTiling: {r: 1, g: -0.7, b: 0, a: 0}
+    - _WaterOffset: {r: 0, g: 0, b: 0, a: 0}
+    - _WaterTiling: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

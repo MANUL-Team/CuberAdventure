@@ -49722,7 +49722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &520690336
 Transform:
   m_ObjectHideFlags: 0
@@ -51223,7 +51223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &836361118
 Animator:
   serializedVersion: 4
@@ -718369,7 +718369,6 @@ MonoBehaviour:
   LevelTeleportL: {fileID: 2122973527}
   LevelTeleportP: {fileID: 592479305}
   NewSpawn: {fileID: 1477860350}
-  level: 5
   player: {fileID: 4801676336126942650, guid: 6d55b879e228ed04982a7374361cae17, type: 3}
 --- !u!81 &2007726044
 AudioListener:
