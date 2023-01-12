@@ -14,6 +14,6 @@ public class Poision : MonoBehaviour
         poision.RegenerationPoision(itemId, poisionId);
     }
     private void Start() {
-        poision.PoisionEnd(poisionId, delay);
+        poision.StartPoisionEndCoroutine(poisionId, delay);
     }
 }
