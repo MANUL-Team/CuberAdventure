@@ -44,7 +44,10 @@ public class SwitchPoisionButtons : MonoBehaviour
     private void RegenerationPoisionEnd(){
         PlayerPrefs.SetInt("HealMnojitel", 1);
     }
-    public IEnumerator PoisionEnd(int poisionId, int delay){
+    public void StartPoisionEndCoroutine(int poisionId, int delay){
+        StartCoroutine(PoisionEnd(poisionId, delay));
+    }
+    private IEnumerator PoisionEnd(int poisionId, int delay){
         while(true){
             DateTime nowTime = DateTime.Now;
             if(PlayerPrefs.GetString("CollectTimePoision" + poisionId) != ""){
