@@ -19341,7 +19341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 2007726046}
   chunkPrefabs:
-  - {fileID: 5271973424611750901, guid: ccfa91a60356cca41a0e74951cadb34d, type: 3}
+  - {fileID: 5861685648827165389, guid: 177d13c3c51f83948b836343f727f1a6, type: 3}
   FirstChunk: {fileID: 210983967}
   SpawnedChunks: []
 --- !u!4 &2065713914 stripped
