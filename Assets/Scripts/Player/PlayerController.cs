@@ -220,6 +220,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)){
             Jump();
         }
+        if (Input.GetKeyDown(KeyCode.Mouse1)){
+            Jump();
+        }
+        if (Input.GetKeyDown(KeyCode.W)){
+            Jump();
+        }
         
         if(moveInput > 0){
             PlayerPrefs.SetInt("PlayerRotation", 1);
