@@ -362,7 +362,7 @@ MonoBehaviour:
   id: 1
   num: 1
   button: {fileID: 7508625726922234311}
-  delay: 5
+  delay: 3
   DisplayTime: 
 --- !u!1 &7508625726922234311
 GameObject:
