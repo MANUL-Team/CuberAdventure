@@ -18,12 +18,18 @@ public class Poision : MonoBehaviour
         else if(typeOfPoision == "UnderWater"){
             poision.UnderWaterPoision(itemId, poisionId, delay);
         }
+        else if(typeOfPoision == "Light"){
+            poision.LightPoision(itemId, poisionId, delay);
+        }
     }
     private void Start() {
         DateTime nowTime = DateTime.Now;
         if(PlayerPrefs.GetString("CollectTimePoision" + poisionId) != ""){
-            if(nowTime < DateTime.Parse(PlayerPrefs.GetString("CollectTimePoision" + poisionId)).AddSeconds(delay)){
+            if(nowTime < DateTime.Parse(PlayerPrefs.GetString("CollectTimePoision" + poisionId)).AddMinutes(delay)){
                 poision.StartPoisionEndCoroutine(poisionId, delay, typeOfPoision);
+            }
+            else{
+                poision.PoisionEnd(typeOfPoision);
             }
         }
     }
