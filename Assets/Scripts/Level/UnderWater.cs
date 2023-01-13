@@ -11,6 +11,7 @@ public class UnderWater : MonoBehaviour
     public bool loseAir;
     [SerializeField] private float maxAir;
     [SerializeField] private Image scaleAir, scaleAirOutline;
+    [SerializeField] private bool canAirLose;
 
     void OnTriggerEnter2D (Collider2D collision){
         if (collision.CompareTag("Water")){
@@ -30,13 +31,15 @@ public class UnderWater : MonoBehaviour
     }
     private IEnumerator AirLose(){
         while(loseAir){
-            if(air > 0){
-                air = air - 1.5f;
+            if(canAirLose){
+                if(air > 0){
+                    air = air - 15f;
+                }
+                else{
+                    ps.Damage(10f);
+                } 
             }
-            else{
-                ps.Damage(1f);
-            }
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(1f);
         }
     }
     private IEnumerator AirKeep(){
@@ -53,6 +56,12 @@ public class UnderWater : MonoBehaviour
     }
     private void Update() {
         maxAir = PlayerPrefs.GetFloat("MaxAir");
+        if(PlayerPrefs.GetInt("CanLoseAir") == 0){
+            canAirLose = false;
+        }
+        else{
+            canAirLose = true;
+        }
         if(air < maxAir){
             scaleAirOutline.gameObject.SetActive(true);
         }
