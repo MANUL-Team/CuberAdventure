@@ -9,6 +9,7 @@ public class UnderWater : MonoBehaviour
     [SerializeField] private float air;
     private PlayerStats ps;
     public bool loseAir;
+    [SerializeField] private float maxAir;
     [SerializeField] private Image scaleAir, scaleAirOutline;
 
     void OnTriggerEnter2D (Collider2D collision){
@@ -30,12 +31,12 @@ public class UnderWater : MonoBehaviour
     private IEnumerator AirLose(){
         while(loseAir){
             if(air > 0){
-                air = air - 3;
+                air = air - 1.5f;
             }
             else{
-                ps.Damage(2f);
+                ps.Damage(1f);
             }
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
     private IEnumerator AirKeep(){
@@ -47,15 +48,17 @@ public class UnderWater : MonoBehaviour
     void Start(){
         pc = GetComponent<PlayerController>();
         ps = GetComponent<PlayerStats>();
-        air = 100;
+        maxAir = PlayerPrefs.GetFloat("MaxAir");
+        air = maxAir;
     }
     private void Update() {
-        if(air < 100){
+        maxAir = PlayerPrefs.GetFloat("MaxAir");
+        if(air < maxAir){
             scaleAirOutline.gameObject.SetActive(true);
         }
         else{
             scaleAirOutline.gameObject.SetActive(false);
         }
-        scaleAir.fillAmount = air/100;
+        scaleAir.fillAmount = air/maxAir;
     }
 }
