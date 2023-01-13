@@ -1931,7 +1931,7 @@ MonoBehaviour:
   isTrigger: 1
   canvasPosition: {fileID: 2676253655399120837}
   bloodPos: {fileID: 1620978639939019190}
-  damage: 25
+  damage: 30
   exp: 40
   mobObj: {fileID: 7727688358041383722}
 --- !u!114 &6151959548625104953
