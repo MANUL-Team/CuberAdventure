@@ -23,6 +23,9 @@ public class MenuScript : MonoBehaviour
     {
         Loading.SetActive(true);
         StartCoroutine("AsyncLoadNew");
+        PlayerPrefs.SetInt("Dead", 0);
+        PlayerPrefs.SetInt("Time", 800);
+        PlayerPrefs.SetInt("ToDay", 1);
         PlayerPrefs.SetInt("CanLoseAir", 1);
         PlayerPrefs.SetFloat("MaxAir", 100);
         PlayerPrefs.SetInt("HealMnojitel", 1);

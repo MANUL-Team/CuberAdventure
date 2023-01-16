@@ -16,7 +16,7 @@ public class PlayerStats : MonoBehaviour
     private UnderWater uw;
 
     private IEnumerator health(){
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         hp = Mathf.Clamp(hp + 3 * PlayerPrefs.GetInt("HealMnojitel"), 0, maxHp);
         StartCoroutine("health");
     }
