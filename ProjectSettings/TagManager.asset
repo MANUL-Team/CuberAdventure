@@ -34,6 +34,7 @@ TagManager:
   - CutSceneController
   - Teleport
   - Water
+  - Time
   layers:
   - Default
   - TransparentFX
