@@ -39806,7 +39806,7 @@ GameObject:
   - component: {fileID: 1074314230}
   m_Layer: 0
   m_Name: Light 2D
-  m_TagString: Untagged
+  m_TagString: Time
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41233,7 +41233,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1074314226}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 48be86f92a679c449a1639c8a0eb72a0, type: 2}
   m_CullingMode: 0
@@ -43530,8 +43530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93fd68f8edd76074caf8eed9e14a3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPos: {fileID: 906524534}
-  playerPosP: {fileID: 1520988299}
   Movement: {fileID: 0}
   players: []
   Respawn: {fileID: 0}
@@ -44090,8 +44088,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93fd68f8edd76074caf8eed9e14a3a8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPos: {fileID: 906524534}
-  playerPosP: {fileID: 1520988299}
   Movement: {fileID: 0}
   players: []
   Respawn: {fileID: 0}
