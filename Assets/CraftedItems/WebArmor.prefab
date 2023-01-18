@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa70c2a3775a4744832c6b9c6690cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WhatIsIt: Armor
+  module: Armor
   id: 3

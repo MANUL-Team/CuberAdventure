@@ -126,7 +126,7 @@ public class MobController : MonoBehaviour
             PlayerPrefs.SetInt("Exp", PlayerPrefs.GetInt("Exp") + exp);
             PlayerPrefs.SetInt("SkillPoints", PlayerPrefs.GetInt("SkillPoints") + skillPoints);
             DateTime dieTime = DateTime.Now;
-            PlayerPrefs.SetString("MobTimeDie" + id + num, dieTime.ToString());
+            PlayerPrefs.SetString("MobTimeDie" + id + " " + num, dieTime.ToString());
             if(isHasDrop){
                 giveDrop.Drop();
             }

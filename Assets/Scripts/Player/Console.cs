@@ -17,21 +17,19 @@ public class Console : MonoBehaviour
     public void EnterCommand(){
         wordsInCommand = inputField.text.Split(" ");
         if(wordsInCommand[0] == "give"){
-            if(wordsInCommand[1] == "Default" || wordsInCommand[1] == "Biologic" || wordsInCommand[1] == "Mob" || wordsInCommand[1] == "Mineral"){
-                if(wordsInCommand.Length == 3){
-                    PlayerPrefs.SetInt("Item" + wordsInCommand[1] + wordsInCommand[2], PlayerPrefs.GetInt("Item" + wordsInCommand[1] + wordsInCommand[2]) + 1);
-                }
-                else{
-                    PlayerPrefs.SetInt("Item" + wordsInCommand[1] + wordsInCommand[2], PlayerPrefs.GetInt("Item" + wordsInCommand[1] + wordsInCommand[2]) + int.Parse(wordsInCommand[3]));
-                }
-                text.text = text.text + "\nItem gived!";
-            }
-            else if(wordsInCommand[1] == "Weapon" || wordsInCommand[1] == "Gusenici" || wordsInCommand[1] == "Turbine" || wordsInCommand[1] == "Laser" || wordsInCommand[1] == "Armor"){
+            if(wordsInCommand[1] == "Weapon" || wordsInCommand[1] == "Gusenici" || wordsInCommand[1] == "Turbine" || wordsInCommand[1] == "Laser" || wordsInCommand[1] == "Armor"){
                 PlayerPrefs.SetInt(wordsInCommand[1] + wordsInCommand[2], 1);
                 text.text = text.text + "\nModule gived!";
             }
             else{
-                text.text = text.text + "\nUnknown variable!";
+                if(wordsInCommand.Length == 1){
+                    PlayerPrefs.SetInt("Item" + wordsInCommand[1], PlayerPrefs.GetInt("Item" + wordsInCommand[1]) + 1);
+                    text.text = text.text + "\nItem gived!";
+                }
+                else{
+                    PlayerPrefs.SetInt("Item" + wordsInCommand[1], PlayerPrefs.GetInt("Item" + wordsInCommand[1]) + int.Parse(wordsInCommand[2]));
+                    text.text = text.text + "\nItem gived!";
+                }
             }
         }
         else if(wordsInCommand[0] == "heal"){

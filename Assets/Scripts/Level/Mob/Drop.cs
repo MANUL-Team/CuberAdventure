@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class Drop : MonoBehaviour
 {
-    public string type;
     public int id;
 }

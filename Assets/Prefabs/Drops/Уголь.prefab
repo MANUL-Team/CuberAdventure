@@ -358,8 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f3fb1a4624b8346af54138a1940cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: Mineral
-  id: 1
+  id: 7
   num: 1
   button: {fileID: 7508625726922234311}
   delay: 3
