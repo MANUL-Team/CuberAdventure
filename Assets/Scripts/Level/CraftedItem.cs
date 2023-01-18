@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class CraftedItem : MonoBehaviour
 {
-    public string WhatIsIt;
+    public string module;
     public int id;
 }

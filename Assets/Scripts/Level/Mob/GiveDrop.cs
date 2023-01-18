@@ -13,7 +13,7 @@ public class GiveDrop : MonoBehaviour
     }
     public void Drop(){
         for(int i = 0; i < drop.Length; i++){
-            PlayerPrefs.SetInt("Item" + drop[i].type + drop[i].id, PlayerPrefs.GetInt("Item" + drop[i].type + drop[i].id) + counts[i]);
+            PlayerPrefs.SetInt("Item" + drop[i].id, PlayerPrefs.GetInt("Item" + drop[i].id) + counts[i]);
         }
     }
 
