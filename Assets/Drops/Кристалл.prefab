@@ -44,5 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f48facad5d755e4c9be2f91450a6675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: Mineral
-  id: 2
+  id: 8

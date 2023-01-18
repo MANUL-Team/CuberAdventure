@@ -5,11 +5,10 @@ using UnityEngine;
 public class ChooseTypeOfItems : MonoBehaviour
 {
     [SerializeField] private GameObject[] itemsScroll;
-    [SerializeField] private int main;
 
-    public void Active(){
+    public void Active(int id){
         for(int i = 0; i < itemsScroll.Length; i++){
-            if(i != main-1){
+            if(i != id){
                 itemsScroll[i].SetActive(false);
             }
             else{

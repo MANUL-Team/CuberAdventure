@@ -4,24 +4,31 @@ using UnityEngine;
 
 public class ItemControl : MonoBehaviour
 {
-    [SerializeField] private Item[] items;
 
-    public void CloseDescriprions(){
-        for(int i = 0; i < items.Length; i++){
-            items[i].description.SetActive(false);
+    [SerializeField] private Transform itemsFolder;
+    [SerializeField] private List<Item> itemsList = new List<Item>();
+    void Start()
+    {
+        for(int i = 0; i < itemsFolder.childCount; i++){
+            itemsList.Add(itemsFolder.GetChild(i).GetComponent<Item>());
+        }
+    }
+    public void CloseDescriptions(){
+        for(int i = 0; i < itemsList.Count; i++){
+            itemsList[i].description.SetActive(false);
         }
     }
     IEnumerator ItemsUpdate(){
         while(true){
-            for(int i = 0; i < items.Length; i++){
-                if(PlayerPrefs.GetInt("Item" + items[i].type + items[i].id) == 0){
-                    items[i].gameObject.SetActive(false);
+            for(int i = 0; i < itemsList.Count; i++){
+                if(PlayerPrefs.GetInt("Item" + itemsList[i].id) == 0){
+                    itemsList[i].gameObject.SetActive(false);
                 }
                 else{
-                    items[i].gameObject.SetActive(true);
+                    itemsList[i].gameObject.SetActive(true);
                 }
             }
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.1f);
         }
     }
     private void OnEnable() {

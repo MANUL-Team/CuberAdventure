@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class Item : MonoBehaviour
 {
     [Header("Item Properties")]
-    public string type;
     public int id;
 
     [Header("Text")]
@@ -17,7 +16,7 @@ public class Item : MonoBehaviour
     [SerializeField] private ItemControl itemControl;
     IEnumerator CountUpdate(){
         while(true){
-            count.text = PlayerPrefs.GetInt("Item" + type + id).ToString();
+            count.text = PlayerPrefs.GetInt("Item" + id).ToString();
             yield return new WaitForSeconds(0.5f);
         }
     }
@@ -25,7 +24,7 @@ public class Item : MonoBehaviour
         StartCoroutine(CountUpdate());
     }
     public void SelectItem(){
-        itemControl.CloseDescriprions();
+        itemControl.CloseDescriptions();
         description.SetActive(true);
     }
 }

@@ -21,10 +21,16 @@ public class CraftngMenuController : MonoBehaviour
     [SerializeField] private bool isItem;
     private bool canCraft;
     private bool stack;
-    private CraftedItem craftingItem;
+    private CraftedItem craftingModule;
+    private Drop craftingItem;
     public void SelectCraftingItem(int id){
-        craftingItem = itemsToCraft[id].item;
         stack = itemsToCraft[id].stack;
+        if(stack){
+            craftingItem = itemsToCraft[id].item;
+        }
+        else{
+            craftingModule = itemsToCraft[id].module;
+        }
         for(int i = 0; i < descriptions.Length; i++){
             if(i != id){
                 descriptions[i].SetActive(false);
@@ -44,7 +50,7 @@ public class CraftngMenuController : MonoBehaviour
 
         for(int b = 0; b < items.Length; b++){
             for(int i = 0; i < itemsToCraft[id].needToCraft.Length; i++){
-                if(items[b].item.type == itemsToCraft[id].needToCraft[i].type && items[b].item.id == itemsToCraft[id].needToCraft[i].id){
+                if(items[b].item.id == itemsToCraft[id].needToCraft[i].id){
                     items[b].gameObject.SetActive(true);
                     items[b].count = itemsToCraft[id].count[i];
                     forCraftItems.Add(items[b].item);
@@ -56,19 +62,19 @@ public class CraftngMenuController : MonoBehaviour
     public void Craft(){
         canCraft = true;
         for(int i = 0; i < forCraftItems.Count; i++){
-            if(!(PlayerPrefs.GetInt("Item" + forCraftItems[i].type.ToString() + forCraftItems[i].id.ToString()) >= forCraftCounts[i])){
+            if(!(PlayerPrefs.GetInt("Item" + forCraftItems[i].id.ToString()) >= forCraftCounts[i])){
                 canCraft = false;
             }
         }
         if(canCraft){
             if(stack){
-                PlayerPrefs.SetInt("Item" + craftingItem.WhatIsIt + craftingItem.id.ToString(), PlayerPrefs.GetInt("Item" + craftingItem.WhatIsIt + craftingItem.id.ToString()) + 1);
+                PlayerPrefs.SetInt("Item" + craftingItem.id.ToString(), PlayerPrefs.GetInt("Item" + craftingItem.id.ToString()) + 1);
             }
             else{
-                PlayerPrefs.SetInt(craftingItem.WhatIsIt + craftingItem.id.ToString(), 1);
+                PlayerPrefs.SetInt(craftingModule.module + craftingModule.id.ToString(), 1);
             }
             for(int i = 0; i < forCraftCounts.Count; i++){
-                PlayerPrefs.SetInt("Item" + forCraftItems[i].type.ToString() + forCraftItems[i].id.ToString(), PlayerPrefs.GetInt("Item" + forCraftItems[i].type.ToString() + forCraftItems[i].id.ToString()) - forCraftCounts[i]);
+                PlayerPrefs.SetInt("Item" + forCraftItems[i].id.ToString(), PlayerPrefs.GetInt("Item" + forCraftItems[i].id.ToString()) - forCraftCounts[i]);
             }
             successful.SetActive(true);
         }
@@ -79,11 +85,13 @@ public class CraftngMenuController : MonoBehaviour
     void FixedUpdate()
     {
         for(int i = 0; i < itemsToCraft.Length; i++){
-            if(PlayerPrefs.GetInt(itemsToCraft[i].item.WhatIsIt + itemsToCraft[i].item.id.ToString()) != 0 && !itemsToCraft[i].stack){
-                itemsToCraft[i].gameObject.SetActive(false);
-            }
-            else{
-                itemsToCraft[i].gameObject.SetActive(true);
+            if(!itemsToCraft[i].module != null){
+                if(PlayerPrefs.GetInt(itemsToCraft[i].module.module + itemsToCraft[i].module.id.ToString()) != 0){
+                    itemsToCraft[i].gameObject.SetActive(false);
+                }
+                else{
+                    itemsToCraft[i].gameObject.SetActive(true);
+                }
             }
         }
     }

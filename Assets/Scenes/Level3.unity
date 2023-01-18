@@ -2821,7 +2821,8 @@ MonoBehaviour:
   - {fileID: 7624702161724597496, guid: 291251c0653705545a255c60361e7027, type: 3}
   - {fileID: 7624702161724597496, guid: c810c5b6b83d34c418bb3ff64178b502, type: 3}
   count: 0100000014000000
-  item: {fileID: 2218467968396888069, guid: 740a3a59b1b034f4faad39490727e249, type: 3}
+  module: {fileID: 0}
+  item: {fileID: 5682972526304499521, guid: 740a3a59b1b034f4faad39490727e249, type: 3}
   stack: 1
 --- !u!114 &207456145
 MonoBehaviour:
@@ -3819,7 +3820,8 @@ MonoBehaviour:
   - {fileID: 7624702161724597496, guid: 08872c02560cbfd498bcc5fdb7dee0d8, type: 3}
   - {fileID: 7624702161724597496, guid: 291251c0653705545a255c60361e7027, type: 3}
   count: 0a00000001000000
-  item: {fileID: 2218467968396888069, guid: 2ec666b3aadfdf44ea914a1cc601463d, type: 3}
+  module: {fileID: 0}
+  item: {fileID: 910114744025905460, guid: 2ec666b3aadfdf44ea914a1cc601463d, type: 3}
   stack: 1
 --- !u!114 &281769945
 MonoBehaviour:
@@ -4168,7 +4170,8 @@ MonoBehaviour:
   - {fileID: 7624702161724597496, guid: 6b1977bb6ad3eb4488eba8cc502fe538, type: 3}
   - {fileID: 7624702161724597496, guid: 291251c0653705545a255c60361e7027, type: 3}
   count: 0500000001000000
-  item: {fileID: 2218467968396888069, guid: bbfe380e12ea7bf4593cb41c0a6db07b, type: 3}
+  module: {fileID: 0}
+  item: {fileID: -3318809659965999377, guid: bbfe380e12ea7bf4593cb41c0a6db07b, type: 3}
   stack: 1
 --- !u!114 &323687571
 MonoBehaviour:
@@ -26688,7 +26691,8 @@ MonoBehaviour:
   needToCraft:
   - {fileID: 7624702161724597496, guid: e9896585b13f3d842945740f534dbde5, type: 3}
   count: 0f000000
-  item: {fileID: 2218467968396888069, guid: 1a0b03a57502bae46a7aa33e73e98d8c, type: 3}
+  module: {fileID: 2218467968396888069, guid: 1a0b03a57502bae46a7aa33e73e98d8c, type: 3}
+  item: {fileID: 0}
   stack: 0
 --- !u!1 &1018355485
 GameObject:
@@ -72239,7 +72243,8 @@ MonoBehaviour:
   needToCraft:
   - {fileID: 7624702161724597496, guid: d6276e34e827f0e4586becd9441a54c1, type: 3}
   count: 19000000
-  item: {fileID: 2218467968396888069, guid: cf6a29cbdd038804097494f2e18b7b23, type: 3}
+  module: {fileID: 2218467968396888069, guid: cf6a29cbdd038804097494f2e18b7b23, type: 3}
+  item: {fileID: 0}
   stack: 0
 --- !u!1 &1300636319
 GameObject:
@@ -92103,7 +92108,8 @@ MonoBehaviour:
   needToCraft:
   - {fileID: 7624702161724597496, guid: 328d706aae827be4cbdf003e528627dd, type: 3}
   count: 05000000
-  item: {fileID: 2218467968396888069, guid: cf425d903d17fbc439d6e52a85f58f21, type: 3}
+  module: {fileID: 0}
+  item: {fileID: 7624702161724597496, guid: 291251c0653705545a255c60361e7027, type: 3}
   stack: 1
 --- !u!114 &1882237744
 MonoBehaviour:
