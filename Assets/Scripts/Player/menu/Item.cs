@@ -16,7 +16,7 @@ public class Item : MonoBehaviour
     [SerializeField] private ItemControl itemControl;
     IEnumerator CountUpdate(){
         while(true){
-            count.text = PlayerPrefs.GetInt("Item" + id).ToString();
+            count.text = PlayerPrefs.GetInt("Item" + " " + id).ToString();
             yield return new WaitForSeconds(0.5f);
         }
     }
