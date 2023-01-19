@@ -21,7 +21,7 @@ public class ItemControl : MonoBehaviour
     IEnumerator ItemsUpdate(){
         while(true){
             for(int i = 0; i < itemsList.Count; i++){
-                if(PlayerPrefs.GetInt("Item" + itemsList[i].id) == 0){
+                if(PlayerPrefs.GetInt("Item" + " " + itemsList[i].id) == 0){
                     itemsList[i].gameObject.SetActive(false);
                 }
                 else{

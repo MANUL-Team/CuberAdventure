@@ -5,9 +5,20 @@ using UnityEngine;
 
 public class RespawnManager : MonoBehaviour
 {
-    [SerializeField] private KeepItem[] items;
+    private List<KeepItem> items = new List<KeepItem>();
+    [SerializeField] private Transform itemsFolder;
     [SerializeField] private MobController[] mobs;
-
+    void Awake()
+    {
+        if(itemsFolder != null){
+            for(int i = 0; i < itemsFolder.childCount; i++){
+                items.Add(itemsFolder.GetChild(i).GetComponent<KeepItem>());
+            }
+            for(int i = 0; i < items.Count; i++){
+                items[i].num = i;
+            }
+        }
+    }
     private void Start() {
         //StartCoroutine("CheckRespawns");
         CheckItems();
@@ -15,7 +26,7 @@ public class RespawnManager : MonoBehaviour
     }
     private void CheckItems(){
         DateTime nowTime = DateTime.Now;
-        for(int i = 0; i < items.Length; i++){
+        for(int i = 0; i < items.Count; i++){
             if(PlayerPrefs.GetString("CollectTimeItem" + items[i].id + items[i].num) != ""){
                 if(nowTime > DateTime.Parse(PlayerPrefs.GetString("CollectTimeItem" + items[i].id + " " + items[i].num)).AddMinutes(items[i].delay)){
                     items[i].gameObject.SetActive(true);
