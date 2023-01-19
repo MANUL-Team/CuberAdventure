@@ -46,13 +46,13 @@ public class MenuScript : MonoBehaviour
         PlayerPrefs.SetInt("NewSpawnTP", 0);
         PlayerPrefs.SetInt("NeedExp", 100);
         for(int i = 0; i < 50; i++){
-            PlayerPrefs.SetInt("Item" + "Biologic" + i.ToString(), 0);
-            PlayerPrefs.SetInt("Item" + "Mob" + i.ToString(), 0);
-            PlayerPrefs.SetInt("Item" + "Mineral" + i.ToString(), 0);
+            PlayerPrefs.SetInt("Item" + " " + i.ToString(), 0);
             PlayerPrefs.SetInt("CutScene" + i.ToString(), 0);
             PlayerPrefs.SetInt("LevelEnded" + i.ToString(), 0);
             PlayerPrefs.SetInt("OpenSkill" + i.ToString(), 0);
-            PlayerPrefs.SetInt("Money" + i.ToString(), 0);
+            for(int a = 0; a < 10; a++){
+                PlayerPrefs.SetInt("Money" + " " + i.ToString() + " " + a.ToString(), 0);
+            }
             PlayerPrefs.SetInt("Weapon" + i.ToString(), 0);
             PlayerPrefs.SetInt("Armor" + i.ToString(), 0);
             PlayerPrefs.SetInt("Laser" + i.ToString(), 0);

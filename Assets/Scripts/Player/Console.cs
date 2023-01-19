@@ -23,11 +23,11 @@ public class Console : MonoBehaviour
             }
             else{
                 if(wordsInCommand.Length == 1){
-                    PlayerPrefs.SetInt("Item" + wordsInCommand[1], PlayerPrefs.GetInt("Item" + wordsInCommand[1]) + 1);
+                    PlayerPrefs.SetInt("Item" + " " + wordsInCommand[1], PlayerPrefs.GetInt("Item" + " " + wordsInCommand[1]) + 1);
                     text.text = text.text + "\nItem gived!";
                 }
                 else{
-                    PlayerPrefs.SetInt("Item" + wordsInCommand[1], PlayerPrefs.GetInt("Item" + wordsInCommand[1]) + int.Parse(wordsInCommand[2]));
+                    PlayerPrefs.SetInt("Item" + " " + wordsInCommand[1], PlayerPrefs.GetInt("Item" + " " + wordsInCommand[1]) + int.Parse(wordsInCommand[2]));
                     text.text = text.text + "\nItem gived!";
                 }
             }

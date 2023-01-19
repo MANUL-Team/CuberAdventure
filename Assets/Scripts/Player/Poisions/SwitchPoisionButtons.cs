@@ -13,7 +13,7 @@ public class SwitchPoisionButtons : MonoBehaviour
     public DateTime collectTime;
     public void PoisionSwitch() {
         for(int i = 0; i < buttons.Length; i++){
-            if(i == PlayerPrefs.GetInt("SelectedPoision") && PlayerPrefs.GetInt("Item" + buttons[i].GetComponent<Poision>().itemId) > 0){
+            if(i == PlayerPrefs.GetInt("SelectedPoision") && PlayerPrefs.GetInt("Item" + " " + buttons[i].GetComponent<Poision>().itemId) > 0){
                 buttons[i].SetActive(true);
             }
             else{
