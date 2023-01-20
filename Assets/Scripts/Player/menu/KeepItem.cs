@@ -16,11 +16,11 @@ public class KeepItem : MonoBehaviour
     [SerializeField] private GameObject button;
     public int delay;
     public string DisplayTime;
-    void Start()
+    public DateTime collectTime;
+    void Awake()
     {
         loc = SceneManager.GetActiveScene().buildIndex;
     }
-    public DateTime collectTime;
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player")){
             button.SetActive(true);

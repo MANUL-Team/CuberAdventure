@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CuberCustomizeOpen : MonoBehaviour
 {
-    [SerializeField] private GameObject energySys, armor, laser, turbine, gusenici;
+    [SerializeField] private GameObject energySys, armor, laser, turbine, gusenici, underWaterSystem;
 
     public void EnergyOpen(){
         energySys.SetActive(true);
@@ -12,6 +12,7 @@ public class CuberCustomizeOpen : MonoBehaviour
         laser.SetActive(false);
         turbine.SetActive(false);
         gusenici.SetActive(false);
+        underWaterSystem.SetActive(false);
     }
     public void ArmorOpen(){
         energySys.SetActive(false);
@@ -19,6 +20,7 @@ public class CuberCustomizeOpen : MonoBehaviour
         laser.SetActive(false);
         turbine.SetActive(false);
         gusenici.SetActive(false);
+        underWaterSystem.SetActive(false);
     }
     public void LaserOpen(){
         energySys.SetActive(false);
@@ -26,6 +28,7 @@ public class CuberCustomizeOpen : MonoBehaviour
         laser.SetActive(true);
         turbine.SetActive(false);
         gusenici.SetActive(false);
+        underWaterSystem.SetActive(false);
     }
     public void TurbineOpen(){
         energySys.SetActive(false);
@@ -33,6 +36,7 @@ public class CuberCustomizeOpen : MonoBehaviour
         laser.SetActive(false);
         turbine.SetActive(true);
         gusenici.SetActive(false);
+        underWaterSystem.SetActive(false);
     }
     public void GuseniciOpen(){
         energySys.SetActive(false);
@@ -40,5 +44,14 @@ public class CuberCustomizeOpen : MonoBehaviour
         laser.SetActive(false);
         turbine.SetActive(false);
         gusenici.SetActive(true);
+        underWaterSystem.SetActive(false);
+    }
+    public void UnderWaterSystemOpen(){
+        energySys.SetActive(false);
+        armor.SetActive(false);
+        laser.SetActive(false);
+        turbine.SetActive(false);
+        gusenici.SetActive(false);
+        underWaterSystem.SetActive(true);
     }
 }

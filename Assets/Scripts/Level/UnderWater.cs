@@ -12,6 +12,7 @@ public class UnderWater : MonoBehaviour
     [SerializeField] private float maxAir;
     [SerializeField] private Image scaleAir, scaleAirOutline;
     [SerializeField] private bool canAirLose;
+    [SerializeField] private JoystickManager jm;
 
     void OnTriggerEnter2D (Collider2D collision){
         if (collision.CompareTag("Water")){
@@ -19,6 +20,9 @@ public class UnderWater : MonoBehaviour
             loseAir = true;
             StartCoroutine(AirLose());
             StopCoroutine(AirKeep());
+            if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") != 0){
+                jm.JoystickSwitch(loseAir);
+            }
         }
     }
     void OnTriggerExit2D (Collider2D collision){
@@ -27,6 +31,9 @@ public class UnderWater : MonoBehaviour
             loseAir = false;
             StopCoroutine(AirLose());
             StartCoroutine(AirKeep());
+            if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") != 0){
+                jm.JoystickSwitch(loseAir);
+            }
         }
     }
     private IEnumerator AirLose(){
