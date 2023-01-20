@@ -19,16 +19,16 @@ public class RespawnManager : MonoBehaviour
             }
         }
     }
-    private void Start() {
-        //StartCoroutine("CheckRespawns");
+    void Start()
+    {
         CheckItems();
         CheckMobs();
     }
     private void CheckItems(){
         DateTime nowTime = DateTime.Now;
         for(int i = 0; i < items.Count; i++){
-            if(PlayerPrefs.GetString("CollectTimeItem" + items[i].id + items[i].num) != ""){
-                if(nowTime > DateTime.Parse(PlayerPrefs.GetString("CollectTimeItem" + items[i].id + " " + items[i].num)).AddMinutes(items[i].delay)){
+            if(PlayerPrefs.GetString("CollectTimeItem" + " " + items[i].loc + " " + items[i].id + " " + items[i].num) != ""){
+                if(nowTime > DateTime.Parse(PlayerPrefs.GetString("CollectTimeItem" + " " + items[i].loc + " " + items[i].id + " " + items[i].num)).AddMinutes(items[i].delay)){
                     items[i].gameObject.SetActive(true);
                 }
                 else{
