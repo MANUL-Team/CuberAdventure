@@ -22,11 +22,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private LayerMask whatIsNotGround;
     [SerializeField] private LayerMask EndLevel;
-    [SerializeField] private float moveInput;
+    [SerializeField] private float moveInput, moveInputY;
 
     [SerializeField] private int DoubleJumps, DoubleJumpsValue;
 
-    [SerializeField] private Joystick joystick;
+    [SerializeField] private Joystick joystick, uwJoystick;
     [SerializeField] private GameObject jumpPart, canvas;
 
     private AudioSource source;
@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
     }
     private void CheckGusenici(){
         if(PlayerPrefs.GetInt("ChangedGusenici") == 0){
-            if(!uw.loseAir){
+            if(!uw.loseAir || PlayerPrefs.GetInt("ChangedUnderWaterSystem") != 0){
                 speed = 10f;
             }
             else{
@@ -181,12 +181,19 @@ public class PlayerController : MonoBehaviour
                 falling = 0;
             }
         }
-        if(canvas.activeSelf == true){
-            moveInput = joystick.Horizontal;
+        if(joystick.gameObject.activeSelf == true)
+        {
+            if(canvas.activeSelf == true){
+                moveInput = joystick.Horizontal;
+            }
+            else{
+                joystick.input = Vector2.zero;
+                moveInput = 0;
+            }
         }
         else{
-            joystick.input = Vector2.zero;
-            moveInput = 0;
+            moveInput = uwJoystick.Horizontal;
+            moveInputY = uwJoystick.Vertical;
         }
         if(isGrounded){
             DoubleJumps = DoubleJumpsValue;
@@ -236,8 +243,19 @@ public class PlayerController : MonoBehaviour
         
     }
     private void FixedUpdate() {
-        if(!confusion){
-            rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        if(joystick.gameObject.activeSelf == true)
+        {
+            if(!confusion){
+                rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+            }
+        }
+        else{
+            if(!confusion && moveInputY == 0){
+                rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+            }
+            else if(!confusion && moveInputY != 0){
+                rb.velocity = new Vector2(moveInput * speed, moveInputY);
+            }
         }
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         isNotGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsNotGround);

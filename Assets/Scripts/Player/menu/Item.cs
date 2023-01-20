@@ -14,6 +14,7 @@ public class Item : MonoBehaviour
     
     [Header("ItemControl")]
     [SerializeField] private ItemControl itemControl;
+    public string sorting;
     IEnumerator CountUpdate(){
         while(true){
             count.text = PlayerPrefs.GetInt("Item" + " " + id).ToString();
