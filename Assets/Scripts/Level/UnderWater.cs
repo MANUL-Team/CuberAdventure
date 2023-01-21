@@ -18,8 +18,6 @@ public class UnderWater : MonoBehaviour
         if (collision.CompareTag("Water")){
             pc.AnyJumpForce(8);
             loseAir = true;
-            StartCoroutine(AirLose());
-            StopCoroutine(AirKeep());
             if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") != 0){
                 jm.JoystickSwitch(loseAir);
             }
@@ -29,30 +27,27 @@ public class UnderWater : MonoBehaviour
         if (collision.CompareTag("Water")){
             pc.AnyJumpForce(17);
             loseAir = false;
-            StopCoroutine(AirLose());
-            StartCoroutine(AirKeep());
             if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") != 0){
                 jm.JoystickSwitch(loseAir);
             }
         }
     }
-    private IEnumerator AirLose(){
-        while(loseAir){
-            if(canAirLose){
-                if(air > 0){
-                    air = air - 15f;
+    private IEnumerator AirController(){
+        while(true){
+            if(loseAir){
+                if(canAirLose){
+                    if(air > 0){
+                        air = Mathf.Clamp(air - 10, 0, maxAir);
+                    }
+                    else{
+                        ps.Damage(10f);
+                    } 
                 }
-                else{
-                    ps.Damage(10f);
-                } 
+            }
+            else{
+                air = Mathf.Clamp(air + 25, 0, maxAir);
             }
             yield return new WaitForSeconds(1f);
-        }
-    }
-    private IEnumerator AirKeep(){
-        while(!loseAir){
-            air = Mathf.Clamp(air + 5, 0, 100);
-            yield return new WaitForSeconds(0.2f);
         }
     }
     void Start(){
@@ -60,8 +55,21 @@ public class UnderWater : MonoBehaviour
         ps = GetComponent<PlayerStats>();
         maxAir = PlayerPrefs.GetFloat("MaxAir");
         air = maxAir;
+        StartCoroutine(AirController());
     }
     private void Update() {
+        if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") != 0){
+                jm.JoystickSwitch(loseAir);
+        }
+        else{
+            jm.JoystickSwitch(false);
+        }
+        if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") == 0){
+            PlayerPrefs.SetFloat("MaxAir", 100);
+        }
+        else if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") == 1){
+            PlayerPrefs.SetFloat("MaxAir", 300);
+        }
         maxAir = PlayerPrefs.GetFloat("MaxAir");
         if(PlayerPrefs.GetInt("CanLoseAir") == 0){
             canAirLose = false;

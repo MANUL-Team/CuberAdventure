@@ -3007,7 +3007,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
-  type: Biologic
   price: 1
   notEnough: {fileID: 1481638678}
   scaleCount: {fileID: 1160548542}
@@ -3125,7 +3124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5588b38e6374c645908f8e5f9f80358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items: []
+  itemsFolder: {fileID: 0}
   mobs:
   - {fileID: 1203645624}
   - {fileID: 1364607249}
@@ -8914,8 +8913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb91042972d51864b8a9f41f4a8bb276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
-  type: Mineral
+  id: 7
   price: 10
   notEnough: {fileID: 1481638678}
   scaleCount: {fileID: 1160548542}
@@ -9649,8 +9647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb91042972d51864b8a9f41f4a8bb276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
-  type: Mob
+  id: 5
   price: 5
   notEnough: {fileID: 1481638678}
   scaleCount: {fileID: 1160548542}
@@ -10171,8 +10168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb91042972d51864b8a9f41f4a8bb276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
-  type: Mob
+  id: 4
   price: 5
   notEnough: {fileID: 1481638678}
   scaleCount: {fileID: 1160548542}
@@ -10733,7 +10729,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  type: Biologic
   price: 2
   notEnough: {fileID: 1481638678}
   scaleCount: {fileID: 1160548542}
@@ -12626,7 +12621,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  type: 
   price: 0
   slider: {fileID: 34224638}
   scaleCount: {fileID: 1160548542}
@@ -13955,8 +13949,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb91042972d51864b8a9f41f4a8bb276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
-  type: Mineral
+  id: 8
   price: 10
   notEnough: {fileID: 1481638678}
   scaleCount: {fileID: 1160548542}
