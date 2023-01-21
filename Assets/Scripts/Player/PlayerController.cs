@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
 
     [SerializeField] private float speed = 5f;
+    private float startSpeed = 10;
     [SerializeField] private float x;
     private Rigidbody2D rb;
     [SerializeField] private float JumpForce = 300f;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private Joystick joystick, uwJoystick;
     [SerializeField] private GameObject jumpPart, canvas;
+    private float speedMnojitel;
 
     private AudioSource source;
     private AudioClip fallSound;
@@ -115,27 +117,40 @@ public class PlayerController : MonoBehaviour
     }
     private void CheckGusenici(){
         if(PlayerPrefs.GetInt("ChangedGusenici") == 0){
-            if(!uw.loseAir || PlayerPrefs.GetInt("ChangedUnderWaterSystem") != 0){
-                speed = 10f;
+            if(!uw.loseAir){
+                speedMnojitel = 1;
             }
             else{
-                speed = 5f;
+                if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") == 0){
+                    speedMnojitel = 0.5f;
+                }
             }
         }
         else if(PlayerPrefs.GetInt("ChangedGusenici") == 1){
             if(!uw.loseAir){
-                speed = 12f;
+                speedMnojitel = 1.2f;
             }
             else{
-                speed = 6f;
+                if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") == 0){
+                    speedMnojitel = 0.6f;
+                }
             }
         }
         else if(PlayerPrefs.GetInt("ChangedGusenici") == 2){
             if(!uw.loseAir){
-                speed = 14f;
+                speedMnojitel = 1.4f;
             }
             else{
-                speed = 7f;
+                if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") == 0){
+                    speedMnojitel = 0.7f;
+                }
+            }
+        }
+    }
+    private void CheckUWS(){
+        if(uw.loseAir){
+            if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") == 1){
+                speedMnojitel = 1f;
             }
         }
     }
@@ -157,6 +172,8 @@ public class PlayerController : MonoBehaviour
     private void Update() {
         CheckTurbine();
         CheckGusenici();
+        CheckUWS();
+        speed = startSpeed * speedMnojitel;
         if(!isGrounded){
             fallSpeed = rb.velocity.y;
         }
@@ -190,6 +207,7 @@ public class PlayerController : MonoBehaviour
                 joystick.input = Vector2.zero;
                 moveInput = 0;
             }
+            moveInputY = 0;
         }
         else{
             moveInput = uwJoystick.Horizontal;
@@ -254,7 +272,7 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
             }
             else if(!confusion && moveInputY != 0){
-                rb.velocity = new Vector2(moveInput * speed, moveInputY);
+                rb.velocity = new Vector2(moveInput * speed, moveInputY * speed);
             }
         }
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);

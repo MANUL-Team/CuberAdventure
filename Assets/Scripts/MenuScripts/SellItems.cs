@@ -7,19 +7,17 @@ using UnityEngine.UI;
 public class SellItems : MonoBehaviour
 {
     [SerializeField] private int id;
-    [SerializeField] private string type;
     [SerializeField] private int price;
     [SerializeField] private GameObject notEnough, scaleCount;
     [SerializeField] private Slider slider;
     [SerializeField] private Text textSlider, textPrice;
     [SerializeField] private SellSomeItems button;
     public void Sell(){
-        if(PlayerPrefs.GetInt("Item" + type + id) > 0){
+        if(PlayerPrefs.GetInt("Item" + " " + id) > 0){
             scaleCount.SetActive(true);
-            slider.maxValue = PlayerPrefs.GetInt("Item" + type + id);
+            slider.maxValue = PlayerPrefs.GetInt("Item" + " " + id);
             button.price = price;
             button.id = id;
-            button.type = type;
         }
         else{
             notEnough.SetActive(true);
