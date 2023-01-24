@@ -72,6 +72,9 @@ public class CraftngMenuController : MonoBehaviour
             }
             else{
                 PlayerPrefs.SetInt(craftingModule.module + craftingModule.id.ToString(), 1);
+                for(int i = 0; i < descriptions.Length; i++){
+                    descriptions[i].SetActive(false);
+                }
             }
             for(int i = 0; i < forCraftCounts.Count; i++){
                 PlayerPrefs.SetInt("Item" + " " + forCraftItems[i].id.ToString(), PlayerPrefs.GetInt("Item" + " " + forCraftItems[i].id.ToString()) - forCraftCounts[i]);

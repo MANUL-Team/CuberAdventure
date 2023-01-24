@@ -52,21 +52,21 @@ public class SwitchPoisionButtons : MonoBehaviour
         collectTime = DateTime.Now;
         PlayerPrefs.SetString("CollectTimePoision" + poisionId, collectTime.ToString());
         PlayerPrefs.SetInt("HealMnojitel", 5);
-        PlayerPrefs.SetInt("Item" + itemId, PlayerPrefs.GetInt("Item" + itemId) - 1);
+        PlayerPrefs.SetInt("Item" + " " + itemId, PlayerPrefs.GetInt("Item" + " " + itemId) - 1);
         StartPoisionEndCoroutine(poisionId, delay, "Regeneration");
     }
     public void UnderWaterPoision(int itemId, int poisionId, int delay){
         collectTime = DateTime.Now;
         PlayerPrefs.SetString("CollectTimePoision" + poisionId, collectTime.ToString());
         PlayerPrefs.SetInt("CanLoseAir", 0);
-        PlayerPrefs.SetInt("Item" + itemId, PlayerPrefs.GetInt("Item" + itemId) - 1);
+        PlayerPrefs.SetInt("Item" + " " + itemId, PlayerPrefs.GetInt("Item" + " " + itemId) - 1);
         StartPoisionEndCoroutine(poisionId, delay, "UnderWater");
     }
     public void LightPoision(int itemId, int poisionId, int delay){
         collectTime = DateTime.Now;
         PlayerPrefs.SetString("CollectTimePoision" + poisionId, collectTime.ToString());
         PlayerPrefs.SetInt("LightPoision", 1);
-        PlayerPrefs.SetInt("Item" + itemId, PlayerPrefs.GetInt("Item" + itemId) - 1);
+        PlayerPrefs.SetInt("Item" + " " + itemId, PlayerPrefs.GetInt("Item" + " " + itemId) - 1);
         StartPoisionEndCoroutine(poisionId, delay, "Light");
     }
     public void PoisionEnd(string typeOfPoision){
