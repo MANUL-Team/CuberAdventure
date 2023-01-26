@@ -7,6 +7,6 @@ public class CloseAnything : MonoBehaviour
     [SerializeField] private GameObject anything;
 
     public void Close(){
-        anything.SetActive(false);
+        anything.SetActive(!anything.activeSelf);
     }
 }
