@@ -16,6 +16,7 @@ public class DialogManager : MonoBehaviour
     [TextArea]
     [SerializeField] private string[] dialogTextsRu;
     private Animator cam;
+    public bool dialogEnded;
     void Start(){
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Animator>();
     }
@@ -24,6 +25,7 @@ public class DialogManager : MonoBehaviour
         dialog.SetActive(true);
         button.SetActive(false);
         id = 0;
+        dialogEnded = false;
         cam.SetBool("Dialog", true);
         if(PlayerPrefs.GetInt("Language") == 0){
             printText.PrintText(dialogTextsEng[id]);
@@ -56,6 +58,7 @@ public class DialogManager : MonoBehaviour
         }
         if(id >= namesRu.Length && dialog.activeSelf == true){
             dialog.SetActive(false);
+            dialogEnded = true;
             cam.SetBool("Dialog", false);
         }
     }

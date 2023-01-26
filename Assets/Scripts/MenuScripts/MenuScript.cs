@@ -21,8 +21,9 @@ public class MenuScript : MonoBehaviour
 
     public void NewGame()
     {
-        Loading.SetActive(true);
-        StartCoroutine("AsyncLoadNew");
+        ReloadDataPart1();
+    }
+    public void ReloadDataPart1(){
         PlayerPrefs.SetInt("Dead", 0);
         PlayerPrefs.SetInt("Time", 800);
         PlayerPrefs.SetInt("ToDay", 1);
@@ -31,6 +32,9 @@ public class MenuScript : MonoBehaviour
         PlayerPrefs.SetInt("HealMnojitel", 1);
         PlayerPrefs.SetInt("Level", 1);
         PlayerPrefs.SetInt("LastLevel", 0);
+        ReloadDataPart2();
+    }
+    public void ReloadDataPart2(){
         PlayerPrefs.SetInt("MaxHp", 100);
         PlayerPrefs.SetInt("PlayerLevel", 1);
         PlayerPrefs.SetInt("Exp", 0);
@@ -41,28 +45,37 @@ public class MenuScript : MonoBehaviour
         PlayerPrefs.SetInt("ChangedGusenici", 0);
         PlayerPrefs.SetInt("ChangedLaser", 0);
         PlayerPrefs.SetInt("ChangedTurbine", 0);
+        ReloadDataPart3();
+    }
+    public void ReloadDataPart3(){
         PlayerPrefs.SetInt("Skill", 0);
         PlayerPrefs.SetInt("SkillPoints", 0);
         PlayerPrefs.SetInt("NewSpawnTP", 0);
         PlayerPrefs.SetInt("NeedExp", 100);
+        ReloadDataPart4();
+    }
+    public void ReloadDataPart4(){
         for(int i = 0; i < 50; i++){
             PlayerPrefs.SetInt("Item" + " " + i.ToString(), 0);
             PlayerPrefs.SetInt("CutScene" + i.ToString(), 0);
             PlayerPrefs.SetInt("LevelEnded" + i.ToString(), 0);
             PlayerPrefs.SetInt("OpenSkill" + i.ToString(), 0);
+            PlayerPrefs.SetInt("Mission "+ i, 0);
             for(int a = 0; a < 10; a++){
                 PlayerPrefs.SetInt("Money" + " " + i.ToString() + " " + a.ToString(), 0);
+                PlayerPrefs.SetInt("Mission " + i + " Step " + a, 0);
             }
             PlayerPrefs.SetInt("Weapon" + i.ToString(), 0);
             PlayerPrefs.SetInt("Armor" + i.ToString(), 0);
             PlayerPrefs.SetInt("Laser" + i.ToString(), 0);
             PlayerPrefs.SetInt("Turbine" + i.ToString(), 0);
             PlayerPrefs.SetInt("Gusenici" + i.ToString(), 0);
-            for(int a = 0; a < 50; a++){
-                PlayerPrefs.SetString("CollectTimeItem" + "Biologic" + i + a, "");
-                PlayerPrefs.SetString("MobTimeDie" + i + a, "");
-            }
         }
+        StartNewGame();
+    }
+    public void StartNewGame(){
+        Loading.SetActive(true);
+        StartCoroutine("AsyncLoadNew");
     }
     public void ContinueGame(){
         if(PlayerPrefs.GetInt("Level") != 0){
@@ -135,7 +148,7 @@ public class MenuScript : MonoBehaviour
     }
 
     IEnumerator AsyncLoadNew(){
-        AsyncOperation operation = SceneManager.LoadSceneAsync("Game");
+        AsyncOperation operation = SceneManager.LoadSceneAsync(1);
         while(!operation.isDone){
             loadingImg.fillAmount = operation.progress;
             yield return null;
