@@ -4,36 +4,52 @@ using UnityEngine;
 
 public class DialogChange : MonoBehaviour
 {
-    [SerializeField] private GameObject mainDialog, missionDialog;
-    [SerializeField] private DialogManager mission;
-    [SerializeField] private int id, step;
+    [SerializeField] private GameObject mainDialog;
+    [SerializeField] private GameObject[] missionDialogs;
+    [SerializeField] private DialogManager[] missions;
+    [SerializeField] private int id;
+    [SerializeField] private int[] steps;
+    [SerializeField] private bool main, last;
     void FixedUpdate(){
-        if(step != 0){
-            if(PlayerPrefs.GetInt("Mission " + id + " Step " + step) == 0 && (PlayerPrefs.GetInt("Mission " + id + " Step " + (step-1)) == 1)){
-                missionDialog.SetActive(true);
-                mainDialog.SetActive(false);
+        main = true;
+        for(int i = 0; i < missionDialogs.Length; i++){
+            if(steps[i] != 0){
+                if(PlayerPrefs.GetInt("Mission " + id + " Step " + steps[i]) == 0 && (PlayerPrefs.GetInt("Mission " + id + " Step " + (steps[i]-1)) == 1)){
+                    missionDialogs[i].SetActive(true);
+                    main = false;
+                }
+                else{
+                    missionDialogs[i].SetActive(false);
+                }
             }
             else{
-                missionDialog.SetActive(false);
-                mainDialog.SetActive(true);
+                if(PlayerPrefs.GetInt("Mission " + id + " Step " + steps[i]) == 0){
+                    missionDialogs[i].SetActive(true);
+                    main = false;
+                }
+                else{
+                    missionDialogs[i].SetActive(false);
+                }
             }
+        }
+        if(main){
+            mainDialog.SetActive(true);
         }
         else{
-            if(PlayerPrefs.GetInt("Mission " + id + " Step " + step) == 0){
-                missionDialog.SetActive(true);
-                mainDialog.SetActive(false);
-            }
-            else{
-                missionDialog.SetActive(false);
-                mainDialog.SetActive(true);
+            mainDialog.SetActive(false);
+        }
+        for(int i = 0; i < missions.Length; i++){
+            if(missions[i].dialogEnded == true){
+                StartNewMissionStep(steps[i]);
             }
         }
-        
-        if(mission.dialogEnded == true){
-            StartNewMissionStep();
+        if(last){
+            if(PlayerPrefs.GetInt("Mission " + id + " Step " + steps[steps.Length - 1]) == 1){
+                PlayerPrefs.SetInt("Mission " + id, 2);
+            }
         }
     }
-    public void StartNewMissionStep(){
+    public void StartNewMissionStep(int step){
         if(step != 0){
             PlayerPrefs.SetInt("Mission " + id + " Step " + (step-1), 2);
             PlayerPrefs.SetInt("Mission " + id + " Step " + step, 1);
