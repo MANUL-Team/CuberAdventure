@@ -32,13 +32,9 @@ public class CraftngMenuController : MonoBehaviour
             craftingModule = itemsToCraft[id].module;
         }
         for(int i = 0; i < descriptions.Length; i++){
-            if(i != id){
-                descriptions[i].SetActive(false);
-            }
-            else{
-                descriptions[i].SetActive(true);
-            }
+            descriptions[i].SetActive(false);
         }
+        descriptions[id].SetActive(true);
         itemsDisplay.SetActive(true);
         craftButton.SetActive(true);
         closeButton.SetActive(false);
