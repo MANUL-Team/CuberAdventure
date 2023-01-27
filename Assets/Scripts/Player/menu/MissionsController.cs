@@ -13,19 +13,23 @@ public class MissionsController : MonoBehaviour
         for(int i = 0; i < missionsFolder.childCount; i++){
             missions.Add(missionsFolder.GetChild(i).GetComponent<Mission>());
         }
-        StartCoroutine(CheckMissions());
     }
-    private IEnumerator CheckMissions(){
-        while(true){
-            for(int i = 0; i < missions.Count; i++){
-                if(PlayerPrefs.GetInt("Mission " + missions[i].id) != 1){
-                    missions[i].gameObject.SetActive(false);
-                }
-                else{
-                    missions[i].gameObject.SetActive(true);
-                }
+    void FixedUpdate(){
+        for(int i = 0; i < missions.Count; i++){
+            if(PlayerPrefs.GetInt("Mission " + missions[i].id) == 1){
+                missions[i].gameObject.SetActive(true);
             }
-            yield return new WaitForSeconds(0.1f);
+            else{
+                missions[i].gameObject.SetActive(false);
+            }
+        }
+    }
+    void OnEnable(){
+        if(PlayerPrefs.GetInt("Language") == 0){
+            description.text = "Select a mission to display the required action to continue.";
+        }
+        else if(PlayerPrefs.GetInt("Language") == 1){
+            description.text = "Выберите миссию для отображения необходимого действия для продолжения.";
         }
     }
 }
