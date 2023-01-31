@@ -38,22 +38,7 @@ public class CraftngMenuController : MonoBehaviour
         itemsDisplay.SetActive(true);
         craftButton.SetActive(true);
         closeButton.SetActive(false);
-        for(int i = 0; i < items.Length; i++){
-            items[i].gameObject.SetActive(false);
-        }
-        forCraftCounts.Clear();
-        forCraftItems.Clear();
-
-        for(int b = 0; b < items.Length; b++){
-            for(int i = 0; i < itemsToCraft[id].needToCraft.Length; i++){
-                if(items[b].item.id == itemsToCraft[id].needToCraft[i].id){
-                    items[b].gameObject.SetActive(true);
-                    items[b].count = itemsToCraft[id].count[i];
-                    forCraftItems.Add(items[b].item);
-                    forCraftCounts.Add(items[b].count);
-                }
-            }
-        }
+        AddItems(id);
     }
     public void Craft(){
         canCraft = true;
@@ -90,6 +75,26 @@ public class CraftngMenuController : MonoBehaviour
                 }
                 else{
                     itemsToCraft[i].gameObject.SetActive(true);
+                }
+            }
+        }
+    }
+    public void ClearItems(){
+        for(int i = 0; i < items.Length; i++){
+            items[i].gameObject.SetActive(false);
+        }
+        forCraftCounts.Clear();
+        forCraftItems.Clear();
+    }
+    public void AddItems(int id){
+        ClearItems();
+        for(int b = 0; b < items.Length; b++){
+            for(int i = 0; i < itemsToCraft[id].needToCraft.Length; i++){
+                if(items[b].item.id == itemsToCraft[id].needToCraft[i].id){
+                    items[b].gameObject.SetActive(true);
+                    items[b].count = itemsToCraft[id].count[i];
+                    forCraftItems.Add(items[b].item);
+                    forCraftCounts.Add(items[b].count);
                 }
             }
         }

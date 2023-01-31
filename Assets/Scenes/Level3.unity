@@ -109723,6 +109723,7 @@ GameObject:
   - component: {fileID: 8059630030378245133}
   - component: {fileID: 714927204}
   - component: {fileID: 8059630030378245136}
+  - component: {fileID: 8059630030378245137}
   m_Layer: 0
   m_Name: NPCShop
   m_TagString: Untagged
@@ -109866,6 +109867,22 @@ MonoBehaviour:
   steps: 01000000
   main: 0
   last: 0
+--- !u!114 &8059630030378245137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8059630030378245123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a01dede4d1e9674a89a42025fc2e7a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mission: {fileID: 1727103024}
+  main: {fileID: 8059630030378245136}
+  id: 2
+  step: 0
 --- !u!1 &8059630030597492871
 GameObject:
   m_ObjectHideFlags: 0
