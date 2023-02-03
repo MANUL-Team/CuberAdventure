@@ -45,6 +45,7 @@ public class MenuScript : MonoBehaviour
         PlayerPrefs.SetInt("ChangedGusenici", 0);
         PlayerPrefs.SetInt("ChangedLaser", 0);
         PlayerPrefs.SetInt("ChangedTurbine", 0);
+        PlayerPrefs.SetInt("ChangedUnderWaterSystem", 0);
         ReloadDataPart3();
     }
     public void ReloadDataPart3(){
@@ -70,6 +71,7 @@ public class MenuScript : MonoBehaviour
             PlayerPrefs.SetInt("Laser" + i.ToString(), 0);
             PlayerPrefs.SetInt("Turbine" + i.ToString(), 0);
             PlayerPrefs.SetInt("Gusenici" + i.ToString(), 0);
+            PlayerPrefs.SetInt("UnderWaterSystem" + i.ToString(), 0);
         }
         StartNewGame();
     }
