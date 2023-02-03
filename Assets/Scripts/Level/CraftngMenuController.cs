@@ -31,29 +31,7 @@ public class CraftngMenuController : MonoBehaviour
         else{
             craftingModule = itemsToCraft[id].module;
         }
-        for(int i = 0; i < descriptions.Length; i++){
-            descriptions[i].SetActive(false);
-        }
-        descriptions[id].SetActive(true);
-        itemsDisplay.SetActive(true);
-        craftButton.SetActive(true);
-        closeButton.SetActive(false);
-        for(int i = 0; i < items.Length; i++){
-            items[i].gameObject.SetActive(false);
-        }
-        forCraftCounts.Clear();
-        forCraftItems.Clear();
-
-        for(int b = 0; b < items.Length; b++){
-            for(int i = 0; i < itemsToCraft[id].needToCraft.Length; i++){
-                if(items[b].item.id == itemsToCraft[id].needToCraft[i].id){
-                    items[b].gameObject.SetActive(true);
-                    items[b].count = itemsToCraft[id].count[i];
-                    forCraftItems.Add(items[b].item);
-                    forCraftCounts.Add(items[b].count);
-                }
-            }
-        }
+        AddItems(id);
     }
     public void Craft(){
         canCraft = true;
@@ -76,6 +54,7 @@ public class CraftngMenuController : MonoBehaviour
                 PlayerPrefs.SetInt("Item" + " " + forCraftItems[i].id.ToString(), PlayerPrefs.GetInt("Item" + " " + forCraftItems[i].id.ToString()) - forCraftCounts[i]);
             }
             successful.SetActive(true);
+            ClearItems();
         }
         else{
             notEnough.SetActive(true);
@@ -84,7 +63,7 @@ public class CraftngMenuController : MonoBehaviour
     void FixedUpdate()
     {
         for(int i = 0; i < itemsToCraft.Length; i++){
-            if(!itemsToCraft[i].module != null){
+            if(itemsToCraft[i].module != null){
                 if(PlayerPrefs.GetInt(itemsToCraft[i].module.module + itemsToCraft[i].module.id.ToString()) != 0){
                     itemsToCraft[i].gameObject.SetActive(false);
                 }
@@ -93,6 +72,36 @@ public class CraftngMenuController : MonoBehaviour
                 }
             }
         }
+    }
+    public void ClearItems(){
+        itemsDisplay.SetActive(false);
+        craftButton.SetActive(false);
+        closeButton.SetActive(true);
+        for(int i = 0; i < items.Length; i++){
+            items[i].gameObject.SetActive(false);
+        }
+        for(int i = 0; i < descriptions.Length; i++){
+            descriptions[i].SetActive(false);
+        }
+        forCraftCounts.Clear();
+        forCraftItems.Clear();
+    }
+    public void AddItems(int id){
+        ClearItems();
+        for(int b = 0; b < items.Length; b++){
+            for(int i = 0; i < itemsToCraft[id].needToCraft.Length; i++){
+                if(items[b].item.id == itemsToCraft[id].needToCraft[i].id){
+                    items[b].gameObject.SetActive(true);
+                    items[b].count = itemsToCraft[id].count[i];
+                    forCraftItems.Add(items[b].item);
+                    forCraftCounts.Add(items[b].count);
+                }
+            }
+        }
+        descriptions[id].SetActive(true);
+        itemsDisplay.SetActive(true);
+        craftButton.SetActive(true);
+        closeButton.SetActive(false);
     }
 
 }

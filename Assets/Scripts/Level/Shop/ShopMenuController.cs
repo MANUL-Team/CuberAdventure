@@ -35,9 +35,24 @@ public class ShopMenuController : MonoBehaviour
             fail.SetActive(true);
         }
     }
+    public void ChangeCountForSell(){
+        if(PlayerPrefs.GetInt("Item " + id) > 0){
+            scale.SetActive(true);
+            slider.maxValue = PlayerPrefs.GetInt("Item " + id);
+        }
+        else{
+            fail.SetActive(true);
+        }
+    }
     public void BuyItem(){
         PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") - (Mathf.RoundToInt(slider.value)*price));
         PlayerPrefs.SetInt("Item" + " " + id, PlayerPrefs.GetInt("Item" + " " + id) + Mathf.RoundToInt(slider.value));
+        successful.SetActive(true);
+        scale.SetActive(false);
+    }
+    public void SellItem(){
+        PlayerPrefs.SetInt("Item " + id, PlayerPrefs.GetInt("Item" + " " + id) - Mathf.RoundToInt(slider.value));
+        PlayerPrefs.SetInt("Coins", PlayerPrefs.GetInt("Coins") + (Mathf.RoundToInt(slider.value)*price));
         successful.SetActive(true);
         scale.SetActive(false);
     }
