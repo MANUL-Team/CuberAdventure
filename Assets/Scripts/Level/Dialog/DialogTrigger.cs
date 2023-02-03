@@ -5,14 +5,23 @@ using UnityEngine;
 public class DialogTrigger : MonoBehaviour
 {
     [SerializeField] private GameObject button;
+    [SerializeField] private DialogManager dialog;
+    [SerializeField] private bool cutScene;
     void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
-            button.SetActive(true);
+            if(!cutScene){
+                button.SetActive(true);
+            }
+            else{
+                dialog.OpenDialog();
+            }
         }
     }
     void OnTriggerExit2D(Collider2D collision){
         if(collision.CompareTag("Player")){
-            button.SetActive(false);
+            if(!cutScene){
+                button.SetActive(false);
+            }
         }
     }
 }

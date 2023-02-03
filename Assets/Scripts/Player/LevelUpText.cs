@@ -10,6 +10,8 @@ public class LevelUpText : MonoBehaviour
 
     private void Start() {
         text = GetComponent<Text>();
+    }
+    public void OldLevel(){
         oldLevel = PlayerPrefs.GetInt("PlayerLevel") - 1;
         newLevel = PlayerPrefs.GetInt("PlayerLevel");
         if(PlayerPrefs.GetInt("Language") == 0){

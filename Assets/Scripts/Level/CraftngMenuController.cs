@@ -31,13 +31,6 @@ public class CraftngMenuController : MonoBehaviour
         else{
             craftingModule = itemsToCraft[id].module;
         }
-        for(int i = 0; i < descriptions.Length; i++){
-            descriptions[i].SetActive(false);
-        }
-        descriptions[id].SetActive(true);
-        itemsDisplay.SetActive(true);
-        craftButton.SetActive(true);
-        closeButton.SetActive(false);
         AddItems(id);
     }
     public void Craft(){
@@ -61,6 +54,7 @@ public class CraftngMenuController : MonoBehaviour
                 PlayerPrefs.SetInt("Item" + " " + forCraftItems[i].id.ToString(), PlayerPrefs.GetInt("Item" + " " + forCraftItems[i].id.ToString()) - forCraftCounts[i]);
             }
             successful.SetActive(true);
+            ClearItems();
         }
         else{
             notEnough.SetActive(true);
@@ -69,7 +63,7 @@ public class CraftngMenuController : MonoBehaviour
     void FixedUpdate()
     {
         for(int i = 0; i < itemsToCraft.Length; i++){
-            if(!itemsToCraft[i].module != null){
+            if(itemsToCraft[i].module != null){
                 if(PlayerPrefs.GetInt(itemsToCraft[i].module.module + itemsToCraft[i].module.id.ToString()) != 0){
                     itemsToCraft[i].gameObject.SetActive(false);
                 }
@@ -80,8 +74,14 @@ public class CraftngMenuController : MonoBehaviour
         }
     }
     public void ClearItems(){
+        itemsDisplay.SetActive(false);
+        craftButton.SetActive(false);
+        closeButton.SetActive(true);
         for(int i = 0; i < items.Length; i++){
             items[i].gameObject.SetActive(false);
+        }
+        for(int i = 0; i < descriptions.Length; i++){
+            descriptions[i].SetActive(false);
         }
         forCraftCounts.Clear();
         forCraftItems.Clear();
@@ -98,6 +98,10 @@ public class CraftngMenuController : MonoBehaviour
                 }
             }
         }
+        descriptions[id].SetActive(true);
+        itemsDisplay.SetActive(true);
+        craftButton.SetActive(true);
+        closeButton.SetActive(false);
     }
 
 }
