@@ -33,12 +33,13 @@ public class MobController : MonoBehaviour
     public int id, num, delay;
     [SerializeField] private bool isHasDrop;
     [SerializeField] private Text dmgText;
-    [SerializeField] private bool needGC, isTrigger;
+    [SerializeField] private bool needGC, isTrigger, rotate;
     [SerializeField] private Transform canvasPosition, bloodPos;
     [SerializeField] private float damage;
     [SerializeField] private int exp;
     [SerializeField] private GameObject mobObj;
     private GiveDrop giveDrop;
+    [SerializeField] private float distance, speed;
     
     public void Damage(float damage){
         if(maneken == false){
@@ -146,19 +147,21 @@ public class MobController : MonoBehaviour
         if(maneken == false){
             healthBar.fillAmount = hp/maxHp;
             DeathCheck();
-            canvas.position = new Vector2(canvasPosition.position.x, canvasPosition.position.y);
+            if(canvasPosition != null){
+                canvas.position = new Vector2(canvasPosition.position.x, canvasPosition.position.y);
+            }
             if(timeBtwAttack > 0){
                 timeBtwAttack -= Time.deltaTime;
             }
             distToPlayer = Vector2.Distance(transform.position, player.position);
-            if(distToPlayer >= 20){
+            if(distToPlayer >= 30){
                 mobObj.SetActive(false);
             }
             else{
                 mobObj.SetActive(true);
             }
             if(!confusion && !pathFinding && agressiveMob){
-                if(distToPlayer < 8){
+                if(distToPlayer < distance){
                     StartHunter();
                 }
                 else{
@@ -167,18 +170,31 @@ public class MobController : MonoBehaviour
             }else if(pathFinding){
                 EndHunter();
             }
+            if(rotate){
+                Rotate();
+            }
         }
+    }
+    private void Rotate(){
+        if(transform.position.x > player.position.x){
+                transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
+                direction = -1;
+            }
+            else if(transform.position.x < player.position.x){
+                transform.rotation = new Quaternion(0, 180, 0, transform.rotation.w);
+                direction = 1;
+            }
     }
     private void StartHunter(){
         if(startTimeBtwAttack > 0){
             anim.SetBool("Run", true);
             if(transform.position.x > player.position.x){
-                speedx = -4f;
+                speedx = -speed;
                 transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
                 direction = -1;
             }
             else if(transform.position.x < player.position.x){
-                speedx = 4f;
+                speedx = speed;
                 transform.rotation = new Quaternion(0, 180, 0, transform.rotation.w);
                 direction = 1;
             }
@@ -198,6 +214,9 @@ public class MobController : MonoBehaviour
         }
         if(agressiveMob && !pathFinding){
             if(isGrounded){
+                rb.velocity = new Vector2(speedx, rb.velocity.y);
+            }
+            else if(!needGC){
                 rb.velocity = new Vector2(speedx, rb.velocity.y);
             }
         }
