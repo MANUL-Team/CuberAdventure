@@ -542,7 +542,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0410\u0434\u043C\u0438\u0440\u0430\u043B-\u043F\u0430\u0443\u043A"
+  m_Text: 
 --- !u!114 &7843454439753899880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,8 +555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eng: Mother-spider
-  ru: "\u041C\u0430\u0442\u043A\u0430"
+  eng: Spider Queen
+  ru: "\u041A\u043E\u0440\u043E\u043B\u0435\u0432\u0430 \u043F\u0430\u0443\u043A\u043E\u0432"
   engEd: []
   ruEd: []
   editable: 0
@@ -834,9 +834,9 @@ RectTransform:
   m_Father: {fileID: 7843454440910152266}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -0.000061035156, y: -176}
   m_SizeDelta: {x: 799, y: 353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &7843454440596545126

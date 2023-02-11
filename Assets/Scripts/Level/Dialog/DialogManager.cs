@@ -6,21 +6,20 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     [SerializeField] private GameObject dialog, button;
-    [SerializeField] private Text name, text;
+    [SerializeField] public Text name, text;
     [SerializeField] private PrintableText printText;
     private int id;
     [SerializeField] private string[] namesEng;
     [TextArea]
-    [SerializeField] private string[] dialogTextsEng;
+    [SerializeField] public string[] dialogTextsEng;
     [SerializeField] private string[] namesRu;
     [TextArea]
-    [SerializeField] private string[] dialogTextsRu;
+    [SerializeField] public string[] dialogTextsRu;
     private Animator cam;
     public bool dialogEnded;
     void Start(){
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Animator>();
     }
-
     public void OpenDialog(){
         dialog.SetActive(true);
         button.SetActive(false);
@@ -33,7 +32,7 @@ public class DialogManager : MonoBehaviour
         else if(PlayerPrefs.GetInt("Language") == 1){
             printText.PrintText(dialogTextsRu[id]);
         }
-        
+        Debug.Log("Print");
     }
     public void NextPage(){
         id += 1;
@@ -53,7 +52,6 @@ public class DialogManager : MonoBehaviour
                 else if(PlayerPrefs.GetInt("Language") == 1){
                     name.text = namesRu[i];
                 }
-                
             }
         }
         if(id >= namesRu.Length && dialog.activeSelf == true){
