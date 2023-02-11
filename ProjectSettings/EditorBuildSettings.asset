@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level9Down.unity
     guid: 305c7ba900fd0984d82d3fb6d94e5347
+  - enabled: 1
+    path: Assets/Scenes/Level8BossFight.unity
+    guid: 576df3a2982d56c408cf1a1fc6fbf2d4
   - enabled: 0
     path: Assets/Scenes/Server/ServLevel.unity
     guid: b5920c10732594c43911f52e90f7810d
