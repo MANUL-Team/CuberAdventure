@@ -2426,11 +2426,16 @@ MonoBehaviour:
   dmgText: {fileID: 7843454440133419016}
   needGC: 0
   isTrigger: 1
+  rotate: 0
   canvasPosition: {fileID: 2676253655399120837}
   bloodPos: {fileID: 1620978639939019190}
   damage: 25
   exp: 30
   mobObj: {fileID: 7727688358041383722}
+  distance: 0
+  speed: 0
+  pushPower: 5000
+  deConfusion: 0.7
 --- !u!114 &5577911355128323871
 MonoBehaviour:
   m_ObjectHideFlags: 0

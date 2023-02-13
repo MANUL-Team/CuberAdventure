@@ -7,7 +7,7 @@ public class OpenBossfightRoom : MonoBehaviour
     [SerializeField] private int id, step;
 
     private void FixedUpdate() {
-        if(PlayerPrefs.GetInt("Mission " + id + " Step " + step) == 1){
+        if(PlayerPrefs.GetInt("Mission " + id + " Step " + step) == 1 && PlayerPrefs.GetInt("Mission " + id + " Step " + step+1) == 0){
             GetComponent<AnotherLevel>().enabled = true;
         }
         else{
