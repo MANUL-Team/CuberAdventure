@@ -716,6 +716,8 @@ MonoBehaviour:
   mobObj: {fileID: 8183750714486971872}
   distance: 0
   speed: 0
+  pushPower: 7000
+  deConfusion: 1
 --- !u!114 &5577911355128323871
 MonoBehaviour:
   m_ObjectHideFlags: 0
