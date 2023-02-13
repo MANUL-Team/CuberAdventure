@@ -39,7 +39,7 @@ public class MobController : MonoBehaviour
     [SerializeField] private int exp;
     [SerializeField] private GameObject mobObj;
     private GiveDrop giveDrop;
-    [SerializeField] private float distance, speed;
+    [SerializeField] private float distance, speed, pushPower, deConfusion;
     
     public void Damage(float damage){
         if(maneken == false){
@@ -76,7 +76,7 @@ public class MobController : MonoBehaviour
     private void DeConfusion(){
         confusion = false;
     }
-    void OnCollisionEnter2D(Collision2D collision) {
+    void OnCollisionStay2D(Collision2D collision) {
         if(collision.gameObject.tag == "Player"){
             if(startTimeBtwAttack > 0){
                 if(timeBtwAttack <= 0){
@@ -84,7 +84,7 @@ public class MobController : MonoBehaviour
                     Collider2D[] playerCol = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerLayer);
                     for(int i = 0; i < playerCol.Length; i++){
                         playerCol[i].GetComponent<PlayerStats>().Damage(damage);
-                        playerCol[i].GetComponent<PlayerController>().PushAway(direction, 5000f);
+                        playerCol[i].GetComponent<PlayerController>().PushAway(direction, pushPower, deConfusion);
                     }
                     timeBtwAttack = startTimeBtwAttack;
                 }
@@ -99,7 +99,7 @@ public class MobController : MonoBehaviour
                     Collider2D[] playerCol = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerLayer);
                     for(int i = 0; i < playerCol.Length; i++){
                         playerCol[i].GetComponent<PlayerStats>().Damage(damage);
-                        playerCol[i].GetComponent<PlayerController>().PushAway(direction, 5000f);
+                        playerCol[i].GetComponent<PlayerController>().PushAway(direction, pushPower, deConfusion);
                     }
                     timeBtwAttack = startTimeBtwAttack;
                 }
@@ -177,13 +177,19 @@ public class MobController : MonoBehaviour
     }
     private void Rotate(){
         if(transform.position.x > player.position.x){
+            transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
+            direction = -1;
+        }
+        else if(transform.position.x < player.position.x){
+            if(player.position.x - transform.position.x <= 5){
                 transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
                 direction = -1;
             }
-            else if(transform.position.x < player.position.x){
+            else{
                 transform.rotation = new Quaternion(0, 180, 0, transform.rotation.w);
                 direction = 1;
             }
+        }
     }
     private void StartHunter(){
         if(startTimeBtwAttack > 0){

@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 30);
         }
     }
-    public void PushAway(int direction, float pushPower)
+    public void PushAway(int direction, float pushPower, float deConfusion)
     {
         if (rb == null || pushPower == 0)
         {
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         confusion = true;
         rb.AddForce(Vector2.up * pushPower*5);
         rb.AddForce(Vector2.right * direction * pushPower*3);
-        Invoke("DeConfusion", 0.7f);
+        Invoke("DeConfusion", deConfusion);
     }
     private void DeConfusion(){
         confusion = false;
