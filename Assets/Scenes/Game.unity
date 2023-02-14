@@ -5525,6 +5525,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6902990054827762124, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7304944720285047193, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: m_Name
       value: DialogTrigger
@@ -5773,29 +5777,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u0424\u0430\u043A\u0435\u043B"
       objectReference: {fileID: 0}
-    - target: {fileID: 2161883331797974943, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
-      propertyPath: m_SortingLayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2161883331797974943, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
-      propertyPath: m_SortingOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 2161883331797974943, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3178962894442601694, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
       propertyPath: m_RootOrder
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3178962894442601694, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.15000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 3178962894442601694, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.15000002
       objectReference: {fileID: 0}
     - target: {fileID: 3178962894442601694, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5836,10 +5820,6 @@ PrefabInstance:
     - target: {fileID: 3178962894442601694, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615371812232956194, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
-      propertyPath: m_SortingOrder
-      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
