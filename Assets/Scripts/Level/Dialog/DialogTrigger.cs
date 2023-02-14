@@ -27,4 +27,9 @@ public class DialogTrigger : MonoBehaviour
             }
         }
     }
+    private void FixedUpdate() {
+        if(dialog.gameObject.activeSelf == false){
+            GetComponent<BoxCollider2D>().enabled = false;
+        }
+    }
 }

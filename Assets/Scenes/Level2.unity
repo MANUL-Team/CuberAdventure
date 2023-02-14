@@ -103299,10 +103299,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u0424\u0430\u043A\u0435\u043B"
       objectReference: {fileID: 0}
-    - target: {fileID: 2161883331797974943, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
-      propertyPath: m_SortingOrder
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 3178962894442601694, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -103346,10 +103342,6 @@ PrefabInstance:
     - target: {fileID: 3178962894442601694, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615371812232956194, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
-      propertyPath: m_SortingOrder
-      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
