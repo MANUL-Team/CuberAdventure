@@ -927,7 +927,7 @@ RectTransform:
   m_GameObject: {fileID: 36657292}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1276780779}
@@ -8570,7 +8570,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!1 &348936516
 GameObject:
@@ -13641,8 +13641,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 715.8652}
+  m_AnchoredPosition: {x: -0, y: 0.61345065}
+  m_SizeDelta: {x: 0, y: 851.4564}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &622495835
 MonoBehaviour:
@@ -13666,8 +13666,8 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 80, y: 80}
   m_Spacing: {x: 10, y: 14.39}
-  m_Constraint: 0
-  m_ConstraintCount: 2
+  m_Constraint: 1
+  m_ConstraintCount: 3
 --- !u!1 &628453806
 GameObject:
   m_ObjectHideFlags: 0
@@ -22214,7 +22214,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!1 &659096302
 GameObject:
@@ -24211,7 +24211,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!1 &770470639
 GameObject:
@@ -37565,7 +37565,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!1 &1026324971
 GameObject:
@@ -90223,7 +90223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1392695888
@@ -100237,7 +100237,7 @@ RectTransform:
   m_GameObject: {fileID: 1450202466}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1249409989}
@@ -109777,7 +109777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1688242457
 Transform:
   m_ObjectHideFlags: 0
@@ -109810,7 +109810,7 @@ MonoBehaviour:
   lvlCore: 3
   lvlLaser: 1
   id: 1
-  step: 6
+  step: 7
   last: 0
 --- !u!61 &1688242459
 BoxCollider2D:
@@ -111026,7 +111026,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!1 &1727825824
 GameObject:
@@ -118690,7 +118690,7 @@ RectTransform:
   m_GameObject: {fileID: 2049009034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1907118950}
@@ -121353,7 +121353,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &5062623831314133627
 RectTransform:
@@ -121901,16 +121901,14 @@ MonoBehaviour:
   - {fileID: 909213341}
   - {fileID: 341810160}
   - {fileID: 884653174}
-  - {fileID: 1688242456}
   - {fileID: 2111928236}
   missions:
   - {fileID: 1727103024}
   - {fileID: 767653584}
   - {fileID: 1023882383}
-  - {fileID: 1688242460}
   - {fileID: 342951838}
   id: 1
-  steps: 0100000003000000050000000600000009000000
+  steps: 01000000030000000500000009000000
   main: 0
   last: 0
   missionsBool: 0

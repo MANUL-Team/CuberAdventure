@@ -22,6 +22,9 @@ public class DialogTrigger : MonoBehaviour
             if(!cutScene){
                 button.SetActive(false);
             }
+            else{
+                gameObject.SetActive(false);
+            }
         }
     }
 }
