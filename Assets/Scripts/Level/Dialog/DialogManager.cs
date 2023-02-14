@@ -23,6 +23,8 @@ public class DialogManager : MonoBehaviour
     public void OpenDialog(){
         dialog.SetActive(true);
         button.SetActive(false);
+        PlayerPrefs.SetInt("MaskCS", 1);
+        PlayerPrefs.SetInt("MaskD", 1);
         id = 0;
         dialogEnded = false;
         cam.SetBool("Dialog", true);
@@ -58,6 +60,8 @@ public class DialogManager : MonoBehaviour
             dialog.SetActive(false);
             dialogEnded = true;
             cam.SetBool("Dialog", false);
+            PlayerPrefs.SetInt("MaskCS", 0);
+            PlayerPrefs.SetInt("MaskD", 0);
         }
     }
 }

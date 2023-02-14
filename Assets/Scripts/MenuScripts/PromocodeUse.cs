@@ -45,6 +45,16 @@ public class PromocodeUse : MonoBehaviour
                 fail.SetActive(true);
             }
         }
+        else if(promoInput.text == "ULockAConsole"){
+            if(PlayerPrefs.GetInt("ConsoleUnlocked") == 1){
+                PlayerPrefs.SetInt("ConsoleUnlocked", 0);
+            }
+            else{
+                PlayerPrefs.SetInt("ConsoleUnlocked", 1);
+            }
+            success.SetActive(true);
+            fail.SetActive(false);
+        }
         else{
             success.SetActive(false);
             fail.SetActive(true);

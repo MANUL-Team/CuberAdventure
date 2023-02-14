@@ -11,8 +11,27 @@ public class DialogChange : MonoBehaviour
     [SerializeField] private int[] steps;
     [SerializeField] private bool main, last;
     [SerializeField] private bool missionsBool;
+    private bool checkStarted;
     void FixedUpdate(){
         if(!missionsBool){
+            if(!checkStarted){
+                StartCoroutine(MissionsCheck());
+                checkStarted = true;
+            }
+            for(int i = 0; i < missions.Length; i++){
+                if(missions[i].dialogEnded == true){
+                    StartNewMissionStep(id, steps[i], false);
+                }
+            }
+            if(last){
+                if(PlayerPrefs.GetInt("Mission " + id + " Step " + steps[steps.Length - 1]) == 1){
+                    PlayerPrefs.SetInt("Mission " + id, 2);
+                }
+            }
+        }
+    }
+    private IEnumerator MissionsCheck(){
+        while(true){
             main = true;
             for(int i = 0; i < missionDialogs.Length; i++){
                 if(steps[i] != 0){
@@ -40,17 +59,8 @@ public class DialogChange : MonoBehaviour
             else{
                 mainDialog.SetActive(false);
             }
-            for(int i = 0; i < missions.Length; i++){
-                if(missions[i].dialogEnded == true){
-                    StartNewMissionStep(id, steps[i], false);
-                }
-            }
-            if(last){
-                if(PlayerPrefs.GetInt("Mission " + id + " Step " + steps[steps.Length - 1]) == 1){
-                    PlayerPrefs.SetInt("Mission " + id, 2);
-                }
-            }
-            }
+            yield return new WaitForSeconds(0.2f);
+        }
     }
     public void StartNewMissionStep(int id, int step, bool last){
         if(last){

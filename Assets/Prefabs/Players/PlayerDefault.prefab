@@ -3355,6 +3355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 353732772104820805}
+  - component: {fileID: 2946143061624541188}
   m_Layer: 5
   m_Name: RightUp
   m_TagString: Untagged
@@ -3386,6 +3387,19 @@ RectTransform:
   m_AnchoredPosition: {x: -140.77768, y: -64.43964}
   m_SizeDelta: {x: 281.55542, y: 128.8793}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2946143061624541188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 680940534283505135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21a6bc0a5f3ee764a8c8010ac6f7d713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  console: {fileID: 4160466093250126626}
 --- !u!1 &712865293725375452
 GameObject:
   m_ObjectHideFlags: 0
@@ -15292,6 +15306,57 @@ MonoBehaviour:
   skillId: 2
   skill: {fileID: 3773627508118270437}
   skillGO: {fileID: 5464429646968859808}
+--- !u!1 &1684208337332391913
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 640687546509230111}
+  - component: {fileID: 8248195786841687654}
+  m_Layer: 0
+  m_Name: Quest 1-6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &640687546509230111
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684208337332391913}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7486993148743629963}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8248195786841687654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684208337332391913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3925841c41db8b5448b1c263e81b5aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main: {fileID: 3672245110945219434}
+  lvlArmor: 2
+  lvlCore: 3
+  lvlLaser: 1
+  id: 1
+  step: 6
+  last: 0
 --- !u!1 &1686522280828608580
 GameObject:
   m_ObjectHideFlags: 0
@@ -18593,6 +18658,76 @@ MonoBehaviour:
     m_Bits: 0
   bullet: {fileID: 0}
   sound: {fileID: 0}
+--- !u!1 &2150395027827501503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7486993148743629963}
+  - component: {fileID: 3672245110945219434}
+  - component: {fileID: 4586003679929200895}
+  m_Layer: 0
+  m_Name: MissionsClasses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7486993148743629963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2150395027827501503}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 640687546509230111}
+  m_Father: {fileID: 4801676336126942648}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3672245110945219434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2150395027827501503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48bfa8634f62ca5499063cbe02c6fe36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainDialog: {fileID: 0}
+  missionDialogs: []
+  missions: []
+  id: 0
+  steps: 
+  main: 0
+  last: 0
+  missionsBool: 1
+--- !u!114 &4586003679929200895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2150395027827501503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 044c0ecf9f8ad1d4286cf65c7f3dc9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  classes:
+  - {fileID: 1684208337332391913}
+  id: 01000000
+  steps: 05000000
 --- !u!1 &2159421916969117588
 GameObject:
   m_ObjectHideFlags: 0
@@ -37127,6 +37262,7 @@ Transform:
   - {fileID: 2041418518084447107}
   - {fileID: 3136365735408075068}
   - {fileID: 6241224934492149384}
+  - {fileID: 7486993148743629963}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -48042,8 +48178,8 @@ MonoBehaviour:
     \u0438 \u0441\u043A\u0440\u0430\u0444\u0442\u0438 \u043C\u043E\u0434\u0443\u043B\u0438
     \u0434\u043B\u044F \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0435\u043D\u0438\u044F
     \u043B\u043E\u0433\u043E\u0432\u0430 \u043F\u0430\u0443\u043A\u043E\u0432. (\u0423\u0440\u043E\u0432\u0435\u043D\u044C
-    \u044F\u0434\u0440\u0430 - 2, \u0443\u0440\u043E\u0432\u0435\u043D\u044C \u0431\u0440\u043E\u043D\u0438
-    - 4, \u0443\u0440\u043E\u0432\u0435\u043D\u044C \u043B\u0430\u0437\u0435\u0440\u0430
+    \u044F\u0434\u0440\u0430 - 4, \u0443\u0440\u043E\u0432\u0435\u043D\u044C \u0431\u0440\u043E\u043D\u0438
+    - 3, \u0443\u0440\u043E\u0432\u0435\u043D\u044C \u043B\u0430\u0437\u0435\u0440\u0430
     - 2)"
   - "\u0423\u0431\u0435\u0439 \u0410\u0434\u043C\u0438\u0440\u0430\u043B\u0430-\u043F\u0430\u0443\u043A\u0430
     \u0432 \u043B\u043E\u0433\u043E\u0432\u0435 \u043F\u0430\u0443\u043A\u043E\u0432."
@@ -48061,7 +48197,7 @@ MonoBehaviour:
   - Pass the words of Abdul to Vitaly from Bogomgrad.
   - Go back to the village and tell Abdul about the plight of Bogomgrad.
   - Collect resources and craft modules to destroy the spider lair. (Core level -
-    2, Armor level - 4, Laser level - 2)
+    4, Armor level - 3, Laser level - 2)
   - Kill the Spider Admiral in the spider lair.
   - Go to Bogomgrad to kill the Spider Queen.
   - Go to the Village of Cubers to tell about what happened.
@@ -59236,7 +59372,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 101
   m_TargetDisplay: 0
 --- !u!114 &1131456017168084588
 MonoBehaviour:
