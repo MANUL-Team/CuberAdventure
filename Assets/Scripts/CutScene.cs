@@ -5,6 +5,6 @@ using UnityEngine;
 public class CutScene : MonoBehaviour
 {
     public int id;
-    public GameObject trigger, scene;
+    public GameObject trigger, scene, dialogTrigger;
     public CutSceneController csc;
 }
