@@ -12,6 +12,9 @@ public class CutSceneController : MonoBehaviour
             for(int i = 0; i < scenes.Length; i++){
                 if(PlayerPrefs.GetInt("CutScene" + scenes[i].id.ToString()) == 1){
                     scenes[i].trigger.SetActive(false);
+                    if(scenes[i].dialogTrigger != null){
+                        scenes[i].dialogTrigger.SetActive(false);
+                    }
                 }
             }
         }

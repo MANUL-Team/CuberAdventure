@@ -7,7 +7,8 @@ public class PlayerMenuController : MonoBehaviour
 {
     [SerializeField] private Text lvl, dmg, hp, prot;
     [SerializeField] private PlayerStats ps;
-    [SerializeField] private GameObject inventory, weaponMenu, menu, lBut, dBut, cBut, sBut, skillsMenu, bg;
+    [SerializeField] private GameObject inventory, weaponMenu, menu, lBut, dBut, cBut, sBut, skillsMenu, bg, xpScale, statsBG;
+    private bool statsUpdate;
 
 
     public void OpenCloseInventory(){
@@ -20,6 +21,8 @@ public class PlayerMenuController : MonoBehaviour
         dBut.gameObject.SetActive(!inventory.activeSelf);
         cBut.gameObject.SetActive(!inventory.activeSelf);
         sBut.gameObject.SetActive(!inventory.activeSelf);
+        xpScale.SetActive(!xpScale.activeSelf);
+        statsBG.SetActive(!statsBG.activeSelf);
     }
     public void OpenWeaponMenu(){
         weaponMenu.SetActive(!weaponMenu.activeSelf);
@@ -31,6 +34,8 @@ public class PlayerMenuController : MonoBehaviour
         dBut.gameObject.SetActive(!weaponMenu.activeSelf);
         cBut.gameObject.SetActive(!weaponMenu.activeSelf);
         sBut.gameObject.SetActive(!weaponMenu.activeSelf);
+        xpScale.SetActive(!xpScale.activeSelf);
+        statsBG.SetActive(!statsBG.activeSelf);
     }
     public void OpenSkillsMenu(){
         skillsMenu.SetActive(!skillsMenu.activeSelf);
@@ -43,12 +48,34 @@ public class PlayerMenuController : MonoBehaviour
         cBut.gameObject.SetActive(!skillsMenu.activeSelf);
         sBut.gameObject.SetActive(!skillsMenu.activeSelf);
         bg.gameObject.SetActive(!skillsMenu.activeSelf);
+        xpScale.SetActive(!xpScale.activeSelf);
+        statsBG.SetActive(!statsBG.activeSelf);
     }
-    private void Update() {
-        lvl.text = "Lvl: " + ps.lvl.ToString();
-        hp.text = "Hp: " + ps.maxHp.ToString();
-        dmg.text = "Dmg: " + (ps.dmg + ps.dmgBonus).ToString();
-        prot.text = "Prot: " + ps.prot.ToString();
+    private void FixedUpdate() {
+        if(!statsUpdate){
+            StartCoroutine(UpdateStats());
+            statsUpdate = true;
+        }
+    }
+    private void OnDisable() {
+        statsUpdate = false;
+    }
+    private IEnumerator UpdateStats(){
+        while(true){
+            if(PlayerPrefs.GetInt("Language") == 0){
+                lvl.text = "Level: " + ps.lvl.ToString();
+                hp.text = "Hp: " + ps.maxHp.ToString();
+                dmg.text = "Damage: " + (ps.dmg + ps.dmgBonus).ToString();
+                prot.text = "Protection: " + ps.prot.ToString();
+            }
+            else if(PlayerPrefs.GetInt("Language") == 1){
+                lvl.text = "Уровень: " + ps.lvl.ToString();
+                hp.text = "Здоровье: " + ps.maxHp.ToString();
+                dmg.text = "Урон: " + (ps.dmg + ps.dmgBonus).ToString();
+                prot.text = "Защита: " + ps.prot.ToString();
+            }
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 
     public void Close(){
