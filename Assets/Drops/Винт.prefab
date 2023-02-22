@@ -45,3 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 21
+  nameRu: "\u0412\u0438\u043D\u0442"
+  descriptionRu: "\u0417\u0430\u0433\u0440\u0435\u0431\u0430\u0435\u0442 \u0432\u043E\u0434\u0443,
+    \u0447\u0442\u043E\u0431\u044B \u0431\u044B\u0441\u0442\u0440\u0435\u0435 \u043F\u043B\u044B\u0442\u044C"
+  statsRu: 
+  commentRu: 
+  nameEng: Screw
+  descriptionEng: Rakes in water to swim faster
+  statsEng: 
+  commentEng: 
+  icon: {fileID: 21300000, guid: 09c5d15b1fcd4b0408af69c66587cfe4, type: 3}

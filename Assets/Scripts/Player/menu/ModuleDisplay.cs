@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ModuleDisplay : MonoBehaviour
 {
-    [SerializeField] private GameObject[] laser, turbine, core, gusenici, armor;
+    [SerializeField] private GameObject[] laser, turbine, core, gusenici, armor, UWS;
 
-    private void Update() {
+    private void FixedUpdate() {
         for(int i = 0; i < laser.Length; i++){
             if(i == PlayerPrefs.GetInt("ChangedLaser")){
                 laser[i].SetActive(true);
@@ -31,6 +31,11 @@ public class ModuleDisplay : MonoBehaviour
             if(i == PlayerPrefs.GetInt("ChangedArmor")){
                 armor[i].SetActive(true);
             } else{armor[i].SetActive(false);}
+        }
+        for(int i = 0; i < UWS.Length; i++){
+            if(i == PlayerPrefs.GetInt("ChangedUnderWaterSystem")){
+                UWS[i].SetActive(true);
+            } else{UWS[i].SetActive(false);}
         }
     }
 }
