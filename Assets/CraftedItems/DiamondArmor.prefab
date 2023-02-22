@@ -46,3 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   module: Armor
   id: 2
+  nameRu: "\u0410\u043B\u043C\u0430\u0437\u043D\u044B\u0439 \u043A\u043E\u0440\u043F\u0443\u0441"
+  descriptionRu: "\u0412\u043D\u0435\u0448\u043D\u0438\u0439 \u043C\u043E\u0434\u0443\u043B\u044C
+    \u043A\u0443\u0431\u0435\u0440\u0430, \u0437\u0430\u0449\u0438\u0449\u0430\u044E\u0449\u0438\u0439
+    \u0432\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0435 \u043C\u043E\u0434\u0443\u043B\u0438"
+  statsRu: "\u0417\u0430\u0449\u0438\u0442\u0430: 25"
+  commentRu: "\u041F\u0440\u043E\u0431\u0438\u0442\u0438\u044F \u043D\u0435 \u0431\u0443\u0434\u0435\u0442..."
+  nameEng: Diamond Case
+  descriptionEng: External cuber module protecting internal modules
+  statsEng: 'Protection: 25'
+  commentEng: There will be no penetration...
+  icon: {fileID: 21300000, guid: e5b6c3fb43fd8d943b72a60bb0b87f19, type: 3}

@@ -46,3 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   module: Armor
   id: 1
+  nameRu: "\u041A\u043E\u0440\u043F\u0443\u0441 \u0438\u0437 \u043A\u0440\u0435\u043C\u043D\u0438\u044F"
+  descriptionRu: "\u0412\u043D\u0435\u0448\u043D\u0438\u0439 \u043C\u043E\u0434\u0443\u043B\u044C
+    \u043A\u0443\u0431\u0435\u0440\u0430, \u0437\u0430\u0449\u0438\u0449\u0430\u044E\u0449\u0438\u0439
+    \u0432\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0435 \u043C\u043E\u0434\u0443\u043B\u0438"
+  statsRu: "\u0417\u0430\u0449\u0438\u0442\u0430: 10"
+  commentRu: "\u041F\u0440\u043E\u0431\u0438\u0442\u0438\u044F \u043D\u0435 \u0431\u0443\u0434\u0435\u0442..."
+  nameEng: Silicon housing
+  descriptionEng: External cuber module protecting internal modules
+  statsEng: 'Protection: 10'
+  commentEng: There will be no penetration...
+  icon: {fileID: 21300000, guid: 0a58c11184d9d3645a72cacf960032de, type: 3}

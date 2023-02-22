@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CraftngMenuController : MonoBehaviour
 {
@@ -12,7 +13,6 @@ public class CraftngMenuController : MonoBehaviour
     [SerializeField] private GameObject successful;
     [SerializeField] private GameObject notEnough;
     [Header("Arrays")]
-    [SerializeField] private GameObject[] descriptions;
     [SerializeField] private NeedToCraft[] itemsToCraft;
     [SerializeField] private ForCraftItem[] items;
     [Header("Lists with about craft info")]
@@ -23,6 +23,8 @@ public class CraftngMenuController : MonoBehaviour
     private bool stack;
     private CraftedItem craftingModule;
     private Drop craftingItem;
+    [SerializeField] private Text name, description, stats, comment;
+    [SerializeField] private GameObject descriptionObj;
     public void SelectCraftingItem(int id){
         stack = itemsToCraft[id].stack;
         if(stack){
@@ -32,6 +34,7 @@ public class CraftngMenuController : MonoBehaviour
             craftingModule = itemsToCraft[id].module;
         }
         AddItems(id);
+        SetDescription(id);
     }
     public void Craft(){
         canCraft = true;
@@ -46,9 +49,7 @@ public class CraftngMenuController : MonoBehaviour
             }
             else{
                 PlayerPrefs.SetInt(craftingModule.module + craftingModule.id.ToString(), 1);
-                for(int i = 0; i < descriptions.Length; i++){
-                    descriptions[i].SetActive(false);
-                }
+                descriptionObj.SetActive(false);
             }
             for(int i = 0; i < forCraftCounts.Count; i++){
                 PlayerPrefs.SetInt("Item" + " " + forCraftItems[i].id.ToString(), PlayerPrefs.GetInt("Item" + " " + forCraftItems[i].id.ToString()) - forCraftCounts[i]);
@@ -80,9 +81,7 @@ public class CraftngMenuController : MonoBehaviour
         for(int i = 0; i < items.Length; i++){
             items[i].gameObject.SetActive(false);
         }
-        for(int i = 0; i < descriptions.Length; i++){
-            descriptions[i].SetActive(false);
-        }
+        descriptionObj.SetActive(false);
         forCraftCounts.Clear();
         forCraftItems.Clear();
     }
@@ -98,10 +97,40 @@ public class CraftngMenuController : MonoBehaviour
                 }
             }
         }
-        descriptions[id].SetActive(true);
         itemsDisplay.SetActive(true);
         craftButton.SetActive(true);
         closeButton.SetActive(false);
+    }
+    public void SetDescription(int id){
+        descriptionObj.SetActive(true);
+        if(!stack){
+            if(PlayerPrefs.GetInt("Language") == 0){
+                name.text = itemsToCraft[id].module.nameEng;
+                description.text = itemsToCraft[id].module.descriptionEng;
+                comment.text = itemsToCraft[id].module.commentEng;
+                stats.text = itemsToCraft[id].module.statsEng;
+            }
+            else if(PlayerPrefs.GetInt("Language") == 1){
+                name.text = itemsToCraft[id].module.nameRu;
+                description.text = itemsToCraft[id].module.descriptionRu;
+                comment.text = itemsToCraft[id].module.commentRu;
+                stats.text = itemsToCraft[id].module.statsRu;
+            }
+        }
+        else{
+            if(PlayerPrefs.GetInt("Language") == 0){
+                name.text = itemsToCraft[id].item.nameEng;
+                description.text = itemsToCraft[id].item.descriptionEng;
+                comment.text = itemsToCraft[id].item.commentEng;
+                stats.text = itemsToCraft[id].item.statsEng;
+            }
+            else if(PlayerPrefs.GetInt("Language") == 1){
+                name.text = itemsToCraft[id].item.nameRu;
+                description.text = itemsToCraft[id].item.descriptionRu;
+                comment.text = itemsToCraft[id].item.commentRu;
+                stats.text = itemsToCraft[id].item.statsRu;
+            }
+        }
     }
 
 }

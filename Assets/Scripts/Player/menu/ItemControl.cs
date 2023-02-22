@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ItemControl : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class ItemControl : MonoBehaviour
     [SerializeField] private Transform itemsFolder;
     [SerializeField] private List<Item> itemsList = new List<Item>();
     private string nowSorting;
+    [SerializeField] private GameObject mainDescription;
+    public Text name, description;
+    [SerializeField] private GameObject[] potionDesc;
     void Start()
     {
         for(int i = 0; i < itemsFolder.childCount; i++){
@@ -16,15 +20,16 @@ public class ItemControl : MonoBehaviour
         nowSorting = "All";
     }
     public void CloseDescriptions(){
-        for(int i = 0; i < itemsList.Count; i++){
-            itemsList[i].description.SetActive(false);
-        }
+        mainDescription.SetActive(false);
+    }
+    public void OpenDescription(){
+        mainDescription.SetActive(true);
     }
     IEnumerator ItemsUpdate(){
         while(true){
             for(int i = 0; i < itemsList.Count; i++){
                 if(nowSorting != "All"){
-                    if(PlayerPrefs.GetInt("Item" + " " + itemsList[i].id) != 0 && itemsList[i].sorting == nowSorting){
+                    if(PlayerPrefs.GetInt("Item" + " " + itemsList[i].item.id) != 0 && itemsList[i].sorting == nowSorting){
                         itemsList[i].gameObject.SetActive(true);
                     }
                     else{
@@ -32,7 +37,7 @@ public class ItemControl : MonoBehaviour
                     }
                 }
                 else{
-                    if(PlayerPrefs.GetInt("Item" + " " + itemsList[i].id) != 0){
+                    if(PlayerPrefs.GetInt("Item" + " " + itemsList[i].item.id) != 0){
                         itemsList[i].gameObject.SetActive(true);
                     }
                     else{
@@ -48,5 +53,10 @@ public class ItemControl : MonoBehaviour
     }
     private void OnEnable() {
         StartCoroutine(ItemsUpdate());
+    }
+    public void ClosePotDesc(){
+        for(int i = 0; i < potionDesc.Length; i++){
+            potionDesc[i].SetActive(false);
+        }
     }
 }

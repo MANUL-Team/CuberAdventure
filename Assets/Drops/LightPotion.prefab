@@ -45,3 +45,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 13
+  nameRu: "\u0417\u0435\u043B\u044C\u0435 \u0441\u0432\u0435\u0442\u0430"
+  descriptionRu: "\u0417\u0435\u043B\u044C\u0435, \u043F\u043E\u0437\u0432\u043E\u043B\u044F\u044E\u0449\u0435\u0435
+    \u0432\u0438\u0434\u0435\u0442\u044C \u0432 \u043F\u0435\u0449\u0435\u0440\u0430\u0445
+    \u043B\u0443\u0447\u0448\u0435."
+  statsRu: "\u0412\u0440\u0435\u043C\u044F: 3\u043C\u0438\u043D\n\u0421\u0432\u0435\u0442:
+    20"
+  commentRu: "\u041F\u0440\u043E\u0437\u0440\u0435\u043D\u0438\u0435!"
+  nameEng: Light potion
+  descriptionEng: A potion that allows you to see better in caves.
+  statsEng: 'Time: 3 min
+
+    Light: 20'
+  commentEng: Epiphany!
+  icon: {fileID: 21300000, guid: 225f9555bb11a2b45993a80b94c1eecf, type: 3}
