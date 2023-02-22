@@ -10,9 +10,13 @@ public class TeleportScript : MonoBehaviour
     [SerializeField]private GameObject loadMenu;
     [SerializeField]private PlayerStats ps;
     [SerializeField]private int levelId;
+    [SerializeField] private bool needToUpdate;
+    public int currentId;
 
     private void Start() {
-        if(levelId != -1){
+        ps = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
+        if(levelId != -1 && needToUpdate){
+            levelId = currentId;
             if(PlayerPrefs.GetInt("LevelEnded" + levelId) == 1){
                 gameObject.SetActive(true);
             } else{
@@ -22,16 +26,27 @@ public class TeleportScript : MonoBehaviour
         else{
             gameObject.SetActive(true);
         }
-        ps = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
-        
     }
-    public void Teleport(int id){
+    private void FixedUpdate() {
+        if(levelId != -1 && needToUpdate){
+            levelId = currentId;
+            if(PlayerPrefs.GetInt("LevelEnded" + levelId) == 1){
+                gameObject.SetActive(true);
+            } else{
+                gameObject.SetActive(false);
+            }
+        }
+        else{
+            gameObject.SetActive(true);
+        }
+    }
+    public void Teleport(){
         PlayerPrefs.SetInt("LastLevel", PlayerPrefs.GetInt("Level"));
-        PlayerPrefs.SetInt("Level", id);
+        PlayerPrefs.SetInt("Level", currentId);
         loadMenu.SetActive(true);
         PlayerPrefs.SetFloat("Hp", ps.hp);
         PlayerPrefs.SetInt("NewSpawnTP", 0);
-        StartCoroutine(AsyncLoad(id));
+        StartCoroutine(AsyncLoad(currentId));
     }
     IEnumerator AsyncLoad(int id){
         AsyncOperation operation = SceneManager.LoadSceneAsync(id);

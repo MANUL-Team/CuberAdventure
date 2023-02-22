@@ -44,5 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f48facad5d755e4c9be2f91450a6675, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: Biologic
   id: 3
+  nameRu: "\u0412\u043E\u0437\u0434\u0443\u0448\u043D\u044B\u0439 \u0433\u0440\u0438\u0431"
+  descriptionRu: "\u0413\u0440\u0438\u0431, \u0441\u043E\u0434\u0435\u0440\u0436\u0430\u0449\u0438\u0439 
+    \u0432 \u0441\u0435\u0431\u0435 \u0431\u043E\u043B\u044C\u0448\u043E\u0435 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E
+    \u0432\u043E\u0437\u0434\u0443\u0445\u0430"
+  statsRu: 
+  commentRu: 
+  nameEng: Air mushroom
+  descriptionEng: A mushroom containing a large amount of air
+  statsEng: 
+  commentEng: 
+  icon: {fileID: 21300000, guid: f13740d0816cc3640b6d8aa689d8354d, type: 3}

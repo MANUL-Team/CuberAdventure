@@ -45,3 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 11
+  nameRu: "\u0417\u0435\u043B\u044C\u0435 \u0440\u0435\u0433\u0435\u043D\u0435\u0440\u0430\u0446\u0438\u0438"
+  descriptionRu: "\u0423\u043B\u0443\u0447\u0448\u0430\u0435\u0442 \u0432\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435
+    \u0437\u0434\u043E\u0440\u043E\u0432\u044C\u044F"
+  statsRu: "\u0412\u0440\u0435\u043C\u044F: 3 \u043C\u0438\u043D\n\u0412\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0438\u0435:
+    15\u0435\u0434/\u0441\u0435\u043A"
+  commentRu: "\u0418 \u043C\u0435\u0434\u0438\u043A\u0438 \u043D\u0435 \u043D\u0443\u0436\u043D\u044B!"
+  nameEng: 
+  descriptionEng: Improves health recovery
+  statsEng: 'Time: 3 min
+
+    Recovery: 15 hp/sec'
+  commentEng: And doctors are not needed!
+  icon: {fileID: 21300000, guid: e3953fbc710968e4fa58fb300227c4e4, type: 3}

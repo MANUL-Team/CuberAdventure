@@ -45,3 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 19
+  nameRu: "\u0411\u0430\u043B\u043B\u043E\u043D \u0441 \u0432\u043E\u0437\u0434\u0443\u0445\u043E\u043C"
+  descriptionRu: "\u0411\u0430\u043B\u043B\u043E\u043D, \u0445\u0440\u0430\u043D\u044F\u0449\u0438\u0439
+    \u0432 \u0441\u0435\u0431\u0435 \u0432\u043E\u0437\u0434\u0443\u0445"
+  statsRu: 
+  commentRu: 
+  nameEng: Air cylinder
+  descriptionEng: A balloon that stores air in itself
+  statsEng: 
+  commentEng: 
+  icon: {fileID: 21300000, guid: 33522d06d0a90a449bc1bc69da836619, type: 3}

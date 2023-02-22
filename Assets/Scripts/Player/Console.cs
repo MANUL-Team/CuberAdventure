@@ -37,7 +37,8 @@ public class Console : MonoBehaviour
             text.text = text.text + "\nHealled!";
         }
         else if(wordsInCommand[0] == "tp"){
-            tp.Teleport(int.Parse(wordsInCommand[1]));
+            tp.currentId = int.Parse(wordsInCommand[1]);
+            tp.Teleport();
             text.text = text.text + "\nTeleported!";
         }
         else if(wordsInCommand[0] == "setlevel"){

@@ -45,3 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 17
+  nameRu: "\u0420\u0435\u0437\u0438\u043D\u0430"
+  descriptionRu: "\u041E\u0442\u043B\u0438\u0447\u043D\u044B\u0439 \u0438\u0437\u043E\u043B\u044F\u0442\u043E\u0440
+    \u044D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u0442\u0432\u0430"
+  statsRu: 
+  commentRu: 
+  nameEng: Rubber
+  descriptionEng: Excellent insulator of electricity
+  statsEng: 
+  commentEng: 
+  icon: {fileID: 21300000, guid: c4ea7ff3d80c74e42b425edb3ad8c8b7, type: 3}
