@@ -39244,9 +39244,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pets:
-  - {fileID: 1686522280828608580}
-  - {fileID: 5368712935137417724}
-  - {fileID: 6141297349876310719}
+  - {fileID: 6479919003463763833}
+  - {fileID: 1649663221185710636}
+  - {fileID: 1406426405042770056}
   petIndex: 0
 --- !u!1 &4829012526212695787
 GameObject:
