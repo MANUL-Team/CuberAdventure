@@ -12,43 +12,50 @@ public class WeaponInventory : MonoBehaviour
     [SerializeField] private LayerMask enemy;
     [SerializeField] private GameObject bullet, sound;
     private GameObject bulletInst;
+    private IEnumerator LowUpdate(){
+        while(true){
+            damage = PlayerPrefs.GetInt("PlayerDmg") + PlayerPrefs.GetInt("DmgBonus") + PlayerPrefs.GetInt("LaserDmg");
+            if(PlayerPrefs.GetInt("ChangedWeapon") == 0){
+                PlayerPrefs.SetInt("PlayerDmg", 1);
+            }
+            if(PlayerPrefs.GetInt("ChangedWeapon") == 1){
+                PlayerPrefs.SetInt("PlayerDmg", 10);
+            }
+            if(PlayerPrefs.GetInt("ChangedWeapon") == 2){
+                PlayerPrefs.SetInt("PlayerDmg", 15);
+            }
+            if(PlayerPrefs.GetInt("ChangedWeapon") == 3){
+                PlayerPrefs.SetInt("PlayerDmg", 20);
+            }
+            if(PlayerPrefs.GetInt("ChangedWeapon") == 4){
+                PlayerPrefs.SetInt("PlayerDmg", 25);
+            }
+            if(PlayerPrefs.GetInt("ChangedWeapon") == 5){
+                PlayerPrefs.SetInt("PlayerDmg", 30);
+            }
+            if(PlayerPrefs.GetInt("ChangedWeapon") == 6){
+                PlayerPrefs.SetInt("PlayerDmg", 42);
+            }
+            if(PlayerPrefs.GetInt("ChangedLaser") == 0){
+                PlayerPrefs.SetInt("LaserDmg", 0);
+            }
+            if(PlayerPrefs.GetInt("ChangedLaser") == 1){
+                PlayerPrefs.SetInt("LaserDmg", 20);
+            }
+            if(PlayerPrefs.GetInt("ChangedLaser") == 2){
+                PlayerPrefs.SetInt("LaserDmg", 50);
+            }
+            yield return new WaitForSeconds(0.2f);
+        }
+    }
+    private void Start() {
+        StartCoroutine(LowUpdate());
+    }
     private void Update() {
-        damage = PlayerPrefs.GetInt("PlayerDmg") + PlayerPrefs.GetInt("DmgBonus") + PlayerPrefs.GetInt("LaserDmg");
-        if(PlayerPrefs.GetInt("ChangedWeapon") == 0){
-            PlayerPrefs.SetInt("PlayerDmg", 1);
-        }
-        if(PlayerPrefs.GetInt("ChangedWeapon") == 1){
-            PlayerPrefs.SetInt("PlayerDmg", 10);
-        }
-        if(PlayerPrefs.GetInt("ChangedWeapon") == 2){
-            PlayerPrefs.SetInt("PlayerDmg", 15);
-        }
-        if(PlayerPrefs.GetInt("ChangedWeapon") == 3){
-            PlayerPrefs.SetInt("PlayerDmg", 20);
-        }
-        if(PlayerPrefs.GetInt("ChangedWeapon") == 4){
-            PlayerPrefs.SetInt("PlayerDmg", 25);
-        }
-        if(PlayerPrefs.GetInt("ChangedWeapon") == 5){
-            PlayerPrefs.SetInt("PlayerDmg", 30);
-        }
-        if(PlayerPrefs.GetInt("ChangedWeapon") == 6){
-            PlayerPrefs.SetInt("PlayerDmg", 42);
-        }
-        if(PlayerPrefs.GetInt("ChangedLaser") == 0){
-            PlayerPrefs.SetInt("LaserDmg", 0);
-        }
-        if(PlayerPrefs.GetInt("ChangedLaser") == 1){
-            PlayerPrefs.SetInt("LaserDmg", 20);
-        }
-        if(PlayerPrefs.GetInt("ChangedLaser") == 2){
-            PlayerPrefs.SetInt("LaserDmg", 50);
-        }
         if(timeBtwAttack > 0){
             timeBtwAttack -= Time.deltaTime;
         }
     }
-
     public void Skill1(){
         attackRange = 0.73f;
         int direction = PlayerPrefs.GetInt("PlayerRotation");

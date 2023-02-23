@@ -59,3 +59,4 @@ MonoBehaviour:
     Light: 20'
   commentEng: Epiphany!
   icon: {fileID: 21300000, guid: 225f9555bb11a2b45993a80b94c1eecf, type: 3}
+  price: 20

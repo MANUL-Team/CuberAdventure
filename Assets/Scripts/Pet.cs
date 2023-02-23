@@ -5,27 +5,27 @@ using UnityEngine;
 public class Pet : MonoBehaviour
 {
 
-    [SerializeField] private GameObject[] pets;
+    [SerializeField] private SpriteRenderer[] pets;
     public int petIndex;
     private IEnumerator petCheck(){
         yield return new WaitForSeconds(10f);
         if(PlayerPrefs.GetInt("Pet") != 0){
-            pets[PlayerPrefs.GetInt("Pet") - 1].SetActive(true);
+            pets[PlayerPrefs.GetInt("Pet") - 1].gameObject.SetActive(true);
         }
     }
     private void Start() {
         if(PlayerPrefs.GetInt("Pet") != 0){
-            pets[PlayerPrefs.GetInt("Pet") - 1].SetActive(true);
+            pets[PlayerPrefs.GetInt("Pet") - 1].gameObject.SetActive(true);
         }
         StartCoroutine("petCheck");
     }
-    private void Update() {
+    private void FixedUpdate() {
         petIndex = PlayerPrefs.GetInt("Pet");
         if(PlayerPrefs.GetInt("Pet") == 2){
             if(PlayerPrefs.GetInt("PlayerRotation") == 1){
-                pets[PlayerPrefs.GetInt("Pet") - 1].GetComponent<SpriteRenderer>().flipX = false;
+                pets[PlayerPrefs.GetInt("Pet") - 1].flipX = false;
             } else{
-                pets[PlayerPrefs.GetInt("Pet") - 1].GetComponent<SpriteRenderer>().flipX = true;
+                pets[PlayerPrefs.GetInt("Pet") - 1].flipX = true;
             }
         }
     }

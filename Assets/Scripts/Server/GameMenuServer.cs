@@ -10,14 +10,17 @@ public class GameMenuServer : MonoBehaviour
     [SerializeField] private GameObject GMenu, RD, RU, LD, LU;
     [SerializeField] private Image menu;
     [SerializeField] private Text menuText;
+    private Animator anim;
 
     private void Awake() {
+        anim = GMenu.GetComponent<Animator>();
         GMenu.SetActive(false);
     }
 
     public void MenuPressed(){
         if(PlayerPrefs.GetInt("Dead") == 0){
             GMenu.SetActive(true);
+            anim.SetBool("Close", false);
             RD.SetActive(false);
             RU.SetActive(false);
             LD.SetActive(false);
@@ -28,7 +31,7 @@ public class GameMenuServer : MonoBehaviour
         }
     }
     public void Resume(){
-        GMenu.SetActive(false);
+        anim.SetBool("Close", true);
         RD.SetActive(true);
         RU.SetActive(true);
         LD.SetActive(true);

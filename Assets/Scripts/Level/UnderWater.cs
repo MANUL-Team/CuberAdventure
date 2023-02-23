@@ -56,33 +56,37 @@ public class UnderWater : MonoBehaviour
         maxAir = PlayerPrefs.GetFloat("MaxAir");
         air = maxAir;
         StartCoroutine(AirController());
+        StartCoroutine(LowUpdate());
     }
-    private void Update() {
-        if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") != 0){
+    private IEnumerator LowUpdate(){
+        while(true){
+            if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") != 0){
                 jm.JoystickSwitch(loseAir);
+            }
+            else{
+                jm.JoystickSwitch(false);
+            }
+            if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") == 0){
+                PlayerPrefs.SetFloat("MaxAir", 100);
+            }
+            else if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") == 1){
+                PlayerPrefs.SetFloat("MaxAir", 300);
+            }
+            maxAir = PlayerPrefs.GetFloat("MaxAir");
+            if(PlayerPrefs.GetInt("CanLoseAir") == 0){
+                canAirLose = false;
+            }
+            else{
+                canAirLose = true;
+            }
+            if(air < maxAir){
+                scaleAirOutline.gameObject.SetActive(true);
+            }
+            else{
+                scaleAirOutline.gameObject.SetActive(false);
+            }
+            scaleAir.fillAmount = air/maxAir;
+            yield return new WaitForSeconds(0.2f);
         }
-        else{
-            jm.JoystickSwitch(false);
-        }
-        if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") == 0){
-            PlayerPrefs.SetFloat("MaxAir", 100);
-        }
-        else if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") == 1){
-            PlayerPrefs.SetFloat("MaxAir", 300);
-        }
-        maxAir = PlayerPrefs.GetFloat("MaxAir");
-        if(PlayerPrefs.GetInt("CanLoseAir") == 0){
-            canAirLose = false;
-        }
-        else{
-            canAirLose = true;
-        }
-        if(air < maxAir){
-            scaleAirOutline.gameObject.SetActive(true);
-        }
-        else{
-            scaleAirOutline.gameObject.SetActive(false);
-        }
-        scaleAir.fillAmount = air/maxAir;
     }
 }
