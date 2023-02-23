@@ -6,6 +6,7 @@ public class FirstStart : MonoBehaviour
 {
     private void Start() {
         if(PlayerPrefs.GetInt("FirstStart") == 0){
+            PlayerPrefs.DeleteAll();
             PlayerPrefs.SetFloat("Volume", 1);
             PlayerPrefs.SetInt("Language", 1);
             PlayerPrefs.SetInt("Graphics", 1);
