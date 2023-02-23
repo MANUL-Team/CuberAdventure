@@ -12,4 +12,5 @@ public class Drop : MonoBehaviour
     [TextArea]
     public string descriptionEng, statsEng, commentEng;
     public Sprite icon;
+    public int price;
 }

@@ -58,3 +58,4 @@ MonoBehaviour:
   statsEng: 'Time: 1 min'
   commentEng: It remains to learn how to swim...
   icon: {fileID: 21300000, guid: 3ee0c95dc5c9c944bb976f2b87e6790f, type: 3}
+  price: 25
