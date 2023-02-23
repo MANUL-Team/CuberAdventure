@@ -55,3 +55,4 @@ MonoBehaviour:
   statsEng: 
   commentEng: 
   icon: {fileID: 21300000, guid: dcf5ba917dbfa3e479f47b75c588a180, type: 3}
+  price: 15

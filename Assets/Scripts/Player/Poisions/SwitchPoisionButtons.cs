@@ -23,10 +23,14 @@ public class SwitchPoisionButtons : MonoBehaviour
     }
     private void Start() {
         PoisionSwitch();
+        StartCoroutine(LowUpdate());
     }
-    private void FixedUpdate() {
-        PoisionSwitch();
-        SwitchEffect();
+    private IEnumerator LowUpdate(){
+        while(true){
+            PoisionSwitch();
+            SwitchEffect();
+            yield return new WaitForSeconds(0.2f);
+        }
     }
     public void SwitchEffect(){
         if(PlayerPrefs.GetInt("HealMnojitel") == 5){

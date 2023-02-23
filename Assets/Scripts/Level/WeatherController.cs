@@ -12,16 +12,20 @@ public class WeatherController : MonoBehaviour
             StartCoroutine("StartRain");
             rainAnim = rain.GetComponent<Animator>();
         }
+        StartCoroutine(LowUpdate());
     }
-    private void Update() {
-        if(rain != null){
-            if(PlayerPrefs.GetInt("Rain") == 1){
-                rain.SetActive(true);
-            } else if(PlayerPrefs.GetInt("Rain") == 0 && rain.activeSelf == true){
-                rainAnim.SetTrigger("RainExit");
+    private IEnumerator LowUpdate(){
+        while(true){
+            if(rain != null){
+                if(PlayerPrefs.GetInt("Rain") == 1){
+                    rain.SetActive(true);
+                } else if(PlayerPrefs.GetInt("Rain") == 0 && rain.activeSelf == true){
+                    rainAnim.SetTrigger("RainExit");
+                }
             }
+            randInt = PlayerPrefs.GetInt("Rain");
+            yield return new WaitForSeconds(0.2f);
         }
-        randInt = PlayerPrefs.GetInt("Rain");
     }
     IEnumerator StartRain(){
         yield return new WaitForSeconds(60f);

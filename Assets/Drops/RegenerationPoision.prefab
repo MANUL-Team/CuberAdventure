@@ -58,3 +58,4 @@ MonoBehaviour:
     Recovery: 15 hp/sec'
   commentEng: And doctors are not needed!
   icon: {fileID: 21300000, guid: e3953fbc710968e4fa58fb300227c4e4, type: 3}
+  price: 20
