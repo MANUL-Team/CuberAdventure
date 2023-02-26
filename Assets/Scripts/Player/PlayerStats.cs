@@ -88,9 +88,6 @@ public class PlayerStats : MonoBehaviour
         }
         needExp = PlayerPrefs.GetInt("NeedExp");
     }
-    private void SaveStats(){
-
-    }
     public void UpdateLevel(){
         LoadStats();
         needExp = PlayerPrefs.GetInt("NeedExp");

@@ -62,6 +62,7 @@ public class MenuScript : MonoBehaviour
             PlayerPrefs.SetInt("LevelEnded" + i.ToString(), 0);
             PlayerPrefs.SetInt("OpenSkill" + i.ToString(), 0);
             PlayerPrefs.SetInt("Mission "+ i, 0);
+            PlayerPrefs.SetInt("Tutorial " +i, 0);
             for(int a = 0; a < 10; a++){
                 PlayerPrefs.SetInt("Money" + " " + i.ToString() + " " + a.ToString(), 0);
                 PlayerPrefs.SetInt("Mission " + i + " Step " + a, 0);

@@ -7,8 +7,12 @@ public class MapLevelController : MonoBehaviour
     private List<MapLevelChange> descriptions = new List<MapLevelChange>();
     [SerializeField] TeleportScript tp;
     public void OpenDescription(int id){
-        tp.gameObject.SetActive(true);
         for(int i = 0; i <= descriptions.Count; i++){
+            if(PlayerPrefs.GetInt("LevelEnded" + id) == 1){
+                tp.gameObject.SetActive(true);
+            } else{
+                tp.gameObject.SetActive(false);
+            }
             if(descriptions[i].id != id){
                 descriptions[i].gameObject.SetActive(false);
             }
