@@ -53,7 +53,7 @@ MonoBehaviour:
   statsRu: "\u041C\u043E\u0449\u043D\u043E\u0441\u0442\u044C: 800\u043A\u0412\u0442"
   commentRu: "\u0411\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u0430\u044F
     \u044D\u043D\u0435\u0440\u0433\u0438\u044F..."
-  nameEng: 
+  nameEng: Core lvl4
   descriptionEng: The Cuber module, feeding it with infinitely released energy
   statsEng: 'Power: 800 kW'
   commentEng: Infinite energy...

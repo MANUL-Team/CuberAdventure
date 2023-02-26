@@ -21,6 +21,7 @@ public class DialogChange : MonoBehaviour
             for(int i = 0; i < missions.Length; i++){
                 if(missions[i].dialogEnded == true){
                     StartNewMissionStep(id, steps[i], false);
+                    missions[i].dialogEnded = false;
                 }
             }
             if(last){
@@ -63,6 +64,7 @@ public class DialogChange : MonoBehaviour
         }
     }
     public void StartNewMissionStep(int id, int step, bool last){
+        PlayerPrefs.SetInt("CheckTheMission", 1);
         if(last){
             PlayerPrefs.SetInt("Mission " + id, 2);
             PlayerPrefs.SetInt("Mission " + id + " Step " + step, 2);

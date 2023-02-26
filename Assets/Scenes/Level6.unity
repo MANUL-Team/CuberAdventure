@@ -35497,7 +35497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1216916309}
-  dialog: {fileID: 0}
+  dialog: {fileID: 653928246}
   cutScene: 0
 --- !u!114 &1964584876
 MonoBehaviour:
@@ -35512,7 +35512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 2124691715}
-  dialog: {fileID: 0}
+  dialog: {fileID: 653928246}
   cutScene: 0
 --- !u!61 &1964584877
 BoxCollider2D:
