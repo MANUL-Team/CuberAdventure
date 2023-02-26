@@ -30,11 +30,6 @@ public class TeleportScript : MonoBehaviour
     private void FixedUpdate() {
         if(levelId != -1 && needToUpdate){
             levelId = currentId;
-            if(PlayerPrefs.GetInt("LevelEnded" + levelId) == 1){
-                gameObject.SetActive(true);
-            } else{
-                gameObject.SetActive(false);
-            }
         }
         else{
             gameObject.SetActive(true);

@@ -22,6 +22,7 @@ public class GameMenu : MonoBehaviour
     }
     public void MainMenu(){
         PhotonNetwork.LeaveRoom();
+        PlayerPrefs.SetInt("Dead", 0);
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
     }
