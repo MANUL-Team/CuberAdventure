@@ -26,10 +26,10 @@ public class MissionsController : MonoBehaviour
     }
     void OnEnable(){
         if(PlayerPrefs.GetInt("Language") == 0){
-            description.text = "Select a mission to display the required action to continue.";
+            description.text = "Select a mission.";
         }
         else if(PlayerPrefs.GetInt("Language") == 1){
-            description.text = "Выберите миссию для отображения необходимого действия для продолжения.";
+            description.text = "Выберите миссию.";
         }
     }
 }
