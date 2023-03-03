@@ -65,6 +65,7 @@ public class DialogChange : MonoBehaviour
     }
     public void StartNewMissionStep(int id, int step, bool last){
         PlayerPrefs.SetInt("CheckTheMission", 1);
+        PlayerPrefs.SetInt("CheckMission " + id, 1);
         if(last){
             PlayerPrefs.SetInt("Mission " + id, 2);
             PlayerPrefs.SetInt("Mission " + id + " Step " + step, 2);

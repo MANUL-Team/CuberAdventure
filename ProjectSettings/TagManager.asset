@@ -75,6 +75,12 @@ TagManager:
   - name: Buildings
     uniqueID: 2192892495
     locked: 0
+  - name: NPCBackBackBack
+    uniqueID: 223932819
+    locked: 0
+  - name: NPCBackBack
+    uniqueID: 2887484299
+    locked: 0
   - name: NPCBack
     uniqueID: 3489318413
     locked: 0

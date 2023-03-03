@@ -5,12 +5,15 @@ using UnityEngine.UI;
 
 public class PrintableText : MonoBehaviour
 {
-    [SerializeField] private GameObject button;
+    [SerializeField] private GameObject button, skip;
     [SerializeField] private Text text;
+    public float speedOfPrint = 0.02f;
     private string words;
     public void PrintText(string strText){
         button.SetActive(false);
+        skip.SetActive(true);
         words = strText;
+        speedOfPrint = 0.02f;
         text.text = "";
         StartCoroutine("Print");
     }
@@ -19,11 +22,10 @@ public class PrintableText : MonoBehaviour
             text.text += abc;
             if(text.text == words && button != null){
                 button.SetActive(true);
+                skip.SetActive(false);
                 StopCoroutine(Print());
             }
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(speedOfPrint);
         }
     }
-    
-
 }

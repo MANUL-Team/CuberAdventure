@@ -45,6 +45,9 @@ public class DialogManager : MonoBehaviour
             printText.PrintText(dialogTextsRu[id]);
         }
     }
+    public void SkipText(){
+        printText.speedOfPrint = 0.005f;
+    }
     void FixedUpdate(){
         for(int i = 0; i < namesRu.Length; i++){
             if(i == id){
