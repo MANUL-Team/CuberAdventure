@@ -443,7 +443,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1150,7 +1150,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135791994}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -1398,7 +1398,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1894,7 +1894,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 194829655}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -2090,7 +2090,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2415,7 +2415,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 264497412}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -6860,7 +6860,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7149,7 +7149,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7276,7 +7276,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583119818}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -7725,7 +7725,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -265278839
-  m_SortingLayer: -5
+  m_SortingLayer: -7
   m_SortingOrder: -13
   m_Sprite: {fileID: 21300000, guid: af390d8c5519637418ed587a671b7c47, type: 3}
   m_Color: {r: 0.8160377, g: 1, b: 0.99240804, a: 1}
@@ -9873,7 +9873,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762504819}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -10106,7 +10106,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 771416073}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -11080,6 +11080,7 @@ RectTransform:
   - {fileID: 1308974764}
   - {fileID: 1701655759}
   - {fileID: 486560844}
+  - {fileID: 929700464}
   m_Father: {fileID: 420336915}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11567,7 +11568,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12610,7 +12611,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892915886}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -12878,7 +12879,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903544826}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -13277,6 +13278,72 @@ MonoBehaviour:
   ruEd: []
   editable: 0
   dialog: 0
+--- !u!1 &929700463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929700464}
+  - component: {fileID: 929700465}
+  m_Layer: 5
+  m_Name: SkinsController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &929700464
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929700463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 798281009}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &929700465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929700463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d796792914f094e9c11e8bba23ff86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skins:
+  - {fileID: 1220122174}
+  - {fileID: 1819924899}
+  - {fileID: 34027435}
+  - {fileID: 246784009}
+  - {fileID: 2001142958}
+  - {fileID: 903669859}
+  - {fileID: 579103371}
+  - {fileID: 571160253}
+  - {fileID: 162699366}
+  - {fileID: 2040770851}
+  - {fileID: 1309750766}
+  - {fileID: 816809187}
+  - {fileID: 1091879506}
+  - {fileID: 1533249223}
+  - {fileID: 1943073279}
+  - {fileID: 1586422860}
 --- !u!1 &932384728
 GameObject:
   m_ObjectHideFlags: 0
@@ -15215,7 +15282,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15610,7 +15677,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1095908136}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -17096,6 +17163,7 @@ GameObject:
   - component: {fileID: 1220122177}
   - component: {fileID: 1220122176}
   - component: {fileID: 1220122175}
+  - component: {fileID: 1220122178}
   m_Layer: 5
   m_Name: Skin0
   m_TagString: Untagged
@@ -17170,8 +17238,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
-        m_Mode: 1
+        m_MethodName: SetPlayer
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17180,10 +17248,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2020105215}
-        m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: SetPlayer
-        m_Mode: 3
+      - m_Target: {fileID: 1220122178}
+        m_TargetAssemblyTypeName: SkinCheck, Assembly-CSharp
+        m_MethodName: Check
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -17230,6 +17298,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220122173}
   m_CullTransparentMesh: 1
+--- !u!114 &1220122178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220122173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d796792914f094e9c11e8bba23ff86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skins: []
 --- !u!1 &1222591747
 GameObject:
   m_ObjectHideFlags: 0
@@ -17660,7 +17741,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1236017859}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -17785,7 +17866,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -265278839
-  m_SortingLayer: -5
+  m_SortingLayer: -7
   m_SortingOrder: -11
   m_Sprite: {fileID: 21300000, guid: 8218f9082877f9a4f8813f3196029e38, type: 3}
   m_Color: {r: 0.75, g: 0.9848627, b: 1, a: 1}
@@ -18625,7 +18706,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18989,7 +19070,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328932160}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -20014,7 +20095,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439117491}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -20214,7 +20295,7 @@ GameObject:
   - component: {fileID: 1444026977}
   - component: {fileID: 1444026979}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Use
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20289,12 +20370,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444026975}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eng: Use
+  eng: 'Use
+
+'
   ru: "\u0412\u044B\u0431\u0440\u0430\u0442\u044C"
   engEd: []
   ruEd: []
@@ -20961,7 +21044,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489107571}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -21527,7 +21610,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22362,7 +22445,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24070,7 +24153,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702953753}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -25119,7 +25202,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26687,7 +26770,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27851,7 +27934,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28650,7 +28733,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -28906,7 +28989,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058851276}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f79c66631c5818b49a0aa262bdf9d77b, type: 3}
   m_Name: 
@@ -29886,7 +29969,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -265278839
-  m_SortingLayer: -5
+  m_SortingLayer: -7
   m_SortingOrder: -1002
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.6179246, g: 0.9887774, b: 1, a: 1}
@@ -30344,7 +30427,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -265278839
-  m_SortingLayer: -5
+  m_SortingLayer: -7
   m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: faabdbf893955844b9a8b5d8b3d5d33b, type: 3}
   m_Color: {r: 0.5707547, g: 0.9875196, b: 1, a: 1}
