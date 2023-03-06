@@ -619,6 +619,8 @@ GameObject:
   - component: {fileID: 7843454439545517342}
   - component: {fileID: 7843454439545517343}
   - component: {fileID: 5577911355128323871}
+  - component: {fileID: 6177548123614841588}
+  - component: {fileID: 2408358386707025160}
   m_Layer: 7
   m_Name: "\u041A\u0440\u0430\u0441\u043D\u044B\u0439 \u043F\u0430\u0443\u043AMob"
   m_TagString: Mob
@@ -734,6 +736,33 @@ MonoBehaviour:
   - {fileID: 7624702161724597496, guid: e9896585b13f3d842945740f534dbde5, type: 3}
   - {fileID: 7624702161724597496, guid: d6276e34e827f0e4586becd9441a54c1, type: 3}
   counts: 140000000f000000
+--- !u!114 &6177548123614841588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843454439545517336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6543fbdb56d930844bfce8744453f8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  web: {fileID: 5349974085053405608, guid: a2a9e8ca45edd084a8607ffc90e2e9fe, type: 3}
+--- !u!114 &2408358386707025160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843454439545517336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b356e3bb90ef03741bf03945cb9e329f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startCallDown: 10
+  attack: {fileID: 6177548123614841588}
 --- !u!1 &7843454440201325950
 GameObject:
   m_ObjectHideFlags: 0

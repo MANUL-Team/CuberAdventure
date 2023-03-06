@@ -30,17 +30,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Joystick joystick, uwJoystick;
     [SerializeField] private GameObject jumpPart, canvas;
     private float speedMnojitel;
-
     private AudioSource source;
     private AudioClip fallSound;
     private bool confusion;
-
     private int timeLand;
     [SerializeField] private float falling;
     private PlayerStats ps;
     private UnderWater uw;
     private float fallSpeed;
 
+    public void Confuse(){
+        confusion = true;
+        rb.velocity = new Vector2(0, 0);
+        Invoke("DeConfusion", 3f);
+    }
     public void AnyJumpForce(float jf){
         JumpForce = jf;
     }
@@ -71,8 +74,6 @@ public class PlayerController : MonoBehaviour
     private void DeConfusion(){
         confusion = false;
     }
-
-
     public void menu(){
         SceneManager.LoadScene("Menu");
     }

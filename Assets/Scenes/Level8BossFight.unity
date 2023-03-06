@@ -7202,6 +7202,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2408358386707025160, guid: 2a6113dec28f0c048bb9e5a30d116b10, type: 3}
+      propertyPath: startCallDown
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7843454439545517343, guid: 2a6113dec28f0c048bb9e5a30d116b10, type: 3}
       propertyPath: rotate
       value: 1
@@ -51081,7 +51085,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514370580}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6238ac3590a3e8a439f263afabbc159e, type: 3}
   m_Name: 
