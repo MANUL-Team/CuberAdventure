@@ -7,7 +7,7 @@ public class EnableForMissions : MonoBehaviour
     [SerializeField] private int id, step;
     [SerializeField] private GameObject enable, disable;
 
-    private void FixedUpdate() {
+    private void Start() {
         if(PlayerPrefs.GetInt("Mission " + id + " Step " + step) == 1){
             enable.SetActive(true);
             disable.SetActive(false);

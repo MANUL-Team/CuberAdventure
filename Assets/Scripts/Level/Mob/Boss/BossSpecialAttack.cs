@@ -12,7 +12,7 @@ public class BossSpecialAttack : MonoBehaviour
     }
     private IEnumerator AttackCD(){
         while(true){
-            if(callDown<0){
+            if(callDown<=0){
                 Attack();
             }
             callDown-=0.1f;

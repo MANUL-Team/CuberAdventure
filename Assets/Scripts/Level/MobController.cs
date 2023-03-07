@@ -117,6 +117,7 @@ public class MobController : MonoBehaviour
             hp = maxHp;
             rb = GetComponent<Rigidbody2D>();
             giveDrop = GetComponent<GiveDrop>();
+            StartCoroutine(Hunter());
         }
     }
     private void DeathCheck(){
@@ -160,6 +161,10 @@ public class MobController : MonoBehaviour
             else{
                 mobObj.SetActive(true);
             }
+        }
+    }
+    private IEnumerator Hunter(){
+        while(true){
             if(!confusion && !pathFinding && agressiveMob){
                 if(distToPlayer < distance){
                     StartHunter();
@@ -173,6 +178,7 @@ public class MobController : MonoBehaviour
             if(rotate){
                 Rotate();
             }
+            yield return new WaitForSeconds(0.5f);
         }
     }
     private void Rotate(){

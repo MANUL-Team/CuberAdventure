@@ -624,7 +624,7 @@ MonoBehaviour:
   canvasPosition: {fileID: 1128485191762052119}
   bloodPos: {fileID: 8648283885075973190}
   damage: 15
-  exp: 0
+  exp: 20
   mobObj: {fileID: 5375716925405577377}
   distance: 10
   speed: 5
