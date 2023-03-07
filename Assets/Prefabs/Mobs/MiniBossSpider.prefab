@@ -714,7 +714,7 @@ MonoBehaviour:
   canvasPosition: {fileID: 0}
   bloodPos: {fileID: 1620978639939019190}
   damage: 50
-  exp: 150
+  exp: 250
   mobObj: {fileID: 8183750714486971872}
   distance: 0
   speed: 0
@@ -761,7 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b356e3bb90ef03741bf03945cb9e329f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startCallDown: 10
+  startCallDown: 5
   attack: {fileID: 6177548123614841588}
 --- !u!1 &7843454440201325950
 GameObject:

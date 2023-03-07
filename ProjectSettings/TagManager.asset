@@ -93,3 +93,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Boss
+    uniqueID: 2031902119
+    locked: 0
