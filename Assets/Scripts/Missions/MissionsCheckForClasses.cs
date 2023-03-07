@@ -7,13 +7,19 @@ public class MissionsCheckForClasses : MonoBehaviour
     [SerializeField] private GameObject[] classes;
     [SerializeField] private int[] id, steps;
     private void Start() {
-        for(int i = 0; i < classes.Length; i++){
-            if(PlayerPrefs.GetInt("Mission " + id[i] + " Step " + steps[i]) == 1){
-                classes[i].SetActive(true);
+        StartCoroutine(ClassesCheck());
+    }
+    private IEnumerator ClassesCheck(){
+        while(true){
+            for(int i = 0; i < classes.Length; i++){
+                if(PlayerPrefs.GetInt("Mission " + id[i] + " Step " + steps[i]) == 1){
+                    classes[i].SetActive(true);
+                }
+                else{
+                    classes[i].SetActive(false);
+                }
             }
-            else{
-                classes[i].SetActive(false);
-            }
+            yield return new WaitForSeconds(3f);
         }
     }
 
