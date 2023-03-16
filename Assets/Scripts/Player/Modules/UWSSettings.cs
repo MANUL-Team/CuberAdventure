@@ -39,7 +39,7 @@ public class UWSSettings : MonoBehaviour
     public bool ready;
     public void CheckModule() {
         for(int i = 0; i < prefabs.Length; i++){
-            if(PlayerPrefs.GetInt("UWS") == prefabs[i].id){
+            if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") == prefabs[i].id){
                 _speed = prefabs[i].speed;
                 _airCount = prefabs[i].airCount;
                 _needEnergy = prefabs[i].needEnergy;

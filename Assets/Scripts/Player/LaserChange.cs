@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class LaserChange : MonoBehaviour
 {
-    [SerializeField] private int id;
-    [SerializeField] private GameObject button, buttonClose;
+    public int id;
+    public GameObject button, buttonClose;
     [SerializeField] private PlayerStats stats;
+    [SerializeField] private LaserSettings laser;
 
     public void ChangeLaser(){
         if(id != 0){
@@ -17,6 +18,7 @@ public class LaserChange : MonoBehaviour
         }else{
             PlayerPrefs.SetInt("ChangedLaser", id);
         }
+        laser.CheckModule();
     }
     private void Update() {
         if(id != 0){

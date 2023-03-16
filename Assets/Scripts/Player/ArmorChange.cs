@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ArmorChange : MonoBehaviour
 {
-    [SerializeField] private int id;
-    [SerializeField] private GameObject button, buttonClose;
+    public int id;
+    public GameObject button, buttonClose;
     [SerializeField] private PlayerStats stats;
+    [SerializeField] private ArmorSettings armor;
 
     public void ChangeArmor(){
         if(id != 0){
@@ -17,6 +18,7 @@ public class ArmorChange : MonoBehaviour
         }else{
             PlayerPrefs.SetInt("ChangedArmor", id);
         }
+        armor.CheckModule();
     }
     private void Update() {
         if(id != 0){
