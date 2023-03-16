@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WeaponChange : MonoBehaviour
 {
-    [SerializeField] private int id;
-    [SerializeField] private GameObject button, buttonClose;
+    public int id;
+    public GameObject button, buttonClose;
     [SerializeField] private PlayerStats stats;
     [SerializeField] private CoreSettings core;
 

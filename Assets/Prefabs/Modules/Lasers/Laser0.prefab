@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e8c136e4b22e541b7538bd6b327d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _needEnergy: 50
-  _damage: 10
+  _needEnergy: 20
+  _damage: 5
   _currentDamage: 0
   prefabs: []
   _id: 0
