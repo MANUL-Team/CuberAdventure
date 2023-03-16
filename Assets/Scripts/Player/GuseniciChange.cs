@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GuseniciChange : MonoBehaviour
 {
-    [SerializeField] private int id;
-    [SerializeField] private GameObject button, buttonClose;
+    public int id;
+    public GameObject button, buttonClose;
     [SerializeField] private PlayerStats stats;
+    [SerializeField] private TracksSettings tracks;
 
     public void ChangeGusenici(){
         if(id != 0){
@@ -17,6 +18,7 @@ public class GuseniciChange : MonoBehaviour
         }else{
             PlayerPrefs.SetInt("ChangedGusenici", id);
         }
+        tracks.CheckModule();
     }
     private void Update() {
         if(id != 0){

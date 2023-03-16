@@ -39,7 +39,7 @@ public class ArmorSettings : MonoBehaviour
     public bool ready;
     public void CheckModule() {
         for(int i = 0; i < prefabs.Length; i++){
-            if(PlayerPrefs.GetInt("Armor") == prefabs[i].id){
+            if(PlayerPrefs.GetInt("ChangedArmor") == prefabs[i].id){
                 _protection = prefabs[i].protection;
                 _isEnergy = prefabs[i].isEnergy;
                 _needEnergy = prefabs[i].needEnergy;

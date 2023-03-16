@@ -33,7 +33,7 @@ public class TracksSettings : MonoBehaviour
     public bool ready;
     public void CheckModule() {
         for(int i = 0; i < prefabs.Length; i++){
-            if(PlayerPrefs.GetInt("Tracks") == prefabs[i].id){
+            if(PlayerPrefs.GetInt("ChangedGusenici") == prefabs[i].id){
                 _speed = prefabs[i].speed;
                 _needEnergy = prefabs[i].needEnergy;
                 _id = prefabs[i].id;

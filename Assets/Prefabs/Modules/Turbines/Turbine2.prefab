@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8077714653651954505}
   - component: {fileID: 8252158061680675948}
   m_Layer: 0
-  m_Name: Turbine1
+  m_Name: Turbine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,11 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 414e52e503e769d49a42929304c3f435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _needEnergy: 80
-  _jumpHeight: 20
+  _needEnergy: 120
+  _jumpHeight: 22
   _currentJumpHeight: 0
   _jumpCount: 1
   prefabs: []
-  _id: 1
+  _id: 2
   haveE: 0
   ready: 0
