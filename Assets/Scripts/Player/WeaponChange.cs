@@ -7,16 +7,18 @@ public class WeaponChange : MonoBehaviour
     [SerializeField] private int id;
     [SerializeField] private GameObject button, buttonClose;
     [SerializeField] private PlayerStats stats;
+    [SerializeField] private CoreSettings core;
 
     public void ChangeWeapon(){
         if(id != 0){
             if(PlayerPrefs.GetInt("Weapon" + id.ToString()) == 1){
-                PlayerPrefs.SetInt("ChangedWeapon", id);
+                PlayerPrefs.SetInt("Core", id);
                 stats.LoadStats();
             }
         }else{
-            PlayerPrefs.SetInt("ChangedWeapon", id);
+            PlayerPrefs.SetInt("Core", id);
         }
+        core.CheckModule();
     }
     private void Update() {
         if(id != 0){
@@ -26,7 +28,7 @@ public class WeaponChange : MonoBehaviour
                 buttonClose.SetActive(false);
             }
         }
-        if(PlayerPrefs.GetInt("ChangedWeapon") == id){
+        if(PlayerPrefs.GetInt("Core") == id){
             button.SetActive(false);
         }
         else{
