@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class TurbineChange : MonoBehaviour
 {
-    [SerializeField] private int id;
-    [SerializeField] private GameObject button, buttonClose;
+    public int id;
+    public GameObject button, buttonClose;
     [SerializeField] private PlayerStats stats;
+    [SerializeField] private TurbineSettings turbine;
 
     public void ChangeTurbine(){
         if(id != 0){
@@ -17,6 +18,7 @@ public class TurbineChange : MonoBehaviour
         }else{
             PlayerPrefs.SetInt("ChangedTurbine", id);
         }
+        turbine.CheckModule();
     }
     private void Update() {
         if(id != 0){

@@ -33,7 +33,7 @@ public class LaserSettings : MonoBehaviour
     public bool ready;
     public void CheckModule() {
         for(int i = 0; i < prefabs.Length; i++){
-            if(PlayerPrefs.GetInt("Armor") == prefabs[i].id){
+            if(PlayerPrefs.GetInt("ChangedLaser") == prefabs[i].id){
                 _damage = prefabs[i].damage;
                 _needEnergy = prefabs[i].needEnergy;
                 _id = prefabs[i].id;

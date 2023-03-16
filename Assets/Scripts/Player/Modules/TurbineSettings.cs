@@ -39,7 +39,7 @@ public class TurbineSettings : MonoBehaviour
     public bool ready;
     public void CheckModule() {
         for(int i = 0; i < prefabs.Length; i++){
-            if(PlayerPrefs.GetInt("Turbine") == prefabs[i].id){
+            if(PlayerPrefs.GetInt("ChangedTurbine") == prefabs[i].id){
                 _jumpHeight = prefabs[i].jumpHeight;
                 _needEnergy = prefabs[i].needEnergy;
                 _id = prefabs[i].id;

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class UWSystemChange : MonoBehaviour
 {
-    [SerializeField] private int id;
-    [SerializeField] private GameObject button, buttonClose;
+    public int id;
+    public GameObject button, buttonClose;
     [SerializeField] private PlayerStats stats;
+    [SerializeField] private UWSSettings uws;
 
     public void ChangeUWS(){
         if(id != 0){
@@ -17,6 +18,7 @@ public class UWSystemChange : MonoBehaviour
         }else{
             PlayerPrefs.SetInt("ChangedUnderWaterSystem", id);
         }
+        uws.CheckModule();
     }
     private void Update() {
         if(id != 0){
