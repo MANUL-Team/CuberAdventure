@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float hp, maxHp, dmg, exp, hpBonus, dmgBonus;
-    public int lvl, armor, prot;
+    public float hp, maxHp, dmg, exp, hpBonus, dmgBonus, prot;
+    public int lvl, armor;
     [SerializeField] private Image healthBar;
     [SerializeField] private Text hpText;
     public int needExp;
     private DeathScript death;
     [SerializeField] private GameObject soundDmgObj;
     [SerializeField] private GameObject levelText;
+    [SerializeField] private ModulesController modules;
     private UnderWater uw;
 
     private IEnumerator health(){
@@ -22,7 +23,7 @@ public class PlayerStats : MonoBehaviour
     }
     public void Damage(float damage){
         if(damage - prot >= 0 && !uw.loseAir){
-            hp -= damage - prot;
+            hp -= Mathf.Round(damage - damage * (prot/100));
         }
         else if(uw.loseAir){
             hp -= damage;
@@ -75,22 +76,10 @@ public class PlayerStats : MonoBehaviour
         exp = PlayerPrefs.GetInt("Exp");
         hpBonus = PlayerPrefs.GetInt("HpBonus");
         dmgBonus = PlayerPrefs.GetInt("DmgBonus");
-        dmg = PlayerPrefs.GetInt("PlayerDmg") + PlayerPrefs.GetInt("LaserDmg");
+        dmg = modules._laser.currentDamage;
         armor = PlayerPrefs.GetInt("ChangedArmor");
-        if(armor == 0){
-            prot = 0;
-        } else if(armor == 1){
-            prot = 10;
-        } else if(armor == 2){
-            prot = 25;
-        } else if(armor == 3){
-            prot = 15;
-        }
         needExp = PlayerPrefs.GetInt("NeedExp");
-    }
-    public void UpdateLevel(){
-        LoadStats();
-        needExp = PlayerPrefs.GetInt("NeedExp");
+        prot = modules._armor.currentProtection;
     }
     public void LevelUp(){
         if(PlayerPrefs.GetInt("Exp") >= needExp){

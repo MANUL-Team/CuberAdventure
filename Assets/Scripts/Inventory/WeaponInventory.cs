@@ -11,40 +11,11 @@ public class WeaponInventory : MonoBehaviour
     [SerializeField] private Transform attackPosR, attackPosL, bulletPosL, bulletPosR;
     [SerializeField] private LayerMask enemy;
     [SerializeField] private GameObject bullet, sound;
+    [SerializeField] private ModulesController modules;
     private GameObject bulletInst;
     private IEnumerator LowUpdate(){
         while(true){
-            damage = PlayerPrefs.GetInt("PlayerDmg") + PlayerPrefs.GetInt("DmgBonus") + PlayerPrefs.GetInt("LaserDmg");
-            if(PlayerPrefs.GetInt("ChangedWeapon") == 0){
-                PlayerPrefs.SetInt("PlayerDmg", 1);
-            }
-            if(PlayerPrefs.GetInt("ChangedWeapon") == 1){
-                PlayerPrefs.SetInt("PlayerDmg", 10);
-            }
-            if(PlayerPrefs.GetInt("ChangedWeapon") == 2){
-                PlayerPrefs.SetInt("PlayerDmg", 15);
-            }
-            if(PlayerPrefs.GetInt("ChangedWeapon") == 3){
-                PlayerPrefs.SetInt("PlayerDmg", 20);
-            }
-            if(PlayerPrefs.GetInt("ChangedWeapon") == 4){
-                PlayerPrefs.SetInt("PlayerDmg", 25);
-            }
-            if(PlayerPrefs.GetInt("ChangedWeapon") == 5){
-                PlayerPrefs.SetInt("PlayerDmg", 30);
-            }
-            if(PlayerPrefs.GetInt("ChangedWeapon") == 6){
-                PlayerPrefs.SetInt("PlayerDmg", 42);
-            }
-            if(PlayerPrefs.GetInt("ChangedLaser") == 0){
-                PlayerPrefs.SetInt("LaserDmg", 0);
-            }
-            if(PlayerPrefs.GetInt("ChangedLaser") == 1){
-                PlayerPrefs.SetInt("LaserDmg", 20);
-            }
-            if(PlayerPrefs.GetInt("ChangedLaser") == 2){
-                PlayerPrefs.SetInt("LaserDmg", 50);
-            }
+            damage = modules._laser.currentDamage + PlayerPrefs.GetInt("DmgBonus");
             yield return new WaitForSeconds(0.2f);
         }
     }

@@ -15,7 +15,7 @@ public class SkyGenerate : MonoBehaviour
 
     private void SpawnChunk(){
         GameObject newChunk = Instantiate(chunkPrefabs[Random.Range(0, chunkPrefabs.Length)]);
-        newChunk.GetComponent<Transform>().position = new Vector2(51.65f, -11.5f);
+        newChunk.GetComponent<Transform>().position = new Vector3(51.65f, 8.15f, 51f);
         SpawnedChunks.Add(newChunk);
 
         if (SpawnedChunks.Count >= 3) {
