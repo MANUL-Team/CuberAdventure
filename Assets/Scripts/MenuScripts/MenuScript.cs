@@ -11,6 +11,7 @@ public class MenuScript : MonoBehaviour
     [SerializeField]private GameObject Play, SkinsMenu, MainMenu, ServMenu, Shop, PetsMenu, PromoMenu, Loading, settingsMenu, shopMenu;
     [SerializeField]private Image loadingImg;
     [SerializeField]private PresentTimeReset present;
+    [SerializeField]private SkinCheck skincheck;
 
     public void PlayPressed()
     {
@@ -92,7 +93,6 @@ public class MenuScript : MonoBehaviour
         MainMenu.SetActive(false);
         SkinsMenu.SetActive(false);
     }
-
     public void Skins(){
         SkinsMenu.SetActive(true);
         MainMenu.SetActive(false);
@@ -100,6 +100,11 @@ public class MenuScript : MonoBehaviour
         PetsMenu.SetActive(false);
         PromoMenu.SetActive(false);
         shopMenu.SetActive(false);
+        skincheck.CheckUsed();
+        Invoke("CheckUsed", 0.1f);
+    }
+    private void CheckUsed(){
+        skincheck.CheckUsed();
     }
 
     public void Pets(){
@@ -145,6 +150,7 @@ public class MenuScript : MonoBehaviour
 
     public void SetPlayer(int index){
         PlayerPrefs.SetInt("Player", index);
+        skincheck.CheckUsed();
     }
     public void SetPet(int index){
         PlayerPrefs.SetInt("Pet", index);
