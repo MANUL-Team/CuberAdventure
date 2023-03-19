@@ -7934,6 +7934,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2041122782}
+  - {fileID: 1377793847}
   - {fileID: 1220122174}
   m_Father: {fileID: 798281009}
   m_RootOrder: 0
@@ -12999,7 +13000,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2020105215}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: Menu
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13344,6 +13345,8 @@ MonoBehaviour:
   - {fileID: 1533249223}
   - {fileID: 1943073279}
   - {fileID: 1586422860}
+  use: {fileID: 21300000, guid: 4b0db5b5ac513eb4981ec6830d2146d8, type: 3}
+  used: {fileID: 21300000, guid: 4c6c52e9a04b61e4da55030f8730b0cc, type: 3}
 --- !u!1 &932384728
 GameObject:
   m_ObjectHideFlags: 0
@@ -17163,7 +17166,6 @@ GameObject:
   - component: {fileID: 1220122177}
   - component: {fileID: 1220122176}
   - component: {fileID: 1220122175}
-  - component: {fileID: 1220122178}
   m_Layer: 5
   m_Name: Skin0
   m_TagString: Untagged
@@ -17185,7 +17187,7 @@ RectTransform:
   m_Children:
   - {fileID: 1444026976}
   m_Father: {fileID: 626892719}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17248,7 +17250,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1220122178}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SkinCheck, Assembly-CSharp
         m_MethodName: Check
         m_Mode: 1
@@ -17298,19 +17300,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220122173}
   m_CullTransparentMesh: 1
---- !u!114 &1220122178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1220122173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11d796792914f094e9c11e8bba23ff86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  skins: []
 --- !u!1 &1222591747
 GameObject:
   m_ObjectHideFlags: 0
@@ -19500,6 +19489,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369050182}
   m_CullTransparentMesh: 1
+--- !u!1 &1377793846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1377793847}
+  m_Layer: 5
+  m_Name: BuySkin
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1377793847
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377793846}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 626892719}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1378386888
 GameObject:
   m_ObjectHideFlags: 0
@@ -28118,6 +28143,7 @@ MonoBehaviour:
   shopMenu: {fileID: 834077767}
   loadingImg: {fileID: 1186100455}
   present: {fileID: 808763649}
+  skincheck: {fileID: 929700465}
 --- !u!81 &2020105216
 AudioListener:
   m_ObjectHideFlags: 0
