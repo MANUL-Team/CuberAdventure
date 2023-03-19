@@ -22,14 +22,16 @@ public class PlayerStats : MonoBehaviour
         StartCoroutine("health");
     }
     public void Damage(float damage){
-        if(damage - prot >= 0 && !uw.loseAir){
+        if(!uw.loseAir){
             hp -= Mathf.Round(damage - damage * (prot/100));
         }
         else if(uw.loseAir){
             hp -= damage;
         }
-        GameObject soundDmg = Instantiate(soundDmgObj, transform.position, Quaternion.identity);
-        Destroy(soundDmg, 1f);
+        if(Mathf.Round(damage - damage * (prot/100)) >= 1){
+            GameObject soundDmg = Instantiate(soundDmgObj, transform.position, Quaternion.identity);
+            Destroy(soundDmg, 1f);
+        }
     }
     private void Start(){
         uw = GetComponent<UnderWater>();
@@ -76,10 +78,10 @@ public class PlayerStats : MonoBehaviour
         exp = PlayerPrefs.GetInt("Exp");
         hpBonus = PlayerPrefs.GetInt("HpBonus");
         dmgBonus = PlayerPrefs.GetInt("DmgBonus");
-        dmg = modules._laser.currentDamage;
+        dmg = Mathf.Round(modules._laser.currentDamage);
         armor = PlayerPrefs.GetInt("ChangedArmor");
         needExp = PlayerPrefs.GetInt("NeedExp");
-        prot = modules._armor.currentProtection;
+        prot = Mathf.Round(modules._armor.currentProtection);
     }
     public void LevelUp(){
         if(PlayerPrefs.GetInt("Exp") >= needExp){
