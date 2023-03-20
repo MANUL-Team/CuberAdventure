@@ -29,6 +29,12 @@ public class TracksSettings : MonoBehaviour
         }
     }
     [SerializeField] private int _id;
+    public Sprite sprite{
+        get{
+            return _sprite;
+        }
+    }
+    [SerializeField] private Sprite _sprite;
     public float haveE;
     public bool ready;
     public void CheckModule() {
@@ -37,6 +43,7 @@ public class TracksSettings : MonoBehaviour
                 _speed = prefabs[i].speed;
                 _needEnergy = prefabs[i].needEnergy;
                 _id = prefabs[i].id;
+                _sprite = prefabs[i]._sprite;
                 ready = true;
             }
         }

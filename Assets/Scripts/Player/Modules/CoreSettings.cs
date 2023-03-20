@@ -18,6 +18,12 @@ public class CoreSettings : MonoBehaviour
         }
     }
     [SerializeField] private int _id;
+    public Sprite sprite{
+        get{
+            return _sprite;
+        }
+    }
+    [SerializeField] private Sprite _sprite;
     public int haveE;
     public bool ready;
     public void CheckModule() {
@@ -25,6 +31,7 @@ public class CoreSettings : MonoBehaviour
             if(PlayerPrefs.GetInt("Core") == prefabs[i].id){
                 _countEnergy = prefabs[i].countEnegry;
                 _id = prefabs[i].id;
+                _sprite = prefabs[i]._sprite;
                 ready = true;
             }
         }
