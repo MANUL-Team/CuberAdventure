@@ -49,5 +49,6 @@ MonoBehaviour:
   _currentDamage: 0
   prefabs: []
   _id: 1
+  _sprite: {fileID: 21300000, guid: cdee3f296e5c8df4c9122bfebd3c0774, type: 3}
   haveE: 0
   ready: 0

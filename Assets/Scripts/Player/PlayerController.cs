@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     private int timeLand;
     [SerializeField] private float falling;
     private PlayerStats ps;
-    private UnderWater uw;
+    [SerializeField] private UnderWater uw;
     private float fallSpeed;
 
     public void Confuse(){
@@ -125,7 +125,6 @@ public class PlayerController : MonoBehaviour
         source = obj.GetComponent<AudioSource>();
         fallSound = source.clip;
         ps = GetComponent<PlayerStats>();
-        uw = GetComponent<UnderWater>();
         StartCoroutine(Falling());
     }
 
