@@ -50,5 +50,6 @@ MonoBehaviour:
   _jumpCount: 1
   prefabs: []
   _id: 0
+  _sprite: {fileID: 21300000, guid: 18652efcbd41f6a478ae30c9c45699ec, type: 3}
   haveE: 0
   ready: 0

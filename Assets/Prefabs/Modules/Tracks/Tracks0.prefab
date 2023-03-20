@@ -49,5 +49,6 @@ MonoBehaviour:
   _currentSpeed: 0
   prefabs: []
   _id: 0
+  _sprite: {fileID: 21300000, guid: 2b21890414f895a4db6c485e474367da, type: 3}
   haveE: 0
   ready: 0

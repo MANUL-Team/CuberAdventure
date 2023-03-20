@@ -4,38 +4,29 @@ using UnityEngine;
 
 public class PointOffline : MonoBehaviour
 {
-    private GameObject player;
-
-    Animator animator;
-
+    [SerializeField] Animator animator;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float checkRadius;
     [SerializeField] private LayerMask whatIsGround;
-    [SerializeField] private LayerMask whatIsNotGround;
-    [SerializeField] private LayerMask EndLevel;
     [SerializeField] private bool isGrounded;
-    [SerializeField] private bool isNotGrounded;
-    [SerializeField] private bool levelEnded;
-
-
-
-    private void Awake() {
-        
+    private Rigidbody2D rb;
+    private void Start() {
+        rb = GetComponent<Rigidbody2D>();
     }
-    void Start()
-    {
-        animator = GameObject.FindGameObjectWithTag("PlayerSkin").GetComponent<Animator>();
-    }
-
-
     void Update()
     {
-            if(isGrounded == false){
-                animator.SetBool("Jump", true);
-            }
-            if(isGrounded){
-                animator.SetBool("Jump", false);
-            }
+        if(rb.velocity.y == 0){
+            animator.SetBool("JumpDown", false);
+            animator.SetBool("JumpUp", false);
+        }
+        else if(rb.velocity.y > 0){
+            animator.SetBool("JumpUp", true);
+            animator.SetBool("JumpDown", false);
+        }
+        else if(rb.velocity.y < 0){
+            animator.SetBool("JumpUp", false);
+            animator.SetBool("JumpDown", true);
+        }
     }
     private void FixedUpdate() {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
