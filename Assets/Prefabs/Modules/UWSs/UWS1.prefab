@@ -50,4 +50,6 @@ MonoBehaviour:
   _airCount: 300
   prefabs: []
   _id: 1
+  _sprite: {fileID: 21300000, guid: 4f42f8305d714e24aa140f89be77b728, type: 3}
   haveE: 0
+  ready: 0

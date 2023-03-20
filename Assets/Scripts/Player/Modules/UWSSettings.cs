@@ -35,6 +35,12 @@ public class UWSSettings : MonoBehaviour
         }
     }
     [SerializeField] private int _id;
+    public Sprite sprite{
+        get{
+            return _sprite;
+        }
+    }
+    [SerializeField] private Sprite _sprite;
     public float haveE;
     public bool ready;
     public void CheckModule() {
@@ -45,6 +51,7 @@ public class UWSSettings : MonoBehaviour
                 _needEnergy = prefabs[i].needEnergy;
                 _id = prefabs[i].id;
                 _currentSpeed = _speed * (haveE/_needEnergy);
+                _sprite = prefabs[i]._sprite;
                 ready = true;
             }
         }

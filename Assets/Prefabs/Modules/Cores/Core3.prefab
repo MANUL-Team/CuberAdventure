@@ -48,5 +48,6 @@ MonoBehaviour:
   countLastEnegry: 0
   prefabs: []
   _id: 3
+  _sprite: {fileID: 21300000, guid: 54a98ac8fb9b31844bb1cb9a2254c3a2, type: 3}
   haveE: 0
   ready: 0

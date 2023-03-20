@@ -34,6 +34,12 @@ public class ArmorSettings : MonoBehaviour
         }
     }
     [SerializeField] private int _id;
+    public Sprite sprite{
+        get{
+            return _sprite;
+        }
+    }
+    [SerializeField] private Sprite _sprite;
     public float haveE;
     [SerializeField] private ArmorSettings[] prefabs;
     public bool ready;
@@ -43,7 +49,8 @@ public class ArmorSettings : MonoBehaviour
                 _protection = prefabs[i].protection;
                 _isEnergy = prefabs[i].isEnergy;
                 _needEnergy = prefabs[i].needEnergy;
-                _id = prefabs[i].id; 
+                _id = prefabs[i].id;
+                _sprite = prefabs[i]._sprite;
                 ready = true;
             }
         }
