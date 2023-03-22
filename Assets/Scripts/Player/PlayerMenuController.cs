@@ -8,21 +8,24 @@ public class PlayerMenuController : MonoBehaviour
     [SerializeField] private Text lvl, dmg, hp, prot;
     [SerializeField] private PlayerStats ps;
     [SerializeField] private GameObject inventory, weaponMenu, menu, lBut, dBut, cBut, sBut, skillsMenu, bg, xpScale, statsBG;
+    private Animator animator;
     private bool statsUpdate;
-
-
+    private void Start() {
+        animator = GetComponent<Animator>();
+    }
+    public void AnimInventory(){
+        animator.SetTrigger("Inventory");
+    }
+    public void AnimInventoryBack(){
+        animator.SetTrigger("InventoryBack");
+    }
     public void OpenCloseInventory(){
         inventory.SetActive(!inventory.activeSelf);
         lvl.gameObject.SetActive(!inventory.activeSelf);
-        dmg.gameObject.SetActive(!inventory.activeSelf);
-        hp.gameObject.SetActive(!inventory.activeSelf);
-        prot.gameObject.SetActive(!inventory.activeSelf);
         lBut.gameObject.SetActive(!inventory.activeSelf);
         dBut.gameObject.SetActive(!inventory.activeSelf);
         cBut.gameObject.SetActive(!inventory.activeSelf);
         sBut.gameObject.SetActive(!inventory.activeSelf);
-        xpScale.SetActive(!xpScale.activeSelf);
-        statsBG.SetActive(!statsBG.activeSelf);
     }
     public void OpenWeaponMenu(){
         weaponMenu.SetActive(!weaponMenu.activeSelf);
