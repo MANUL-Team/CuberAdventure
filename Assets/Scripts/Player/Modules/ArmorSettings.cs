@@ -42,6 +42,11 @@ public class ArmorSettings : MonoBehaviour
     [SerializeField] private Sprite _sprite;
     public float haveE;
     [SerializeField] private ArmorSettings[] prefabs;
+    public ArmorSettings[] _prefabs{
+        get{
+            return prefabs;
+        }
+    }
     public bool ready;
     public void CheckModule() {
         for(int i = 0; i < prefabs.Length; i++){

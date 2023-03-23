@@ -23,6 +23,11 @@ public class TracksSettings : MonoBehaviour
     }
     [SerializeField] private float _currentSpeed;
     [SerializeField] private TracksSettings[] prefabs;
+    public TracksSettings[] _prefabs{
+        get{
+            return prefabs;
+        }
+    }
     public int id{
         get{
             return _id;

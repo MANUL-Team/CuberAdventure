@@ -29,6 +29,11 @@ public class TurbineSettings : MonoBehaviour
     }
     [SerializeField] private int _jumpCount;
     [SerializeField] private TurbineSettings[] prefabs;
+    public TurbineSettings[] _prefabs{
+        get{
+            return prefabs;
+        }
+    }
     public int id{
         get{
             return _id;
