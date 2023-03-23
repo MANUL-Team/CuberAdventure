@@ -14,18 +14,14 @@ public class PlayerMenuController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
     public void AnimInventory(){
-        animator.SetTrigger("Inventory");
+        animator.SetBool("Inventory", true);
     }
     public void AnimInventoryBack(){
-        animator.SetTrigger("InventoryBack");
+        animator.SetBool("Inventory", false);
     }
     public void OpenCloseInventory(){
         inventory.SetActive(!inventory.activeSelf);
-        lvl.gameObject.SetActive(!inventory.activeSelf);
-        lBut.gameObject.SetActive(!inventory.activeSelf);
-        dBut.gameObject.SetActive(!inventory.activeSelf);
-        cBut.gameObject.SetActive(!inventory.activeSelf);
-        sBut.gameObject.SetActive(!inventory.activeSelf);
+        menu.gameObject.SetActive(!inventory.activeSelf);
     }
     public void OpenWeaponMenu(){
         weaponMenu.SetActive(!weaponMenu.activeSelf);
