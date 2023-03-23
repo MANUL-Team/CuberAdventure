@@ -29,6 +29,11 @@ public class UWSSettings : MonoBehaviour
     }
     [SerializeField] private int _airCount;
     [SerializeField] private UWSSettings[] prefabs;
+    public UWSSettings[] _prefabs{
+        get{
+            return prefabs;
+        }
+    }
     public int id{
         get{
             return _id;

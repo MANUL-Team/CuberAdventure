@@ -1,0 +1,55 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class UsedModules : MonoBehaviour
+{
+    [SerializeField] private ButtonSettings[] modules;
+    [SerializeField] private ModulesController controller;
+    [SerializeField] private Text name, description, stats;
+    private string type, id;
+    public string _type{
+        get{
+            return type;
+        }
+    }
+    public string _id{
+        get{
+            return id;
+        }
+    }
+    public void ModulesCheck(){
+        for(int i = 0; i < modules.Length; i++){
+            if(PlayerPrefs.GetInt(modules[i]._module.module.ToString() + modules[i]._module.id.ToString()) == 0){
+                modules[i].background.color = new Color(255/255f, 75/255f, 75/255f);
+            }
+            else{
+                if(PlayerPrefs.GetInt(modules[i]._module.module.ToString()) == modules[i]._module.id){
+                    modules[i].background.color = new Color(255/255f, 255/255f, 75/255f);
+                }
+                else{
+                    modules[i].background.color = new Color(75/255f, 255/255f, 75/255f);
+                }
+            }
+        }
+    }
+    private void Start() {
+        ModulesCheck();
+    }
+    public void SelectModule(CraftedItem module){
+        name.text = module.nameRu;
+        description.text = module.descriptionRu;
+        stats.text = module.statsRu;
+        type = module.module;
+        id = module.id.ToString();
+    }
+    public void ChangeModule(){
+        PlayerPrefs.SetInt(type, int.Parse(id));
+        ModulesCheck();
+    }
+    public void GiveModule(){
+        PlayerPrefs.SetInt(type + id, 1);
+        ModulesCheck();
+    }
+}
