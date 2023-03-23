@@ -12,8 +12,9 @@ public class PlayerButtonManager : MonoBehaviour
     public void OpenClosePM(){
         if(PM.activeSelf == false){
             PM.SetActive(true);
+            PManim.SetBool("Close", false);
         }else{
-            PManim.SetTrigger("Close");
+            PManim.SetBool("Close", true);
         }
     }
 }

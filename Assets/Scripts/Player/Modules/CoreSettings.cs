@@ -12,6 +12,11 @@ public class CoreSettings : MonoBehaviour
     [SerializeField] private int _countEnergy;
     public int countLastEnegry;
     [SerializeField] private CoreSettings[] prefabs;
+    public CoreSettings[] _prefabs{
+        get{
+            return prefabs;
+        }
+    }
     public int id{
         get{
             return _id;

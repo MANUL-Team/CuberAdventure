@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aa70c2a3775a4744832c6b9c6690cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  module: Weapon
+  module: Core
   id: 1
   nameRu: "\u042F\u0434\u0440\u043E \u0443\u04402"
   descriptionRu: "\u041C\u043E\u0434\u0443\u043B\u044C \u043A\u0443\u0431\u0435\u0440\u0430,
@@ -53,7 +53,7 @@ MonoBehaviour:
   statsRu: "\u041C\u043E\u0449\u043D\u043E\u0441\u0442\u044C: 100\u043A\u0412\u0442"
   commentRu: "\u0411\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u0430\u044F
     \u044D\u043D\u0435\u0440\u0433\u0438\u044F..."
-  nameEng: Core lvl1
+  nameEng: Core lvl2
   descriptionEng: The Cuber module, feeding it with infinitely released energy
   statsEng: 'Power: 100 kW'
   commentEng: Infinite energy...

@@ -23,6 +23,11 @@ public class LaserSettings : MonoBehaviour
     }
     [SerializeField] private float _currentDamage;
     [SerializeField] private LaserSettings[] prefabs;
+    public LaserSettings[] _prefabs{
+        get{
+            return prefabs;
+        }
+    }
     public int id{
         get{
             return _id;
