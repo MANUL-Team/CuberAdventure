@@ -8,6 +8,9 @@ public class UsedModules : MonoBehaviour
     [SerializeField] private ButtonSettings[] modules;
     [SerializeField] private ModulesController controller;
     [SerializeField] private Text name, description, stats;
+    [SerializeField] private GameObject[] typesOfModules;
+    [SerializeField] private GameObject selectButton;
+    [SerializeField] private Animator cuber;
     private string type, id;
     public string _type{
         get{
@@ -21,7 +24,7 @@ public class UsedModules : MonoBehaviour
     }
     public void ModulesCheck(){
         for(int i = 0; i < modules.Length; i++){
-            if(PlayerPrefs.GetInt(modules[i]._module.module.ToString() + modules[i]._module.id.ToString()) == 0){
+            if(PlayerPrefs.GetInt(modules[i]._module.module.ToString() + modules[i]._module.id.ToString()) == 0 && modules[i]._module.id != 0){
                 modules[i].background.color = new Color(255/255f, 75/255f, 75/255f);
             }
             else{
@@ -43,6 +46,13 @@ public class UsedModules : MonoBehaviour
         stats.text = module.statsRu;
         type = module.module;
         id = module.id.ToString();
+        if(PlayerPrefs.GetInt(module.module.ToString() + module.id) != 0 || module.id == 0){
+            selectButton.SetActive(true);
+        }
+        else{
+            selectButton.SetActive(false);
+        }
+        ModulesCheck();
     }
     public void ChangeModule(){
         PlayerPrefs.SetInt(type, int.Parse(id));
@@ -51,5 +61,24 @@ public class UsedModules : MonoBehaviour
     public void GiveModule(){
         PlayerPrefs.SetInt(type + id, 1);
         ModulesCheck();
+    }
+    public void SelectTypeOfModule(int id){
+        for(int i = 0; i < typesOfModules.Length; i++){
+            if(i != id){
+                typesOfModules[i].SetActive(false);
+            }
+            else{
+                typesOfModules[i].SetActive(true);
+            }
+        }
+        if(id == 0 || id == 1){
+            cuber.SetBool("Transperency", true);
+        }
+        else{
+            cuber.SetBool("Transperency", false);
+        }
+    }
+    public void TransperencyOff(){
+        cuber.SetBool("Transperency", false);
     }
 }

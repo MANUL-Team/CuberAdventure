@@ -21,6 +21,12 @@ public class ArmorSettings : MonoBehaviour
             return _isEnergy;
         }
     }
+    public Sprite sprite{
+        get{
+            return _sprite;
+        }
+    }
+    [SerializeField] private Sprite _sprite;
     [SerializeField] private bool _isEnergy;
     public float needEnergy{
         get{
@@ -34,12 +40,6 @@ public class ArmorSettings : MonoBehaviour
         }
     }
     [SerializeField] private int _id;
-    public Sprite sprite{
-        get{
-            return _sprite;
-        }
-    }
-    [SerializeField] private Sprite _sprite;
     public float haveE;
     [SerializeField] private ArmorSettings[] prefabs;
     public ArmorSettings[] _prefabs{
@@ -50,7 +50,7 @@ public class ArmorSettings : MonoBehaviour
     public bool ready;
     public void CheckModule() {
         for(int i = 0; i < prefabs.Length; i++){
-            if(PlayerPrefs.GetInt("ChangedArmor") == prefabs[i].id){
+            if(PlayerPrefs.GetInt("Armor") == prefabs[i].id){
                 _protection = prefabs[i].protection;
                 _isEnergy = prefabs[i].isEnergy;
                 _needEnergy = prefabs[i].needEnergy;
