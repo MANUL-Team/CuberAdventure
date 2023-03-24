@@ -49,6 +49,7 @@ MonoBehaviour:
   _isEnergy: 1
   _needEnergy: 40
   _id: 2
+  _sprite: {fileID: 21300000, guid: ae86ec25a7c9a144ab66c3005c226d44, type: 3}
   haveE: 0
   prefabs: []
   ready: 0
