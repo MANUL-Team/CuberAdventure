@@ -78,6 +78,14 @@ public class ModulesController : MonoBehaviour
             }
         }
     }
+    public void CheckAllModules(){
+        armor.CheckModule();
+        laser.CheckModule();
+        tracks.CheckModule();
+        uws.CheckModule();
+        turbine.CheckModule();
+        core.CheckModule();
+    }
     private void Update() {
         if(distribution){
             EnergyDistribution();

@@ -19,5 +19,6 @@ public class ButtonSettings : MonoBehaviour
     }
     public void Select(){
         controller.SelectModule(module);
+        background.color = new Color(background.color.r-0.2f, background.color.g-0.2f, background.color.b-0.2f);
     }
 }

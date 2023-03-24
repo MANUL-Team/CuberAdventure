@@ -24,17 +24,10 @@ public class PlayerMenuController : MonoBehaviour
         menu.gameObject.SetActive(!inventory.activeSelf);
     }
     public void OpenWeaponMenu(){
-        weaponMenu.SetActive(!weaponMenu.activeSelf);
-        lvl.gameObject.SetActive(!weaponMenu.activeSelf);
-        dmg.gameObject.SetActive(!weaponMenu.activeSelf);
-        hp.gameObject.SetActive(!weaponMenu.activeSelf);
-        prot.gameObject.SetActive(!weaponMenu.activeSelf);
-        lBut.gameObject.SetActive(!weaponMenu.activeSelf);
-        dBut.gameObject.SetActive(!weaponMenu.activeSelf);
-        cBut.gameObject.SetActive(!weaponMenu.activeSelf);
-        sBut.gameObject.SetActive(!weaponMenu.activeSelf);
-        xpScale.SetActive(!xpScale.activeSelf);
-        statsBG.SetActive(!statsBG.activeSelf);
+        animator.SetBool("Modules", true);
+    }
+    public void CloseWeaponMenu(){
+        animator.SetBool("Modules", false);
     }
     public void OpenSkillsMenu(){
         skillsMenu.SetActive(!skillsMenu.activeSelf);

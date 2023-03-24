@@ -17,7 +17,7 @@ public class Console : MonoBehaviour
     public void EnterCommand(){
         wordsInCommand = inputField.text.Split(" ");
         if(wordsInCommand[0] == "give"){
-            if(wordsInCommand[1] == "Weapon" || wordsInCommand[1] == "Gusenici" || wordsInCommand[1] == "Turbine" || wordsInCommand[1] == "Laser" || wordsInCommand[1] == "Armor"){
+            if(wordsInCommand[1] == "Core" || wordsInCommand[1] == "Tracks" || wordsInCommand[1] == "Turbine" || wordsInCommand[1] == "Laser" || wordsInCommand[1] == "Armor"){
                 PlayerPrefs.SetInt(wordsInCommand[1] + wordsInCommand[2], 1);
                 text.text = text.text + "\nModule gived!";
             }

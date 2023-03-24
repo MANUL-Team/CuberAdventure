@@ -40,13 +40,13 @@ public class MenuScript : MonoBehaviour
         PlayerPrefs.SetInt("PlayerLevel", 1);
         PlayerPrefs.SetInt("Exp", 0);
         PlayerPrefs.SetInt("Coins", 0);
-        PlayerPrefs.SetInt("ChangedWeapon", 0);
+        PlayerPrefs.SetInt("Core", 0);
         PlayerPrefs.SetFloat("Hp", 100);
-        PlayerPrefs.SetInt("ChangedArmor", 0);
-        PlayerPrefs.SetInt("ChangedGusenici", 0);
-        PlayerPrefs.SetInt("ChangedLaser", 0);
-        PlayerPrefs.SetInt("ChangedTurbine", 0);
-        PlayerPrefs.SetInt("ChangedUnderWaterSystem", 0);
+        PlayerPrefs.SetInt("Armor", 0);
+        PlayerPrefs.SetInt("Tracks", 0);
+        PlayerPrefs.SetInt("Laser", 0);
+        PlayerPrefs.SetInt("Turbine", 0);
+        PlayerPrefs.SetInt("UWS", 0);
         ReloadDataPart3();
     }
     public void ReloadDataPart3(){
@@ -68,12 +68,12 @@ public class MenuScript : MonoBehaviour
                 PlayerPrefs.SetInt("Money" + " " + i.ToString() + " " + a.ToString(), 0);
                 PlayerPrefs.SetInt("Mission " + i + " Step " + a, 0);
             }
-            PlayerPrefs.SetInt("Weapon" + i.ToString(), 0);
+            PlayerPrefs.SetInt("Core" + i.ToString(), 0);
             PlayerPrefs.SetInt("Armor" + i.ToString(), 0);
             PlayerPrefs.SetInt("Laser" + i.ToString(), 0);
             PlayerPrefs.SetInt("Turbine" + i.ToString(), 0);
-            PlayerPrefs.SetInt("Gusenici" + i.ToString(), 0);
-            PlayerPrefs.SetInt("UnderWaterSystem" + i.ToString(), 0);
+            PlayerPrefs.SetInt("Tracks" + i.ToString(), 0);
+            PlayerPrefs.SetInt("UWS" + i.ToString(), 0);
         }
         StartNewGame();
     }
