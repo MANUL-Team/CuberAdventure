@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ActiveSkin : MonoBehaviour
 {
-    [SerializeField] GameObject[] skins;
+    [SerializeField] Sprite[] skins;
+    [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private Image spriteI;
     private void Awake() {
-        skins[PlayerPrefs.GetInt("Player")].SetActive(true);
+        if(sprite != null){
+            sprite.sprite = skins[PlayerPrefs.GetInt("Player")];
+        }
+        else if(spriteI != null){
+            spriteI.sprite = skins[PlayerPrefs.GetInt("Player")];
+        }
     }
     void Start()
     {
