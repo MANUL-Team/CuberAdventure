@@ -7,16 +7,16 @@ public class SwitchSkills : MonoBehaviour
     [SerializeField] private GameObject[] skillsButtons;
 
     public void SkillSwitch() {
-        for(int i = 0; i<skillsButtons.Length; i++){
+        for(int i = -1; i<skillsButtons.Length; i++){
             if(i == PlayerPrefs.GetInt("Skill")){
-                skillsButtons[i].SetActive(true);
+                skillsButtons[i+1].SetActive(true);
             }
             else{
-                skillsButtons[i].SetActive(false);
+                skillsButtons[i+1].SetActive(false);
             }
         }
     }
-    private void Start() {
+    private void FixedUpdate() {
         SkillSwitch();
     }
 }
