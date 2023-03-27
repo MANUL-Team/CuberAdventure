@@ -30,18 +30,10 @@ public class PlayerMenuController : MonoBehaviour
         animator.SetBool("Modules", false);
     }
     public void OpenSkillsMenu(){
-        skillsMenu.SetActive(!skillsMenu.activeSelf);
-        lvl.gameObject.SetActive(!skillsMenu.activeSelf);
-        dmg.gameObject.SetActive(!skillsMenu.activeSelf);
-        hp.gameObject.SetActive(!skillsMenu.activeSelf);
-        prot.gameObject.SetActive(!skillsMenu.activeSelf);
-        lBut.gameObject.SetActive(!skillsMenu.activeSelf);
-        dBut.gameObject.SetActive(!skillsMenu.activeSelf);
-        cBut.gameObject.SetActive(!skillsMenu.activeSelf);
-        sBut.gameObject.SetActive(!skillsMenu.activeSelf);
-        bg.gameObject.SetActive(!skillsMenu.activeSelf);
-        xpScale.SetActive(!xpScale.activeSelf);
-        statsBG.SetActive(!statsBG.activeSelf);
+        animator.SetBool("Skills", true);
+    }
+    public void CloseSkillsMenu(){
+        animator.SetBool("Skills", false);
     }
     private void FixedUpdate() {
         if(!statsUpdate){

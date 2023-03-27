@@ -7,11 +7,12 @@ public class UsedModules : MonoBehaviour
 {
     [SerializeField] private ButtonSettings[] modules;
     [SerializeField] private ModulesController controller;
-    [SerializeField] private Text name, description, stats;
+    [SerializeField] private Text name, description, stats, selectText;
     [SerializeField] private GameObject[] typesOfModules;
     [SerializeField] private GameObject selectButton;
     [SerializeField] private Animator cuber;
     private string type, id;
+    private CraftedItem currentModule;
     public string _type{
         get{
             return type;
@@ -41,6 +42,7 @@ public class UsedModules : MonoBehaviour
         ModulesCheck();
     }
     public void SelectModule(CraftedItem module){
+        currentModule = module;
         name.text = module.nameRu;
         description.text = module.descriptionRu;
         stats.text = module.statsRu;
@@ -48,6 +50,26 @@ public class UsedModules : MonoBehaviour
         id = module.id.ToString();
         if(PlayerPrefs.GetInt(module.module.ToString() + module.id) != 0 || module.id == 0){
             selectButton.SetActive(true);
+            if(PlayerPrefs.GetInt(module.module.ToString()) == module.id){
+                if(PlayerPrefs.GetInt("Language") == 0){
+                    selectButton.GetComponent<Image>().color = new Color(50f/255f, 50/255f, 50f/255f);
+                    selectText.text = "Selected";
+                }
+                else if(PlayerPrefs.GetInt("Language") == 1){
+                    selectButton.GetComponent<Image>().color = new Color(50f/255f, 50/255f, 50f/255f);
+                    selectText.text = "Выбрано";
+                }
+            }
+            else if(PlayerPrefs.GetInt(module.module.ToString()) != module.id){
+                if(PlayerPrefs.GetInt("Language") == 0){
+                    selectButton.GetComponent<Image>().color = new Color(75f/255f, 73f/255f, 71f/255f);
+                    selectText.text = "Select";
+                }
+                else if(PlayerPrefs.GetInt("Language") == 1){
+                    selectButton.GetComponent<Image>().color = new Color(75f/255f, 73f/255f, 71f/255f);
+                    selectText.text = "Выбрать";
+                }
+            }
         }
         else{
             selectButton.SetActive(false);
@@ -56,6 +78,7 @@ public class UsedModules : MonoBehaviour
     }
     public void ChangeModule(){
         PlayerPrefs.SetInt(type, int.Parse(id));
+        SelectModule(currentModule);
         ModulesCheck();
     }
     public void GiveModule(){
