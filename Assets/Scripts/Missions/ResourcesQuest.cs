@@ -9,7 +9,7 @@ public class ResourcesQuest : MonoBehaviour
     [SerializeField] private bool last;
 
     private void FixedUpdate() {
-        if(PlayerPrefs.GetInt("ChangedArmor") >= lvlArmor && PlayerPrefs.GetInt("ChangedWeapon") >= lvlCore && PlayerPrefs.GetInt("ChangedLaser") >= lvlLaser){
+        if(PlayerPrefs.GetInt("Armor") >= lvlArmor && PlayerPrefs.GetInt("Core") >= lvlCore && PlayerPrefs.GetInt("Laser") >= lvlLaser){
             main.StartNewMissionStep(id, step, last);
         }
     }

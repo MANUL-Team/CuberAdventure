@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float x;
     private Rigidbody2D rb;
     [SerializeField] private float JumpForce = 300f;
-
     private GameObject obj;
     private Transform playerTransform;
     [SerializeField] private float xc, yc;
@@ -215,7 +214,7 @@ public class PlayerController : MonoBehaviour
 
         
     }
-    private void FixedUpdate() {
+    public void FixedUpdate() {
         if(joystick.gameObject.activeSelf == true)
         {
             if(!confusion){
