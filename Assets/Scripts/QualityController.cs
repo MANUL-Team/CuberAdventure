@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class QualityController : MonoBehaviour
 {
-    private void FixedUpdate() {
-        QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Graphics"), true);
+    public int targetFrameRate;
+    private void Start() {
+        PlayerPrefs.SetInt("FPS", targetFrameRate);
+        StartCoroutine(GraphicsUpdate());
+    }
+    private IEnumerator GraphicsUpdate(){
+        while(true){
+            targetFrameRate = PlayerPrefs.GetInt("FPS");
+            QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Graphics"), true);
+            Application.targetFrameRate = targetFrameRate;
+            yield return new WaitForSeconds(0.2f);
+        }
     }
 }
