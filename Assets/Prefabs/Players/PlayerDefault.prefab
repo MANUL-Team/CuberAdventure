@@ -853,6 +853,7 @@ GameObject:
   - component: {fileID: 7084635321083762782}
   - component: {fileID: 3812987005334256278}
   - component: {fileID: 6767829959319775862}
+  - component: {fileID: 2175497575603468509}
   m_Layer: 5
   m_Name: ItemBioligic1 (1)
   m_TagString: Untagged
@@ -879,8 +880,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000026745, y: -129.28}
-  m_SizeDelta: {x: 139.58, y: 256.41}
+  m_AnchoredPosition: {x: -0.000026745, y: -9.999971}
+  m_SizeDelta: {x: 139.58, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7084635321083762782
 CanvasRenderer:
@@ -921,7 +922,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!114 &6767829959319775862
@@ -942,6 +943,20 @@ MonoBehaviour:
   ruEd: []
   editable: 0
   dialog: 0
+--- !u!114 &2175497575603468509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197466185430099818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
 --- !u!1 &210132719410830075
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,7 +1718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1.7000908, y: -104.60002}
+  m_AnchoredPosition: {x: 0.000045657158, y: -282}
   m_SizeDelta: {x: 139.5855, y: 37.6854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1637295999251587818
@@ -3381,8 +3396,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -163}
-  m_SizeDelta: {x: 139.58, y: 295.80176}
+  m_AnchoredPosition: {x: -0.000023842, y: -243.44}
+  m_SizeDelta: {x: 174.98, y: 486.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &731816536587596369
 GameObject:
@@ -17896,6 +17911,7 @@ GameObject:
   - component: {fileID: 7933688362917289338}
   - component: {fileID: 8646177990584767319}
   - component: {fileID: 1135959011095809596}
+  - component: {fileID: 3558246566786972795}
   m_Layer: 5
   m_Name: ItemBioligic1 (1)
   m_TagString: Untagged
@@ -17922,8 +17938,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000026745, y: -129.28}
-  m_SizeDelta: {x: 139.58, y: 256.41}
+  m_AnchoredPosition: {x: -0.000026745, y: -10.5457325}
+  m_SizeDelta: {x: 139.58, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7933688362917289338
 CanvasRenderer:
@@ -17964,7 +17980,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!114 &1135959011095809596
@@ -17986,6 +18002,20 @@ MonoBehaviour:
   ruEd: []
   editable: 0
   dialog: 0
+--- !u!114 &3558246566786972795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2211561287118336201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
 --- !u!1 &2212642512839542194
 GameObject:
   m_ObjectHideFlags: 0
@@ -18827,7 +18857,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1.7000908, y: -104.60002}
+  m_AnchoredPosition: {x: -1.2, y: -282}
   m_SizeDelta: {x: 139.5855, y: 37.6854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9146077637153418361
@@ -31092,6 +31122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2607b5bf4add0914b963e7fde61f8d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetFrameRate: 60
 --- !u!114 &325034050151544281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36019,7 +36050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1.7000908, y: -104.60002}
+  m_AnchoredPosition: {x: -1.199919, y: -281.99997}
   m_SizeDelta: {x: 139.5855, y: 37.6854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2929144720367036379
@@ -37653,7 +37684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1.7000908, y: -104.60002}
+  m_AnchoredPosition: {x: -1.199919, y: -281.99997}
   m_SizeDelta: {x: 139.5855, y: 37.6854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &343648445297490350
@@ -40291,7 +40322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1.7, y: -104.6}
+  m_AnchoredPosition: {x: -1.1998283, y: -281.99997}
   m_SizeDelta: {x: 139.5855, y: 37.6854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6056958197870638415
@@ -41338,6 +41369,7 @@ GameObject:
   - component: {fileID: 2900687725092160262}
   - component: {fileID: 7716990913192865953}
   - component: {fileID: 4693979412649495094}
+  - component: {fileID: 7811590760135439151}
   m_Layer: 5
   m_Name: ItemBioligic1 (1)
   m_TagString: Untagged
@@ -41364,8 +41396,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.000026745, y: -129.28}
-  m_SizeDelta: {x: 139.58, y: 256.41}
+  m_AnchoredPosition: {x: -0.000026745, y: -10}
+  m_SizeDelta: {x: 139.58, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2900687725092160262
 CanvasRenderer:
@@ -41406,7 +41438,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 
 --- !u!114 &4693979412649495094
@@ -41428,6 +41460,20 @@ MonoBehaviour:
   ruEd: []
   editable: 0
   dialog: 0
+--- !u!114 &7811590760135439151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6595875654087430409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
 --- !u!1 &6656759650497953177
 GameObject:
   m_ObjectHideFlags: 0
@@ -51667,7 +51713,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1.7000908, y: -104.60002}
+  m_AnchoredPosition: {x: 0, y: -281.99997}
   m_SizeDelta: {x: 139.5855, y: 37.6854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3354319148371213244

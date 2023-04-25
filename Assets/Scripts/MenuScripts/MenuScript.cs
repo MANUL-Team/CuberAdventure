@@ -16,7 +16,7 @@ public class MenuScript : MonoBehaviour
     public void PlayPressed()
     {
         Play.SetActive(true);
-        MainMenu.SetActive(false);
+        MainMenu.GetComponent<Animator>().SetTrigger("Closing");
         ServMenu.SetActive(false);
     }
 
@@ -50,7 +50,7 @@ public class MenuScript : MonoBehaviour
         ReloadDataPart3();
     }
     public void ReloadDataPart3(){
-        PlayerPrefs.SetInt("Skill", 0);
+        PlayerPrefs.SetInt("Skill", -1);
         PlayerPrefs.SetInt("SkillPoints", 0);
         PlayerPrefs.SetInt("NewSpawnTP", 0);
         PlayerPrefs.SetInt("NeedExp", 100);
@@ -124,8 +124,8 @@ public class MenuScript : MonoBehaviour
 
     public void Menu(){
         MainMenu.SetActive(true);
+        Play.GetComponent<Animator>().SetTrigger("Closing");
         SkinsMenu.SetActive(false);
-        Play.SetActive(false);
         ServMenu.SetActive(false);
         PetsMenu.SetActive(false);
         settingsMenu.SetActive(false);
