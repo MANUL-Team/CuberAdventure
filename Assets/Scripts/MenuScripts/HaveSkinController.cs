@@ -6,7 +6,7 @@ public class HaveSkinController : MonoBehaviour
 {
     [SerializeField] private GameObject Buy, Use;
     [SerializeField] private int index;
-    void Start()
+    void OnEnable()
     {
         if(PlayerPrefs.GetInt("Skin" + index.ToString()) > 0){
             Buy.SetActive(false);
