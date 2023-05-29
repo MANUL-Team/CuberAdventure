@@ -12,12 +12,21 @@ public class MenuScript : MonoBehaviour
     [SerializeField]private Image loadingImg;
     [SerializeField]private PresentTimeReset present;
     [SerializeField]private SkinCheck skincheck;
+    [SerializeField] private Animator menuAnimator;
 
     public void PlayPressed()
     {
-        Play.SetActive(true);
-        MainMenu.GetComponent<Animator>().SetTrigger("Closing");
-        ServMenu.SetActive(false);
+        AllAnimationsFalse();
+        menuAnimator.SetBool("PlayOpened", true);
+    }
+    private void AllAnimationsFalse(){
+        menuAnimator.SetBool("PlayOpened", false);
+        menuAnimator.SetBool("SkinsOpened", false);
+        menuAnimator.SetBool("PetsOpened", false);
+        menuAnimator.SetBool("PromoOpened", false);
+        menuAnimator.SetBool("SettingsOpened", false);
+        menuAnimator.SetBool("MainMenuOpened", false);
+        menuAnimator.SetBool("ShopOpened", false);
     }
 
     public void NewGame()
@@ -94,12 +103,8 @@ public class MenuScript : MonoBehaviour
         SkinsMenu.SetActive(false);
     }
     public void Skins(){
-        SkinsMenu.SetActive(true);
-        MainMenu.SetActive(false);
-        ServMenu.SetActive(false);
-        PetsMenu.SetActive(false);
-        PromoMenu.SetActive(false);
-        shopMenu.SetActive(false);
+        AllAnimationsFalse();
+        menuAnimator.SetBool("SkinsOpened", true);
         skincheck.CheckUsed();
         Invoke("CheckUsed", 0.1f);
     }
@@ -108,33 +113,24 @@ public class MenuScript : MonoBehaviour
     }
 
     public void Pets(){
-        SkinsMenu.SetActive(false);
-        MainMenu.SetActive(false);
-        ServMenu.SetActive(false);
-        PetsMenu.SetActive(true);
+        AllAnimationsFalse();
+        menuAnimator.SetBool("PetsOpened", true);
     }
 
     public void Promo(){
-        SkinsMenu.SetActive(false);
-        MainMenu.SetActive(false);
-        ServMenu.SetActive(false);
-        PetsMenu.SetActive(false);
-        PromoMenu.SetActive(true);
+        AllAnimationsFalse();
+        menuAnimator.SetBool("PromoOpened", true);
     }
 
     public void Menu(){
-        MainMenu.SetActive(true);
-        Play.GetComponent<Animator>().SetTrigger("Closing");
-        SkinsMenu.SetActive(false);
-        ServMenu.SetActive(false);
-        PetsMenu.SetActive(false);
-        settingsMenu.SetActive(false);
+        AllAnimationsFalse();
+        menuAnimator.SetBool("MainMenuOpened", true);
         StartCoroutine(present.CheckPresent());
     }
 
     public void ShopPressed(){
-        SkinsMenu.SetActive(false);
-        shopMenu.SetActive(true);
+        AllAnimationsFalse();
+        menuAnimator.SetBool("ShopOpened", true);
     }
 
     public void ExitPressed()
@@ -144,8 +140,8 @@ public class MenuScript : MonoBehaviour
     }
 
     public void SettingsPressed(){
-        settingsMenu.SetActive(true);
-        MainMenu.SetActive(false);
+        AllAnimationsFalse();
+        menuAnimator.SetBool("SettingsOpened", true);
     }
 
     public void SetPlayer(int index){
@@ -170,15 +166,8 @@ public class MenuScript : MonoBehaviour
             yield return null;
         }
     }
-
-
     void Start()
     {
-        Application.targetFrameRate = 60;
-    }
-
-
-    void Update()
-    {
+        Application.targetFrameRate = 120;
     }
 }
