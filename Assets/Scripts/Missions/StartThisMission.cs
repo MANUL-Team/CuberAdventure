@@ -6,11 +6,12 @@ public class StartThisMission : MonoBehaviour
 {
     [SerializeField] private DialogManager mission;
     [SerializeField] private DialogChange main;
-    [SerializeField] private int id, step;
+    [SerializeField] private int step;
+    [SerializeField] private string missionName;
 
     void FixedUpdate(){
         if(mission.dialogEnded == true){
-            main.StartNewMissionStep(id, step, false);
+            main.StartNewMissionStep(missionName, step, false);
         }
     }
 }

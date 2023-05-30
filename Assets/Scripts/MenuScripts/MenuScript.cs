@@ -12,6 +12,7 @@ public class MenuScript : MonoBehaviour
     [SerializeField]private Image loadingImg;
     [SerializeField]private PresentTimeReset present;
     [SerializeField]private SkinCheck skincheck;
+    [SerializeField]private PetsManager petcheck;
     [SerializeField] private Animator menuAnimator;
 
     public void PlayPressed()
@@ -71,7 +72,8 @@ public class MenuScript : MonoBehaviour
             PlayerPrefs.SetInt("CutScene" + i.ToString(), 0);
             PlayerPrefs.SetInt("LevelEnded" + i.ToString(), 0);
             PlayerPrefs.SetInt("OpenSkill" + i.ToString(), 0);
-            PlayerPrefs.SetInt("Mission "+ i, 0);
+            PlayerPrefs.SetInt("MissionTutorial", 0);
+            PlayerPrefs.SetInt("MissionTopOfTheFoodChain", 0);
             PlayerPrefs.SetInt("Tutorial " +i, 0);
             for(int a = 0; a < 10; a++){
                 PlayerPrefs.SetInt("Money" + " " + i.ToString() + " " + a.ToString(), 0);
@@ -150,6 +152,7 @@ public class MenuScript : MonoBehaviour
     }
     public void SetPet(int index){
         PlayerPrefs.SetInt("Pet", index);
+        petcheck.CheckUsed();
     }
 
     IEnumerator AsyncLoadNew(){

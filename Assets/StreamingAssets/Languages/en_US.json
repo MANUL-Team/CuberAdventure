@@ -1,0 +1,368 @@
+{
+    "items": [
+        {
+            "key": "Volume",
+            "value": "Volume"
+        },
+        {
+            "key": "Back",
+            "value": "Back"
+        },
+        {
+            "key": "Play",
+            "value": "Play"
+        },
+        {
+            "key": "Skins",
+            "value": "Skins"
+        },
+        {
+            "key": "Use",
+            "value": "Use"
+        },
+        {
+            "key": "Used",
+            "value": "Used"
+        },
+        {
+            "key": "Pets",
+            "value": "Pets"
+        },
+        {
+            "key": "Shop",
+            "value": "Shop"
+        },
+        {
+            "key": "Promo",
+            "value": "Promo"
+        },
+        {
+            "key": "Unaviable",
+            "value": "Unaviable"
+        },
+        {
+            "key": "Success",
+            "value": "Success"
+        },
+        {
+            "key": "Failed",
+            "value": "Failed"
+        },
+        {
+            "key": "New game",
+            "value": "New game"
+        },
+        {
+            "key": "Continue",
+            "value": "Continue"
+        },
+        {
+            "key": "Language",
+            "value": "Language"
+        },
+        {
+            "key": "Quality",
+            "value": "Quality"
+        },
+        {
+            "key": "Loading...",
+            "value": "Loading..."
+        },
+        {
+            "key": "Ruins",
+            "value": "Ruins"
+        },
+        {
+            "key": "Resume",
+            "value": "Resume"
+        },
+        {
+            "key": "Menu",
+            "value": "Menu"
+        },
+        {
+            "key": "Unknown",
+            "value": "Unknown"
+        },
+        {
+            "key": "StartReplica1",
+            "value": "Who am I..."
+        },
+        {
+            "key": "StartReplica2",
+            "value": "Where am I..."
+        },
+        {
+            "key": "InsideVoice",
+            "value": "Inner voice"
+        },
+        {
+            "key": "Tutorial1Rep1",
+            "value": "Hi! I'm your inner helper. You can call me the inner voice."
+        },
+        {
+            "key": "Tutorial1Rep2",
+            "value": "You probably don't understand who you are and where you are... But I will help you with this!"
+        },
+        {
+            "key": "Tutorial1Rep3",
+            "value": "Now you are on the mainland of Antania. It was captured by the megasecomes and humanity decided to rename the continent."
+        },
+        {
+            "key": "Tutorial1Rep4",
+            "value": "What? You don't know who the megasecomes are?!"
+        },
+        {
+            "key": "Tutorial1Rep5",
+            "value": "Megasecomes are insects mutated as a result of an experiment conducted by a scientist..."
+        },
+        {
+            "key": "Tutorial1Rep6",
+            "value": "The name of this scientist is classified information, I'm sorry, I can't share it..."
+        },
+        {
+            "key": "Tutorial1Rep7",
+            "value": "Well, you seem to have the basic information."
+        },
+        {
+            "key": "Tutorial1Rep8",
+            "value": "By the way, what's your name?"
+        },
+        {
+            "key": "Tutorial1Rep9",
+            "value": "Don't know... You didn't say..."
+        },
+        {
+            "key": "Tutorial1Rep10",
+            "value": "Oh, yeah... I'll fill you in..."
+        },
+        {
+            "key": "Tutorial1Rep11",
+            "value": "You, my friend, are a cuber. That is, a robot created by mankind to fight megasecomes."
+        },
+        {
+            "key": "Tutorial1Rep12",
+            "value": "Hmm... I don't think your name is in my database..."
+        },
+        {
+            "key": "Tutorial1Rep13",
+            "value": "Apparently people didn't give you a name... Well, so that you won't be nameless, we'll come up with a name for you. Which one do you want?"
+        },
+        {
+            "key": "Tutorial1Rep14",
+            "value": "Enter a name..."
+        },
+        {
+            "key": "Tutorial1Rep15",
+            "value": "Great! Then let's start learning!"
+        },
+        {
+            "key": "Tutorial1Rep16",
+            "value": "First, let's learn how to jump. To make a jump, click on the big button on the right side of the screen."
+        },
+        {
+            "key": "TakeName",
+            "value": "Enter a name..."
+        },
+        {
+            "key": "ConfirmName",
+            "value": "Confirm name"
+        },
+        {
+            "key": "Tutorial2Rep1",
+            "value": "Be careful! Touching these spikes, you will instantly explode!"
+        },
+        {
+            "key": "TutorialMoneyRep1",
+            "value": "Oh, it's money!"
+        },
+        {
+            "key": "TutorialMoneyRep2",
+            "value": "Be sure to collect money! With these you will be able to buy resources!"
+        },
+        {
+            "key": "Tutorial3Rep1",
+            "value": "It looks like a dungeon. According to my data, there is a village behind this dungeon."
+        },
+        {
+            "key": "Tutorial3Rep2",
+            "value": "Jump quickly!"
+        },
+        {
+            "key": "Tutorial3Rep3",
+            "value": "Oh no..."
+        },
+        {
+            "key": "Tutorial4Rep1",
+            "value": "Be careful! There's a praying mantis up there!"
+        },
+        {
+            "key": "Tutorial4Rep2",
+            "value": "I don't advise you to fight him, you're still too weak. Better get around him."
+        },
+        {
+            "key": "Tutorial5Rep1",
+            "value": "Looks like we got out. Go meet the other cubers."
+        },
+        {
+            "key": "Tutorial6Rep1",
+            "value": "It's a blacksmith shop!"
+        },
+        {
+            "key": "Tutorial6Rep2",
+            "value": "That's what we call a universal machine for creating modules, but it seems that in this village everything was taken literally..."
+        },
+        {
+            "key": "Levan",
+            "value": "Levan"
+        },
+        {
+            "key": "LevanBaseDialogRep1",
+            "value": "Hi. How are you doing?"
+        },
+        {
+            "key": "LevanBaseDialogRep2",
+            "value": "It's all good."
+        },
+        {
+            "key": "TopOfTheFoodChain1Rep1",
+            "value": "Hey! I haven't seen you here before... Are you new? What's your name?"
+        },
+        {
+            "key": "TopOfTheFoodChain1Rep3",
+            "value": "Oh, you're really new!"
+        },
+        {
+            "key": "TopOfTheFoodChain1Rep4",
+            "value": "My name is Levan. I am a guide for new cubers, as well as a resident of this village."
+        },
+        {
+            "key": "TopOfTheFoodChain1Rep5",
+            "value": "Nice to meet you."
+        },
+        {
+            "key": "TopOfTheFoodChain1Rep6",
+            "value": "I think you should look around our village. Meet the cubers!"
+        },
+        {
+            "key": "TopOfTheFoodChain2Rep1",
+            "value": "Hi. I am Abdul, a local blacksmith and salesman."
+        },
+        {
+            "key": "TopOfTheFoodChain2Rep2",
+            "value": "You seem to be new. We manufacture modules at this forge. If you need anything, contact us."
+        },
+        {
+            "key": "TopOfTheFoodChain2Rep3",
+            "value": "Thank you."
+        },
+        {
+            "key": "TopOfTheFoodChain2Rep4",
+            "value": "Be careful, other cubers don't have an internal voice, they get information directly from the database."
+        },
+        {
+            "key": "Abdul",
+            "value": "Abdul"
+        },
+        {
+            "key": "AbdulBaseRep1",
+            "value": "Don't need a new module?"
+        },
+        {
+            "key": "TopOfTheFoodChain3Rep1",
+            "value": "Well how? Have you met?"
+        },
+        {
+            "key": "TopOfTheFoodChain3Rep2",
+            "value": "If you want to train before the fight, there is a special training house with a basement in our village."
+        },
+        {
+            "key": "TopOfTheFoodChain3Rep3",
+            "value": "Listen, this is my first time on this mainland, can you advise me?"
+        },
+        {
+            "key": "TopOfTheFoodChain3Rep4",
+            "value": "Of course! Then listen carefully."
+        },
+        {
+            "key": "TopOfTheFoodChain3Rep5",
+            "value": "Leaving the village you will find yourself in a quiet forest. Wild mantises live there."
+        },
+        {
+            "key": "TopOfTheFoodChain3Rep6",
+            "value": "By killing them, you can gain experience and resources that you can later use to create items."
+        },
+        {
+            "key": "TopOfTheFoodChain3Rep7",
+            "value": "The items themselves can be created at the forge. You probably decided that only modules are made on it?"
+        },
+        {
+            "key": "TopOfTheFoodChain3Rep8",
+            "value": "In general, this is all I know, because I am on duty and I accept new people. I don't go outside the village at all."
+        },
+        {
+            "key": "TopOfTheFoodChain3Rep9",
+            "value": "By the way, since you have nothing to do, I suggest you help Abdul."
+        },
+        {
+            "key": "TopOfTheFoodChain3Rep10",
+            "value": "It seems that Bogomgrad has stopped supplying us with resources. But you'd better ask Abdul himself."
+        },
+        {
+            "key": "TopOfTheFoodChain3Rep11",
+            "value": "OK, thanks for the information!"
+        },
+        {
+            "key": "TopOfTheFoodChain3Rep12",
+            "value": "You could have asked me about the mainland..."
+        },
+        {
+            "key": "TopOfTheFoodChain4Rep1",
+            "value": "Hi. Levan said you needed help."
+        },
+        {
+            "key": "TopOfTheFoodChain4Rep2",
+            "value": "And you came to help me?"
+        },
+        {
+            "key": "TopOfTheFoodChain4Rep3",
+            "value": "Yes."
+        },
+        {
+            "key": "TopOfTheFoodChain4Rep4",
+            "value": "Great! Then listen."
+        },
+        {
+            "key": "TopOfTheFoodChain4Rep5",
+            "value": "Until recently, Bogomgrad supplied our village with resources, but it stopped and I want to find out the truth."
+        },
+        {
+            "key": "TopOfTheFoodChain4Rep6",
+            "value": "Go to Bogomgrad and find out what's going on."
+        },
+        {
+            "key": "TopOfTheFoodChain4Rep7",
+            "value": "The name of our supplier is Vitaly."
+        },
+        {
+            "key": "TopOfTheFoodChain4Rep8",
+            "value": "Good. No problem."
+        },
+        {
+            "key": "Richard",
+            "value": "Richard"
+        },
+        {
+            "key": "RichardBaseRep1",
+            "value": "Ehh... I wish it would all be over..."
+        },
+        {
+            "key": "Sam",
+            "value": "Sam"
+        },
+        {
+            "key": "SamBaseRep1",
+            "value": "I hope the mantises don't invade the village like last time..."
+        }
+    ]
+}
