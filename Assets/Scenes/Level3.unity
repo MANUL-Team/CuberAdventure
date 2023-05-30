@@ -4979,89 +4979,8 @@ MonoBehaviour:
   name: {fileID: 124036303}
   text: {fileID: 2010316184}
   printText: {fileID: 2010316181}
-  namesEng:
-  - I
-  - I
-  - Abdul
-  - Abdul
-  - Abdul
-  - Abdul
-  - Abdul
-  - Abdul
-  - Abdul
-  dialogTextsEng:
-  - Phew... There was a real horror...
-  - The spider queen attacked Bogomgrad and I miraculously managed to defeat her...
-  - Bravo! Unbelievable!
-  - You have a lot of kubera potential! It seems that you are capable of a lot. I
-    advise you to craft more and more powerful blows and move deeper into the mainland.
-  - Behind the spider lair you will see a waterfall. Descending from it, you will
-    get into an Anthill. Megamurts live there.
-  - 'Cubers'' policy towards mantises and ants
-
-    it is such that as long as the
-    megasecomes do not threaten humanity and the Cubers themselves, they will not
-    kill them.'
-  - 'Also, meganasekomye who have signed such a contract
-
-    are obliged to supply
-    food to the Cubers.'
-  - Go there and get new resources there. There is also a much more powerful forge
-    there. You can create more powerful modules in it.
-  - I will be waiting for news from you!
-  namesRu:
-  - "\u042F"
-  - "\u042F"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  dialogTextsRu:
-  - "\u0424\u0443\u0445... \u041F\u0440\u043E\u0438\u0437\u043E\u0448\u0435\u043B
-    \u0441\u0443\u0449\u0438\u0439 \u0443\u0436\u0430\u0441..."
-  - "\u041A\u043E\u0440\u043E\u043B\u0435\u0432\u0430 \u043F\u0430\u0443\u043A\u043E\u0432
-    \u043D\u0430\u043F\u0430\u043B\u0430 \u043D\u0430 \u0411\u043E\u0433\u043E\u043C\u0433\u0440\u0430\u0434
-    \u0438 \u043C\u043D\u0435 \u0447\u0443\u0434\u043E\u043C \u0443\u0434\u0430\u043B\u043E\u0441\u044C
-    \u0435\u0435 \u043F\u043E\u0431\u0435\u0434\u0438\u0442\u044C..."
-  - "\u0411\u0440\u0430\u0432\u043E! \u041D\u0435\u0432\u0435\u0440\u043E\u044F\u0442\u043D\u043E!"
-  - "\u0423 \u0442\u0435\u0431\u044F \u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u043F\u043E\u0442\u0435\u043D\u0446\u0438\u0430\u043B
-    \u043A\u0443\u0431\u0435\u0440\u0430! \u041A\u0430\u0436\u0435\u0442\u0441\u044F,
-    \u0442\u044B \u0441\u043F\u043E\u0441\u043E\u0431\u0435\u043D \u043D\u0430 \u043E\u0447\u0435\u043D\u044C
-    \u043C\u043D\u043E\u0433\u043E\u0435. \u042F \u0441\u043E\u0432\u0435\u0442\u0443\u044E
-    \u0442\u0435\u0431\u0435 \u043A\u0440\u0430\u0444\u0442\u0438\u0442\u044C \u0432\u0441\u0435
-    \u0431\u043E\u043B\u0435\u0435 \u043C\u043E\u0449\u043D\u044B\u0435 \u043C\u043E\u0434\u0443\u043B\u0438
-    \u0438 \u043F\u0440\u043E\u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F
-    \u0432\u0433\u043B\u0443\u0431\u044C \u043C\u0430\u0442\u0435\u0440\u0438\u043A\u0430."
-  - "\u0417\u0430 \u043F\u0430\u0443\u0447\u044C\u0438\u043C \u043B\u043E\u0433\u043E\u0432\u043E\u043C
-    \u0442\u044B \u0443\u0432\u0438\u0434\u0438\u0448\u044C \u0432\u043E\u0434\u043E\u043F\u0430\u0434.
-    \u0421\u043F\u0443\u0441\u0442\u0438\u0432\u0448\u0438\u0441\u044C \u0441 \u043D\u0435\u0433\u043E
-    \u0442\u044B \u043F\u043E\u043F\u0430\u0434\u0435\u0448\u044C \u0432 \u041C\u0443\u0440\u0430\u0432\u0435\u0439\u043D\u0438\u043A.
-    \u0422\u0430\u043C \u0436\u0438\u0432\u0443\u0442 \u043C\u0435\u0433\u0430\u043C\u0443\u0440\u0430\u0432\u044C\u0438."
-  - "\u041F\u043E\u043B\u0438\u0442\u0438\u043A\u0430 \u043A\u0443\u0431\u0435\u0440\u043E\u0432
-    \u0432 \u043E\u0442\u043D\u043E\u0448\u0435\u043D\u0438\u0438 \u0431\u043E\u0433\u043E\u043C\u043E\u043B\u043E\u0432
-    \u0438 \u043C\u0443\u0440\u0430\u0432\u044C\u0435\u0432 \r\n\u0442\u0430\u043A\u043E\u0432\u0430,
-    \u0447\u0442\u043E \u0434\u043E \u0442\u0435\u0445 \u043F\u043E\u0440, \u043F\u043E\u043A\u0430
-    \u043C\u0435\u0433\u0430\u043D\u0430\u0441\u0435\u043A\u043E\u043C\u044B\u0435
-    \u043D\u0435 \u0443\u0433\u0440\u043E\u0436\u0430\u044E\u0442 \u0447\u0435\u043B\u043E\u0432\u0435\u0447\u0435\u0441\u0442\u0432\u0443
-    \u0438 \u0441\u0430\u043C\u0438\u043C \u043A\u0443\u0431\u0435\u0440\u0430\u043C,
-    \u0442\u0435 \u043D\u0435 \u0431\u0443\u0434\u0443\u0442 \u0438\u0445 \u0443\u0431\u0438\u0432\u0430\u0442\u044C."
-  - "\u0422\u0430\u043A\u0436\u0435 \u043C\u0435\u0433\u0430\u043D\u0430\u0441\u0435\u043A\u043E\u043C\u044B\u0435,
-    \u0437\u0430\u043A\u043B\u044E\u0447\u0438\u0432\u0448\u0438\u0435 \u0442\u0430\u043A\u043E\u0439
-    \u043A\u043E\u043D\u0442\u0440\u0430\u043A\u0442\r\n\u043E\u0431\u044F\u0437\u0430\u043D\u044B
-    \u043F\u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0442\u044C \u043A\u0443\u0431\u0435\u0440\u0430\u043C
-    \u043F\u0440\u043E\u0434\u043E\u0432\u043E\u043B\u044C\u0441\u0442\u0432\u0438\u0435."
-  - "\u041E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0439\u0441\u044F \u0442\u0443\u0434\u0430
-    \u0438 \u0440\u0430\u0437\u0434\u043E\u0431\u0443\u0434\u044C \u0442\u0430\u043C
-    \u043D\u043E\u0432\u044B\u0435 \u0440\u0435\u0441\u0443\u0440\u0441\u044B. \u0422\u0430\u043A\u0436\u0435
-    \u0442\u0430\u043C \u0441\u0442\u043E\u0438\u0442 \u043D\u0430\u043C\u043D\u043E\u0433\u043E
-    \u0431\u043E\u043B\u0435\u0435 \u043C\u043E\u0449\u043D\u0430\u044F \u043A\u0443\u0437\u043D\u0438\u0446\u0430.
-    \u0412 \u043D\u0435\u0439 \u043C\u043E\u0436\u043D\u043E \u0441\u043E\u0437\u0434\u0430\u0442\u044C
-    \u0431\u043E\u043B\u0435\u0435 \u043C\u043E\u0449\u043D\u044B\u0435 \u043C\u043E\u0434\u0443\u043B\u0438."
-  - "\u0411\u0443\u0434\u0443 \u0436\u0434\u0430\u0442\u044C \u043E\u0442 \u0442\u0435\u0431\u044F
-    \u043D\u043E\u0432\u043E\u0441\u0442\u0435\u0439!"
+  names: []
+  dialogTexts: []
   dialogEnded: 0
 --- !u!114 &342951839
 MonoBehaviour:
@@ -6553,6 +6472,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 8059630031502777393}
     m_Modifications:
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: names.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: names.Array.data[0]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: names.Array.data[1]
+      value: PlayerName
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: namesRu.Array.data[0]
       value: "\u0414\u044D\u043D630"
       objectReference: {fileID: 0}
@@ -6561,12 +6492,24 @@ PrefabInstance:
       value: "\u0414\u044D\u043D630"
       objectReference: {fileID: 0}
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: dialogTexts.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: namesEng.Array.data[0]
       value: Dan630
       objectReference: {fileID: 0}
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: namesEng.Array.data[1]
       value: Dan630
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: dialogTexts.Array.data[0]
+      value: LevanBaseDialogRep1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: dialogTexts.Array.data[1]
+      value: LevanBaseDialogRep2
       objectReference: {fileID: 0}
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: dialogTextsRu.Array.data[0]
@@ -18724,36 +18667,24 @@ MonoBehaviour:
   name: {fileID: 56514870}
   text: {fileID: 1741054364}
   printText: {fileID: 1741054361}
-  namesEng:
+  names:
+  - PlayerName
+  - Abdul
+  - PlayerName
   - Abdul
   - Abdul
   - Abdul
-  dialogTextsEng:
-  - Hello again! Listen, do you have a spare minute? I wanted to ask you to go to
-    the neighboring town, Mantitown.
-  - There you will find my colleague, merchant Vitaly. Please tell him that our village
-    is short of food supplies.
-  - Thank you!
-  namesRu:
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  dialogTextsRu:
-  - "\u0418 \u0441\u043D\u043E\u0432\u0430 \u0437\u0434\u0440\u0430\u0432\u0441\u0442\u0432\u0443\u0439!
-    \u0421\u043B\u0443\u0448\u0430\u0439, \u0430 \u0443 \u0442\u0435\u0431\u044F
-    \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u0442\u0441\u044F \u0441\u0432\u043E\u0431\u043E\u0434\u043D\u043E\u0439
-    \u043C\u0438\u043D\u0443\u0442\u043A\u0438? \u042F \u0445\u043E\u0442\u0435\u043B
-    \u043F\u043E\u043F\u0440\u043E\u0441\u0438\u0442\u044C \u0442\u0435\u0431\u044F
-    \u0441\u0445\u043E\u0434\u0438\u0442\u044C \u0432 \u0441\u043E\u0441\u0435\u0434\u043D\u0438\u0439
-    \u0433\u043E\u0440\u043E\u0434, \u0411\u043E\u0433\u043E\u043C\u0433\u0440\u0430\u0434."
-  - "\u0422\u0430\u043C \u0442\u044B \u043D\u0430\u0439\u0434\u0435\u0448\u044C \u043C\u043E\u0435\u0433\u043E
-    \u043A\u043E\u043B\u043B\u0435\u0433\u0443, \u0442\u043E\u0440\u0433\u043E\u0432\u0446\u0430
-    \u0412\u0438\u0442\u0430\u043B\u0438\u044F. \u041F\u0435\u0440\u0435\u0434\u0430\u0439
-    \u0435\u043C\u0443 \u043F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430,
-    \u0447\u0442\u043E \u043D\u0430\u0448\u0435\u0439 \u0434\u0435\u0440\u0435\u0432\u043D\u0435
-    \u043D\u0435 \u0445\u0432\u0430\u0442\u0430\u0435\u0442 \u043F\u043E\u0441\u0442\u0430\u0432\u043E\u043A
-    \u043F\u0440\u043E\u0434\u043E\u0432\u043B\u044C\u0441\u0442\u0432\u0438\u044F."
-  - "\u0421\u043F\u0430\u0441\u0438\u0431\u043E!"
+  - Abdul
+  - PlayerName
+  dialogTexts:
+  - TopOfTheFoodChain4Rep1
+  - TopOfTheFoodChain4Rep2
+  - TopOfTheFoodChain4Rep3
+  - TopOfTheFoodChain4Rep4
+  - TopOfTheFoodChain4Rep5
+  - TopOfTheFoodChain4Rep6
+  - TopOfTheFoodChain4Rep7
+  - TopOfTheFoodChain4Rep8
   dialogEnded: 0
 --- !u!114 &767653585
 MonoBehaviour:
@@ -19374,6 +19305,50 @@ MonoBehaviour:
   item: {fileID: 7624702161724597496, guid: 98b732bdcf6432d4ca623730d0eda4da, type: 3}
   count: 0
   countText: {fileID: 578643275}
+--- !u!1 &816101846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 816101848}
+  - component: {fileID: 816101847}
+  m_Layer: 0
+  m_Name: LocalizationManager
+  m_TagString: LocalizationManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &816101847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816101846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23d695cca25ee849bc98b127c347413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &816101848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816101846}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1080.105, y: 428.5562, z: -1.268065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &821451370
 GameObject:
   m_ObjectHideFlags: 0
@@ -29514,72 +29489,8 @@ MonoBehaviour:
   name: {fileID: 737017276}
   text: {fileID: 870270651}
   printText: {fileID: 870270648}
-  namesEng:
-  - I
-  - Abdul
-  - Abdul
-  - I
-  - Abdul
-  - Abdul
-  - Abdul
-  dialogTextsEng:
-  - Hi! I conveyed your words to Vitaly. It turns out that they themselves do not
-    have enough food. Spiders destroy their fields and livestock.
-  - What a horror... But there's nothing we can do... Everyone in our village is
-    a cuber of old models and does not support powerful modules.
-  - Increasingly strong Kubera have long gone further inland. And we are standing
-    in this village to receive recruits.
-  - Check me out!
-  - Amazing! You support any modules!
-  - In this case, only you are able to destroy the den of spiders and save Bogomgrad.
-    You need to craft powerful modules for this!
-  - You can collect resources for modules in a Suburban meadow and in a Spider's
-    Den.
-  namesRu:
-  - "\u042F"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u042F"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  dialogTextsRu:
-  - "\u041F\u0440\u0438\u0432\u0435\u0442! \u042F \u043F\u0435\u0440\u0435\u0434\u0430\u043B
-    \u0442\u0432\u043E\u0438 \u0441\u043B\u043E\u0432\u0430 \u0412\u0438\u0442\u0430\u043B\u0438\u044E.
-    \u041E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442\u0441\u044F \u0443 \u043D\u0438\u0445
-    \u0443 \u0441\u0430\u043C\u0438\u0445 \u043D\u0435 \u0445\u0432\u0430\u0442\u0430\u0435\u0442
-    \u043F\u0440\u043E\u0434\u043E\u0432\u043E\u043B\u044C\u0441\u0442\u0432\u0438\u044F.
-    \u041F\u0430\u0443\u043A\u0438 \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0430\u044E\u0442
-    \u0438\u0445 \u043F\u043E\u043B\u044F \u0438 \u0441\u043A\u043E\u0442."
-  - "\u041A\u0430\u043A\u043E\u0439 \u0443\u0436\u0430\u0441... \u041D\u043E \u043C\u044B
-    \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u043C\u043E\u0436\u0435\u043C
-    \u0441\u0434\u0435\u043B\u0430\u0442\u044C... \u0412\u0441\u0435 \u0432 \u043D\u0430\u0448\u0435\u0439
-    \u0434\u0435\u0440\u0435\u0432\u043D\u0435 \u043A\u0443\u0431\u0435\u0440\u044B
-    \u0441\u0442\u0430\u0440\u044B\u0445 \u043C\u043E\u0434\u0435\u043B\u0435\u0439
-    \u0438 \u043D\u0435 \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u043C
-    \u043C\u043E\u0449\u043D\u044B\u0435 \u043C\u043E\u0434\u0443\u043B\u0438."
-  - "\u0412\u0441\u0435 \u0431\u043E\u043B\u0435\u0435 \u0441\u0438\u043B\u044C\u043D\u044B\u0435
-    \u043A\u0443\u0431\u0435\u0440\u044B \u0443\u0436\u0435 \u0434\u0430\u0432\u043D\u043E
-    \u043F\u0440\u043E\u0448\u043B\u0438 \u0434\u0430\u043B\u044C\u0448\u0435 \u0432\u0433\u043B\u0443\u0431\u044C
-    \u043C\u0430\u0442\u0435\u0440\u0438\u043A\u0430. \u0410 \u043C\u044B \u0441\u0442\u043E\u0438\u043C
-    \u0432 \u044D\u0442\u043E\u0439 \u0434\u0435\u0440\u0435\u0432\u043D\u0435, \u0447\u0442\u043E\u0431\u044B
-    \u043F\u0440\u0438\u043D\u0438\u043C\u0430\u0442\u044C \u043D\u043E\u0432\u043E\u0431\u0440\u0430\u043D\u0446\u0435\u0432."
-  - "\u0410 \u043F\u0440\u043E\u0432\u0435\u0440\u044C \u043C\u0435\u043D\u044F!"
-  - "\u0423\u0434\u0438\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E! \u0422\u044B
-    \u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0448\u044C
-    \u043B\u044E\u0431\u044B\u0435 \u043C\u043E\u0434\u0443\u043B\u0438!"
-  - "\u0412 \u0442\u0430\u043A\u043E\u043C \u0441\u043B\u0443\u0447\u0430\u0435 \u0442\u043E\u043B\u044C\u043A\u043E
-    \u0442\u044B \u0441\u043F\u043E\u0441\u043E\u0431\u0435\u043D \u0443\u043D\u0438\u0447\u0442\u043E\u0436\u0438\u0442\u044C
-    \u043B\u043E\u0433\u043E\u0432\u043E \u043F\u0430\u0443\u043A\u043E\u0432 \u0438
-    \u0441\u043F\u0430\u0441\u0442\u0438 \u0411\u043E\u0433\u043E\u043C\u0433\u0440\u0430\u0434.
-    \u0422\u0435\u0431\u0435 \u0434\u043B\u044F \u044D\u0442\u043E\u0433\u043E \u043D\u0443\u0436\u043D\u043E
-    \u0441\u043A\u0440\u0430\u0444\u0442\u0438\u0442\u044C \u043C\u043E\u0449\u043D\u044B\u0435
-    \u043C\u043E\u0434\u0443\u043B\u0438!"
-  - "\u0420\u0435\u0441\u0443\u0440\u0441\u044B \u0434\u043B\u044F \u043C\u043E\u0434\u0443\u043B\u0435\u0439
-    \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C \u0441\u043E\u0431\u0440\u0430\u0442\u044C
-    \u043D\u0430 \u041F\u0440\u0438\u0433\u043E\u0440\u043E\u0434\u043D\u043E\u043C
-    \u043B\u0443\u0433\u0443 \u0438 \u0432 \u041F\u0430\u0443\u0447\u044C\u0435\u043C
-    \u043B\u043E\u0433\u043E\u0432\u0435."
+  names: []
+  dialogTexts: []
   dialogEnded: 0
 --- !u!114 &1023882384
 MonoBehaviour:
@@ -72471,12 +72382,64 @@ PrefabInstance:
       value: DialogTriggerMission2
       objectReference: {fileID: 0}
     - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
       propertyPath: namesRu.Array.size
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[0]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[1]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[2]
+      value: PlayerName
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[3]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[4]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[5]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[6]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[7]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[8]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[9]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
       propertyPath: namesEng.Array.size
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[10]
+      value: PlayerName
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[11]
+      value: InsideVoice
       objectReference: {fileID: 0}
     - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
       propertyPath: namesRu.Array.data[4]
@@ -72501,6 +72464,10 @@ PrefabInstance:
     - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
       propertyPath: namesRu.Array.data[9]
       value: "\u0414\u044D\u043D630"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.size
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
       propertyPath: namesEng.Array.data[4]
@@ -72531,8 +72498,56 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[0]
+      value: TopOfTheFoodChain3Rep1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[1]
+      value: TopOfTheFoodChain3Rep2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[2]
+      value: TopOfTheFoodChain3Rep3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[3]
+      value: TopOfTheFoodChain3Rep4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[4]
+      value: TopOfTheFoodChain3Rep5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[5]
+      value: TopOfTheFoodChain3Rep6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[6]
+      value: TopOfTheFoodChain3Rep7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[7]
+      value: TopOfTheFoodChain3Rep8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[8]
+      value: TopOfTheFoodChain3Rep9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[9]
+      value: TopOfTheFoodChain3Rep10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
       propertyPath: dialogTextsEng.Array.size
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[10]
+      value: TopOfTheFoodChain3Rep11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[11]
+      value: TopOfTheFoodChain3Rep12
       objectReference: {fileID: 0}
     - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
       propertyPath: dialogTextsRu.Array.data[0]
@@ -77502,23 +77517,10 @@ MonoBehaviour:
   name: {fileID: 1787612754}
   text: {fileID: 1724820933}
   printText: {fileID: 1724820930}
-  namesEng:
-  - The inner voice
-  - The inner voice
-  dialogTextsEng:
-  - Well, here we are with you and got to the village!
-  - Come to the cubers, you need to get to know them to move on!
-  namesRu:
-  - "\u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0433\u043E\u043B\u043E\u0441"
-  - "\u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0433\u043E\u043B\u043E\u0441"
-  dialogTextsRu:
-  - "\u0427\u0442\u043E \u0436, \u0432\u043E\u0442 \u043C\u044B \u0441 \u0442\u043E\u0431\u043E\u0439
-    \u0438 \u0434\u043E\u0431\u0440\u0430\u043B\u0438\u0441\u044C \u0434\u043E \u0434\u0435\u0440\u0435\u0432\u043D\u0438!"
-  - "\u041F\u043E\u0434\u043E\u0439\u0434\u0438 \u043A \u043A\u0443\u0431\u0435\u0440\u0430\u043C,
-    \u0442\u0435\u0431\u0435 \u043D\u0443\u0436\u043D\u043E \u0441 \u043D\u0438\u043C\u0438
-    \u043F\u043E\u0437\u043D\u0430\u043A\u043E\u043C\u0438\u0442\u044C\u0441\u044F,
-    \u0447\u0442\u043E\u0431\u044B \u043F\u0440\u043E\u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F
-    \u0434\u0430\u043B\u044C\u0448\u0435!"
+  names:
+  - InsideVoice
+  dialogTexts:
+  - Tutorial5Rep1
   dialogEnded: 0
 --- !u!224 &1290666257
 RectTransform:
@@ -90029,8 +90031,8 @@ MonoBehaviour:
   - {fileID: 1817924920}
   missions:
   - {fileID: 1817924921}
-  id: 2
-  steps: 05000000
+  missionName: Tutorial
+  steps: 06000000
   main: 0
   last: 0
   missionsBool: 0
@@ -91779,8 +91781,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 8059630030946962062}
     m_Modifications:
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: namesRu.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: names.Array.data[0]
+      value: Sam
       objectReference: {fileID: 0}
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: namesEng.Array.size
@@ -91795,6 +91805,10 @@ PrefabInstance:
       value: "\u0418\u0432\u0430\u043D41"
       objectReference: {fileID: 0}
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: dialogTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: namesEng.Array.data[0]
       value: Ivan41
       objectReference: {fileID: 0}
@@ -91805,6 +91819,10 @@ PrefabInstance:
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: dialogTextsRu.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: dialogTexts.Array.data[0]
+      value: SamBaseRep1
       objectReference: {fileID: 0}
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: dialogTextsEng.Array.size
@@ -96889,10 +96907,8 @@ MonoBehaviour:
   name: {fileID: 0}
   text: {fileID: 0}
   printText: {fileID: 0}
-  namesEng: []
-  dialogTextsEng: []
-  namesRu: []
-  dialogTextsRu: []
+  names: []
+  dialogTexts: []
   dialogEnded: 0
 --- !u!1 &1695370454
 GameObject:
@@ -97266,8 +97282,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 8059630030597492874}
     m_Modifications:
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: names.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: namesRu.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: names.Array.data[0]
+      value: Richard
       objectReference: {fileID: 0}
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: namesEng.Array.size
@@ -97282,6 +97306,10 @@ PrefabInstance:
       value: "\u0417\u0430\u0449\u0438\u0442\u043D\u0438\u043A21"
       objectReference: {fileID: 0}
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: dialogTexts.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: namesEng.Array.data[0]
       value: Defender21
       objectReference: {fileID: 0}
@@ -97292,6 +97320,10 @@ PrefabInstance:
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: dialogTextsRu.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
+      propertyPath: dialogTexts.Array.data[0]
+      value: RichardBaseRep1
       objectReference: {fileID: 0}
     - target: {fileID: 1685464763887809082, guid: 8d75d8ec05784ea488d2391948827b96, type: 3}
       propertyPath: dialogTextsEng.Array.size
@@ -97630,28 +97662,16 @@ MonoBehaviour:
   name: {fileID: 306252496}
   text: {fileID: 1410876499}
   printText: {fileID: 1410876496}
-  namesEng:
+  names:
   - Abdul
   - Abdul
-  dialogTextsEng:
-  - Oh, hi, I haven't seen you here before. Did Dan630 send you here? I asked him
-    to send all the newly sent to me.
-  - So you need to buy something for crafting, right? Let's see what I have for you...
-  namesRu:
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  dialogTextsRu:
-  - "\u041E\u0443, \u043F\u0440\u0438\u0432\u0435\u0442, \u044F \u0442\u0435\u0431\u044F
-    \u0437\u0434\u0435\u0441\u044C \u0440\u0430\u043D\u044C\u0448\u0435 \u043D\u0435
-    \u0432\u0438\u0434\u0435\u043B. \u0422\u0435\u0431\u044F \u0441\u044E\u0434\u0430
-    \u043D\u0430\u043F\u0440\u0430\u0432\u0438\u043B \u0414\u044D\u043D630? \u042F
-    \u043F\u0440\u043E\u0441\u0438\u043B \u0435\u0433\u043E \u043E\u0442\u043F\u0440\u0430\u0432\u043B\u044F\u0442\u044C
-    \u043A\u043E \u043C\u043D\u0435 \u0432\u0441\u0435\u0445 \u043D\u043E\u0432\u043E\u0437\u0430\u0441\u043B\u0430\u043D\u043D\u044B\u0445."
-  - "\u0422\u0430\u043A \u0442\u0435\u0431\u0435 \u043D\u0443\u0436\u043D\u043E \u0447\u0442\u043E-\u0442\u043E
-    \u043A\u0443\u043F\u0438\u0442\u044C \u0434\u043B\u044F \u043A\u0440\u0430\u0444\u0442\u043E\u0432,
-    \u0442\u0430\u043A? \u0414\u0430\u0432\u0430\u0439 \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0438\u043C,
-    \u0447\u0442\u043E \u0443 \u043C\u0435\u043D\u044F \u0434\u043B\u044F \u0442\u0435\u0431\u044F
-    \u0435\u0441\u0442\u044C..."
+  - PlayerName
+  - InsideVoice
+  dialogTexts:
+  - TopOfTheFoodChain2Rep1
+  - TopOfTheFoodChain2Rep2
+  - TopOfTheFoodChain2Rep3
+  - TopOfTheFoodChain2Rep4
   dialogEnded: 0
 --- !u!114 &1727103025
 MonoBehaviour:
@@ -99210,56 +99230,12 @@ MonoBehaviour:
   name: {fileID: 661442160}
   text: {fileID: 376309035}
   printText: {fileID: 376309032}
-  namesEng:
-  - The inner voice
-  - The inner voice
-  - The inner voice
-  - The inner voice
-  - The inner voice
-  - The inner voice
-  - The inner voice
-  dialogTextsEng:
-  - On this anvil you can create modules and other items
-  - To change the cuber modules, open the tablet. This can be done by clicking on
-    the button near the jump. It shows a gear.
-  - There you are shown your main parameters and the scale of experience.
-  - 'Also there you will see three sections: inventory, details and skills.'
-  - All your items are stored in the inventory.
-  - In the details menu, you can change modules.
-  - In the skills menu, you can change the currently active skill.
-  namesRu:
-  - "\u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0433\u043E\u043B\u043E\u0441"
-  - "\u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0433\u043E\u043B\u043E\u0441"
-  - "\u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0433\u043E\u043B\u043E\u0441"
-  - "\u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0433\u043E\u043B\u043E\u0441"
-  - "\u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0433\u043E\u043B\u043E\u0441"
-  - "\u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0433\u043E\u043B\u043E\u0441"
-  - "\u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0433\u043E\u043B\u043E\u0441"
-  dialogTextsRu:
-  - "\u041D\u0430 \u044D\u0442\u043E\u0439 \u043D\u0430\u043A\u043E\u0432\u0430\u043B\u044C\u043D\u0435
-    \u0442\u044B \u043C\u043E\u0436\u0435\u0448\u044C \u0441\u043E\u0437\u0434\u0430\u0432\u0430\u0442\u044C
-    \u043C\u043E\u0434\u0443\u043B\u0438 \u0438 \u0434\u0440\u0443\u0433\u0438\u0435
-    \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B"
-  - "\u0427\u0442\u043E\u0431\u044B \u043C\u0435\u043D\u044F\u0442\u044C \u043C\u043E\u0434\u0443\u043B\u0438
-    \u043A\u0443\u0431\u0435\u0440\u0430, \u043E\u0442\u043A\u0440\u043E\u0439 \u043F\u043B\u0430\u043D\u0448\u0435\u0442.
-    \u042D\u0442\u043E \u043C\u043E\u0436\u043D\u043E \u0441\u0434\u0435\u043B\u0430\u0442\u044C
-    \u043D\u0430\u0436\u0430\u0432 \u043D\u0430 \u043A\u043D\u043E\u043F\u043A\u0443
-    \u0432\u043E\u0437\u043B\u0435 \u043F\u0440\u044B\u0436\u043A\u0430. \u041D\u0430
-    \u043D\u0435\u0439 \u0438\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0430
-    \u0448\u0435\u0441\u0442\u0435\u0440\u0435\u043D\u043A\u0430."
-  - "\u0422\u0430\u043C \u0443 \u0442\u0435\u0431\u044F \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u044E\u0442\u0441\u044F
-    \u0442\u0432\u043E\u0438 \u043E\u0441\u043D\u043E\u0432\u043D\u044B\u0435 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u044B
-    \u0438 \u0448\u043A\u0430\u043B\u0430 \u043E\u043F\u044B\u0442\u0430."
-  - "\u0422\u0430\u043A\u0436\u0435 \u0442\u0430\u043C \u0442\u044B \u0443\u0432\u0438\u0434\u0438\u0448\u044C
-    \u0442\u0440\u0438 \u0440\u0430\u0437\u0434\u0435\u043B\u0430: \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u044C,
-    \u0434\u0435\u0442\u0430\u043B\u0438 \u0438 \u043D\u0430\u0432\u044B\u043A\u0438."
-  - "\u0412 \u0438\u043D\u0432\u0435\u043D\u0442\u0430\u0440\u0435 \u0445\u0440\u0430\u043D\u044F\u0442\u0441\u044F
-    \u0432\u0441\u0435 \u0442\u0432\u043E\u0438 \u043F\u0440\u0435\u0434\u043C\u0435\u0442\u044B."
-  - "\u0412 \u043C\u0435\u043D\u044E \u0434\u0435\u0442\u0430\u043B\u0435\u0439 \u0442\u044B
-    \u043C\u043E\u0436\u0435\u0448\u044C \u043C\u0435\u043D\u044F\u0442\u044C \u043C\u043E\u0434\u0443\u043B\u0438."
-  - "\u0412 \u043C\u0435\u043D\u044E \u043D\u0430\u0432\u044B\u043A\u043E\u0432 \u043C\u043E\u0436\u043D\u043E
-    \u0441\u043C\u0435\u043D\u0438\u0442\u044C \u0442\u0435\u043A\u0443\u0449\u0438\u0439
-    \u0430\u043A\u0442\u0438\u0432\u043D\u044B\u0439 \u043D\u0430\u0432\u044B\u043A."
+  names:
+  - InsideVoice
+  - InsideVoice
+  dialogTexts:
+  - Tutorial6Rep1
+  - Tutorial6Rep2
   dialogEnded: 0
 --- !u!224 &1817924922
 RectTransform:
@@ -104336,8 +104312,8 @@ MonoBehaviour:
   - {fileID: 1290666255}
   missions:
   - {fileID: 1290666256}
-  id: 2
-  steps: 04000000
+  missionName: Tutorial
+  steps: 05000000
   main: 0
   last: 0
   missionsBool: 0
@@ -105900,22 +105876,10 @@ MonoBehaviour:
   name: {fileID: 7655602269128045697}
   text: {fileID: 7425659266395550252}
   printText: {fileID: 1632144794451878154}
-  namesEng:
+  names:
   - Abdul
-  - Abdul
-  dialogTextsEng:
-  - Listen, I recently received a new delivery of goods from behind the wall, are
-    you interested?
-  - Come again!
-  namesRu:
-  - "\u0410\u0431\u0434\u0443\u043B"
-  - "\u0410\u0431\u0434\u0443\u043B"
-  dialogTextsRu:
-  - "\u0421\u043B\u0443\u0448\u0430\u0439, \u043C\u043D\u0435 \u043D\u0435\u0434\u0430\u0432\u043D\u043E
-    \u043F\u0440\u0438\u0448\u043B\u0430 \u043D\u043E\u0432\u0430\u044F \u043F\u043E\u0441\u0442\u0430\u0432\u043A\u0430
-    \u0442\u043E\u0432\u0430\u0440\u0430 \u0438\u0437-\u0437\u0430 \u0441\u0442\u0435\u043D\u044B,
-    \u043D\u0435 \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u0443\u0435\u0442?"
-  - "\u041F\u0440\u0438\u0445\u043E\u0434\u0438 \u0435\u0449\u0435!"
+  dialogTexts:
+  - AbdulBaseRep1
   dialogEnded: 0
 --- !u!114 &6428097793406545097
 MonoBehaviour:
@@ -106366,8 +106330,8 @@ MonoBehaviour:
   - {fileID: 767653584}
   - {fileID: 1023882383}
   - {fileID: 342951838}
-  id: 1
-  steps: 01000000030000000500000009000000
+  missionName: TopOfTheFoodChain
+  steps: 0200000004000000060000000a000000
   main: 0
   last: 0
   missionsBool: 0
@@ -106792,8 +106756,8 @@ MonoBehaviour:
   missions:
   - {fileID: 1685464763448772397}
   - {fileID: 169015737}
-  id: 1
-  steps: 0000000002000000
+  missionName: TopOfTheFoodChain
+  steps: 0100000003000000
   main: 0
   last: 0
   missionsBool: 0
@@ -106858,8 +106822,36 @@ PrefabInstance:
       value: DialogTriggerMission
       objectReference: {fileID: 0}
     - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
       propertyPath: namesRu.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[0]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[1]
+      value: PlayerName
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[2]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[3]
+      value: Levan
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[4]
+      value: PlayerName
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: names.Array.data[5]
+      value: Levan
       objectReference: {fileID: 0}
     - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
       propertyPath: namesEng.Array.size
@@ -106870,12 +106862,40 @@ PrefabInstance:
       value: "\u0414\u044D\u043D630"
       objectReference: {fileID: 0}
     - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
       propertyPath: namesEng.Array.data[4]
       value: Dan630
       objectReference: {fileID: 0}
     - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
       propertyPath: dialogTextsRu.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[0]
+      value: TopOfTheFoodChain1Rep1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[1]
+      value: PlayerName
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[2]
+      value: TopOfTheFoodChain1Rep3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[3]
+      value: TopOfTheFoodChain1Rep4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[4]
+      value: TopOfTheFoodChain1Rep5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
+      propertyPath: dialogTexts.Array.data[5]
+      value: TopOfTheFoodChain1Rep6
       objectReference: {fileID: 0}
     - target: {fileID: 7603313533023696501, guid: 71e78c9cf1856eb4485bcbf78b0c1353, type: 3}
       propertyPath: dialogTextsEng.Array.size
