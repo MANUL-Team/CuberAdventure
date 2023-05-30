@@ -15,12 +15,12 @@ public class LangDropDown : MonoBehaviour
 
     void Update()
     {
-        if(PlayerPrefs.GetInt("Language") == 0){
+        if(PlayerPrefs.GetString("Language") == "en_US"){
             for(int i = 0; i < en.Length; i++){
                 dropdown.options[i].text = en[i];
             }
         }
-        if(PlayerPrefs.GetInt("Language") == 1){
+        if(PlayerPrefs.GetString("Language") == "ru_RU"){
             for(int i = 0; i < ru.Length; i++){
                 dropdown.options[i].text = ru[i];
             }

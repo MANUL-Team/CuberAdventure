@@ -9,15 +9,13 @@ public class DialogManager : MonoBehaviour
     [SerializeField] public Text name, text;
     [SerializeField] private PrintableText printText;
     private int id;
-    [SerializeField] private string[] namesEng;
-    [TextArea]
-    [SerializeField] public string[] dialogTextsEng;
-    [SerializeField] private string[] namesRu;
-    [TextArea]
-    [SerializeField] public string[] dialogTextsRu;
+    [SerializeField] private string[] names;
+    [SerializeField] public string[] dialogTexts;
     private Animator cam;
     public bool dialogEnded;
+    private LocalizationManager localizationManager;
     void Start(){
+        localizationManager = GameObject.FindGameObjectWithTag("LocalizationManager").GetComponent<LocalizationManager>();
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Animator>();
     }
     public void OpenDialog(){
@@ -28,43 +26,34 @@ public class DialogManager : MonoBehaviour
         id = 0;
         dialogEnded = false;
         cam.SetBool("Dialog", true);
-        if(PlayerPrefs.GetInt("Language") == 0){
-            printText.PrintText(dialogTextsEng[id]);
-        }
-        else if(PlayerPrefs.GetInt("Language") == 1){
-            printText.PrintText(dialogTextsRu[id]);
-        }
+        printText.PrintText(localizationManager.GetLocalizedValue(dialogTexts[id]));
+        name.text = localizationManager.GetLocalizedValue(names[id]);
         Debug.Log("Print");
     }
     public void NextPage(){
         id += 1;
-        if(PlayerPrefs.GetInt("Language") == 0){
-            printText.PrintText(dialogTextsEng[id]);
-        }
-        else if(PlayerPrefs.GetInt("Language") == 1){
-            printText.PrintText(dialogTextsRu[id]);
-        }
-    }
-    public void SkipText(){
-        printText.speedOfPrint = 0.005f;
-    }
-    void FixedUpdate(){
-        for(int i = 0; i < namesRu.Length; i++){
-            if(i == id){
-                if(PlayerPrefs.GetInt("Language") == 0){
-                    name.text = namesEng[i];
-                }
-                else if(PlayerPrefs.GetInt("Language") == 1){
-                    name.text = namesRu[i];
-                }
-            }
-        }
-        if(id >= namesRu.Length && dialog.activeSelf == true){
+        if(id >= names.Length && dialog.activeSelf == true){
             dialog.SetActive(false);
             dialogEnded = true;
             cam.SetBool("Dialog", false);
             PlayerPrefs.SetInt("MaskCS", 0);
             PlayerPrefs.SetInt("MaskD", 0);
+        }
+        else{
+            for(int i = 0; i < names.Length; i++){
+                if(i == id){
+                    name.text = localizationManager.GetLocalizedValue(names[id]);
+                }
+            }
+            printText.PrintText(localizationManager.GetLocalizedValue(dialogTexts[id]));
+        }
+    }
+    public void SkipText(){
+        printText.speedOfPrint = 0.0005f;
+    }
+    public int ID{
+        get{
+            return id;
         }
     }
 }

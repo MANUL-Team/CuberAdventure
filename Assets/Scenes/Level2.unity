@@ -727,8 +727,8 @@ MonoBehaviour:
   - {fileID: 909436571}
   missions:
   - {fileID: 909436572}
-  id: 2
-  steps: 03000000
+  missionName: Tutorial
+  steps: 04000000
   main: 0
   last: 0
   missionsBool: 0
@@ -797,6 +797,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bda7307682dfd254a92a8bac28abd5ad, type: 3}
+--- !u!1 &100333781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 100333783}
+  - component: {fileID: 100333782}
+  m_Layer: 0
+  m_Name: LocalizationManager
+  m_TagString: LocalizationManager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &100333782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100333781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f23d695cca25ee849bc98b127c347413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &100333783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100333781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1080.105, y: 428.5562, z: -1.268065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &144154256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3266,25 +3310,12 @@ MonoBehaviour:
   name: {fileID: 946703591}
   text: {fileID: 1421912249}
   printText: {fileID: 1421912246}
-  namesEng:
-  - The inner voice
-  - The inner voice
-  dialogTextsEng:
-  - Shh... See, there's a mantis standing on top? This is a hostile mob, it will
-    attack you!
-  - You're too weak right now, better jump over it.
-  namesRu:
-  - "\u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0433\u043E\u043B\u043E\u0441"
-  - "\u0412\u043D\u0443\u0442\u0440\u0435\u043D\u043D\u0438\u0439 \u0433\u043E\u043B\u043E\u0441"
-  dialogTextsRu:
-  - "\u0422\u0441\u0441... \u0412\u0438\u0434\u0438\u0448\u044C, \u0442\u0430\u043C
-    \u0441\u0432\u0435\u0440\u0445\u0443 \u0441\u0442\u043E\u0438\u0442 \u0431\u043E\u0433\u043E\u043C\u043E\u043B?
-    \u042D\u0442\u043E \u0432\u0440\u0430\u0436\u0434\u0435\u0431\u043D\u044B\u0439
-    \u043C\u043E\u0431, \u043E\u043D \u0431\u0443\u0434\u0435\u0442 \u0442\u0435\u0431\u044F
-    \u0430\u0442\u0430\u043A\u043E\u0432\u0430\u0442\u044C!"
-  - "\u0421\u0435\u0439\u0447\u0430\u0441 \u0442\u044B \u0441\u043B\u0438\u0448\u043A\u043E\u043C
-    \u0441\u043B\u0430\u0431\u044B\u0439, \u043B\u0443\u0447\u0448\u0435 \u043F\u0435\u0440\u0435\u043F\u0440\u044B\u0433\u043D\u0438
-    \u0435\u0433\u043E."
+  names:
+  - InsideVoice
+  - InsideVoice
+  dialogTexts:
+  - Tutorial4Rep1
+  - Tutorial4Rep2
   dialogEnded: 0
 --- !u!224 &909436573
 RectTransform:
