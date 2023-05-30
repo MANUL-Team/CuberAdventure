@@ -6,17 +6,17 @@ using UnityEngine.UI;
 public class LangText : MonoBehaviour
 {
     private Text text;
-    private int lang;
+    private string lang;
     [TextArea]
     [SerializeField] private string eng, ru;
     [SerializeField] private string[] engEd, ruEd;
     [SerializeField] private bool editable, dialog;
 
     private void Awake() {
-        lang = PlayerPrefs.GetInt("Language");
+        lang = PlayerPrefs.GetString("Language");
         text = GetComponent<Text>();
         if(editable){
-            if(lang == 0){
+            if(lang == "en_US"){
                 if(text.text == ruEd[0]){
                     text.text = engEd[0];
                 }
@@ -27,7 +27,7 @@ public class LangText : MonoBehaviour
                     text.text = engEd[2];
                 }
             }
-            else if(lang == 1){
+            else if(lang == "ru_RU"){
                 if(text.text == engEd[0]){
                     text.text = ruEd[0];
                 }
@@ -38,10 +38,11 @@ public class LangText : MonoBehaviour
                     text.text = ruEd[2];
                 }
             }
-        }else{
-            if(lang == 0){
+        }
+        else{
+            if(lang == "en_US"){
                 text.text = eng;
-            } else if(lang == 1){
+            } else if(lang == "ru_RU"){
                 text.text = ru;
             }
         }
@@ -49,10 +50,10 @@ public class LangText : MonoBehaviour
 
     void Update()
     {
-        lang = PlayerPrefs.GetInt("Language");
-        if(dialog == false){
+        lang = PlayerPrefs.GetString("Language");
+        text = GetComponent<Text>();
         if(editable){
-            if(lang == 0){
+            if(lang == "en_US"){
                 if(text.text == ruEd[0]){
                     text.text = engEd[0];
                 }
@@ -63,7 +64,7 @@ public class LangText : MonoBehaviour
                     text.text = engEd[2];
                 }
             }
-            else if(lang == 1){
+            else if(lang == "ru_RU"){
                 if(text.text == engEd[0]){
                     text.text = ruEd[0];
                 }
@@ -74,15 +75,13 @@ public class LangText : MonoBehaviour
                     text.text = ruEd[2];
                 }
             }
-        }else{
-            if(lang == 0){
+        }
+        else{
+            if(lang == "en_US"){
                 text.text = eng;
-            } else if(lang == 1){
+            } else if(lang == "ru_RU"){
                 text.text = ru;
             }
         }
-        }
-        
-        
     }
 }

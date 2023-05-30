@@ -16,7 +16,7 @@ public class MissionsController : MonoBehaviour
     }
     void FixedUpdate(){
         for(int i = 0; i < missions.Count; i++){
-            if(PlayerPrefs.GetInt("Mission " + missions[i].id) == 1){
+            if(PlayerPrefs.GetInt("Mission" + missions[i].missionName) > 0){
                 missions[i].gameObject.SetActive(true);
             }
             else{
@@ -25,10 +25,10 @@ public class MissionsController : MonoBehaviour
         }
     }
     void OnEnable(){
-        if(PlayerPrefs.GetInt("Language") == 0){
+        if(PlayerPrefs.GetString("Language") == "en_US"){
             description.text = "Select a mission.";
         }
-        else if(PlayerPrefs.GetInt("Language") == 1){
+        else if(PlayerPrefs.GetString("Language") == "ru_RU"){
             description.text = "Выберите миссию.";
         }
     }

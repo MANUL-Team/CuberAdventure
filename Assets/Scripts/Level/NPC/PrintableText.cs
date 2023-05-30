@@ -7,13 +7,13 @@ public class PrintableText : MonoBehaviour
 {
     [SerializeField] private GameObject button, skip;
     [SerializeField] private Text text;
-    public float speedOfPrint = 0.02f;
+    public float speedOfPrint = 0.01f;
     private string words;
     public void PrintText(string strText){
         button.SetActive(false);
         skip.SetActive(true);
         words = strText;
-        speedOfPrint = 0.02f;
+        speedOfPrint = 0.01f;
         text.text = "";
         StartCoroutine("Print");
     }
