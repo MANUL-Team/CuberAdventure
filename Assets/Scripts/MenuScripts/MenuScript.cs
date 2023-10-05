@@ -14,6 +14,7 @@ public class MenuScript : MonoBehaviour
     [SerializeField]private SkinCheck skincheck;
     [SerializeField]private PetsManager petcheck;
     [SerializeField] private Animator menuAnimator;
+    [SerializeField] private GameObject background;
 
     public void PlayPressed()
     {
@@ -169,8 +170,26 @@ public class MenuScript : MonoBehaviour
             yield return null;
         }
     }
+    public void SetBackground(){
+        if(PlayerPrefs.GetInt("Background") == 0){
+            background.SetActive(false);
+        }
+        else{
+            background.SetActive(true);
+        }
+    }
     void Start()
     {
+        SetBackground();
         Application.targetFrameRate = 120;
+    }
+    public int backgroundID {
+        get{
+            return PlayerPrefs.GetInt("Background");
+        }
+        set{
+            PlayerPrefs.SetInt("Background", value);
+            SetBackground();
+        }
     }
 }
