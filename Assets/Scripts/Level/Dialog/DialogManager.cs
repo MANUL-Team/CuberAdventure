@@ -25,6 +25,7 @@ public class DialogManager : MonoBehaviour
         PlayerPrefs.SetInt("MaskD", 1);
         id = 0;
         dialogEnded = false;
+        cam.enabled = true;
         cam.SetBool("Dialog", true);
         printText.PrintText(localizationManager.GetLocalizedValue(dialogTexts[id]));
         name.text = localizationManager.GetLocalizedValue(names[id]);

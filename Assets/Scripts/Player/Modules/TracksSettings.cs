@@ -10,6 +10,12 @@ public class TracksSettings : MonoBehaviour
         }
     }
     [SerializeField] private float _needEnergy;
+    public float clutch{
+        get{
+            return _clutch;
+        }
+    }
+    [SerializeField] private float _clutch;
     public int speed{
         get{
             return _speed;
@@ -22,6 +28,12 @@ public class TracksSettings : MonoBehaviour
         }
     }
     [SerializeField] private float _currentSpeed;
+    public float acceleration{
+        get{
+            return _acceleration;
+        }
+    }
+    [SerializeField] private float _acceleration;
     [SerializeField] private TracksSettings[] prefabs;
     public TracksSettings[] _prefabs{
         get{
@@ -46,6 +58,8 @@ public class TracksSettings : MonoBehaviour
         for(int i = 0; i < prefabs.Length; i++){
             if(PlayerPrefs.GetInt("Tracks") == prefabs[i].id){
                 _speed = prefabs[i].speed;
+                _clutch = prefabs[i]._clutch;
+                _acceleration = prefabs[i].acceleration;
                 _needEnergy = prefabs[i].needEnergy;
                 _id = prefabs[i].id;
                 _sprite = prefabs[i]._sprite;

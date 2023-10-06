@@ -22,6 +22,16 @@ public class LaserSettings : MonoBehaviour
         }
     }
     [SerializeField] private float _currentDamage;
+
+    public float reloadVelocity
+    {
+        get
+        {
+            return _reloadVelocity;
+        }
+    }
+
+    [SerializeField] private float _reloadVelocity;
     [SerializeField] private LaserSettings[] prefabs;
     public LaserSettings[] _prefabs{
         get{
@@ -47,6 +57,7 @@ public class LaserSettings : MonoBehaviour
             if(PlayerPrefs.GetInt("Laser") == prefabs[i].id){
                 _damage = prefabs[i].damage;
                 _needEnergy = prefabs[i].needEnergy;
+                _reloadVelocity = prefabs[i].reloadVelocity;
                 _id = prefabs[i].id;
                 _sprite = prefabs[i]._sprite;
                 ready = true;

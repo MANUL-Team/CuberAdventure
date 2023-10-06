@@ -108,8 +108,7 @@ public class MenuScript : MonoBehaviour
     public void Skins(){
         AllAnimationsFalse();
         menuAnimator.SetBool("SkinsOpened", true);
-        skincheck.CheckUsed();
-        Invoke("CheckUsed", 0.1f);
+        Invoke("CheckUsed", 0.5f);
     }
     private void CheckUsed(){
         skincheck.CheckUsed();
