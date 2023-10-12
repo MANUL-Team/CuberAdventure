@@ -45,8 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _needEnergy: 100
+  _clutch: 7
   _speed: 18
   _currentSpeed: 0
+  _acceleration: 0.4
   prefabs: []
   _id: 2
   _sprite: {fileID: 21300000, guid: 2482a75ed4e347a48b316b022e347165, type: 3}

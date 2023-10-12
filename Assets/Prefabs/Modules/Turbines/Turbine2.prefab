@@ -48,6 +48,7 @@ MonoBehaviour:
   _jumpHeight: 22
   _currentJumpHeight: 0
   _jumpCount: 1
+  _flyTime: 10
   prefabs: []
   _id: 2
   _sprite: {fileID: 21300000, guid: 5f9abb680f0697f4c80f07201a516427, type: 3}
