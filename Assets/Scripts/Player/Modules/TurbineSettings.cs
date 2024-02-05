@@ -28,6 +28,12 @@ public class TurbineSettings : MonoBehaviour
         }
     }
     [SerializeField] private int _jumpCount;
+    public int flyTime{
+        get{
+            return _flyTime;
+        }
+    }
+    [SerializeField] private int _flyTime;
     [SerializeField] private TurbineSettings[] prefabs;
     public TurbineSettings[] _prefabs{
         get{
@@ -53,6 +59,7 @@ public class TurbineSettings : MonoBehaviour
             if(PlayerPrefs.GetInt("Turbine") == prefabs[i].id){
                 _jumpHeight = prefabs[i].jumpHeight;
                 _needEnergy = prefabs[i].needEnergy;
+                _flyTime = prefabs[i].flyTime;
                 _id = prefabs[i].id;
                 _jumpCount = prefabs[i].jumpCount;
                 _sprite = prefabs[i]._sprite;

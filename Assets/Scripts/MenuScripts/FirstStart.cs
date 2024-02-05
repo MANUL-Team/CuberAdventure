@@ -11,6 +11,7 @@ public class FirstStart : MonoBehaviour
             PlayerPrefs.SetInt("Language", 1);
             PlayerPrefs.SetInt("Graphics", 1);
             PlayerPrefs.SetInt("FirstStart", 1);
+            PlayerPrefs.SetString("Language", "Ru_ru");
         }
     }
 }

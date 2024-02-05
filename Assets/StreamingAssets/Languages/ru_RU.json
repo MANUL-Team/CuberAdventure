@@ -5,6 +5,10 @@
             "value": "Громкость"
         },
         {
+            "key": "Background",
+            "value": "Фон"
+        },
+        {
             "key": "Back",
             "value": "Назад"
         },

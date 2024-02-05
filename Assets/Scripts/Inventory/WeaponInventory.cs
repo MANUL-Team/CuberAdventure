@@ -15,6 +15,7 @@ public class WeaponInventory : MonoBehaviour
     private GameObject bulletInst;
     private IEnumerator LowUpdate(){
         while(true){
+            startTimeBtwAttack = modules._laser.reloadVelocity;
             damage = modules._laser.currentDamage + PlayerPrefs.GetInt("DmgBonus");
             yield return new WaitForSeconds(0.2f);
         }
