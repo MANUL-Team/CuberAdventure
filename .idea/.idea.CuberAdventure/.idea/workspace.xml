@@ -2,35 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7dd2a7b-a153-4032-bccb-8f9c2678a06b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Camera.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Camera.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/DialogCamBack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DialogCamBack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/RandomSkin.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/RandomSkin.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Modules/Armors/Armor2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Modules/Armors/Armor2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Modules/Armors/Armor3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Modules/Armors/Armor3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Modules/Lasers/Laser0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Modules/Lasers/Laser0.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Modules/Lasers/Laser1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Modules/Lasers/Laser1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Modules/Lasers/Laser2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Modules/Lasers/Laser2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Modules/Tracks/Tracks0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Modules/Tracks/Tracks0.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Modules/Tracks/Tracks1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Modules/Tracks/Tracks1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Modules/Tracks/Tracks2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Modules/Tracks/Tracks2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Modules/Turbines/Turbine2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Modules/Turbines/Turbine2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerDefault.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/WeaponInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/WeaponInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/Dialog/DialogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/Dialog/DialogManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/MenuScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/MenuScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/SkinCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/SkinCheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Modules/LaserSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Modules/LaserSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Modules/TracksSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Modules/TracksSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Modules/TurbineSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Modules/TurbineSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/SwitchSkills.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/SwitchSkills.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -42,19 +19,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/MenuScripts/SkinCheck.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MenuScripts/MenuScript.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/WeaponInventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Modules/LaserSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Modules/TurbineSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/Modules/TracksSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/CameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Level/Dialog/DialogManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
-      </list>
-    </option>
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/SwitchSkills.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+    </changedPaths>
   </component>
   <component name="ProjectId" id="2WORzyRGK5rxLllPFaQr4VTP6AY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -65,7 +33,9 @@
   <component name="PropertiesComponent">
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -74,7 +44,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -83,7 +53,7 @@
       <option name="listenPortForConnections" value="false" />
       <option name="pid" />
       <option name="selectedOptions">
-        <set />
+        <list />
       </option>
       <method v="2" />
     </configuration>
@@ -100,6 +70,7 @@
       <workItem from="1696603771481" duration="6000" />
       <workItem from="1696603798864" duration="8527000" />
       <workItem from="1696615877063" duration="1104000" />
+      <workItem from="1707133952658" duration="1499000" />
     </task>
     <servers />
   </component>

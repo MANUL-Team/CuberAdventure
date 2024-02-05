@@ -247,40 +247,33 @@ public class PlayerController : MonoBehaviour
         }
         if(joystick.gameObject.activeSelf)
         {
-            if (isGrounded)
+            if (!uw.loseAir && clutchInt > modules._tracks.clutch)
             {
-                if (!uw.loseAir && clutchInt > modules._tracks.clutch)
+                if(moveInput > 0){
+                    speed = Math.Clamp(speed + (modules._tracks.acceleration), -modules._tracks.currentSpeed, modules._tracks.currentSpeed);
+                }
+                else if(moveInput < 0)
                 {
-                    if(moveInput > 0){
-                        speed = Math.Clamp(speed + (modules._tracks.acceleration), -modules._tracks.currentSpeed, modules._tracks.currentSpeed);
-                    }
-                    else if(moveInput < 0)
+                    speed = Math.Clamp(speed - (modules._tracks.acceleration), -modules._tracks.currentSpeed, modules._tracks.currentSpeed);
+                }
+                else
+                {
+                    if (speed > 0)
                     {
-                        speed = Math.Clamp(speed - (modules._tracks.acceleration), -modules._tracks.currentSpeed, modules._tracks.currentSpeed);
+                        speed = Math.Clamp(speed - 0.5f, 0, modules._tracks.currentSpeed);
                     }
                     else
                     {
-                        if (speed > 0)
-                        {
-                            speed = Math.Clamp(speed - 0.5f, 0, modules._tracks.currentSpeed);
-                        }
-                        else
-                        {
-                            speed = Math.Clamp(speed + 0.5f, -modules._tracks.currentSpeed, 0);
-                        }
+                        speed = Math.Clamp(speed + 0.5f, -modules._tracks.currentSpeed, 0);
                     }
                 }
-                else if (clutchInt <= modules._tracks.clutch)
-                {
-                    speed = speed * 0.95f;
-                }
-                if(!confusion){
-                    rb.velocity = new Vector2( speed, rb.velocity.y);
-                }
             }
-            else
+            else if (clutchInt <= modules._tracks.clutch)
             {
-                rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
+                speed = speed * 0.95f;
+            }
+            if(!confusion){
+                rb.velocity = new Vector2( speed, rb.velocity.y);
             }
         }
         else{
@@ -320,19 +313,6 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
     }
-
-    public void Boost()
-    {
-        if (!isGrounded)
-        {
-            if (DoubleJumps > 0 && Time.timeScale == 1)
-            {
-                rb.velocity = new Vector2(PlayerPrefs.GetInt("PlayerRotation") * modules._turbine.jumpHeight, rb.velocity.y);
-                DoubleJumps--;
-            }
-        }
-    }
-
     public void ToFly()
     {
         if (flyTime > 0)
