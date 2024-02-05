@@ -5,6 +5,10 @@
             "value": "Volume"
         },
         {
+            "key": "Background",
+            "value": "Background"
+        },
+        {
             "key": "Back",
             "value": "Back"
         },

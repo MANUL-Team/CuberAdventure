@@ -47,6 +47,7 @@ MonoBehaviour:
   _needEnergy: 140
   _damage: 60
   _currentDamage: 0
+  _reloadVelocity: 0.6
   prefabs: []
   _id: 2
   _sprite: {fileID: 21300000, guid: 5433976941af45641ae4e875f017c12c, type: 3}

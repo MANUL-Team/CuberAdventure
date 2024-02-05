@@ -65,7 +65,7 @@ public class LocalizationManager : MonoBehaviour
 
     public string GetLocalizedValue(string key)
     {
-        if(key != "PlayerName"){
+        if (key != "PlayerName"){
             if (localizedText.ContainsKey(key))
             {
                 return localizedText[key];

@@ -13,7 +13,7 @@ public class LangDropDown : MonoBehaviour
         dropdown = GetComponent<Dropdown>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(PlayerPrefs.GetString("Language") == "en_US"){
             for(int i = 0; i < en.Length; i++){

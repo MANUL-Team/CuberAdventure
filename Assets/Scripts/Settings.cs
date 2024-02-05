@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class Settings : MonoBehaviour
 {
     [SerializeField] private Slider musicSlider;
-    [SerializeField] private Dropdown graphicsDropDown, language;
+    [SerializeField] private Dropdown graphicsDropDown, language, backgroundDropdown;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private LocalizationManager localizationManager;
+    [SerializeField] private MenuScript menu;
     private void Start() {
         musicSlider.value = PlayerPrefs.GetFloat("Volume");
         graphicsDropDown.value = PlayerPrefs.GetInt("Graphics");
+        backgroundDropdown.value = PlayerPrefs.GetInt("Background");
         if(PlayerPrefs.GetString("Language") == "ru_RU"){
             language.value = 1;
         }
@@ -19,9 +21,10 @@ public class Settings : MonoBehaviour
             language.value = 0;
         }
     }
-    private void Update() {
+    private void FixedUpdate() {
         PlayerPrefs.SetFloat("Volume", musicSlider.value);
         PlayerPrefs.SetInt("Graphics", graphicsDropDown.value);
+        menu.backgroundID = backgroundDropdown.value;
     }
     public void SetLanguage(){
         if(language.value == 1){
