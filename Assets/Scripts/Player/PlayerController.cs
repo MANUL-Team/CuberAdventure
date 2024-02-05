@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class PlayerController : MonoBehaviour
 {
@@ -25,7 +27,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float moveInput, moveInputY;
     [SerializeField] private int DoubleJumps, DoubleJumpsValue;
     [SerializeField] private Joystick joystick, uwJoystick;
-    [SerializeField] private GameObject jumpPart, canvas;
+    [SerializeField] private GameObject jumpPart, canvas, flyButton;
     [SerializeField] private ModulesController modules;
     private float speedMnojitel;
     private AudioSource source;
@@ -36,6 +38,11 @@ public class PlayerController : MonoBehaviour
     private PlayerStats ps;
     [SerializeField] private UnderWater uw;
     private float fallSpeed;
+    private bool flying = false;
+    private float flyTime = 0;
+    private Camera mainCamera;
+    private float standartCameraDist = 7.199291f;
+    private float camDistIndex = 0f;
 
     public void Confuse(){
         confusion = true;
@@ -106,10 +113,13 @@ public class PlayerController : MonoBehaviour
     private void CheckTurbine(){
         JumpForce = modules._turbine.currentJumpHeight;
         DoubleJumpsValue = modules._turbine.jumpCount;
-    }
-    private void CheckGusenici(){
-        if(!uw.loseAir){
-            speed = modules._tracks.currentSpeed;
+        if (modules._turbine.flyTime != 0)
+        {
+            flyButton.SetActive(true);
+        }
+        else
+        {
+            flyButton.SetActive(false);
         }
     }
     private void CheckUWS(){
@@ -119,6 +129,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Start() {
         obj = GameObject.FindGameObjectWithTag("Player");
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = obj.GetComponent<Rigidbody2D>();
         playerTransform = obj.GetComponent<Transform>();
         source = obj.GetComponent<AudioSource>();
@@ -128,9 +139,6 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Update() {
-        CheckTurbine();
-        CheckGusenici();
-        CheckUWS();
         if(!isGrounded){
             fallSpeed = rb.velocity.y;
         }
@@ -211,14 +219,61 @@ public class PlayerController : MonoBehaviour
         } else if(moveInput < 0){
             PlayerPrefs.SetInt("PlayerRotation", -1);
         }
-
-        
     }
-    public void FixedUpdate() {
-        if(joystick.gameObject.activeSelf == true)
+
+    public void FixedUpdate()
+    {
+        CheckTurbine();
+        CheckUWS();
+        float camDist = 0;
+        if (camDistIndex < (Math.Abs(rb.velocity.x) / 25))
         {
+            camDist = Mathf.Lerp(standartCameraDist, 10, camDistIndex);
+        }
+        else
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                float curDist = Math.Clamp(camDistIndex - 0.1f, 0, 1);
+                camDist = Mathf.Lerp(standartCameraDist, 10, curDist);
+            }
+        }
+        //mainCamera.orthographicSize = Math.Clamp(camDist, standartCameraDist, 10);
+        camDistIndex = (Math.Abs(rb.velocity.x) / 25);
+        int clutchInt = Random.Range(0, 100);
+        if (isGrounded)
+        {
+            flyTime = modules._turbine.flyTime;
+        }
+        if(joystick.gameObject.activeSelf)
+        {
+            if (!uw.loseAir && clutchInt > modules._tracks.clutch)
+            {
+                if(moveInput > 0){
+                    speed = Math.Clamp(speed + (modules._tracks.acceleration), -modules._tracks.currentSpeed, modules._tracks.currentSpeed);
+                }
+                else if(moveInput < 0)
+                {
+                    speed = Math.Clamp(speed - (modules._tracks.acceleration), -modules._tracks.currentSpeed, modules._tracks.currentSpeed);
+                }
+                else
+                {
+                    if (speed > 0)
+                    {
+                        speed = Math.Clamp(speed - 0.5f, 0, modules._tracks.currentSpeed);
+                    }
+                    else
+                    {
+                        speed = Math.Clamp(speed + 0.5f, -modules._tracks.currentSpeed, 0);
+                    }
+                }
+            }
+            else if (clutchInt <= modules._tracks.clutch)
+            {
+                speed = speed * 0.95f;
+            }
             if(!confusion){
-                rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+                rb.velocity = new Vector2( speed, rb.velocity.y);
             }
         }
         else{
@@ -227,6 +282,25 @@ public class PlayerController : MonoBehaviour
             }
             else if(!confusion && moveInputY != 0){
                 rb.velocity = new Vector2(moveInput * speed, moveInputY * speed);
+            }
+        }
+
+        if (flying)
+        {
+            flyTime -= 0.1f;
+            float currentSpeedX = rb.velocity.x;
+            if (currentSpeedX > 0)
+            {
+                currentSpeedX = Math.Clamp(currentSpeedX - 0.1f, 0, 50);
+            }
+            else if (currentSpeedX < 0)
+            {
+                currentSpeedX = Math.Clamp(currentSpeedX + 0.1f, -50, 0);
+            }
+            rb.velocity = new Vector2(currentSpeedX, modules._turbine.jumpHeight/3);
+            if (flyTime <= 0)
+            {
+                flying = false;
             }
         }
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
@@ -238,6 +312,18 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundCheck.position, checkRadius);
+    }
+    public void ToFly()
+    {
+        if (flyTime > 0)
+        {
+            flying = true;
+        }
+    }
+
+    public void FromFly()
+    {
+        flying = false;
     }
 }
 

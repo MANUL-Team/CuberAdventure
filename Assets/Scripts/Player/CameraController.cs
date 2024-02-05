@@ -11,6 +11,7 @@ public class CameraController : MonoBehaviour
 
    private Transform player;
    private int lastX;
+   private Animator anim;
 
    [SerializeField]
      float leftLimit;
@@ -24,12 +25,13 @@ public class CameraController : MonoBehaviour
 	 [SerializeField] private bool dontMove;
 
 
-   void Start()
+	 void Start()
    {
 		Application.targetFrameRate = 120;
 		offset = new Vector2(Mathf.Abs(offset.x), offset.y);
 		FindPlayer(isLeft);
 		csc = GameObject.FindGameObjectWithTag("CutSceneController").GetComponent<CutSceneController>();
+		anim = gameObject.GetComponent<Animator>();
    }
 
 
@@ -46,11 +48,6 @@ public class CameraController : MonoBehaviour
 		        transform.position = new Vector3(player.position.x + offset.x, player.position.y + offset.y, transform.position.z);
 		  }
   
-   }
-
-   void Update()
-   {
-	
    }
    private void FixedUpdate() {
 		if (player && !dontMove)
@@ -82,5 +79,10 @@ public class CameraController : MonoBehaviour
 		  transform.position.z
 
 		  );
+   }
+
+   public void StopAnimation()
+   {
+	   anim.enabled = false;
    }
 }
