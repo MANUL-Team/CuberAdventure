@@ -6,17 +6,18 @@ using UnityEngine.UI;
 public class DialogManager : MonoBehaviour
 {
     [SerializeField] private GameObject dialog, button;
-    [SerializeField] public Text name, text;
+    [SerializeField] public Text name;
     [SerializeField] private PrintableText printText;
     private int id;
-    [SerializeField] private string[] names;
-    [SerializeField] public string[] dialogTexts;
+    [SerializeField] private string[] namesRu, namesEng;
+    [SerializeField] public string[] dialogRu, dialogEng;
     private Animator cam;
     public bool dialogEnded;
     private LocalizationManager localizationManager;
+    private int language;
     void Start(){
-        localizationManager = GameObject.FindGameObjectWithTag("LocalizationManager").GetComponent<LocalizationManager>();
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Animator>();
+        language = PlayerPrefs.GetInt("Language");
     }
     public void OpenDialog(){
         dialog.SetActive(true);
@@ -27,34 +28,46 @@ public class DialogManager : MonoBehaviour
         dialogEnded = false;
         cam.enabled = true;
         cam.SetBool("Dialog", true);
-        printText.PrintText(localizationManager.GetLocalizedValue(dialogTexts[id]));
-        name.text = localizationManager.GetLocalizedValue(names[id]);
-        Debug.Log("Print");
+        DoText();
     }
     public void NextPage(){
         id += 1;
-        if(id >= names.Length && dialog.activeSelf == true){
+        if(id >= namesRu.Length && dialog.activeSelf){
             dialog.SetActive(false);
             dialogEnded = true;
             cam.SetBool("Dialog", false);
             PlayerPrefs.SetInt("MaskCS", 0);
             PlayerPrefs.SetInt("MaskD", 0);
         }
-        else{
-            for(int i = 0; i < names.Length; i++){
-                if(i == id){
-                    name.text = localizationManager.GetLocalizedValue(names[id]);
-                }
-            }
-            printText.PrintText(localizationManager.GetLocalizedValue(dialogTexts[id]));
+        else DoText();
+    }
+
+    private void DoText()
+    {
+        string playerName = PlayerPrefs.GetString("PlayerName");
+        string dName = "";
+        string dText = "";
+        
+        switch (language)
+        {
+            case 0:
+                dText = dialogRu[id].Replace("{playerName}", playerName);
+                dName = namesRu[id] != "{playerName}" ? namesRu[id] : playerName;
+                break;
+            case 1:
+                dText = dialogEng[id].Replace("{playerName}", playerName);
+                dName = namesEng[id] != "{playerName}" ? namesEng[id] : playerName;
+                break;
+            default:
+                dText = dialogEng[id].Replace("{playerName}", playerName);
+                dName = namesEng[id] != "{playerName}" ? namesEng[id] : playerName;
+                break;
         }
+        printText.PrintText(dText);
+        name.text = dName;
     }
     public void SkipText(){
         printText.speedOfPrint = 0.0005f;
     }
-    public int ID{
-        get{
-            return id;
-        }
-    }
+    public int ID => id;
 }

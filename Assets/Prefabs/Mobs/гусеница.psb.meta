@@ -21,11 +21,13 @@ ScriptedImporter:
     convertToNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
     vTOnly: 0
-    ignoreMasterTextureLimit: 0
+    ignoreMipmapLimit: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -47,6 +49,7 @@ ScriptedImporter:
     flipbookRows: 0
     flipbookColumns: 0
     ignorePngGamma: 0
+    cookieMode: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -87,8 +90,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
   - name: Bez_nazvania66_20220731180131
@@ -471,8 +474,8 @@ ScriptedImporter:
     - {x: 29, y: 30}
     - {x: 30, y: 31}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -694, y: 396}
+    uvTransform: {x: 164, y: 724}
+    spritePosition: {x: 858, y: 328}
   - name: Bez_nazvania66_20220731180106
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -884,8 +887,8 @@ ScriptedImporter:
     - {x: 31, y: 32}
     - {x: 32, y: 33}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -598, y: 164}
+    uvTransform: {x: 164, y: 500}
+    spritePosition: {x: 762, y: 336}
   - name: Bez_nazvania66_20220731175957
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1297,8 +1300,8 @@ ScriptedImporter:
     - {x: 31, y: 32}
     - {x: 32, y: 33}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -646, y: 468}
+    uvTransform: {x: 4, y: 780}
+    spritePosition: {x: 650, y: 312}
   - name: Bez_nazvania66_20220731175848
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1699,8 +1702,8 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -358, y: -308}
+    uvTransform: {x: 164, y: 4}
+    spritePosition: {x: 522, y: 312}
   - name: Bez_nazvania66_20220731175743
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -2112,8 +2115,8 @@ ScriptedImporter:
     - {x: 31, y: 32}
     - {x: 32, y: 33}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -282, y: -44}
+    uvTransform: {x: 164, y: 244}
+    spritePosition: {x: 446, y: 288}
   - name: Bez_nazvania66_20220731175622
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -2514,8 +2517,8 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -346, y: -36}
+    uvTransform: {x: 4, y: 260}
+    spritePosition: {x: 350, y: 296}
   - name: Bez_nazvania66_20220731175510
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -2927,8 +2930,8 @@ ScriptedImporter:
     - {x: 31, y: 32}
     - {x: 32, y: 33}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -259, y: 228}
+    uvTransform: {x: 4, y: 516}
+    spritePosition: {x: 263, y: 288}
   - name: Bez_nazvania66_20220731175402
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -3318,8 +3321,8 @@ ScriptedImporter:
     - {x: 29, y: 30}
     - {x: 30, y: 31}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 85, y: -68}
+    uvTransform: {x: 308, y: 228}
+    spritePosition: {x: 223, y: 296}
   - name: Bez_nazvania66_20220731175204
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -3711,8 +3714,8 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -107, y: -284}
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 111, y: 288}
   - name: "\u0421\u043B\u043E\u0439 1"
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -4181,8 +4184,8 @@ ScriptedImporter:
     - {x: 37, y: 38}
     - {x: 38, y: 39}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 277, y: -276}
+    uvTransform: {x: 308, y: 4}
+    spritePosition: {x: 31, y: 280}
   characterData:
     bones:
     - name: bone_1
@@ -4359,6 +4362,7 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
+    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   sharedRigSpriteImportData: []
   sharedRigCharacterData:
@@ -4366,10 +4370,12 @@ ScriptedImporter:
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
+    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   platformSettings:
   - name: DefaultTexturePlatform
     overridden: 0
+    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4381,6 +4387,7 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   - name: Standalone
     overridden: 0
+    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4392,6 +4399,7 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   - name: Server
     overridden: 0
+    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4403,6 +4411,7 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   - name: Android
     overridden: 0
+    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4414,6 +4423,7 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   - name: iPhone
     overridden: 0
+    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4425,6 +4435,7 @@ ScriptedImporter:
     androidETC2FallbackOverride: 0
   - name: WebGL
     overridden: 0
+    ignorePlatformSupport: 0
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -4444,6 +4455,8 @@ ScriptedImporter:
   paperDollMode: 0
   keepDupilcateSpriteName: 1
   skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
   spriteCategoryList:
     categories: []
   spritePackingTag: 
@@ -4552,6 +4565,9 @@ ScriptedImporter:
     isVisible: 1
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
   generateGOHierarchy: 0
   textureAssetName: 
   prefabAssetName: 

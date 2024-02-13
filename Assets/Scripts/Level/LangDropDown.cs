@@ -8,21 +8,23 @@ public class LangDropDown : MonoBehaviour
 
     [SerializeField] private string[] en, ru;
     private Dropdown dropdown;
-    void Start()
+    void Awake()
     {
         dropdown = GetComponent<Dropdown>();
+        Localize();
     }
 
-    void FixedUpdate()
+    void Localize()
     {
-        if(PlayerPrefs.GetString("Language") == "en_US"){
-            for(int i = 0; i < en.Length; i++){
-                dropdown.options[i].text = en[i];
-            }
-        }
-        if(PlayerPrefs.GetString("Language") == "ru_RU"){
+        int language = PlayerPrefs.GetInt("Language");
+        if(language == 0){
             for(int i = 0; i < ru.Length; i++){
                 dropdown.options[i].text = ru[i];
+            }
+        }
+        else if(language == 1){
+            for(int i = 0; i < en.Length; i++){
+                dropdown.options[i].text = en[i];
             }
         }
     }

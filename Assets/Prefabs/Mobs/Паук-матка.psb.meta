@@ -21,11 +21,13 @@ ScriptedImporter:
     convertToNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
     isReadable: 0
     streamingMipmaps: 1
     streamingMipmapsPriority: 0
     vTOnly: 0
-    ignoreMasterTextureLimit: 0
+    ignoreMipmapLimit: 0
     nPOTScale: 1
     sRGBTexture: 1
     spriteMode: 2
@@ -47,6 +49,7 @@ ScriptedImporter:
     flipbookRows: 0
     flipbookColumns: 0
     ignorePngGamma: 0
+    cookieMode: 0
     filterMode: 1
     aniso: 1
     mipBias: 0
@@ -87,8 +90,8 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    parentGroupIndex: -1
     uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
   mosaicSpriteImportData: []
   rigSpriteImportData:
   - name: "\u0413\u043E\u043B\u043E\u0432\u0430"
@@ -900,8 +903,8 @@ ScriptedImporter:
     - {x: 68, y: 69}
     - {x: 69, y: 70}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 95, y: 113}
+    uvTransform: {x: 613, y: 443}
+    spritePosition: {x: 518, y: 330}
   - name: Bez_nazvania128_20230107200251
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1392,8 +1395,8 @@ ScriptedImporter:
     - {x: 39, y: 40}
     - {x: 40, y: 41}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -156, y: -596}
+    uvTransform: {x: 488, y: 4}
+    spritePosition: {x: 644, y: 600}
   - name: Bez_nazvania128_20230107200256
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -1807,8 +1810,8 @@ ScriptedImporter:
     - {x: 32, y: 33}
     - {x: 33, y: 34}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 363, y: -327}
+    uvTransform: {x: 1295, y: 219}
+    spritePosition: {x: 932, y: 546}
   - name: Bez_nazvania128_20230107200312
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -2167,8 +2170,8 @@ ScriptedImporter:
     - {x: 27, y: 28}
     - {x: 28, y: 29}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -821, y: 1460}
+    uvTransform: {x: 201, y: 1700}
+    spritePosition: {x: 1022, y: 240}
   - name: Bez_nazvania128_20230107200318
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -2560,8 +2563,8 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -884, y: 1767}
+    uvTransform: {x: 111, y: 1800}
+    spritePosition: {x: 995, y: 33}
   - name: Bez_nazvania128_20230107200151
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -2997,8 +3000,8 @@ ScriptedImporter:
     - {x: 34, y: 35}
     - {x: 35, y: 36}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -228, y: -471}
+    uvTransform: {x: 488, y: 219}
+    spritePosition: {x: 716, y: 690}
   - name: Bez_nazvania128_20230107200156
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -3390,8 +3393,8 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 425, y: -445}
+    uvTransform: {x: 1447, y: 353}
+    spritePosition: {x: 1022, y: 798}
   - name: Bez_nazvania128_20230107200200
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -3739,8 +3742,8 @@ ScriptedImporter:
     - {x: 26, y: 27}
     - {x: 27, y: 28}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -660, y: 884}
+    uvTransform: {x: 488, y: 1394}
+    spritePosition: {x: 1148, y: 510}
   - name: Bez_nazvania128_20230107200206
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -4110,8 +4113,8 @@ ScriptedImporter:
     - {x: 28, y: 29}
     - {x: 29, y: 30}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -1046, y: 905}
+    uvTransform: {x: 120, y: 965}
+    spritePosition: {x: 1166, y: 60}
   - name: Bez_nazvania128_20230107200044
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -4481,8 +4484,8 @@ ScriptedImporter:
     - {x: 28, y: 29}
     - {x: 29, y: 30}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -705, y: 1071}
+    uvTransform: {x: 326, y: 1862}
+    spritePosition: {x: 1031, y: 791}
   - name: Bez_nazvania128_20230107200049
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -4852,8 +4855,8 @@ ScriptedImporter:
     - {x: 28, y: 29}
     - {x: 29, y: 30}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -850, y: 1226}
+    uvTransform: {x: 272, y: 1700}
+    spritePosition: {x: 1122, y: 474}
   - name: Bez_nazvania128_20230107200054
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -5245,8 +5248,8 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -484, y: 980}
+    uvTransform: {x: 613, y: 1017}
+    spritePosition: {x: 1097, y: 37}
   - name: Bez_nazvania128_20230107200039
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -5638,8 +5641,8 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 631, y: -634}
+    uvTransform: {x: 1447, y: 219}
+    spritePosition: {x: 816, y: 853}
   - name: Bez_nazvania128_20230107195907
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -6020,8 +6023,8 @@ ScriptedImporter:
     - {x: 29, y: 30}
     - {x: 30, y: 31}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -211, y: -167}
+    uvTransform: {x: 613, y: 739}
+    spritePosition: {x: 824, y: 906}
   - name: Bez_nazvania128_20230107195913
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -6413,8 +6416,8 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 85, y: -768}
+    uvTransform: {x: 1017, y: 219}
+    spritePosition: {x: 932, y: 987}
   - name: Bez_nazvania128_20230107195917
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -6773,8 +6776,8 @@ ScriptedImporter:
     - {x: 27, y: 28}
     - {x: 28, y: 29}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -1153, y: 895}
+    uvTransform: {x: 4, y: 1423}
+    spritePosition: {x: 1157, y: 528}
   - name: Bez_nazvania128_20230107195921
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -7122,8 +7125,8 @@ ScriptedImporter:
     - {x: 26, y: 27}
     - {x: 27, y: 28}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -518, y: 1365}
+    uvTransform: {x: 702, y: 1470}
+    spritePosition: {x: 1220, y: 105}
   - name: Bez_nazvania128_20230107200348
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -7922,8 +7925,8 @@ ScriptedImporter:
     - {x: 67, y: 68}
     - {x: 68, y: 69}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -461, y: 536}
+    uvTransform: {x: 201, y: 713}
+    spritePosition: {x: 662, y: 177}
   - name: Bez_nazvania128_20230107200447
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -8491,8 +8494,8 @@ ScriptedImporter:
     - {x: 46, y: 47}
     - {x: 47, y: 48}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -95, y: -76}
+    uvTransform: {x: 756, y: 443}
+    spritePosition: {x: 851, y: 519}
   - name: Bez_nazvania128_20230107195053
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -8917,8 +8920,8 @@ ScriptedImporter:
     - {x: 33, y: 34}
     - {x: 34, y: 35}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 293, y: -354}
+    uvTransform: {x: 829, y: 219}
+    spritePosition: {x: 536, y: 573}
   - name: Bez_nazvania128_20230107195113
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -9332,8 +9335,8 @@ ScriptedImporter:
     - {x: 32, y: 33}
     - {x: 33, y: 34}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -389, y: -623}
+    uvTransform: {x: 201, y: 4}
+    spritePosition: {x: 590, y: 627}
   - name: Bez_nazvania128_20230107195145
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -9725,8 +9728,8 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -784, y: -335}
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 788, y: 339}
   - name: Bez_nazvania128_20230107195236
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -10525,8 +10528,8 @@ ScriptedImporter:
     - {x: 67, y: 68}
     - {x: 68, y: 69}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -461, y: 805}
+    uvTransform: {x: 201, y: 982}
+    spritePosition: {x: 662, y: 177}
   - name: Bez_nazvania128_20230107195747
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -10962,8 +10965,8 @@ ScriptedImporter:
     - {x: 34, y: 35}
     - {x: 35, y: 36}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -137, y: -273}
+    uvTransform: {x: 201, y: 354}
+    spritePosition: {x: 338, y: 627}
   - name: Bez_nazvania128_20230107195751
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -11366,8 +11369,8 @@ ScriptedImporter:
     - {x: 31, y: 32}
     - {x: 32, y: 33}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 1567, y: -588}
+    uvTransform: {x: 1689, y: 219}
+    spritePosition: {x: 122, y: 807}
   - name: Bez_nazvania128_20230107195756
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -11759,8 +11762,8 @@ ScriptedImporter:
     - {x: 30, y: 31}
     - {x: 31, y: 32}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 106, y: 876}
+    uvTransform: {x: 201, y: 1251}
+    spritePosition: {x: 95, y: 375}
   - name: Bez_nazvania128_20230107195800
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -12108,8 +12111,8 @@ ScriptedImporter:
     - {x: 26, y: 27}
     - {x: 27, y: 28}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 465, y: 428}
+    uvTransform: {x: 488, y: 443}
+    spritePosition: {x: 23, y: 15}
   - name: Bez_nazvania128_20230107195640
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -12512,8 +12515,8 @@ ScriptedImporter:
     - {x: 31, y: 32}
     - {x: 32, y: 33}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -424, y: -102}
+    uvTransform: {x: 4, y: 597}
+    spritePosition: {x: 428, y: 699}
   - name: Bez_nazvania128_20230107195645
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -12916,8 +12919,8 @@ ScriptedImporter:
     - {x: 31, y: 32}
     - {x: 32, y: 33}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 581, y: -866}
+    uvTransform: {x: 847, y: 4}
+    spritePosition: {x: 266, y: 870}
   - name: Bez_nazvania128_20230107195649
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -13276,8 +13279,8 @@ ScriptedImporter:
     - {x: 27, y: 28}
     - {x: 28, y: 29}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 140, y: 759}
+    uvTransform: {x: 415, y: 1251}
+    spritePosition: {x: 275, y: 492}
   - name: Bez_nazvania128_20230107195655
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -13614,8 +13617,8 @@ ScriptedImporter:
     - {x: 25, y: 26}
     - {x: 26, y: 27}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -217, y: 923}
+    uvTransform: {x: 4, y: 965}
+    spritePosition: {x: 221, y: 42}
   - name: Bez_nazvania128_20230107195521
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -13996,8 +13999,8 @@ ScriptedImporter:
     - {x: 29, y: 30}
     - {x: 30, y: 31}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -30, y: 408}
+    uvTransform: {x: 488, y: 1161}
+    spritePosition: {x: 518, y: 753}
   - name: Bez_nazvania128_20230107195526
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -14400,8 +14403,8 @@ ScriptedImporter:
     - {x: 31, y: 32}
     - {x: 32, y: 33}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 1333, y: -499}
+    uvTransform: {x: 1689, y: 326}
+    spritePosition: {x: 356, y: 825}
   - name: Bez_nazvania128_20230107195532
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -14782,8 +14785,8 @@ ScriptedImporter:
     - {x: 29, y: 30}
     - {x: 30, y: 31}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 323, y: 588}
+    uvTransform: {x: 688, y: 1017}
+    spritePosition: {x: 365, y: 429}
   - name: Bez_nazvania128_20230107195537
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -15142,8 +15145,8 @@ ScriptedImporter:
     - {x: 27, y: 28}
     - {x: 28, y: 29}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -218, y: 1363}
+    uvTransform: {x: 111, y: 1423}
+    spritePosition: {x: 329, y: 60}
   - name: Bez_nazvania128_20230107195337
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -15513,8 +15516,8 @@ ScriptedImporter:
     - {x: 28, y: 29}
     - {x: 29, y: 30}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 59, y: 627}
+    uvTransform: {x: 613, y: 1470}
+    spritePosition: {x: 554, y: 843}
   - name: Bez_nazvania128_20230107195349
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -15895,8 +15898,8 @@ ScriptedImporter:
     - {x: 29, y: 30}
     - {x: 30, y: 31}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 1422, y: -661}
+    uvTransform: {x: 1877, y: 326}
+    spritePosition: {x: 455, y: 987}
   - name: Bez_nazvania128_20230107195355
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -16277,8 +16280,8 @@ ScriptedImporter:
     - {x: 29, y: 30}
     - {x: 30, y: 31}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: -93, y: 858}
+    uvTransform: {x: 326, y: 1251}
+    spritePosition: {x: 419, y: 393}
   - name: Bez_nazvania128_20230107195403
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -16626,8 +16629,8 @@ ScriptedImporter:
     - {x: 26, y: 27}
     - {x: 27, y: 28}
     tessellationDetail: 0
-    parentGroupIndex: -1
-    uvTransform: {x: 51, y: 742}
+    uvTransform: {x: 488, y: 829}
+    spritePosition: {x: 437, y: 87}
   characterData:
     bones:
     - name: bone_1
@@ -17326,6 +17329,7 @@ ScriptedImporter:
       order: 0
     dimension: {x: 0, y: 0}
     characterGroups: []
+    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   sharedRigSpriteImportData: []
   sharedRigCharacterData:
@@ -17333,6 +17337,7 @@ ScriptedImporter:
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
+    pivot: {x: 0, y: 0}
     boneReadOnly: 0
   platformSettings: []
   mosaicLayers: 1
@@ -17345,6 +17350,8 @@ ScriptedImporter:
   paperDollMode: 0
   keepDupilcateSpriteName: 1
   skeletonAssetReferenceID: 
+  padding: 4
+  spriteSizeExpand: 0
   spriteCategoryList:
     categories: []
   spritePackingTag: 
@@ -17833,6 +17840,9 @@ ScriptedImporter:
     isVisible: 1
   sharedRigPSDLayers: []
   pSDLayerImportSetting: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
   generateGOHierarchy: 0
   textureAssetName: 
   prefabAssetName: 

@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855358766393788892}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8252158061680675948
 MonoBehaviour:
@@ -45,9 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _needEnergy: 35
-  _jumpHeight: 17
+  _jumpHeight: 14
   _currentJumpHeight: 0
   _jumpCount: 1
+  _flyTime: 0
   prefabs: []
   _id: 0
   _sprite: {fileID: 21300000, guid: 18652efcbd41f6a478ae30c9c45699ec, type: 3}

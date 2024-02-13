@@ -13,13 +13,21 @@ public class Mission : MonoBehaviour
 
     public void SelectMission(){
         PlayerPrefs.SetInt("CheckMission " + missionName, 0);
+        int language = PlayerPrefs.GetInt("Language");
+        int missionIndex = PlayerPrefs.GetInt("Mission" + missionName) - 1;
         for(int i = 0; i <= steps; i++){
-            if(PlayerPrefs.GetInt("Mission" + missionName) - 1 == i){
-                if(PlayerPrefs.GetString("Language")  == "en_US"){
-                    mc.description.text = descriptionsEng[i];
-                }
-                else if(PlayerPrefs.GetString("Language")  == "ru_RU"){
-                    mc.description.text = descriptionsRu[i];
+            if(missionIndex == i){
+                switch (language)
+                {
+                    case 0:
+                        mc.description.text = descriptionsRu[i];
+                        break;
+                    case 1:
+                        mc.description.text = descriptionsEng[i];
+                        break;
+                    default:
+                        mc.description.text = descriptionsEng[i];
+                        break;
                 }
             }
         }

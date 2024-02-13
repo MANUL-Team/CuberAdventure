@@ -7,21 +7,16 @@ public class LocalizedText : MonoBehaviour
 {
     [SerializeField]
     private string key;
-
-    private LocalizationManager localizationManager;
+    
     private Text text;
 
     void Awake()
     {
-        if (localizationManager == null)
-        {
-            localizationManager = GameObject.FindGameObjectWithTag("LocalizationManager").GetComponent<LocalizationManager>();
-        }
         if(text == null)
         {
             text = GetComponent<Text>();
         }
-        localizationManager.OnLanguageChanged += UpdateText;
+        LocalizationManager.OnLanguageChanged += UpdateText;
     }
 
     void Start()
@@ -31,21 +26,16 @@ public class LocalizedText : MonoBehaviour
 
     private void OnDestroy()
     {
-        localizationManager.OnLanguageChanged -= UpdateText;
+        LocalizationManager.OnLanguageChanged -= UpdateText;
     }
 
     virtual protected void UpdateText()
     {
         if (gameObject == null) return;
-
-        if(localizationManager == null)
-        {
-            localizationManager = GameObject.FindGameObjectWithTag("LocalizationManager").GetComponent<LocalizationManager>();
-        }
         if (text == null)
         {
             text = GetComponent<Text>();
         }
-        text.text = localizationManager.GetLocalizedValue(key);
+        text.text = LocalizationManager.GetLocalizedValue(key);
     }
 }
