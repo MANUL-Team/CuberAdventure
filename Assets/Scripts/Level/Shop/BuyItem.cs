@@ -9,6 +9,7 @@ public class BuyItem : MonoBehaviour
     private Text textPrice;
     private Image icon;
     [SerializeField] private ShopMenuController shop;
+    private int lang;
     void Start(){
         textPrice = transform.GetChild(1).GetComponent<Text>();
         icon = transform.GetChild(0).GetComponent<Image>();
@@ -19,16 +20,21 @@ public class BuyItem : MonoBehaviour
         else{
             textPrice.text = (Mathf.RoundToInt(item.price*0.8f)).ToString();
         }
+
+        lang = PlayerPrefs.GetInt("Language");
     }
     public void SelectItem(){
         shop.descriptionObj.SetActive(true);
-        if(PlayerPrefs.GetInt("Language") == 0){
-            shop.description.text = item.descriptionEng;
-            shop.name.text = item.nameEng;
-        }
-        else if(PlayerPrefs.GetInt("Language") == 1){
-            shop.description.text = item.descriptionRu;
-            shop.name.text = item.nameRu;
+        switch (lang)
+        {
+            case 0:
+                shop.description.text = item.descriptionRu;
+                shop.name.text = item.nameRu;
+                break;
+            default:
+                shop.description.text = item.descriptionEng;
+                shop.name.text = item.nameEng;
+                break;
         }
         shop.id = item.id;
         if(!shop.sell){

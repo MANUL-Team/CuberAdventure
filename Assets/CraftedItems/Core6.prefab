@@ -24,13 +24,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2218467968396888315}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 412.24847, y: 224.61807, z: -2.5329118}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2218467968396888069
 MonoBehaviour:
@@ -50,11 +50,11 @@ MonoBehaviour:
   descriptionRu: "\u041C\u043E\u0434\u0443\u043B\u044C \u043A\u0443\u0431\u0435\u0440\u0430,
     \u043F\u0438\u0442\u0430\u044E\u0449\u0438\u0439 \u0435\u0433\u043E \u0431\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u043E
     \u0432\u044B\u0434\u0435\u043B\u044F\u0435\u043C\u043E\u0439 \u044D\u043D\u0435\u0440\u0433\u0438\u0435\u0439"
-  statsRu: "\u041C\u043E\u0449\u043D\u043E\u0441\u0442\u044C: 1500\u043A\u0412\u0442"
+  statsRu: "\u041C\u043E\u0449\u043D\u043E\u0441\u0442\u044C: 700\u043A\u0412\u0442"
   commentRu: "\u0411\u0435\u0441\u043A\u043E\u043D\u0435\u0447\u043D\u0430\u044F
     \u044D\u043D\u0435\u0440\u0433\u0438\u044F..."
   nameEng: Core lvl7
   descriptionEng: The Cuber module, feeding it with infinitely released energy
-  statsEng: 'Power: 1500 kW'
+  statsEng: 'Power: 700kW'
   commentEng: Infinite energy...
   icon: {fileID: 21300000, guid: 033a92078e8f7d7488268f28ca614246, type: 3}

@@ -1,19 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
     [SerializeField] private GameObject dialog, button;
-    [SerializeField] public Text name;
+    [SerializeField] private Text name;
     [SerializeField] private PrintableText printText;
     private int id;
-    [SerializeField] private string[] namesRu, namesEng;
-    [SerializeField] public string[] dialogRu, dialogEng;
+    [SerializeField] private string[] namesRu, namesEng, dialogRu, dialogEng;
     private Animator cam;
     public bool dialogEnded;
-    private LocalizationManager localizationManager;
     private int language;
     void Start(){
         cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Animator>();
@@ -53,10 +49,6 @@ public class DialogManager : MonoBehaviour
             case 0:
                 dText = dialogRu[id].Replace("{playerName}", playerName);
                 dName = namesRu[id] != "{playerName}" ? namesRu[id] : playerName;
-                break;
-            case 1:
-                dText = dialogEng[id].Replace("{playerName}", playerName);
-                dName = namesEng[id] != "{playerName}" ? namesEng[id] : playerName;
                 break;
             default:
                 dText = dialogEng[id].Replace("{playerName}", playerName);

@@ -6,13 +6,14 @@ public class MissionsCheckForClasses : MonoBehaviour
 {
     [SerializeField] private GameObject[] classes;
     [SerializeField] private int[] id, steps;
+    [SerializeField] private string[] missionNames;
     private void Start() {
         StartCoroutine(ClassesCheck());
     }
     private IEnumerator ClassesCheck(){
         while(true){
             for(int i = 0; i < classes.Length; i++){
-                if(PlayerPrefs.GetInt("Mission " + id[i] + " Step " + steps[i]) == 1){
+                if(PlayerPrefs.GetInt("Mission" + missionNames[i]) == steps[i]-1){
                     classes[i].SetActive(true);
                 }
                 else{

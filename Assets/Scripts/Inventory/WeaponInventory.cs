@@ -7,11 +7,12 @@ public class WeaponInventory : MonoBehaviour
 {
     [SerializeField] private GameObject[]weaponR, weaponL;
 
-    [SerializeField] private float attackRange, damage, timeBtwAttack, startTimeBtwAttack;
+    [SerializeField] private float attackRange, timeBtwAttack, startTimeBtwAttack;
     [SerializeField] private Transform attackPosR, attackPosL, bulletPosL, bulletPosR;
     [SerializeField] private LayerMask enemy;
     [SerializeField] private GameObject bullet, sound;
     [SerializeField] private ModulesController modules;
+    public static float damage;
     private GameObject bulletInst;
     private IEnumerator LowUpdate(){
         while(true){

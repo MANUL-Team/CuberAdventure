@@ -103,32 +103,39 @@ public class CraftngMenuController : MonoBehaviour
     }
     public void SetDescription(int id){
         descriptionObj.SetActive(true);
+        int lang = PlayerPrefs.GetInt("Language");
         if(!stack){
-            if(PlayerPrefs.GetInt("Language") == 0){
-                name.text = itemsToCraft[id].module.nameEng;
-                description.text = itemsToCraft[id].module.descriptionEng;
-                comment.text = itemsToCraft[id].module.commentEng;
-                stats.text = itemsToCraft[id].module.statsEng;
-            }
-            else if(PlayerPrefs.GetInt("Language") == 1){
-                name.text = itemsToCraft[id].module.nameRu;
-                description.text = itemsToCraft[id].module.descriptionRu;
-                comment.text = itemsToCraft[id].module.commentRu;
-                stats.text = itemsToCraft[id].module.statsRu;
+            switch (lang)
+            {
+                case 0:
+                    name.text = itemsToCraft[id].module.nameRu;
+                    description.text = itemsToCraft[id].module.descriptionRu;
+                    comment.text = itemsToCraft[id].module.commentRu;
+                    stats.text = itemsToCraft[id].module.statsRu;
+                    break;
+                default:
+                    name.text = itemsToCraft[id].module.nameEng;
+                    description.text = itemsToCraft[id].module.descriptionEng;
+                    comment.text = itemsToCraft[id].module.commentEng;
+                    stats.text = itemsToCraft[id].module.statsEng;
+                    break;
             }
         }
         else{
-            if(PlayerPrefs.GetInt("Language") == 0){
-                name.text = itemsToCraft[id].item.nameEng;
-                description.text = itemsToCraft[id].item.descriptionEng;
-                comment.text = itemsToCraft[id].item.commentEng;
-                stats.text = itemsToCraft[id].item.statsEng;
-            }
-            else if(PlayerPrefs.GetInt("Language") == 1){
-                name.text = itemsToCraft[id].item.nameRu;
-                description.text = itemsToCraft[id].item.descriptionRu;
-                comment.text = itemsToCraft[id].item.commentRu;
-                stats.text = itemsToCraft[id].item.statsRu;
+            switch (lang)
+            {
+                case 0:
+                    name.text = itemsToCraft[id].item.nameRu;
+                    description.text = itemsToCraft[id].item.descriptionRu;
+                    comment.text = itemsToCraft[id].item.commentRu;
+                    stats.text = itemsToCraft[id].item.statsRu;
+                    break;
+                default:
+                    name.text = itemsToCraft[id].item.nameEng;
+                    description.text = itemsToCraft[id].item.descriptionEng;
+                    comment.text = itemsToCraft[id].item.commentEng;
+                    stats.text = itemsToCraft[id].item.statsEng;
+                    break;
             }
         }
     }

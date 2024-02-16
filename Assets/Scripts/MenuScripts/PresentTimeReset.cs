@@ -7,27 +7,26 @@ public class PresentTimeReset : MonoBehaviour
 {
     [SerializeField] private GameObject have, havent;
     [SerializeField] private int delay;
-    public IEnumerator CheckPresent(){
-        while(true){
-            DateTime nowTime = DateTime.Now;
-            if(PlayerPrefs.GetString("CollectTimePresent") != ""){
-                if(nowTime > DateTime.Parse(PlayerPrefs.GetString("CollectTimePresent")).AddHours(delay)){
-                    have.SetActive(true);
-                    havent.SetActive(false);
-                }
-                else{
-                    have.SetActive(false);
-                    havent.SetActive(true);
-                }
-            }
-            else{
+    void Start()
+    {
+        CheckPresent();
+    }
+    public void CheckPresent()
+    {
+        DateTime nowTime = DateTime.Now;
+        if(PlayerPrefs.GetString("CollectTimePresent") != ""){
+            if(nowTime > DateTime.Parse(PlayerPrefs.GetString("CollectTimePresent")).AddHours(delay)){
                 have.SetActive(true);
                 havent.SetActive(false);
             }
-            yield return new WaitForSeconds(1f);
+            else{
+                have.SetActive(false);
+                havent.SetActive(true);
+            }
         }
-    }
-    void Start(){
-        StartCoroutine(CheckPresent());
+        else{
+            have.SetActive(true);
+            havent.SetActive(false);
+        }
     }
 }

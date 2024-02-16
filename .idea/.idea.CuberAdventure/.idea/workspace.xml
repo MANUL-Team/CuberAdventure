@@ -2,70 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7dd2a7b-a153-4032-bccb-8f9c2678a06b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Matereals/Diffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Matereals/Diffuse.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Matereals/Fire/PixelFire Fire.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Matereals/Fire/PixelFire Fire.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Matereals/Fire/PixelFire Firewall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Matereals/Fire/PixelFire Firewall.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Matereals/Fire/PixelFire Title.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Matereals/Fire/PixelFire Title.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Matereals/Fire/PixelFire Torch.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Matereals/Fire/PixelFire Torch.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Matereals/Fire/PixelFire Unity.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Matereals/Fire/PixelFire Unity.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Matereals/Water/Water2D.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Matereals/Water/Water2D.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Matereals/Water/WaterFall2D.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Matereals/Water/WaterFall2D.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/_defaultMat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/_defaultMat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/bark.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/bark.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/grass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/grass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/grey.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/grey.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/red.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/road.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/road.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/tankco.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/tankco.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/wall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/wall.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/white.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/DemoSlotRacer/Kenney Assets/Racing Kit/Models/Materials/white.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/EyesMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/EyesMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/SkinMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/SkinMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/SuitMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/SuitMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/TeethMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/TeethMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/TongueMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Animations/Materials/TongueMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/UnitCircleMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Materials/UnitCircleMaterial.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mobs/Богомол.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Mobs/Богомол.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mobs/Красный паук.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Mobs/Красный паук.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mobs/Минибосс паук.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Mobs/Минибосс паук.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mobs/Паук-матка.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Mobs/Паук-матка.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mobs/Черный паук.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Mobs/Черный паук.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mobs/гусеница.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Mobs/гусеница.psb.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/DropPresent.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DropPresent.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Core1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Core1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Core2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Core2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Core4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Core4.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Core5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Core5.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Core6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Core6.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Core7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Core7.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/DiamondArmor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/DiamondArmor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/IronCase.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/IronCase.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/WebArmor.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/WebArmor.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Гусеница0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Гусеница0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Гусеница1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Гусеница1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Гусеница2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Гусеница2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/КарбидКремния.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/КарбидКремния.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Лазер0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Лазер0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Лазер1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Лазер1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Лазер2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Лазер2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Турбина0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Турбина0.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Турбина1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Турбина1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Турбина2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Турбина2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Modules/Tracks/Tracks2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Modules/Tracks/Tracks2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerDefault.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level4.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level5.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level6.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level7.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level7.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level8.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level8.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level8BossFight.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level8BossFight.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level9Down.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level9Down.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level9up.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level9up.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.scenetemplate" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.scenetemplate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/WeaponInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/WeaponInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/CraftedItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/CraftedItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/CraftngMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/CraftngMenuController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/Dialog/DialogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/Dialog/DialogManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/LangDropDown.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/LangDropDown.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/LangText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/LangText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Localization/LocalizationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Localization/LocalizationManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Localization/LocalizedText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Localization/LocalizedText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/menu/Mission.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/menu/Mission.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/ParallaxEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/ParallaxEffect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/Shop/BuyItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/Shop/BuyItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/MenuScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/MenuScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/PresentTimeReset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/PresentTimeReset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/SkinCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/SkinCheck.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/TakePresent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/TakePresent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Missions/MissionsCheckForClasses.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Missions/MissionsCheckForClasses.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Missions/ResourcesQuest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Missions/ResourcesQuest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/LevelDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/LevelDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/LevelUpText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/LevelUpText.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Modules/ModulesMenu/UsedModules.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Modules/ModulesMenu/UsedModules.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/menu/DialogChange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/menu/DialogChange.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/menu/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/menu/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/menu/Skills/SkillsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/menu/Skills/SkillsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Settings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/Mobs/Богомол.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Icons/Mobs/Богомол.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Icons/Mobs/гусеница.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Icons/Mobs/гусеница.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Menus/строение кубера.psb.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/Menus/строение кубера.psb.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Languages/en_US.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Languages/en_US.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Languages/en_US.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Languages/en_US.json.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Languages/ru_RU.json" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Languages/ru_RU.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StreamingAssets/Languages/ru_RU.json.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/StreamingAssets/Languages/ru_RU.json.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP/High.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/High.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP/Low.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/Low.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP/Medium.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/Medium.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP/New 2D Renderer Data.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/New 2D Renderer Data.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/com.unity.uiextensions/Editor/CUIImageEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/com.unity.uiextensions/Editor/CUIImageEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/boot.config" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,16 +77,35 @@
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/SwitchSkills.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
       <option value="$PROJECT_DIR$/Assets/StreamingAssets/Languages/en_US.json" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Localization/LocalizedText.cs" />
       <option value="$PROJECT_DIR$/Assets/StreamingAssets/Languages/ru_RU.json" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Localization/LocalizationManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level/LangText.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Level/LangDropDown.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Settings.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Level/Dialog/DialogManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/menu/Mission.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level/ParallaxEffect.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level/Dialog/DialogManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Settings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/menu/DialogChange.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Missions/ResourcesQuest.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Missions/MissionsCheckForClasses.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/Modules/ModulesMenu/UsedModules.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level/CraftedItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level/CraftngMenuController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Level/Shop/BuyItem.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/LevelDisplay.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStats.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/LevelUpText.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MenuScripts/SkinCheck.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MenuScripts/MenuScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MenuScripts/TakePresent.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MenuScripts/PresentTimeReset.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/menu/Skills/SkillsController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/WeaponInventory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/menu/Item.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2WORzyRGK5rxLllPFaQr4VTP6AY" />
@@ -141,6 +159,8 @@
       <workItem from="1707738148509" duration="7869000" />
       <workItem from="1707758371247" duration="2385000" />
       <workItem from="1707836222697" duration="6780000" />
+      <workItem from="1708013651091" duration="1710000" />
+      <workItem from="1708092788242" duration="7932000" />
     </task>
     <servers />
   </component>

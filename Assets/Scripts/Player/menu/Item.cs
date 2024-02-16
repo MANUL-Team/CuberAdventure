@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,7 +30,9 @@ public class Item : MonoBehaviour
     private void Start() {
         transform.GetChild(0).GetComponent<Image>().sprite = item.icon;
     }
-    public void SelectItem(){
+    public void SelectItem()
+    {
+        int lang = PlayerPrefs.GetInt("Language");
         itemControl.ClosePotDesc();
         if(potion){
             itemControl.CloseDescriptions();
@@ -37,15 +40,17 @@ public class Item : MonoBehaviour
         }
         else{
             itemControl.OpenDescription();
-            if(PlayerPrefs.GetInt("Language") == 1){
-                itemControl.name.text = item.nameRu;
-                itemControl.description.text = item.descriptionRu;
+            switch (lang)
+            {
+                case 0:
+                    itemControl.name.text = item.nameRu;
+                    itemControl.description.text = item.descriptionRu;
+                    break;
+                default:
+                    itemControl.name.text = item.nameEng;
+                    itemControl.description.text = item.descriptionEng;
+                    break;
             }
-            else if(PlayerPrefs.GetInt("Language") == 0){
-                itemControl.name.text = item.nameEng;
-                itemControl.description.text = item.descriptionEng;
-            }
-            
         }
     }
 }

@@ -14,11 +14,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float JumpForce = 300f;
     private GameObject obj;
-    private Transform playerTransform;
     [SerializeField] private float xc, yc;
     [SerializeField] private bool isGrounded;
-    [SerializeField] private bool isNotGrounded;
-    [SerializeField] private bool levelEnded;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float checkRadius;
     [SerializeField] private LayerMask whatIsGround;
@@ -38,11 +35,10 @@ public class PlayerController : MonoBehaviour
     private PlayerStats ps;
     [SerializeField] private UnderWater uw;
     private float fallSpeed;
-    private bool flying = false;
-    private float flyTime = 0;
-    private Camera mainCamera;
+    private bool flying;
+    private float flyTime;
     private float standartCameraDist = 7.199291f;
-    private float camDistIndex = 0f;
+    private float camDistIndex;
 
     public void Confuse(){
         confusion = true;
@@ -129,9 +125,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Start() {
         obj = GameObject.FindGameObjectWithTag("Player");
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         rb = obj.GetComponent<Rigidbody2D>();
-        playerTransform = obj.GetComponent<Transform>();
         source = obj.GetComponent<AudioSource>();
         fallSound = source.clip;
         ps = GetComponent<PlayerStats>();
@@ -304,8 +298,6 @@ public class PlayerController : MonoBehaviour
             }
         }
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        isNotGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsNotGround);
-        levelEnded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, EndLevel);
     }
     private void OnDrawGizmosSelected() {
         Gizmos.color = Color.red;

@@ -53,6 +53,5 @@ public class DialogChange : MonoBehaviour
             PlayerPrefs.SetInt("CheckMission " + missionName, 1);
         }
         PlayerPrefs.SetInt("Mission" + missionName, step);
-        Debug.Log("Mission " + missionName + " = " + PlayerPrefs.GetInt("Mission" + missionName));
     }
 }

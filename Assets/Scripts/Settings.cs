@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,7 +7,6 @@ public class Settings : MonoBehaviour
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Dropdown graphicsDropDown, language, backgroundDropdown;
     [SerializeField] private GameObject settingsMenu;
-    [SerializeField] private LocalizationManager localizationManager;
     [SerializeField] private MenuScript menu;
     private void Start() {
         musicSlider.value = PlayerPrefs.GetFloat("Volume");

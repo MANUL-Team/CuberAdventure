@@ -10,8 +10,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private GameObject particles;
     [SerializeField] private int direction;
 
-    private void Update() {
-        damage = PlayerPrefs.GetInt("PlayerDmg") + PlayerPrefs.GetInt("DmgBonus") / 3 + PlayerPrefs.GetInt("LaserDmg");
+    private void FixedUpdate() {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, waitIsSolid);
         if(hitInfo.collider != null){
             if(hitInfo.collider.CompareTag("Mob")){
@@ -26,6 +25,7 @@ public class Bullet : MonoBehaviour
     }
     private void Start() {
         direction = PlayerPrefs.GetInt("PlayerRotation");
+        damage = WeaponInventory.damage + PlayerPrefs.GetInt("DmgBonus") / 3 + PlayerPrefs.GetInt("LaserDmg");
     }
 
 }

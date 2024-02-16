@@ -1,21 +1,31 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelDisplay : MonoBehaviour
 {
     private Text text;
+    private int lang;
 
     private void Start() {
         text = GetComponent<Text>();
+        lang = PlayerPrefs.GetInt("Language");
+        StartCoroutine(CheckLevel());
     }
-    private void FixedUpdate() {
-        if(PlayerPrefs.GetInt("Language") == 0){
-            text.text = "Level: " + PlayerPrefs.GetInt("PlayerLevel");
-        }
-        else if(PlayerPrefs.GetInt("Language") == 1){
-            text.text = "Уровень: " + PlayerPrefs.GetInt("PlayerLevel");
+    IEnumerator CheckLevel()
+    {
+        while (true)
+        {
+            switch (lang)
+            {
+                case 0:
+                    text.text = "Уровень: " + PlayerPrefs.GetInt("PlayerLevel");
+                    break;
+                default:
+                    text.text = "Level: " + PlayerPrefs.GetInt("PlayerLevel");
+                    break;
+            }
+            yield return new WaitForSeconds(1);
         }
     }
 }

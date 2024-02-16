@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ParallaxEffect : MonoBehaviour
@@ -19,7 +17,7 @@ public class ParallaxEffect : MonoBehaviour
         targetPrevPosition = target.position;
     }
     private void Update() {
-        var delta = target.position - targetPrevPosition;
+        Vector3 delta = target.position - targetPrevPosition;
 
         if(disableVerticalParallax){
             delta.y = 0;
@@ -27,6 +25,4 @@ public class ParallaxEffect : MonoBehaviour
         targetPrevPosition = target.position;
         transform.position += delta * parallax;
     }
-
-
 }

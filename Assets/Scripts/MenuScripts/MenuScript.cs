@@ -15,6 +15,7 @@ public class MenuScript : MonoBehaviour
     [SerializeField]private PetsManager petcheck;
     [SerializeField] private Animator menuAnimator;
     [SerializeField] private GameObject background;
+    [SerializeField] private GameObject confirmNewGamePanel, newContinuePanel;
 
     public void PlayPressed()
     {
@@ -29,6 +30,13 @@ public class MenuScript : MonoBehaviour
         menuAnimator.SetBool("SettingsOpened", false);
         menuAnimator.SetBool("MainMenuOpened", false);
         menuAnimator.SetBool("ShopOpened", false);
+    }
+
+    public void OpenCloseConfirmNewGame()
+    {
+        bool open = !confirmNewGamePanel.activeSelf;
+        newContinuePanel.SetActive(!open);
+        confirmNewGamePanel.SetActive(open);
     }
 
     public void NewGame()
@@ -127,7 +135,7 @@ public class MenuScript : MonoBehaviour
     public void Menu(){
         AllAnimationsFalse();
         menuAnimator.SetBool("MainMenuOpened", true);
-        StartCoroutine(present.CheckPresent());
+        present.CheckPresent();
     }
 
     public void ShopPressed(){

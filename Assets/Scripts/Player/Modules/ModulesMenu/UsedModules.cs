@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,19 +14,12 @@ public class UsedModules : MonoBehaviour
     [SerializeField] private Animator cuber;
     private string type, id;
     private CraftedItem currentModule;
-    public string _type{
-        get{
-            return type;
-        }
-    }
-    public string _id{
-        get{
-            return id;
-        }
-    }
+    public string _type => type;
+    public string _id => id;
+
     public void ModulesCheck(){
         for(int i = 0; i < modules.Length; i++){
-            if(PlayerPrefs.GetInt(modules[i]._module.module.ToString() + modules[i]._module.id.ToString()) == 0 && modules[i]._module.id != 0){
+            if(PlayerPrefs.GetInt(modules[i]._module.module + modules[i]._module.id) == 0 && modules[i]._module.id != 0){
                 modules[i].background.color = new Color(255/255f, 75/255f, 75/255f);
             }
             else{
@@ -43,31 +37,42 @@ public class UsedModules : MonoBehaviour
     }
     public void SelectModule(CraftedItem module){
         currentModule = module;
-        name.text = module.nameRu;
-        description.text = module.descriptionRu;
-        stats.text = module.statsRu;
+        int lang = PlayerPrefs.GetInt("Language");
+        switch (lang)
+        {
+            case 0:
+                name.text = module.nameRu;
+                description.text = module.descriptionRu;
+                stats.text = module.statsRu;
+                break;
+            default:
+                name.text = module.nameEng;
+                description.text = module.descriptionEng;
+                stats.text = module.statsEng;
+                break;
+        }
         type = module.module;
         id = module.id.ToString();
-        if(PlayerPrefs.GetInt(module.module.ToString() + module.id) != 0 || module.id == 0){
+        if(PlayerPrefs.GetInt(module.module + module.id) != 0 || module.id == 0){
             selectButton.SetActive(true);
-            if(PlayerPrefs.GetInt(module.module.ToString()) == module.id){
+            if(PlayerPrefs.GetInt(module.module) == module.id){
                 if(PlayerPrefs.GetInt("Language") == 0){
                     selectButton.GetComponent<Image>().color = new Color(50f/255f, 50/255f, 50f/255f);
-                    selectText.text = "Selected";
+                    selectText.text = "Выбрано";
                 }
                 else if(PlayerPrefs.GetInt("Language") == 1){
                     selectButton.GetComponent<Image>().color = new Color(50f/255f, 50/255f, 50f/255f);
-                    selectText.text = "Выбрано";
+                    selectText.text = "Selected";
                 }
             }
             else if(PlayerPrefs.GetInt(module.module.ToString()) != module.id){
                 if(PlayerPrefs.GetInt("Language") == 0){
                     selectButton.GetComponent<Image>().color = new Color(75f/255f, 73f/255f, 71f/255f);
-                    selectText.text = "Select";
+                    selectText.text = "Выбрать";
                 }
                 else if(PlayerPrefs.GetInt("Language") == 1){
                     selectButton.GetComponent<Image>().color = new Color(75f/255f, 73f/255f, 71f/255f);
-                    selectText.text = "Выбрать";
+                    selectText.text = "Select";
                 }
             }
         }

@@ -12,41 +12,51 @@ public class SkillsController : MonoBehaviour
     private int index;
     public void SelectSkill(int id){
         currentId = id;
+        int lang = PlayerPrefs.GetInt("Language");
         for(int i = 0; i < skills.Length; i++){
             if(id == skills[i].id){
                 index = i;
                 description.text = skills[i]._description;
-                if(PlayerPrefs.GetInt("OpenSkill" + id.ToString()) == 1 || id == -1){
+                if(PlayerPrefs.GetInt("OpenSkill" + id) == 1 || id == -1){
                     needText.text = "";
                     use.SetActive(true);
                     buy.SetActive(false);
                     if(PlayerPrefs.GetInt("Skill") == id){
                         use.GetComponent<Image>().color = new Color(120f/255f, 120f/255f, 120f/255f);
-                        if(PlayerPrefs.GetInt("Language") == 0){
-                            useText.text = "Used";
-                        }
-                        else if(PlayerPrefs.GetInt("Language") == 1){
-                            useText.text = "Выбрано";
+                        switch (lang)
+                        {
+                            case 0:
+                                useText.text = "Выбрано";
+                                break;
+                            default:
+                                useText.text = "Used";
+                                break;
                         }
                     }
                     else{
                         use.GetComponent<Image>().color = new Color(176f/255f, 176f/255f, 176f/255f);
-                        if(PlayerPrefs.GetInt("Language") == 0){
-                            useText.text = "Use";
-                        }
-                        else if(PlayerPrefs.GetInt("Language") == 1){
-                            useText.text = "Выбрать";
+                        switch (lang)
+                        {
+                            case 0:
+                                useText.text = "Выбрать";
+                                break;
+                            default:
+                                useText.text = "Use";
+                                break;
                         }
                     }
                 }
                 else{
                     buy.SetActive(true);
                     use.SetActive(false);
-                    if(PlayerPrefs.GetInt("Language") == 0){
-                        needText.text = "You need " + skills[i]._price.ToString() + " skill points!";
-                    }
-                    else{
-                        needText.text = "Вам нужно " + skills[i]._price.ToString() + " очков навыков!";
+                    switch (lang)
+                    {
+                        case 0:
+                            needText.text = "Вам нужно " + skills[i]._price.ToString() + " очков навыков!";
+                            break;
+                        default:
+                            needText.text = "You need " + skills[i]._price.ToString() + " skill points!";
+                            break;
                     }
                 }
                 break;

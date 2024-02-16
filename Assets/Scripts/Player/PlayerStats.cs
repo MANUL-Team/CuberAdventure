@@ -90,7 +90,6 @@ public class PlayerStats : MonoBehaviour
             PlayerPrefs.SetInt("NeedExp", needExp + needExp/3);
             LoadStats();
             levelText.SetActive(true);
-            Debug.Log("LevelUp");
         }
     }
 }
