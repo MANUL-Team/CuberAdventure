@@ -41,6 +41,17 @@ public class TeleportScript : MonoBehaviour
         loadMenu.SetActive(true);
         PlayerPrefs.SetFloat("Hp", ps.hp);
         PlayerPrefs.SetInt("NewSpawnTP", 0);
+        Invoke("StartAsync", 1f);
+    }
+
+    public void DoTeleport(int index)
+    {
+        currentId = index;
+        Teleport();
+    }
+
+    private void StartAsync()
+    {
         StartCoroutine(AsyncLoad(currentId));
     }
     IEnumerator AsyncLoad(int id){

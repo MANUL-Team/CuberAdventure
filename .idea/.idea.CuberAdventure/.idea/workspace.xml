@@ -3,31 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d7dd2a7b-a153-4032-bccb-8f9c2678a06b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CuberAdventure/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/DropPresent.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/DropPresent.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Core1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Core1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Core2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Core2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Core4.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Core4.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Core5.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Core5.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Core6.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Core6.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Core7.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Core7.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/DiamondArmor.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/DiamondArmor.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/IronCase.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/IronCase.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/WebArmor.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/WebArmor.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Гусеница0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Гусеница0.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Гусеница1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Гусеница1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Гусеница2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Гусеница2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/КарбидКремния.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/КарбидКремния.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Лазер0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Лазер0.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Лазер1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Лазер1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Лазер2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Лазер2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Турбина0.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Турбина0.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Турбина1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Турбина1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CraftedItems/Турбина2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CraftedItems/Турбина2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Modules/Tracks/Tracks2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Modules/Tracks/Tracks2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerDefault.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/PlayerDefault.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level2.unity" afterDir="false" />
@@ -42,29 +17,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level9up.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level9up.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.scenetemplate" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.scenetemplate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/WeaponInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/WeaponInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/CraftedItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/CraftedItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/CraftngMenuController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/CraftngMenuController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/Dialog/DialogManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/Dialog/DialogManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/ParallaxEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/ParallaxEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/Shop/BuyItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/Shop/BuyItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/MenuScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/MenuScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/PresentTimeReset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/PresentTimeReset.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/SkinCheck.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/SkinCheck.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/TakePresent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MenuScripts/TakePresent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Missions/MissionsCheckForClasses.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Missions/MissionsCheckForClasses.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Missions/ResourcesQuest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Missions/ResourcesQuest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/LevelDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/LevelDisplay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/LevelUpText.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/LevelUpText.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Modules/ModulesMenu/UsedModules.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Modules/ModulesMenu/UsedModules.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/menu/DialogChange.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/menu/DialogChange.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/menu/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/menu/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/menu/Skills/SkillsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/menu/Skills/SkillsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Settings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Settings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/TeleportScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/TeleportScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +26,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -106,6 +67,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/WeaponInventory.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Player/menu/Item.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Player/TeleportScript.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2WORzyRGK5rxLllPFaQr4VTP6AY" />
@@ -161,6 +123,9 @@
       <workItem from="1707836222697" duration="6780000" />
       <workItem from="1708013651091" duration="1710000" />
       <workItem from="1708092788242" duration="7932000" />
+      <workItem from="1708783871735" duration="1652000" />
+      <workItem from="1708788605344" duration="837000" />
+      <workItem from="1708794924024" duration="595000" />
     </task>
     <servers />
   </component>
