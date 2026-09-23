@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
             return;
         }
         trail += Time.deltaTime;
-        if (trail > 0.025f)
+        if (trail > 0.07f)
         {
             trail = 0f;
             AttackVfx.Spark(transform.position);
