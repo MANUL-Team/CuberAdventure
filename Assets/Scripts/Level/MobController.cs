@@ -40,6 +40,7 @@ public class MobController : MonoBehaviour
     [SerializeField] private GameObject mobObj;
     private GiveDrop giveDrop;
     [SerializeField] private float distance, speed, pushPower, deConfusion;
+    [SerializeField] private float faceAngleOffset = 90f;
     
     public void Damage(float damage){
         if(maneken == false){
@@ -80,13 +81,7 @@ public class MobController : MonoBehaviour
         if(collision.gameObject.tag == "Player"){
             if(startTimeBtwAttack > 0){
                 if(timeBtwAttack <= 0){
-                    anim.SetTrigger("Attack");
-                    Collider2D[] playerCol = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerLayer);
-                    for(int i = 0; i < playerCol.Length; i++){
-                        playerCol[i].GetComponent<PlayerStats>().Damage(damage);
-                        playerCol[i].GetComponent<PlayerController>().PushAway(direction, pushPower, deConfusion);
-                    }
-                    timeBtwAttack = startTimeBtwAttack;
+                    TryAttackPlayer();
                 }
             }
         }
@@ -95,23 +90,35 @@ public class MobController : MonoBehaviour
         if(collision.CompareTag("Player")){
             if(startTimeBtwAttack > 0){
                 if(timeBtwAttack <= 0){
-                    anim.SetTrigger("Attack");
-                    Collider2D[] playerCol = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerLayer);
-                    for(int i = 0; i < playerCol.Length; i++){
-                        playerCol[i].GetComponent<PlayerStats>().Damage(damage);
-                        playerCol[i].GetComponent<PlayerController>().PushAway(direction, pushPower, deConfusion);
-                    }
-                    timeBtwAttack = startTimeBtwAttack;
+                    TryAttackPlayer();
                 }
             }
         }
     }
+    private void TryAttackPlayer() {
+        if (anim != null)
+            anim.SetTrigger("Attack");
+        if (attackPos == null)
+            return;
+        Collider2D[] playerCol = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerLayer);
+        for(int i = 0; i < playerCol.Length; i++){
+            playerCol[i].GetComponent<PlayerStats>().Damage(damage);
+            playerCol[i].GetComponent<PlayerController>().PushAway(direction, pushPower, deConfusion);
+        }
+        timeBtwAttack = startTimeBtwAttack;
+    }
     private void OnDrawGizmosSelected() {
+        if (attackPos == null)
+            return;
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
 
+    private void Awake() {
+        ApplySorting();
+    }
     private void Start() {
+        ApplySorting();
         if(maneken == false){
             player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
             hp = maxHp;
@@ -119,6 +126,11 @@ public class MobController : MonoBehaviour
             giveDrop = GetComponent<GiveDrop>();
             StartCoroutine(Hunter());
         }
+    }
+    private void ApplySorting() {
+        EntitySorting.Apply(gameObject, EntitySorting.NpcLayer);
+        if (mobObj != null)
+            EntitySorting.Apply(mobObj, EntitySorting.NpcLayer);
     }
     private void DeathCheck(){
         if(hp <= 0){
@@ -139,6 +151,7 @@ public class MobController : MonoBehaviour
         }
     }
     private void OnEnable() {
+        ApplySorting();
         if(ai != null){
             ai.canMove = true;
         }
@@ -163,6 +176,45 @@ public class MobController : MonoBehaviour
             }
         }
     }
+
+    private void LateUpdate() {
+        FlattenZ(transform);
+        if (ai != null)
+        {
+            FlattenZ(ai.transform);
+            Vector3 euler = ai.transform.eulerAngles;
+            if (Mathf.Abs(Mathf.DeltaAngle(euler.x, 0f)) > 0.01f || Mathf.Abs(Mathf.DeltaAngle(euler.y, 0f)) > 0.01f)
+                ai.transform.rotation = Quaternion.Euler(0f, 0f, euler.z);
+            FaceByVelocity();
+        }
+    }
+
+    static void FlattenZ(Transform t) {
+        if (t == null)
+            return;
+        Vector3 p = t.position;
+        if (Mathf.Abs(p.z) > 0.001f)
+        {
+            p.z = 0f;
+            t.position = p;
+        }
+    }
+
+    private void FaceByVelocity() {
+        if (!pathFinding || ai == null)
+            return;
+        Vector2 v = ai.velocity;
+        if (v.sqrMagnitude < 0.0025f)
+            return;
+        // Art faces down (-Y) at rest; +90 aligns head with movement direction.
+        float angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg + faceAngleOffset;
+        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        if (v.x >= 0f)
+            direction = 1;
+        else
+            direction = -1;
+    }
+
     private IEnumerator Hunter(){
         while(true){
             if(!confusion && !pathFinding && agressiveMob){
@@ -173,7 +225,10 @@ public class MobController : MonoBehaviour
                     EndHunter();
                 }
             }else if(pathFinding){
-                EndHunter();
+                if (anim != null && ai != null)
+                    anim.SetBool("Run", ai.velocity.sqrMagnitude > 0.05f);
+                else
+                    EndHunter();
             }
             if(rotate){
                 Rotate();
@@ -199,7 +254,8 @@ public class MobController : MonoBehaviour
     }
     private void StartHunter(){
         if(startTimeBtwAttack > 0){
-            anim.SetBool("Run", true);
+            if (anim != null)
+                anim.SetBool("Run", true);
             if(transform.position.x > player.position.x){
                 speedx = -speed;
                 transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
@@ -214,7 +270,8 @@ public class MobController : MonoBehaviour
     }
     private void EndHunter(){
         if(startTimeBtwAttack > 0){
-            anim.SetBool("Run", false);
+            if (anim != null)
+                anim.SetBool("Run", false);
             speedx = 0;
         }
     }

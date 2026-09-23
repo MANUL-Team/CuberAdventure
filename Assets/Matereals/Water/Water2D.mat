@@ -51,6 +51,7 @@ Material:
     - _LineHeight: 17
     - _RefractionAmount: 0.56
     m_Colors:
+    - White: {r: 1, g: 1, b: 1, a: 1}
     - _CausticsColor: {r: 0, g: 0.40828395, b: 1, a: 0}
     - _CausticsSpeed: {r: -0.27, g: 0.51, b: 0, a: 0}
     - _ColorLine: {r: 0.4009434, g: 0.6716068, b: 1, a: 0}
