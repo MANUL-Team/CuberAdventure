@@ -69,24 +69,27 @@ public class SkillsController : MonoBehaviour
             Image icon = skills[i].GetComponent<Image>();
             bool locked = PlayerPrefs.GetInt("OpenSkill" + skills[i].id.ToString()) == 0 && skills[i].id != -1;
             bool selected = skills[i].id == equipped;
+            Transform iconArt = skills[i].transform.Find("SkillIcon");
+            if(iconArt != null){
+                Image art = iconArt.GetComponent<Image>();
+                if(art != null)
+                    art.color = Color.white;
+            }
             if(icon != null){
-                if(locked)
-                    icon.color = new Color(0.62f, 0.62f, 0.66f, 1f);
-                else if(selected)
-                    icon.color = new Color(0.82f, 1f, 0.96f, 1f);
+                if(selected)
+                    icon.color = new Color(0.16f, 0.55f, 0.52f, 1f);
+                else if(locked)
+                    icon.color = new Color(0.16f, 0.12f, 0.10f, 1f);
                 else
-                    icon.color = Color.white;
+                    icon.color = new Color(0.42f, 0.26f, 0.14f, 1f);
             }
             Outline outline = skills[i].GetComponent<Outline>();
             if(outline == null)
                 outline = skills[i].gameObject.AddComponent<Outline>();
             outline.effectDistance = new Vector2(3f, -3f);
-            if(selected)
-                outline.effectColor = new Color(0.20f, 0.85f, 0.82f, 1f);
-            else if(locked)
-                outline.effectColor = new Color(0.15f, 0.10f, 0.07f, 0.8f);
-            else
-                outline.effectColor = new Color(0.55f, 0.28f, 0.08f, 0.9f);
+            outline.effectColor = selected
+                ? new Color(0.55f, 1f, 0.95f, 1f)
+                : new Color(0.05f, 0.03f, 0.02f, 0.9f);
         }
     }
     private void Start() {

@@ -23,6 +23,15 @@ public class WeaponInventory : MonoBehaviour
     }
     private void Start() {
         StartCoroutine(LowUpdate());
+        HideSwings(weaponR);
+        HideSwings(weaponL);
+    }
+    static void HideSwings(GameObject[] weapons)
+    {
+        if (weapons == null)
+            return;
+        for (int i = 0; i < weapons.Length; i++)
+            AttackVfx.HideCircle(weapons[i]);
     }
     private void Update() {
         if(timeBtwAttack > 0){
@@ -37,6 +46,7 @@ public class WeaponInventory : MonoBehaviour
             Destroy(instSound, 2f);
         if(PlayerPrefs.GetInt("PlayerRotation") == 1){
             weaponR[0].SetActive(true);
+            AttackVfx.Slash(attackPosR.position, 0f, false);
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosR.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage);
@@ -45,6 +55,7 @@ public class WeaponInventory : MonoBehaviour
             timeBtwAttack = startTimeBtwAttack;
         } else if(PlayerPrefs.GetInt("PlayerRotation") == -1){
             weaponL[0].SetActive(true);
+            AttackVfx.Slash(attackPosL.position, 180f, false);
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosL.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage);
@@ -61,12 +72,14 @@ public class WeaponInventory : MonoBehaviour
             GameObject instSound = Instantiate(sound, transform.position, Quaternion.identity);
             Destroy(instSound, 2f);
             weaponR[0].SetActive(true);
+            AttackVfx.Slash(attackPosR.position, 0f, false);
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosR.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage);
                 enemies[i].GetComponent<MobController>().PushAway(direction, 200f);
             }
             weaponL[0].SetActive(true);
+            AttackVfx.Slash(attackPosL.position, 180f, false);
             Collider2D[] enemies1 = Physics2D.OverlapCircleAll(attackPosL.position, attackRange, enemy);
             for(int i = 0; i < enemies1.Length; i++){
                 enemies1[i].GetComponent<MobController>().Damage(damage);
@@ -84,6 +97,7 @@ public class WeaponInventory : MonoBehaviour
         if(PlayerPrefs.GetInt("PlayerRotation") == 1){
             weaponR[1].SetActive(true);
             weaponR[1].GetComponent<Animator>().SetBool("Skill3", true);
+            AttackVfx.Slash(attackPosR.position, 0f, true);
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosR.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage * 0.6f);
@@ -93,6 +107,7 @@ public class WeaponInventory : MonoBehaviour
         } else if(PlayerPrefs.GetInt("PlayerRotation") == -1){
             weaponL[1].SetActive(true);
             weaponL[1].GetComponent<Animator>().SetBool("Skill3", true);
+            AttackVfx.Slash(attackPosL.position, 180f, true);
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosL.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage * 0.6f);
@@ -111,6 +126,7 @@ public class WeaponInventory : MonoBehaviour
         if(PlayerPrefs.GetInt("PlayerRotation") == 1){
             weaponR[2].SetActive(true);
             weaponR[2].GetComponent<Animator>().SetBool("Skill4", true);
+            AttackVfx.Thrust(attackPosR.position, 0f);
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosR.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage * 1.25f);
@@ -120,6 +136,7 @@ public class WeaponInventory : MonoBehaviour
         } else if(PlayerPrefs.GetInt("PlayerRotation") == -1){
             weaponL[2].SetActive(true);
             weaponL[2].GetComponent<Animator>().SetBool("Skill4", true);
+            AttackVfx.Thrust(attackPosL.position, 180f);
             Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPosL.position, attackRange, enemy);
             for(int i = 0; i < enemies.Length; i++){
                 enemies[i].GetComponent<MobController>().Damage(damage * 1.25f);

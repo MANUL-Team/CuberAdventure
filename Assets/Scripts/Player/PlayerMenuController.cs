@@ -35,6 +35,12 @@ public class PlayerMenuController : MonoBehaviour
     }
     public void CloseSkillsMenu(){
         animator.SetBool("Skills", false);
+        if (skillsMenu != null)
+        {
+            MenuMotion motion = skillsMenu.GetComponent<MenuMotion>();
+            if (motion != null)
+                motion.PlayClose();
+        }
     }
     private void FixedUpdate() {
         if(!statsUpdate){

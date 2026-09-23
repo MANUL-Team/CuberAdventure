@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private GameObject particles;
     [SerializeField] private int direction;
 
+    float trail;
     private void FixedUpdate() {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, waitIsSolid);
         if(hitInfo.collider != null){
@@ -17,15 +18,28 @@ public class Bullet : MonoBehaviour
                 hitInfo.collider.GetComponent<MobController>().Damage(damage * 0.6f);
                 hitInfo.collider.GetComponent<MobController>().PushAway(direction, 200f);
             }
-            GameObject part = Instantiate(particles, transform.position, Quaternion.identity);
+            AttackVfx.Impact(transform.position);
+            if (particles != null)
+            {
+                GameObject part = Instantiate(particles, transform.position, Quaternion.identity);
+                Destroy(part, 2f);
+            }
             Destroy(gameObject);
-            Destroy(part, 2f);
+            return;
+        }
+        trail += Time.deltaTime;
+        if (trail > 0.025f)
+        {
+            trail = 0f;
+            AttackVfx.Spark(transform.position);
         }
         transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
     private void Start() {
         direction = PlayerPrefs.GetInt("PlayerRotation");
         damage = WeaponInventory.damage + PlayerPrefs.GetInt("DmgBonus") / 3 + PlayerPrefs.GetInt("LaserDmg");
+        AttackVfx.DressBolt(GetComponent<SpriteRenderer>());
+        AttackVfx.Muzzle(transform.position, transform.eulerAngles.z + 90f);
     }
 
 }
