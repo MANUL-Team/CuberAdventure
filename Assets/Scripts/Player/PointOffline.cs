@@ -15,15 +15,15 @@ public class PointOffline : MonoBehaviour
     }
     void Update()
     {
-        if(rb.velocity.y == 0){
+        if(rb.linearVelocity.y == 0){
             animator.SetBool("JumpDown", false);
             animator.SetBool("JumpUp", false);
         }
-        else if(rb.velocity.y > 0){
+        else if(rb.linearVelocity.y > 0){
             animator.SetBool("JumpUp", true);
             animator.SetBool("JumpDown", false);
         }
-        else if(rb.velocity.y < 0){
+        else if(rb.linearVelocity.y < 0){
             animator.SetBool("JumpUp", false);
             animator.SetBool("JumpDown", true);
         }

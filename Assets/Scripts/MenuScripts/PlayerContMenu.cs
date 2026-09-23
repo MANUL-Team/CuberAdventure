@@ -58,7 +58,7 @@ public class PlayerContMenu : MonoBehaviour
         }  
     }
     private void FixedUpdate() {
-        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
     }

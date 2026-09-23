@@ -22,7 +22,7 @@ public class SkillsController : MonoBehaviour
                     use.SetActive(true);
                     buy.SetActive(false);
                     if(PlayerPrefs.GetInt("Skill") == id){
-                        use.GetComponent<Image>().color = new Color(120f/255f, 120f/255f, 120f/255f);
+                        use.GetComponent<Image>().color = new Color(0.33f, 0.48f, 0.46f, 1f);
                         switch (lang)
                         {
                             case 0:
@@ -34,7 +34,7 @@ public class SkillsController : MonoBehaviour
                         }
                     }
                     else{
-                        use.GetComponent<Image>().color = new Color(176f/255f, 176f/255f, 176f/255f);
+                        use.GetComponent<Image>().color = new Color(0.22f, 0.72f, 0.70f, 1f);
                         switch (lang)
                         {
                             case 0:
@@ -64,13 +64,29 @@ public class SkillsController : MonoBehaviour
         }
     }
     private void CheckSkills(){
+        int equipped = PlayerPrefs.GetInt("Skill");
         for(int i = 0; i < skills.Length; i++){
-            if(PlayerPrefs.GetInt("OpenSkill" + skills[i].id.ToString()) == 0 && skills[i].id != -1){
-                skills[i].gameObject.GetComponent<Image>().color = new Color(190f/255f, 190f/255f, 190f/255f);
+            Image icon = skills[i].GetComponent<Image>();
+            bool locked = PlayerPrefs.GetInt("OpenSkill" + skills[i].id.ToString()) == 0 && skills[i].id != -1;
+            bool selected = skills[i].id == equipped;
+            if(icon != null){
+                if(locked)
+                    icon.color = new Color(0.62f, 0.62f, 0.66f, 1f);
+                else if(selected)
+                    icon.color = new Color(0.82f, 1f, 0.96f, 1f);
+                else
+                    icon.color = Color.white;
             }
-            else{
-                skills[i].gameObject.GetComponent<Image>().color = new Color(1, 1, 1);
-            }
+            Outline outline = skills[i].GetComponent<Outline>();
+            if(outline == null)
+                outline = skills[i].gameObject.AddComponent<Outline>();
+            outline.effectDistance = new Vector2(3f, -3f);
+            if(selected)
+                outline.effectColor = new Color(0.20f, 0.85f, 0.82f, 1f);
+            else if(locked)
+                outline.effectColor = new Color(0.15f, 0.10f, 0.07f, 0.8f);
+            else
+                outline.effectColor = new Color(0.55f, 0.28f, 0.08f, 0.9f);
         }
     }
     private void Start() {

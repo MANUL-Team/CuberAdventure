@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Photon.Pun;
 
 public class Point : MonoBehaviour
 {
@@ -22,27 +21,20 @@ public class Point : MonoBehaviour
     [SerializeField] private bool isNotGrounded;
     [SerializeField] private bool levelEnded;
 
-    PhotonView view;
-
-
-
     void Start()
     {
         animator = player.GetComponent<Animator>();
         groundCheck = GameObject.FindGameObjectWithTag("GroundCheck").GetComponent<Transform>();
-        view = GetComponent<PhotonView>();
     }
 
 
     void Update()
     {
-        if(view.IsMine){
-            if(isGrounded == false){
-                animator.SetBool("Jump", true);
-            }
-            if(isGrounded){
-                animator.SetBool("Jump", false);
-            }
+        if(isGrounded == false){
+            animator.SetBool("Jump", true);
+        }
+        if(isGrounded){
+            animator.SetBool("Jump", false);
         }
     }
     private void FixedUpdate() {

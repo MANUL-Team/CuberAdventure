@@ -8,12 +8,12 @@ public class VerticalSpeedController : MonoBehaviour
 
     [SerializeField] private Rigidbody2D rb;
     private void Update(){
-        if(rb.velocity.y <= -maxSpeed){
-            rb.velocity = new Vector2(rb.velocity.x, -maxSpeed);
+        if(rb.linearVelocity.y <= -maxSpeed){
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, -maxSpeed);
         }
-        if(rb.velocity.y >= maxSpeed){
-            rb.velocity = new Vector2(rb.velocity.x, maxSpeed);
+        if(rb.linearVelocity.y >= maxSpeed){
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, maxSpeed);
         }
-        currentSpeed = rb.velocity.y;
+        currentSpeed = rb.linearVelocity.y;
     }
 }

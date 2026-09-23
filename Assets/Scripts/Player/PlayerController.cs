@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
 
     public void Confuse(){
         confusion = true;
-        rb.velocity = new Vector2(0, 0);
+        rb.linearVelocity = new Vector2(0, 0);
         Invoke("DeConfusion", 3f);
     }
     public void AnyJumpForce(float jf){
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("SuperBatut")){
-            rb.velocity = new Vector2(rb.velocity.x, 30);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 30);
         }
     }
     public void PushAway(int direction, float pushPower, float deConfusion)
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
     public void Jump(){
         if(!isGrounded){
             if(DoubleJumps > 0 && Time.timeScale == 1){
-                rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpForce);
                 DoubleJumps--;
                 falling = 0;
                 GameObject particle = Instantiate(jumpPart, transform.position, Quaternion.identity);
@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         else{
-            rb.velocity = new Vector2(rb.velocity.x, JumpForce);
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, JumpForce);
             GameObject particle = Instantiate(jumpPart, transform.position, Quaternion.identity);
             Destroy(particle, 0.5f);
         }
@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update() {
         if(!isGrounded){
-            fallSpeed = rb.velocity.y;
+            fallSpeed = rb.linearVelocity.y;
         }
         if(falling != 0 && isGrounded){
             if(fallSpeed <= -20f && fallSpeed > -25f && !uw.loseAir){
@@ -220,7 +220,7 @@ public class PlayerController : MonoBehaviour
         CheckTurbine();
         CheckUWS();
         float camDist = 0;
-        if (camDistIndex < (Math.Abs(rb.velocity.x) / 25))
+        if (camDistIndex < (Math.Abs(rb.linearVelocity.x) / 25))
         {
             camDist = Mathf.Lerp(standartCameraDist, 10, camDistIndex);
         }
@@ -233,7 +233,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         //mainCamera.orthographicSize = Math.Clamp(camDist, standartCameraDist, 10);
-        camDistIndex = (Math.Abs(rb.velocity.x) / 25);
+        camDistIndex = (Math.Abs(rb.linearVelocity.x) / 25);
         int clutchInt = Random.Range(0, 100);
         if (isGrounded)
         {
@@ -267,22 +267,22 @@ public class PlayerController : MonoBehaviour
                 speed = speed * 0.95f;
             }
             if(!confusion){
-                rb.velocity = new Vector2( speed, rb.velocity.y);
+                rb.linearVelocity = new Vector2( speed, rb.linearVelocity.y);
             }
         }
         else{
             if(!confusion && moveInputY == 0){
-                rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+                rb.linearVelocity = new Vector2(moveInput * speed, rb.linearVelocity.y);
             }
             else if(!confusion && moveInputY != 0){
-                rb.velocity = new Vector2(moveInput * speed, moveInputY * speed);
+                rb.linearVelocity = new Vector2(moveInput * speed, moveInputY * speed);
             }
         }
 
         if (flying)
         {
             flyTime -= 0.1f;
-            float currentSpeedX = rb.velocity.x;
+            float currentSpeedX = rb.linearVelocity.x;
             if (currentSpeedX > 0)
             {
                 currentSpeedX = Math.Clamp(currentSpeedX - 0.1f, 0, 50);
@@ -291,7 +291,7 @@ public class PlayerController : MonoBehaviour
             {
                 currentSpeedX = Math.Clamp(currentSpeedX + 0.1f, -50, 0);
             }
-            rb.velocity = new Vector2(currentSpeedX, modules._turbine.jumpHeight/3);
+            rb.linearVelocity = new Vector2(currentSpeedX, modules._turbine.jumpHeight/3);
             if (flyTime <= 0)
             {
                 flying = false;

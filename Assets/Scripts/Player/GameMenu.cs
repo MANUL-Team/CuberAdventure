@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Photon.Pun;
 
 public class GameMenu : MonoBehaviour
 {
@@ -21,7 +20,6 @@ public class GameMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
     public void MainMenu(){
-        PhotonNetwork.LeaveRoom();
         PlayerPrefs.SetInt("Dead", 0);
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;

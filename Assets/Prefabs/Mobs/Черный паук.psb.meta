@@ -42,7 +42,9 @@ ScriptedImporter:
     cubemapConvolution: 0
     seamlessCubemap: 0
     alphaIsTransparency: 1
+    spriteTessellationMethod: 0
     spriteTessellationDetail: -1
+    spriteGeometrySubdivision: 0
     textureType: 8
     textureShape: 1
     singleChannelComponent: 0
@@ -70,12 +72,13 @@ ScriptedImporter:
     compressionQualitySet: 0
     textureFormatSet: 0
     applyGammaDecoding: 0
-  spriteImportData:
+  singleSpriteImportData:
   - name: 
     originalName: 
     pivot: {x: 0, y: 0}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 0
@@ -92,13 +95,14 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
     spritePosition: {x: 0, y: 0}
-  mosaicSpriteImportData: []
-  rigSpriteImportData:
+  multiSpriteImportData: []
+  layeredSpriteImportData:
   - name: pavuk_20221223182226
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 447
@@ -120,6 +124,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 447
@@ -141,6 +146,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 447
@@ -162,6 +168,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -183,6 +190,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -204,6 +212,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -225,6 +234,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -246,6 +256,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 177
@@ -267,6 +278,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 4
@@ -288,6 +300,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 665
@@ -309,6 +322,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 177
@@ -330,6 +344,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 665
@@ -351,6 +366,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 447
@@ -372,6 +388,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 447
@@ -393,6 +410,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 177
@@ -414,6 +432,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 447
@@ -435,6 +454,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 177
@@ -456,6 +476,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 447
@@ -477,6 +498,7 @@ ScriptedImporter:
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
     border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
     rect:
       serializedVersion: 2
       x: 177
@@ -493,15 +515,458 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 177, y: 875}
     spritePosition: {x: 518, y: 177}
-  characterData:
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  rigSpriteImportData:
+  - name: pavuk_20221223182226
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 447
+      y: 192
+      width: 135
+      height: 270
+    spriteID: 2a5ece49224445842899f22b92573e39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 447, y: 192}
+    spritePosition: {x: 833, y: 27}
+  - name: pavuk_20221223182304
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 447
+      y: 748
+      width: 150
+      height: 225
+    spriteID: a011fad7be180c7408cfb1a344ffeca0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 447, y: 748}
+    spritePosition: {x: 353, y: 297}
+  - name: pavuk_20221223182308
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 447
+      y: 470
+      width: 135
+      height: 270
+    spriteID: b196465723f96ac4cae883d5ec82f1d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 447, y: 470}
+    spritePosition: {x: 323, y: 27}
+  - name: pavuk_20221223181714
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 642
+      width: 315
+      height: 225
+    spriteID: 66a8ecfab073dee41be93b36fab94687
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 642}
+    spritePosition: {x: 488, y: 387}
+  - name: pavuk_20221223181741
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 435
+      height: 630
+    spriteID: e340f4b3bcacabd449cfb3cab6b14540
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 428, y: 597}
+  - name: pavuk_20221223181804
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1581
+      width: 165
+      height: 240
+    spriteID: ca6a85997960acc4eb1d5f9182c0ae7f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1581}
+    spritePosition: {x: 833, y: 702}
+  - name: pavuk_20221223181809
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 875
+      width: 165
+      height: 345
+    spriteID: 940341e1dd7a08645bf4fb34403ed00b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 875}
+    spritePosition: {x: 833, y: 927}
+  - name: pavuk_20221223181853
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 1529
+      width: 165
+      height: 240
+    spriteID: 524c63562d0a8494ab398df831c915e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 1529}
+    spritePosition: {x: 293, y: 702}
+  - name: pavuk_20221223181857
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1228
+      width: 165
+      height: 345
+    spriteID: b096cfbef6814d14fac931382c4aaee0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1228}
+    spritePosition: {x: 293, y: 927}
+  - name: pavuk_20221223181942
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 665
+      y: 4
+      width: 255
+      height: 90
+    spriteID: 7a4850f89bb30cc4c84bd7ca89ef58b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 665, y: 4}
+    spritePosition: {x: 773, y: 582}
+  - name: pavuk_20221223181948
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 1777
+      width: 210
+      height: 180
+    spriteID: 153806d56ac0fcb4194958910ab3878b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 1777}
+    spritePosition: {x: 1028, y: 642}
+  - name: pavuk_20221223182014
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 665
+      y: 102
+      width: 255
+      height: 90
+    spriteID: 9d528327df8cc5a4faacccc43e2d9f24
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 665, y: 102}
+    spritePosition: {x: 263, y: 582}
+  - name: pavuk_20221223182020
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 447
+      y: 4
+      width: 210
+      height: 180
+    spriteID: 745230f74aeb6014ba252ca28fa4fc20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 447, y: 4}
+    spritePosition: {x: 53, y: 642}
+  - name: pavuk_20221223182054
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 447
+      y: 1214
+      width: 195
+      height: 105
+    spriteID: ca1792d443947f34494aeb800714b130
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 447, y: 1214}
+    spritePosition: {x: 833, y: 462}
+  - name: pavuk_20221223182104
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 1311
+      width: 195
+      height: 210
+    spriteID: b3359ab5cd62e5249b46ea94bc16df15
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 1311}
+    spritePosition: {x: 1028, y: 267}
+  - name: pavuk_20221223182132
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 447
+      y: 1327
+      width: 195
+      height: 105
+    spriteID: 0574a5d0ae96fd94caa4e1b5a218e85e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 447, y: 1327}
+    spritePosition: {x: 263, y: 462}
+  - name: pavuk_20221223182138
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 1093
+      width: 210
+      height: 210
+    spriteID: 2b80ada0d67bc624da59eed13eb87f44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 1093}
+    spritePosition: {x: 68, y: 267}
+  - name: pavuk_20221223182217
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 447
+      y: 981
+      width: 150
+      height: 225
+    spriteID: 21eabbfb8f47f114c887baae863a5adc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 447, y: 981}
+    spritePosition: {x: 788, y: 297}
+  - name: "\u0421\u043B\u043E\u0439 1"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 177
+      y: 875
+      width: 255
+      height: 210
+    spriteID: ca4ce80cdfe3ec843aebd58d6d2181af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 177, y: 875}
+    spritePosition: {x: 518, y: 177}
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
     characterGroups: []
     pivot: {x: 0, y: 0}
     boneReadOnly: 0
-  sharedRigSpriteImportData: []
-  sharedRigCharacterData:
+  characterData:
     bones: []
     parts: []
     dimension: {x: 0, y: 0}
@@ -518,13 +983,215 @@ ScriptedImporter:
   generatePhysicsShape: 0
   paperDollMode: 0
   keepDupilcateSpriteName: 1
-  skeletonAssetReferenceID: 
+  generateTileAssets: 0
+  tilePaletteCellLayout: 0
+  tilePaletteHexagonLayout: 0
+  tilePaletteCellSize: {x: 1, y: 1, z: 0}
+  tilePaletteCellSizing: 0
+  transparencySortMode: 0
+  transparencySortAxis: {x: 0, y: 0, z: 1}
+  tileTemplate: {instanceID: 0}
   padding: 4
   spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
   spriteCategoryList:
     categories: []
   spritePackingTag: 
   resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: pavuk_20221223182226
+    spriteName: pavuk_20221223182226
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2a5ece49224445842899f22b92573e39
+    layerID: 21
+    mosaicPosition: {x: 447, y: 192}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223182304
+    spriteName: pavuk_20221223182304
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a011fad7be180c7408cfb1a344ffeca0
+    layerID: 20
+    mosaicPosition: {x: 447, y: 748}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223182308
+    spriteName: pavuk_20221223182308
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b196465723f96ac4cae883d5ec82f1d5
+    layerID: 19
+    mosaicPosition: {x: 447, y: 470}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223181714
+    spriteName: pavuk_20221223181714
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 66a8ecfab073dee41be93b36fab94687
+    layerID: 18
+    mosaicPosition: {x: 4, y: 642}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223181741
+    spriteName: pavuk_20221223181741
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e340f4b3bcacabd449cfb3cab6b14540
+    layerID: 17
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223181804
+    spriteName: pavuk_20221223181804
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ca6a85997960acc4eb1d5f9182c0ae7f
+    layerID: 16
+    mosaicPosition: {x: 4, y: 1581}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223181809
+    spriteName: pavuk_20221223181809
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 940341e1dd7a08645bf4fb34403ed00b
+    layerID: 15
+    mosaicPosition: {x: 4, y: 875}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223181853
+    spriteName: pavuk_20221223181853
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 524c63562d0a8494ab398df831c915e2
+    layerID: 14
+    mosaicPosition: {x: 177, y: 1529}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223181857
+    spriteName: pavuk_20221223181857
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b096cfbef6814d14fac931382c4aaee0
+    layerID: 13
+    mosaicPosition: {x: 4, y: 1228}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223181942
+    spriteName: pavuk_20221223181942
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7a4850f89bb30cc4c84bd7ca89ef58b4
+    layerID: 12
+    mosaicPosition: {x: 665, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223181948
+    spriteName: pavuk_20221223181948
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 153806d56ac0fcb4194958910ab3878b
+    layerID: 11
+    mosaicPosition: {x: 177, y: 1777}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223182014
+    spriteName: pavuk_20221223182014
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 9d528327df8cc5a4faacccc43e2d9f24
+    layerID: 10
+    mosaicPosition: {x: 665, y: 102}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223182020
+    spriteName: pavuk_20221223182020
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 745230f74aeb6014ba252ca28fa4fc20
+    layerID: 9
+    mosaicPosition: {x: 447, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223182054
+    spriteName: pavuk_20221223182054
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ca1792d443947f34494aeb800714b130
+    layerID: 8
+    mosaicPosition: {x: 447, y: 1214}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223182104
+    spriteName: pavuk_20221223182104
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b3359ab5cd62e5249b46ea94bc16df15
+    layerID: 7
+    mosaicPosition: {x: 177, y: 1311}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223182132
+    spriteName: pavuk_20221223182132
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0574a5d0ae96fd94caa4e1b5a218e85e
+    layerID: 6
+    mosaicPosition: {x: 447, y: 1327}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223182138
+    spriteName: pavuk_20221223182138
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2b80ada0d67bc624da59eed13eb87f44
+    layerID: 5
+    mosaicPosition: {x: 177, y: 1093}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pavuk_20221223182217
+    spriteName: pavuk_20221223182217
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 21eabbfb8f47f114c887baae863a5adc
+    layerID: 4
+    mosaicPosition: {x: 447, y: 981}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: "\u0421\u043B\u043E\u0439 1"
+    spriteName: "\u0421\u043B\u043E\u0439 1"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ca4ce80cdfe3ec843aebd58d6d2181af
+    layerID: 2
+    mosaicPosition: {x: 177, y: 875}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
   mosaicPSDLayers: []
   rigPSDLayers:
   - name: pavuk_20221223182226
@@ -718,7 +1385,6 @@ ScriptedImporter:
     isImported: 1
     isVisible: 1
   sharedRigPSDLayers: []
-  pSDLayerImportSetting: []
   importFileNodeState: 1
   platformSettingsDirtyTick: 0
   spriteSizeExpandChanged: 0

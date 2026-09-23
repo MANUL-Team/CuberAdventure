@@ -40,6 +40,6 @@ public class MobMove : MonoBehaviour
     }
     private void FixedUpdate() {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        rb.velocity = new Vector2(speedx, rb.velocity.y);
+        rb.linearVelocity = new Vector2(speedx, rb.linearVelocity.y);
     }
 }

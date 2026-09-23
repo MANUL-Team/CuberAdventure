@@ -12,6 +12,7 @@ public class PlayerMenuController : MonoBehaviour
     private bool statsUpdate;
     private void Start() {
         animator = GetComponent<Animator>();
+        MenuAppearance.Apply(inventory, skillsMenu);
     }
     public void AnimInventory(){
         animator.SetBool("Inventory", true);

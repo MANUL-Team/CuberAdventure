@@ -226,10 +226,10 @@ public class MobController : MonoBehaviour
         }
         if(agressiveMob && !pathFinding){
             if(isGrounded){
-                rb.velocity = new Vector2(speedx, rb.velocity.y);
+                rb.linearVelocity = new Vector2(speedx, rb.linearVelocity.y);
             }
             else if(!needGC){
-                rb.velocity = new Vector2(speedx, rb.velocity.y);
+                rb.linearVelocity = new Vector2(speedx, rb.linearVelocity.y);
             }
         }
     }
