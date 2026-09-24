@@ -7,9 +7,6 @@ public class DialogTrigger : MonoBehaviour
     [SerializeField] private GameObject button;
     [SerializeField] private DialogManager dialog;
     [SerializeField] private bool cutScene;
-    private void Start() {
-        EntitySorting.Apply(transform.root.gameObject, EntitySorting.NpcLayer);
-    }
     void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
             if(!cutScene){

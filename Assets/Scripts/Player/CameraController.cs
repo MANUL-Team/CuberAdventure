@@ -30,8 +30,29 @@ public class CameraController : MonoBehaviour
 		Application.targetFrameRate = 120;
 		offset = new Vector2(Mathf.Abs(offset.x), offset.y);
 		FindPlayer(isLeft);
+		BringLevelInFrontOfCamera();
 		csc = GameObject.FindGameObjectWithTag("CutSceneController").GetComponent<CutSceneController>();
 		anim = gameObject.GetComponent<Animator>();
+   }
+
+   void BringLevelInFrontOfCamera()
+   {
+		if (gameObject.scene.name != "Level3")
+			return;
+		Camera cam = GetComponent<Camera>();
+		Transform level = GameObject.Find("Level") != null ? GameObject.Find("Level").transform : null;
+		if (cam == null || level == null)
+			return;
+		float nearPlane = transform.position.z + cam.nearClipPlane;
+		for (int i = 0; i < level.childCount; i++)
+		{
+			Transform child = level.GetChild(i);
+			if (child.position.z >= nearPlane - 0.05f)
+				continue;
+			Vector3 local = child.localPosition;
+			local.z = 0f;
+			child.localPosition = local;
+		}
    }
 
 

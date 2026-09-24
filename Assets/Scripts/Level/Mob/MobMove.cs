@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[DefaultExecutionOrder(10000)]
 public class MobMove : MonoBehaviour
 {
     private int move;
     private Animator anim;
     private int speedx;
     private Rigidbody2D rb;
+    private MobController facing;
+    private bool faceRight;
     private bool isGrounded;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float checkRadius;
@@ -24,22 +27,37 @@ public class MobMove : MonoBehaviour
         else if(move == 1){
             speedx = speed;
             anim.SetBool("Run", true);
-            transform.rotation = new Quaternion(0, 180, 0, transform.rotation.w);
+            Turn(true);
         }
         else if(move == -1){
             speedx = -speed;
             anim.SetBool("Run", true);
-            transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
+            Turn(false);
         }
         StartCoroutine(RandomMove());
     }
     private void Start() {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        facing = GetComponent<MobController>();
         StartCoroutine(RandomMove());
     }
+    void Turn(bool right) {
+        faceRight = right;
+        if (facing != null)
+            facing.FaceSide(right);
+        else
+            MobController.PresentFacing(transform, right);
+    }
+
     private void FixedUpdate() {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         rb.linearVelocity = new Vector2(speedx, rb.linearVelocity.y);
+    }
+
+    private void LateUpdate() {
+        if (facing != null)
+            return;
+        MobController.PresentFacing(transform, faceRight);
     }
 }

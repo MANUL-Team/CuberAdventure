@@ -25,6 +25,12 @@ public class CraftngMenuController : MonoBehaviour
     private Drop craftingItem;
     [SerializeField] private Text name, description, stats, comment;
     [SerializeField] private GameObject descriptionObj;
+    void OnEnable()
+    {
+        TradeLook.ApplyCraft(this);
+        TradeLook.Fade(transform.parent);
+    }
+
     public void SelectCraftingItem(int id){
         stack = itemsToCraft[id].stack;
         if(stack){
@@ -35,6 +41,7 @@ public class CraftngMenuController : MonoBehaviour
         }
         AddItems(id);
         SetDescription(id);
+        TradeLook.MarkCraft(itemsToCraft[id].transform);
     }
     public void Craft(){
         canCraft = true;

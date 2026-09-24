@@ -39,6 +39,10 @@ public class PlayerController : MonoBehaviour
     private float flyTime;
     private float standartCameraDist = 7.199291f;
     private float camDistIndex;
+    private float groundGravity = -1f;
+    const float WaterMove = 0.55f;
+    const float WaterGravity = 0.5f;
+    const float WaterJump = 1.2f;
 
     public void Confuse(){
         confusion = true;
@@ -118,12 +122,7 @@ public class PlayerController : MonoBehaviour
             flyButton.SetActive(false);
         }
     }
-    private void CheckUWS(){
-        if(uw.loseAir){
-            speed = modules._uws.currentSpeed;
-        }
-    }
-    private void Start() {
+    private void Start(){
         obj = GameObject.FindGameObjectWithTag("Player");
         rb = obj.GetComponent<Rigidbody2D>();
         source = obj.GetComponent<AudioSource>();
@@ -218,7 +217,13 @@ public class PlayerController : MonoBehaviour
     public void FixedUpdate()
     {
         CheckTurbine();
-        CheckUWS();
+        bool inWater = uw != null && uw.loseAir;
+        if (groundGravity < 0f)
+            groundGravity = rb.gravityScale;
+        rb.gravityScale = inWater ? groundGravity * WaterGravity : groundGravity;
+        if (inWater)
+            JumpForce *= WaterJump;
+        float speedLimit = modules._tracks.currentSpeed * (inWater ? WaterMove : 1f);
         float camDist = 0;
         if (camDistIndex < (Math.Abs(rb.linearVelocity.x) / 25))
         {
@@ -241,24 +246,24 @@ public class PlayerController : MonoBehaviour
         }
         if(joystick.gameObject.activeSelf)
         {
-            if (!uw.loseAir && clutchInt > modules._tracks.clutch)
+            if (clutchInt > modules._tracks.clutch)
             {
                 if(moveInput > 0){
-                    speed = Math.Clamp(speed + (modules._tracks.acceleration), -modules._tracks.currentSpeed, modules._tracks.currentSpeed);
+                    speed = Math.Clamp(speed + (modules._tracks.acceleration), -speedLimit, speedLimit);
                 }
                 else if(moveInput < 0)
                 {
-                    speed = Math.Clamp(speed - (modules._tracks.acceleration), -modules._tracks.currentSpeed, modules._tracks.currentSpeed);
+                    speed = Math.Clamp(speed - (modules._tracks.acceleration), -speedLimit, speedLimit);
                 }
                 else
                 {
                     if (speed > 0)
                     {
-                        speed = Math.Clamp(speed - 0.5f, 0, modules._tracks.currentSpeed);
+                        speed = Math.Clamp(speed - 0.5f, 0, speedLimit);
                     }
                     else
                     {
-                        speed = Math.Clamp(speed + 0.5f, -modules._tracks.currentSpeed, 0);
+                        speed = Math.Clamp(speed + 0.5f, -speedLimit, 0);
                     }
                 }
             }
@@ -267,6 +272,7 @@ public class PlayerController : MonoBehaviour
                 speed = speed * 0.95f;
             }
             if(!confusion){
+                speed = Math.Clamp(speed, -speedLimit, speedLimit);
                 rb.linearVelocity = new Vector2( speed, rb.linearVelocity.y);
             }
         }

@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Pathfinding;
 
+[DefaultExecutionOrder(10000)]
 public class MobController : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -30,6 +31,7 @@ public class MobController : MonoBehaviour
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private AIPath ai;
     private int direction;
+    bool faceRight;
     public int id, num, delay;
     [SerializeField] private bool isHasDrop;
     [SerializeField] private Text dmgText;
@@ -40,7 +42,6 @@ public class MobController : MonoBehaviour
     [SerializeField] private GameObject mobObj;
     private GiveDrop giveDrop;
     [SerializeField] private float distance, speed, pushPower, deConfusion;
-    [SerializeField] private float faceAngleOffset = 90f;
     
     public void Damage(float damage){
         if(maneken == false){
@@ -179,14 +180,54 @@ public class MobController : MonoBehaviour
 
     private void LateUpdate() {
         FlattenZ(transform);
+        if (!pathFinding)
+            FlattenTilt(transform);
         if (ai != null)
         {
             FlattenZ(ai.transform);
-            Vector3 euler = ai.transform.eulerAngles;
-            if (Mathf.Abs(Mathf.DeltaAngle(euler.x, 0f)) > 0.01f || Mathf.Abs(Mathf.DeltaAngle(euler.y, 0f)) > 0.01f)
-                ai.transform.rotation = Quaternion.Euler(0f, 0f, euler.z);
+            FlattenTilt(ai.transform);
             FaceByVelocity();
         }
+        if (!pathFinding)
+            ApplyFacing();
+    }
+
+    public void FaceSide(bool right) {
+        faceRight = right;
+        direction = right ? 1 : -1;
+        ApplyFacing();
+    }
+
+    void ApplyFacing() {
+        PresentFacing(transform, faceRight);
+    }
+
+    public static void PresentFacing(Transform root, bool right) {
+        if (root == null)
+            return;
+        root.rotation = Quaternion.Euler(0f, right ? 180f : 0f, 0f);
+        float plane = root.position.z;
+        SpriteRenderer[] parts = root.GetComponentsInChildren<SpriteRenderer>(true);
+        for (int i = 0; i < parts.Length; i++)
+        {
+            if (parts[i] == null)
+                continue;
+            Transform part = parts[i].transform;
+            Vector3 side = part.right;
+            float spin = Mathf.Atan2(side.y, side.x) * Mathf.Rad2Deg;
+            part.rotation = Quaternion.Euler(0f, 0f, spin);
+            Vector3 position = part.position;
+            position.z = plane;
+            part.position = position;
+        }
+    }
+
+    static void FlattenTilt(Transform t) {
+        if (t == null)
+            return;
+        Vector3 euler = t.eulerAngles;
+        if (Mathf.Abs(Mathf.DeltaAngle(euler.x, 0f)) > 0.01f || Mathf.Abs(Mathf.DeltaAngle(euler.y, 0f)) > 0.01f)
+            t.rotation = Quaternion.Euler(0f, 0f, euler.z);
     }
 
     static void FlattenZ(Transform t) {
@@ -206,9 +247,12 @@ public class MobController : MonoBehaviour
         Vector2 v = ai.velocity;
         if (v.sqrMagnitude < 0.0025f)
             return;
-        // Art faces down (-Y) at rest; +90 aligns head with movement direction.
-        float angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg + faceAngleOffset;
-        transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        // Head and AttackPos are on local +Y. The body is centered on the pathfinding
+        // object, while this transform sits below it, so rotate the agent itself.
+        float angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg - 90f;
+        ai.transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        if (ai.transform != transform)
+            transform.localRotation = Quaternion.identity;
         if (v.x >= 0f)
             direction = 1;
         else
@@ -237,35 +281,23 @@ public class MobController : MonoBehaviour
         }
     }
     private void Rotate(){
-        if(transform.position.x > player.position.x){
-            transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
-            direction = -1;
-        }
-        else if(transform.position.x < player.position.x){
-            if(player.position.x - transform.position.x <= 5){
-                transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
-                direction = -1;
-            }
-            else{
-                transform.rotation = new Quaternion(0, 180, 0, transform.rotation.w);
-                direction = 1;
-            }
-        }
+        if(transform.position.x > player.position.x)
+            FaceSide(false);
+        else if(transform.position.x < player.position.x)
+            FaceSide(player.position.x - transform.position.x > 5f);
     }
     private void StartHunter(){
         if(startTimeBtwAttack > 0){
             if (anim != null)
                 anim.SetBool("Run", true);
-            if(transform.position.x > player.position.x){
-                speedx = -speed;
-                transform.rotation = new Quaternion(0, 0, 0, transform.rotation.w);
-                direction = -1;
-            }
-            else if(transform.position.x < player.position.x){
-                speedx = speed;
-                transform.rotation = new Quaternion(0, 180, 0, transform.rotation.w);
-                direction = 1;
-            }
+        if(transform.position.x > player.position.x){
+            speedx = -speed;
+            FaceSide(false);
+        }
+        else if(transform.position.x < player.position.x){
+            speedx = speed;
+            FaceSide(true);
+        }
         }
     }
     private void EndHunter(){

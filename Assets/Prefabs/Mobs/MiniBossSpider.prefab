@@ -754,6 +754,7 @@ MonoBehaviour:
   speed: 0
   pushPower: 7000
   deConfusion: 1
+  faceAngleOffset: 90
 --- !u!114 &5577911355128323871
 MonoBehaviour:
   m_ObjectHideFlags: 0

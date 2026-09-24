@@ -40,11 +40,23 @@ public class ModulesDisplay : MonoBehaviour
 
     void BillboardModules(bool mirrored)
     {
-        Quaternion fix = mirrored ? Quaternion.Euler(0f, 180f, 0f) : Quaternion.identity;
-        SetLocalRotation(laser1, fix);
-        SetLocalRotation(laser2, fix);
-        SetLocalRotation(turbine1, fix);
-        SetLocalRotation(turbine2, fix);
+        float yaw = mirrored ? 180f : 0f;
+        SetLocalRotation(laser1, Quaternion.Euler(0f, yaw, 0f));
+        SetLocalRotation(laser2, Quaternion.Euler(0f, yaw, 180f));
+        SetLocalRotation(turbine1, Quaternion.Euler(0f, yaw, -90f));
+        SetLocalRotation(turbine2, Quaternion.Euler(0f, yaw, -90f));
+        KeepLasersBehindSkin(laser1);
+        KeepLasersBehindSkin(laser2);
+    }
+
+    static void KeepLasersBehindSkin(SpriteRenderer renderer)
+    {
+        if (renderer == null)
+            return;
+        renderer.sortingOrder = 15;
+        Vector3 position = renderer.transform.localPosition;
+        position.z = 0f;
+        renderer.transform.localPosition = position;
     }
 
     static void SetLocalRotation(SpriteRenderer renderer, Quaternion rotation)

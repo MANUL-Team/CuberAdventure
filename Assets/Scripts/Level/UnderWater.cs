@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class UnderWater : MonoBehaviour
 {
-    private PlayerController pc;
     [SerializeField] private float air;
     private PlayerStats ps;
     public bool loseAir;
@@ -16,20 +15,14 @@ public class UnderWater : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D collision){
         if (collision.CompareTag("Water")){
-            pc.AnyJumpForce(8);
             loseAir = true;
-            if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") != 0){
-                jm.JoystickSwitch(loseAir);
-            }
+            jm.JoystickSwitch(false);
         }
     }
     void OnTriggerExit2D (Collider2D collision){
         if (collision.CompareTag("Water")){
-            pc.AnyJumpForce(17);
             loseAir = false;
-            if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") != 0){
-                jm.JoystickSwitch(loseAir);
-            }
+            jm.JoystickSwitch(false);
         }
     }
     private IEnumerator AirController(){
@@ -51,7 +44,6 @@ public class UnderWater : MonoBehaviour
         }
     }
     void Start(){
-        pc = GetComponent<PlayerController>();
         ps = GetComponent<PlayerStats>();
         maxAir = PlayerPrefs.GetFloat("MaxAir");
         air = maxAir;
@@ -60,12 +52,7 @@ public class UnderWater : MonoBehaviour
     }
     private IEnumerator LowUpdate(){
         while(true){
-            if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") != 0){
-                jm.JoystickSwitch(loseAir);
-            }
-            else{
-                jm.JoystickSwitch(false);
-            }
+            jm.JoystickSwitch(false);
             if(PlayerPrefs.GetInt("ChangedUnderWaterSystem") == 0){
                 PlayerPrefs.SetFloat("MaxAir", 100);
             }
