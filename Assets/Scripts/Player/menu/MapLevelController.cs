@@ -1,30 +1,45 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MapLevelController : MonoBehaviour
 {
-    private List<MapLevelChange> descriptions = new List<MapLevelChange>();
+    readonly List<MapLevelChange> descriptions = new List<MapLevelChange>();
     [SerializeField] TeleportScript tp;
-    public void OpenDescription(int id){
-        for(int i = 0; i <= descriptions.Count; i++){
-            if(PlayerPrefs.GetInt("LevelEnded" + id) == 1){
-                tp.gameObject.SetActive(true);
-            } else{
-                tp.gameObject.SetActive(false);
-            }
-            if(descriptions[i].id != id){
-                descriptions[i].gameObject.SetActive(false);
-            }
-            else{
-                descriptions[i].gameObject.SetActive(true);
-                tp.currentId = descriptions[i].id;
-            }
+    bool collected;
+
+    public void OpenDescription(int id)
+    {
+        Ensure();
+        for (int i = 0; i < descriptions.Count; i++)
+        {
+            MapLevelChange card = descriptions[i];
+            if (card == null)
+                continue;
+            bool show = card.id == id;
+            card.gameObject.SetActive(show);
+            if (show && tp != null)
+                tp.currentId = card.id;
         }
+        if (tp != null)
+            tp.gameObject.SetActive(true);
     }
-    private void Start() {
-        for(int i = 0; i < transform.childCount; i++){
-            descriptions.Add(transform.GetChild(i).GetComponent<MapLevelChange>());
+
+    void Awake()
+    {
+        Ensure();
+    }
+
+    void Ensure()
+    {
+        if (collected)
+            return;
+        collected = true;
+        descriptions.Clear();
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            MapLevelChange card = transform.GetChild(i).GetComponent<MapLevelChange>();
+            if (card != null)
+                descriptions.Add(card);
         }
     }
 }

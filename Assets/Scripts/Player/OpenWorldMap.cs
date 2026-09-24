@@ -9,9 +9,19 @@ public class OpenWorldMap : MonoBehaviour
 
     public void OpenMap(){
         worldMap.SetActive(true);
+        if (anim == null)
+            anim = worldMap.GetComponent<Animator>();
+        if (anim == null)
+            return;
+        anim.enabled = true;
         anim.SetBool("Close", false);
     }
     public void CloseMap(){
+        if (anim == null && worldMap != null)
+            anim = worldMap.GetComponent<Animator>();
+        if (anim == null)
+            return;
+        anim.enabled = true;
         anim.SetBool("Close", true);
     }
     private void Start() {

@@ -223734,6 +223734,7 @@ GameObject:
   - component: {fileID: 1449491623}
   - component: {fileID: 1449491626}
   - component: {fileID: 1449491625}
+  - component: {fileID: 9911223344556677889}
   m_Layer: 4
   m_Name: WaterCollider
   m_TagString: Water
@@ -223756,6 +223757,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1519492811}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+
+--- !u!114 &9911223344556677889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449491622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67f6fc6e38bdb3d40a3cf5cb54f972be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &1449491625
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -223810,7 +223824,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449491622}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -223828,7 +223842,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8f4dfc7de585fc438678a803f5fc241, type: 2}
+  - {fileID: 2100000, guid: c7e8f9a0b1c24d5e8f9012345678abcd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -223849,10 +223863,10 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 17
+  m_SortingOrder: 14
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6273585, g: 0.8470109, b: 1, a: 0.54901963}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -224187,6 +224201,7 @@ GameObject:
   - component: {fileID: 1519492810}
   - component: {fileID: 1519492809}
   - component: {fileID: 1519492808}
+  - component: {fileID: 8822100445566778899}
   m_Layer: 4
   m_Name: Water
   m_TagString: Water
@@ -224194,6 +224209,43 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+
+--- !u!114 &8822100445566778899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519492807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4e5f6a7b8c94e0f1a2b3c4d5e6f7081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waterMaterial: {fileID: 2100000, guid: c7e8f9a0b1c24d5e8f9012345678abcd, type: 2}
+  shallowColor: {r: 0.25, g: 0.65, b: 0.95, a: 0.55}
+  deepColor: {r: 0.05, g: 0.25, b: 0.5, a: 0.75}
+  foamColor: {r: 0.85, g: 0.95, b: 1, a: 0.9}
+  pixelSize: 48
+  noiseScale: 3.5
+  useBuoyancySurface: 1
+  surfaceUV: 0.75
+  waveSpeed: 0.7
+  waveAmp: 0.022
+  waveFreq: 0.55
+  surfaceSoft: 0.018
+  foamAmount: 0.85
+  foamSoft: 2.4
+  foamGurgle: 0.75
+  interact: 1
+  splashCooldown: 0.18
+  minSplashSpeed: 1.1
+  rippleStrength: 0.9
+  shoreRippleInterval: 0.55
+  shoreMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  sortingOrder: 8
 --- !u!253 &1519492808
 BuoyancyEffector2D:
   serializedVersion: 2
@@ -224286,7 +224338,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b8f4dfc7de585fc438678a803f5fc241, type: 2}
+  - {fileID: 2100000, guid: c7e8f9a0b1c24d5e8f9012345678abcd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -224307,10 +224359,10 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 17
+  m_SortingOrder: 8
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6273585, g: 0.8470109, b: 1, a: 0.54901963}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -721054,3 +721106,4 @@ SceneRoots:
   - {fileID: 457787089}
   - {fileID: 1711526901}
   - {fileID: 316056232}
+
