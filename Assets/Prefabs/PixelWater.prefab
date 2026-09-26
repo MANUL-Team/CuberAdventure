@@ -83,7 +83,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 18
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -175,29 +175,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waterMaterial: {fileID: 2100000, guid: c7e8f9a0b1c24d5e8f9012345678abcd, type: 2}
-  shallowColor: {r: 0.25, g: 0.65, b: 0.95, a: 0.55}
-  deepColor: {r: 0.05, g: 0.25, b: 0.5, a: 0.75}
-  foamColor: {r: 0.85, g: 0.95, b: 1, a: 0.9}
+  shallowColor: {r: 0.22, g: 0.58, b: 0.92, a: 0.5}
+  deepColor: {r: 0.04, g: 0.2, b: 0.45, a: 0.72}
+  foamColor: {r: 0.92, g: 0.98, b: 1, a: 1}
   pixelSize: 48
   noiseScale: 3.5
-  useBuoyancySurface: 1
-  surfaceUV: 0.75
-  waveSpeed: 0.7
-  waveAmp: 0.022
-  waveFreq: 0.55
-  surfaceSoft: 0.018
-  foamAmount: 0.85
-  foamSoft: 2.4
-  foamGurgle: 0.75
+  surfaceUV: 1
+  waveSpeed: 1.85
+  waveAmp: 0.45
+  waveFreq: 14
+  edgeSoft: 0.35
+  foamWidth: 0.7
+  foamAmount: 1
+  foamGurgle: 0.8
+  syncBuoyancyToTop: 1
+  buoyancySurfaceLevel: 1
   interact: 1
-  splashCooldown: 0.18
-  minSplashSpeed: 1.1
-  rippleStrength: 0.9
-  shoreRippleInterval: 0.55
+  splashCooldown: 0.22
+  minSplashSpeed: 1
+  splashStrength: 1.15
+  splashParticles: 1
+  shoreSplashInterval: 0.7
   shoreMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  sortingOrder: 8
+  sortingOrder: 18
 --- !u!1 &2000000001
 GameObject:
   m_ObjectHideFlags: 0

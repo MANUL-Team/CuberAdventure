@@ -40,9 +40,14 @@ public class ModulesDisplay : MonoBehaviour
 
     void BillboardModules(bool mirrored)
     {
+        // Parent Skins uses Y180 when facing left (mirrors positions).
+        // Counter with local Y180 so sprites face the camera — but also swap the
+        // laser aim (Z) so barrels still point OUTWARD, not into the hull.
         float yaw = mirrored ? 180f : 0f;
-        SetLocalRotation(laser1, Quaternion.Euler(0f, yaw, 0f));
-        SetLocalRotation(laser2, Quaternion.Euler(0f, yaw, 180f));
+        float laser1Z = mirrored ? 180f : 0f;
+        float laser2Z = mirrored ? 0f : 180f;
+        SetLocalRotation(laser1, Quaternion.Euler(0f, yaw, laser1Z));
+        SetLocalRotation(laser2, Quaternion.Euler(0f, yaw, laser2Z));
         SetLocalRotation(turbine1, Quaternion.Euler(0f, yaw, -90f));
         SetLocalRotation(turbine2, Quaternion.Euler(0f, yaw, -90f));
         KeepLasersBehindSkin(laser1);

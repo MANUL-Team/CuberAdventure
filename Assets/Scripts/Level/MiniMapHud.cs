@@ -38,27 +38,23 @@ public class MiniMapBoot : MonoBehaviour
     }
 }
 
-public class MiniMapHud : MonoBehaviour
+public class MiniMapHud : MonoBehaviour, IPointerClickHandler
 {
     public static MiniMapHud Live { get; private set; }
 
-    const float Width = 176f;
-    const float Height = 70f;
     const float Border = 2f;
     const float MaxInnerW = 206f;
     const float MaxInnerH = 104f;
 
-    static Sprite pixel;
+    [SerializeField] RawImage picture;
+    [SerializeField] RectTransform dot;
 
     Transform player;
     Camera eye;
     RenderTexture rt;
-    RawImage picture;
     int texW;
     int texH;
     RectTransform panel;
-    RectTransform view;
-    RectTransform dot;
     CanvasGroup group;
     readonly List<GameObject> covers = new List<GameObject>();
     bool built;
@@ -69,27 +65,18 @@ public class MiniMapHud : MonoBehaviour
 
     public static bool TrySpawn()
     {
-        if (Live != null)
+        if (Live != null && Live.built)
             return true;
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null || Camera.main == null)
+        if (Camera.main == null)
             return false;
-        Canvas hud = null;
-        Canvas[] canvases = player.GetComponentsInChildren<Canvas>(true);
-        for (int i = 0; i < canvases.Length; i++)
-        {
-            if (canvases[i].transform.Find("LeftUp") != null)
-            {
-                hud = canvases[i];
-                break;
-            }
-        }
-        if (hud == null || hud.transform.lossyScale.sqrMagnitude < 0.0001f)
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject == null)
             return false;
-
-        var host = new GameObject("MiniMap");
-        Live = host.AddComponent<MiniMapHud>();
-        Live.Build(player.transform, hud);
+        MiniMapHud hud = playerObject.GetComponentInChildren<MiniMapHud>(true);
+        if (hud == null)
+            return false;
+        Live = hud;
+        hud.Wake(playerObject.transform);
         return true;
     }
 
@@ -109,51 +96,22 @@ public class MiniMapHud : MonoBehaviour
         }
     }
 
-    void Build(Transform playerTransform, Canvas hud)
+    void Wake(Transform playerTransform)
     {
+        if (built)
+            return;
         player = playerTransform;
+        panel = transform as RectTransform;
+        if (picture == null)
+            picture = GetComponentInChildren<RawImage>(true);
+        if (dot == null)
+        {
+            Transform mark = transform.Find("View/You");
+            if (mark != null)
+                dot = mark as RectTransform;
+        }
+        group = GetComponent<CanvasGroup>();
         CacheCovers(playerTransform.gameObject);
-        EnsurePixel();
-
-        panel = NewRect("Panel", hud.transform);
-        panel.gameObject.layer = hud.gameObject.layer;
-        PlaceAtMapButton(hud.transform);
-        panel.sizeDelta = new Vector2(Width, Height);
-
-        Canvas layer = panel.gameObject.AddComponent<Canvas>();
-        layer.overrideSorting = true;
-        layer.sortingOrder = -1;
-        panel.gameObject.AddComponent<GraphicRaycaster>();
-
-        Image frame = panel.gameObject.AddComponent<Image>();
-        frame.sprite = pixel;
-        frame.type = Image.Type.Simple;
-        frame.color = new Color(0.16f, 0.10f, 0.06f, 0.88f);
-        frame.raycastTarget = true;
-        MiniMapWindow window = panel.gameObject.AddComponent<MiniMapWindow>();
-        window.hud = this;
-
-        group = panel.gameObject.AddComponent<CanvasGroup>();
-        group.alpha = 0f;
-
-        view = NewRect("View", panel);
-        Stretch(view, Border, Border, Border, Border);
-        view.gameObject.AddComponent<RectMask2D>();
-
-        picture = view.gameObject.AddComponent<RawImage>();
-        picture.raycastTarget = false;
-        picture.color = Color.white;
-        EnsureRt(352, 136);
-
-        dot = NewRect("You", view);
-        dot.anchorMin = dot.anchorMax = new Vector2(0.5f, 0.5f);
-        dot.pivot = new Vector2(0.5f, 0.5f);
-        dot.sizeDelta = new Vector2(7f, 7f);
-        Image mark = dot.gameObject.AddComponent<Image>();
-        mark.sprite = CoreSprite();
-        mark.color = Color.white;
-        mark.raycastTarget = false;
-        mark.preserveAspect = true;
 
         eye = new GameObject("MinimapCamera").AddComponent<Camera>();
         eye.enabled = false;
@@ -179,8 +137,7 @@ public class MiniMapHud : MonoBehaviour
         data.requiresColorTexture = false;
         data.antialiasing = AntialiasingMode.None;
         data.SetRenderer(RendererIndex(mainData));
-        eye.targetTexture = rt;
-        eye.aspect = (float)rt.width / rt.height;
+        EnsureRt(352, 136);
         ReleaseTitleClicks();
 
         built = true;
@@ -204,18 +161,28 @@ public class MiniMapHud : MonoBehaviour
             ToggleAtlas();
 
         bool show = player != null && !menu && !atlas;
-        if (panel.gameObject.activeSelf != show)
-            panel.gameObject.SetActive(show);
         if (!show && eye != null)
             eye.enabled = false;
-        if (show && framed && group.alpha < 1f)
-            group.alpha = Mathf.MoveTowards(group.alpha, 1f, Time.unscaledDeltaTime * 3.2f);
+        if (group != null)
+        {
+            group.blocksRaycasts = show;
+            group.interactable = show;
+            if (!show)
+                group.alpha = 0f;
+            else if (framed && group.alpha < 1f)
+                group.alpha = Mathf.MoveTowards(group.alpha, 1f, Time.unscaledDeltaTime * 3.2f);
+        }
     }
 
     void LateUpdate()
     {
-        if (!built || eye == null || player == null || panel == null || !panel.gameObject.activeSelf)
+        if (!built || eye == null || player == null || panel == null)
             return;
+        if (OtherMenuOpen() || AtlasOpen())
+        {
+            eye.enabled = false;
+            return;
+        }
 
         if (!locked && Time.unscaledTime >= nextFit)
         {
@@ -411,24 +378,9 @@ public class MiniMapHud : MonoBehaviour
         return true;
     }
 
-    void PlaceAtMapButton(Transform hud)
+    public void OnPointerClick(PointerEventData eventData)
     {
-        Transform left = hud.Find("LeftUp");
-        RectTransform button = left != null ? left.Find("MapButton") as RectTransform : null;
-        panel.anchorMin = panel.anchorMax = new Vector2(0f, 1f);
-        panel.pivot = new Vector2(0f, 1f);
-        panel.anchoredPosition = new Vector2(8f, -8f);
-        if (button == null)
-            return;
-        panel.SetParent(button.parent, false);
-        panel.anchorMin = button.anchorMin;
-        panel.anchorMax = button.anchorMax;
-        panel.pivot = new Vector2(0f, 1f);
-        Vector2 topLeft = button.anchoredPosition;
-        topLeft.x -= button.sizeDelta.x * button.pivot.x;
-        topLeft.y += button.sizeDelta.y * (1f - button.pivot.y);
-        panel.anchoredPosition = topLeft;
-        button.gameObject.SetActive(false);
+        ToggleAtlas();
     }
 
     public void ToggleAtlas()
@@ -559,97 +511,6 @@ public class MiniMapHud : MonoBehaviour
             return 0;
         int index = (int)field.GetValue(data);
         return index < 0 ? 0 : index;
-    }
-
-    static Sprite coreSprite;
-
-    static Sprite CoreSprite()
-    {
-        if (coreSprite != null)
-            return coreSprite;
-        const int n = 7;
-        Texture2D tex = new Texture2D(n, n, TextureFormat.RGBA32, false);
-        tex.filterMode = FilterMode.Point;
-        tex.wrapMode = TextureWrapMode.Clamp;
-        Color hot = new Color(1f, 0.86f, 0.76f, 1f);
-        Color bright = new Color(1f, 0.40f, 0.28f, 1f);
-        Color red = new Color(0.80f, 0.16f, 0.13f, 1f);
-        Color deep = new Color(0.55f, 0.08f, 0.08f, 1f);
-        Color rim = new Color(0.26f, 0.04f, 0.05f, 1f);
-        string rows =
-            "..rrr.." +
-            ".rdhrd." +
-            "rdhbhrd" +
-            "rdb*brd" +
-            "rddhddr" +
-            ".rdddr." +
-            "..rrr..";
-        for (int row = 0; row < n; row++)
-        {
-            for (int col = 0; col < n; col++)
-            {
-                char ink = rows[row * n + col];
-                Color color = Color.clear;
-                if (ink == '*')
-                    color = hot;
-                else if (ink == 'b')
-                    color = bright;
-                else if (ink == 'h')
-                    color = red;
-                else if (ink == 'd')
-                    color = deep;
-                else if (ink == 'r')
-                    color = rim;
-                tex.SetPixel(col, n - 1 - row, color);
-            }
-        }
-        tex.Apply();
-        tex.hideFlags = HideFlags.HideAndDontSave;
-        coreSprite = Sprite.Create(tex, new Rect(0, 0, n, n), new Vector2(0.5f, 0.5f), 1f);
-        coreSprite.hideFlags = HideFlags.HideAndDontSave;
-        return coreSprite;
-    }
-
-    static void EnsurePixel()
-    {
-        if (pixel != null)
-            return;
-        Texture2D tex = new Texture2D(1, 1, TextureFormat.RGBA32, false);
-        tex.SetPixel(0, 0, Color.white);
-        tex.Apply();
-        tex.hideFlags = HideFlags.HideAndDontSave;
-        pixel = Sprite.Create(tex, new Rect(0, 0, 1, 1), new Vector2(0.5f, 0.5f), 1f);
-        pixel.hideFlags = HideFlags.HideAndDontSave;
-    }
-
-    static RectTransform NewRect(string name, Transform parent)
-    {
-        var go = new GameObject(name, typeof(RectTransform));
-        go.layer = parent.gameObject.layer;
-        RectTransform rect = go.GetComponent<RectTransform>();
-        rect.SetParent(parent, false);
-        rect.localScale = Vector3.one;
-        rect.anchorMin = Vector2.zero;
-        rect.anchorMax = Vector2.one;
-        rect.offsetMin = Vector2.zero;
-        rect.offsetMax = Vector2.zero;
-        return rect;
-    }
-
-    static Image AddImage(RectTransform rect, Sprite sprite, Color color)
-    {
-        Image image = rect.gameObject.AddComponent<Image>();
-        image.sprite = sprite;
-        image.color = color;
-        return image;
-    }
-
-    static void Stretch(RectTransform rect, float left, float bottom, float right, float top)
-    {
-        rect.anchorMin = Vector2.zero;
-        rect.anchorMax = Vector2.one;
-        rect.offsetMin = new Vector2(left, bottom);
-        rect.offsetMax = new Vector2(-right, -top);
     }
 }
 

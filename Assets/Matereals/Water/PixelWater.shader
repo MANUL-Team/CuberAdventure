@@ -5,24 +5,26 @@ Shader "CuberAdventure/PixelWaterLit"
         [PerRendererData] _MainTex ("Mask / Sprite", 2D) = "white" {}
         [PerRendererData] _MaskTex ("Light Mask", 2D) = "white" {}
         [PerRendererData] _NormalMap ("Normal Map", 2D) = "bump" {}
-        _Color ("Shallow", Color) = (0.25, 0.65, 0.95, 0.55)
-        _DeepColor ("Deep", Color) = (0.05, 0.25, 0.5, 0.75)
-        _FoamColor ("Foam", Color) = (0.85, 0.95, 1.0, 0.9)
+        _Color ("Shallow", Color) = (0.22, 0.58, 0.92, 0.5)
+        _DeepColor ("Deep", Color) = (0.04, 0.2, 0.45, 0.72)
+        _FoamColor ("Foam", Color) = (0.92, 0.98, 1.0, 1.0)
         _PixelSize ("Pixels", Float) = 48
         _NoiseScale ("Noise Scale", Float) = 3.5
-        _WaveSpeed ("Wave Speed", Float) = 0.7
-        _WaveAmp ("Wave Amp", Range(0, 0.08)) = 0.022
-        _WaveFreq ("Wave Freq", Float) = 0.55
-        _SurfaceUV ("Surface UV", Range(0, 1)) = 0.75
-        _SurfaceSoft ("Surface Soft", Range(0.005, 0.08)) = 0.018
-        _FoamAmount ("Foam Amount", Range(0, 1)) = 0.85
-        _FoamSoft ("Foam Softness", Range(0.5, 8)) = 2.4
-        _FoamGurgle ("Foam Gurgle", Range(0, 1)) = 0.75
-        _DepthContrast ("Depth Contrast", Range(0, 1)) = 0.65
+        _WaveSpeed ("Wave Speed", Float) = 1.85
+        _WaveAmp ("Wave Height (world)", Range(0.1, 3)) = 0.45
+        _WaveFreq ("Wave Freq (per ~70u)", Float) = 14
+        _SurfaceUV ("Surface UV", Range(0, 1)) = 1
+        _EdgeSoft ("Edge Soft (world)", Range(0.1, 2)) = 0.35
+        _FoamWidth ("Foam Width (world)", Range(0.2, 3)) = 0.7
+        _FoamAmount ("Foam Amount", Range(0, 1)) = 1
+        _FoamGurgle ("Foam Gurgle", Range(0, 1)) = 0.8
+        _DepthContrast ("Depth Contrast", Range(0, 1)) = 0.78
         _NormalStrength ("Normal Strength", Range(0, 2)) = 0.9
-        _Ripple1 ("Ripple1", Vector) = (0, 0, -999, 0)
-        _Ripple2 ("Ripple2", Vector) = (0, 0, -999, 0)
-        _Ripple3 ("Ripple3", Vector) = (0, 0, -999, 0)
+        _SplashSpeed ("Splash Wave Speed", Float) = 0.7
+        _RectSize ("Rect Size", Vector) = (1, 1, 0, 0)
+        _Splash1 ("Splash1", Vector) = (0, 0, -999, 0)
+        _Splash2 ("Splash2", Vector) = (0, 0, -999, 0)
+        _Splash3 ("Splash3", Vector) = (0, 0, -999, 0)
         [MaterialToggle] _ZWrite ("ZWrite", Float) = 0
         [HideInInspector] _RendererColor ("RendererColor", Color) = (1,1,1,1)
     }
@@ -75,15 +77,17 @@ Shader "CuberAdventure/PixelWaterLit"
                 float _WaveAmp;
                 float _WaveFreq;
                 float _SurfaceUV;
-                float _SurfaceSoft;
+                float _EdgeSoft;
+                float _FoamWidth;
                 float _FoamAmount;
-                float _FoamSoft;
                 float _FoamGurgle;
                 float _DepthContrast;
                 float _NormalStrength;
-                float4 _Ripple1;
-                float4 _Ripple2;
-                float4 _Ripple3;
+                float _SplashSpeed;
+                float4 _RectSize;
+                float4 _Splash1;
+                float4 _Splash2;
+                float4 _Splash3;
             CBUFFER_END
 
             float Hash21(float2 p)
@@ -123,89 +127,89 @@ Shader "CuberAdventure/PixelWaterLit"
                 return floor(uv * pixels) / pixels;
             }
 
-            // World-space multi-frequency wave (amplitude ~1)
+            // World-space waves — crest size stays constant; big pools get more crests
+            float WaveLength()
+            {
+                // WaveFreq ≈ how many crests you'd see on a ~70-unit-wide pool
+                return max(70.0 / max(_WaveFreq, 0.5), 2.5);
+            }
+
             float SurfaceWave(float worldX, float t)
             {
+                float waveLen = WaveLength();
+                float phase = worldX / waveLen;
                 float w =
-                    sin(worldX * _WaveFreq + t * 1.15) * 0.55 +
-                    sin(worldX * (_WaveFreq * 1.85) - t * 1.4) * 0.28 +
-                    sin(worldX * (_WaveFreq * 0.42) + t * 0.6) * 0.17;
-                w += (FBM(float2(worldX * 0.12, t * 0.22)) - 0.5) * 0.3;
-                return w;
+                    sin(phase * 6.183 + t * 2.1 + FBM(float2(phase * 0.35, t * 0.15)) * 2.5) * 0.42 +
+                    sin(phase * 11.7 - t * 2.85 + 1.7) * 0.22 +
+                    sin(phase * 2.45 + t * 1.15) * 0.18;
+                float chop = FBM(float2(phase * 0.85 + t * 0.55, t * 0.9));
+                float chop2 = FBM(float2(phase * 1.9 - t * 0.7, phase * 0.4 + t * 0.35));
+                w += (chop - 0.5) * 0.55;
+                w += (chop2 - 0.5) * 0.35;
+                w += pow(saturate(chop * chop2 * 1.4), 2.0) * 0.45;
+                return saturate(w * 0.5 + 0.5) * 2.0 - 1.0;
             }
 
-            float RippleFoam(float2 worldXY, float4 rip)
-            {
-                // rip.xy = origin, rip.z = birth time, rip.w = strength
-                float age = _Time.y - rip.z;
-                if (age < 0.0 || age > 2.4 || rip.w < 0.01)
-                    return 0.0;
-                float radius = age * 3.2;
-                float d = abs(length(worldXY - rip.xy) - radius);
-                float ring = exp(-d * d * 9.0);
-                float fade = 1.0 - saturate(age / 2.4);
-                return ring * fade * rip.w;
-            }
-
-            // Body look preserved; free surface is a wavy cut + foam at buoyancy line
             void SampleWater(float2 uv, float3 worldPos, out half3 albedo, out half alpha, out half3 normalTS)
             {
                 float t = _Time.y * _WaveSpeed;
-                float2 wuv = worldPos.xy * (_NoiseScale * 0.15);
-                float2 puv = Pix(wuv + float2(t * 0.12, t * 0.03), _PixelSize * 0.35);
-                float2 puv2 = Pix(wuv * 1.7 + float2(-t * 0.1, t * 0.08), _PixelSize * 0.5);
+
+                // Body noise tiles in world space so flooded caves don't stretch one pattern
+                float2 wuv = worldPos.xy / max(WaveLength() * 2.5, 1.0) * _NoiseScale;
+                float2 puv = Pix(wuv + float2(t * 0.16, t * 0.05), _PixelSize * 0.35);
+                float2 puv2 = Pix(wuv * 1.6 + float2(-t * 0.12, t * 0.09), _PixelSize * 0.5);
 
                 float n = FBM(puv);
                 float n2 = FBM(puv2 + 3.7);
                 float cells = ValueNoise(puv * 2.2);
 
-                // Depth relative to free surface (not quad top)
-                float wave = SurfaceWave(worldPos.x, t);
-                float surface = _SurfaceUV + wave * _WaveAmp;
-                float below = surface - uv.y; // >0 under water
-
-                float depth = saturate((surface - uv.y) / max(surface, 0.05) * _DepthContrast + (n - 0.5) * 0.12);
+                float depth = saturate((1.0 - uv.y) * _DepthContrast + (n - 0.5) * 0.12);
                 half3 body = lerp(_Color.rgb, _DeepColor.rgb, depth);
-                body = lerp(body, body * 1.06, cells * 0.2);
-                body = lerp(body, body * 0.94, n2 * 0.18);
+                body = lerp(body, body * 1.06, cells * 0.18);
+                body = lerp(body, body * 0.94, n2 * 0.15);
 
-                // Soft free-surface silhouette (no hard line)
-                float soft = max(_SurfaceSoft, 0.004);
-                float edgeKeep = smoothstep(-soft, soft * 0.35, below);
+                float height = max(_RectSize.y, 0.5);
+                // All surface metrics in WORLD units → UV, so tall/short pools look the same
+                float amp = clamp(_WaveAmp / height, 0.002, 0.15);
+                float widthUV = clamp(_FoamWidth / height, 0.004, 0.2);
+                float edgeSoft = clamp(_EdgeSoft / height, 0.0015, 0.08);
 
-                // Crest band around the wavy top boundary
-                float crest = exp(-abs(below) * (_FoamSoft + 1.2) * 18.0);
-                crest *= smoothstep(-soft * 2.0, soft * 0.5, below); // mostly under / on surface
+                float wave = SurfaceWave(worldPos.x, t);
+                float surface = (_SurfaceUV - amp) + wave * amp;
+                float below = surface - uv.y;
+                float edgeKeep = smoothstep(-edgeSoft, edgeSoft * 0.55, below);
 
-                // Gurgling foam clumps ON the crest only
-                float gurgle = FBM(float2(worldPos.x * 0.45 + t * 1.7, t * 2.4));
-                float gurgle2 = FBM(float2(worldPos.x * 0.95 - t * 2.2, t * 3.0));
-                float clump = smoothstep(0.38, 0.68, gurgle) * smoothstep(0.32, 0.65, gurgle2 + crest * 0.15);
-                float foam = crest * clump * _FoamAmount * (0.5 + _FoamGurgle * gurgle);
-                foam += crest * smoothstep(0.7, 0.9, gurgle2) * _FoamGurgle * 0.35;
+                float sideWorld = min(uv.x, 1.0 - uv.x) * max(_RectSize.x, 0.5);
+                float sideWave = 0.5 + 0.5 * SurfaceWave(worldPos.y * 0.35 + t * 0.15, t * 0.7);
+                float sideErode = smoothstep(0.0, 0.35 + 0.2 * sideWave, sideWorld);
+                float topFactor = smoothstep(0.55, 0.85, uv.y);
+                edgeKeep *= lerp(1.0, sideErode, topFactor);
 
-                // Interaction ripples
-                float rip =
-                    RippleFoam(worldPos.xy, _Ripple1) +
-                    RippleFoam(worldPos.xy, _Ripple2) +
-                    RippleFoam(worldPos.xy, _Ripple3);
-                // Ripples only near free surface
-                float surfBand = saturate(1.0 - abs(below) / max(soft * 8.0, 0.04));
-                foam = saturate(foam + rip * surfBand * 0.85);
+                float dist = abs(below);
+                float crest = saturate(1.0 - dist / widthUV);
+                crest = crest * crest * (3.0 - 2.0 * crest);
+                crest *= edgeKeep;
+
+                float g1 = FBM(float2(worldPos.x / WaveLength() * 0.9 + t * 2.6, t * 3.4));
+                float g2 = FBM(float2(worldPos.x / WaveLength() * 1.7 - t * 3.2, t * 4.1));
+                float clump = lerp(0.45, 1.0, smoothstep(0.3, 0.7, g1));
+                clump *= lerp(0.55, 1.0, smoothstep(0.25, 0.65, g2));
+                float foam = crest * _FoamAmount * clump * (0.55 + _FoamGurgle * g1 * 0.45);
+                float peak = saturate(wave * 0.5 + 0.5);
+                foam += crest * peak * _FoamGurgle * smoothstep(0.55, 0.85, g2) * 0.4;
+                foam = saturate(foam);
 
                 body = lerp(body, _FoamColor.rgb, foam);
-                body.rgb = lerp(body.rgb, lerp(body.rgb, _FoamColor.rgb, 0.22), crest * 0.3 * (1.0 - foam));
+                body = lerp(body, lerp(body, _FoamColor.rgb, 0.35), crest * (1.0 - foam) * 0.45);
 
                 float hL = SurfaceWave(worldPos.x - 0.35, t);
                 float hR = SurfaceWave(worldPos.x + 0.35, t);
-                float hD = FBM(puv + float2(0, -0.03));
-                float hU = FBM(puv + float2(0, 0.03));
-                normalTS = normalize(half3((hL - hR) * _NormalStrength * 2.0, (hD - hU) * _NormalStrength, 1.0));
+                normalTS = normalize(half3((hL - hR) * _NormalStrength * 4.0, (n2 - n) * _NormalStrength, 1.0));
 
                 half maskA = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv).a;
                 albedo = body;
-                alpha = saturate(lerp(_Color.a, _DeepColor.a, depth) + foam * 0.2) * maskA * edgeKeep;
-                alpha = min(alpha, 0.85);
+                alpha = saturate(lerp(_Color.a, _DeepColor.a, depth) + foam * 0.15) * maskA * edgeKeep;
+                alpha = min(alpha, 0.82);
             }
 
             Varyings LitVertex(Attributes input)
@@ -274,15 +278,17 @@ Shader "CuberAdventure/PixelWaterLit"
                 float _WaveAmp;
                 float _WaveFreq;
                 float _SurfaceUV;
-                float _SurfaceSoft;
+                float _EdgeSoft;
+                float _FoamWidth;
                 float _FoamAmount;
-                float _FoamSoft;
                 float _FoamGurgle;
                 float _DepthContrast;
                 float _NormalStrength;
-                float4 _Ripple1;
-                float4 _Ripple2;
-                float4 _Ripple3;
+                float _SplashSpeed;
+                float4 _RectSize;
+                float4 _Splash1;
+                float4 _Splash2;
+                float4 _Splash3;
             CBUFFER_END
 
             Varyings NormalsRenderingVertex(Attributes input)
@@ -326,25 +332,34 @@ Shader "CuberAdventure/PixelWaterLit"
                 float _WaveAmp;
                 float _WaveFreq;
                 float _SurfaceUV;
-                float _SurfaceSoft;
+                float _EdgeSoft;
+                float _FoamWidth;
                 float _FoamAmount;
-                float _FoamSoft;
                 float _FoamGurgle;
                 float _DepthContrast;
                 float _NormalStrength;
-                float4 _Ripple1;
-                float4 _Ripple2;
-                float4 _Ripple3;
+                float _SplashSpeed;
+                float4 _RectSize;
+                float4 _Splash1;
+                float4 _Splash2;
+                float4 _Splash3;
             CBUFFER_END
 
             float Hash21(float2 p){ p=frac(p*float2(127.1,311.7)); p+=dot(p,p+19.19); return frac(p.x*p.y); }
             float ValueNoise(float2 p){ float2 i=floor(p),f=frac(p); float a=Hash21(i),b=Hash21(i+float2(1,0)),c=Hash21(i+float2(0,1)),d=Hash21(i+float2(1,1)); float2 u=f*f*(3-2*f); return lerp(lerp(a,b,u.x),lerp(c,d,u.x),u.y); }
             float FBM(float2 p){ float v=0,a=0.5; [unroll] for(int i=0;i<3;i++){ v+=ValueNoise(p)*a; p=p*2.05+17.1; a*=0.5;} return v; }
+            float WaveLength(){ return max(70.0 / max(_WaveFreq, 0.5), 2.5); }
             float SurfaceWave(float worldX, float t)
             {
-                return sin(worldX*_WaveFreq+t*1.15)*0.55
-                     + sin(worldX*(_WaveFreq*1.85)-t*1.4)*0.28
-                     + sin(worldX*(_WaveFreq*0.42)+t*0.6)*0.17;
+                float phase = worldX / WaveLength();
+                float w =
+                    sin(phase * 6.183 + t * 2.1) * 0.42 +
+                    sin(phase * 11.7 - t * 2.85 + 1.7) * 0.22 +
+                    sin(phase * 2.45 + t * 1.15) * 0.18;
+                float chop = FBM(float2(phase * 0.85 + t * 0.55, t * 0.9));
+                w += (chop - 0.5) * 0.55;
+                w += (FBM(float2(phase * 1.9 - t * 0.7, t * 0.35)) - 0.5) * 0.35;
+                return w;
             }
 
             Varyings UnlitVertex(Attributes input)
@@ -360,22 +375,30 @@ Shader "CuberAdventure/PixelWaterLit"
             half4 UnlitFragment(Varyings input) : SV_Target
             {
                 float t = _Time.y * _WaveSpeed;
-                float2 wuv = input.worldPos.xy * (_NoiseScale * 0.15);
-                float2 puv = floor((wuv + float2(t*0.12,t*0.03)) * _PixelSize * 0.35) / (_PixelSize * 0.35);
+                float2 wuv = input.worldPos.xy / max(WaveLength()*2.5,1.0) * _NoiseScale;
+                float2 puv = floor((wuv+float2(t*0.16,t*0.05))*_PixelSize*0.35)/(_PixelSize*0.35);
                 float n = FBM(puv);
-                float wave = SurfaceWave(input.worldPos.x, t);
-                float surface = _SurfaceUV + wave * _WaveAmp;
-                float below = surface - input.uv.y;
-                float soft = max(_SurfaceSoft, 0.004);
-                float edgeKeep = smoothstep(-soft, soft*0.35, below);
-                float depth = saturate((surface - input.uv.y) / max(surface,0.05) * _DepthContrast + (n-0.5)*0.12);
+                float depth = saturate((1-input.uv.y)*_DepthContrast+(n-0.5)*0.12);
                 half3 rgb = lerp(_Color.rgb, _DeepColor.rgb, depth);
-                float crest = exp(-abs(below)*(_FoamSoft+1.2)*18.0) * smoothstep(-soft*2.0, soft*0.5, below);
-                float gurgle = FBM(float2(input.worldPos.x*0.45+t*1.7, t*2.4));
-                float foam = crest * smoothstep(0.38,0.68,gurgle) * _FoamAmount;
+                float height = max(_RectSize.y, 0.5);
+                float wave = SurfaceWave(input.worldPos.x, t);
+                float amp = clamp(_WaveAmp / height, 0.002, 0.15);
+                float surface = (_SurfaceUV - amp) + wave * amp;
+                float below = surface - input.uv.y;
+                float edgeSoft = clamp(_EdgeSoft / height, 0.0015, 0.08);
+                float edgeKeep = smoothstep(-edgeSoft, edgeSoft*0.55, below);
+                float sideWorld = min(input.uv.x, 1.0 - input.uv.x) * max(_RectSize.x, 0.5);
+                float sideErode = smoothstep(0.0, 0.4, sideWorld);
+                float topFactor = smoothstep(0.55, 0.85, input.uv.y);
+                edgeKeep *= lerp(1.0, sideErode, topFactor);
+                float widthUV = clamp(_FoamWidth / height, 0.004, 0.2);
+                float crest = saturate(1.0 - abs(below) / widthUV);
+                crest = crest*crest*(3.0-2.0*crest) * edgeKeep;
+                float g = FBM(float2(input.worldPos.x/WaveLength()*0.9+t*1.8, t*2.5));
+                float foam = crest * _FoamAmount * lerp(0.5,1.0,g);
                 rgb = lerp(rgb, _FoamColor.rgb, saturate(foam));
-                half a = saturate(lerp(_Color.a,_DeepColor.a,depth)+foam*0.2) * SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,input.uv).a * input.color.a * edgeKeep;
-                return half4(rgb * input.color.rgb, min(a, 0.85));
+                half a = saturate(lerp(_Color.a,_DeepColor.a,depth)+foam*0.15) * SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,input.uv).a * input.color.a * edgeKeep;
+                return half4(rgb*input.color.rgb, min(a,0.82));
             }
             ENDHLSL
         }

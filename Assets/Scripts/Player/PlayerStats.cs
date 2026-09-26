@@ -15,6 +15,11 @@ public class PlayerStats : MonoBehaviour
     [SerializeField] private GameObject levelText;
     [SerializeField] private ModulesController modules;
     private UnderWater uw;
+    float shownHp = -1f;
+    static readonly Color HealthFull = new Color(0.84f, 0.31f, 0.22f, 1f);
+    static readonly Color HealthLow = new Color(0.62f, 0.18f, 0.16f, 1f);
+    const float HealthWidth = 200f;
+    const float HealthPad = 5f;
 
     private IEnumerator health(){
         yield return new WaitForSeconds(1f);
@@ -44,8 +49,20 @@ public class PlayerStats : MonoBehaviour
         StartCoroutine("health");
     }
     private void Update() {
-        hpText.text = hp + "/" + maxHp;
-        healthBar.fillAmount = hp/maxHp;
+        int current = Mathf.RoundToInt(Mathf.Max(0f, hp));
+        int max = Mathf.RoundToInt(maxHp);
+        hpText.text = current + " / " + max;
+        float ratio = maxHp > 0f ? Mathf.Clamp01(hp / maxHp) : 0f;
+        if (shownHp < 0f)
+            shownHp = ratio;
+        else
+            shownHp = Mathf.Lerp(shownHp, ratio, 1f - Mathf.Exp(-10f * Time.deltaTime));
+        RectTransform fill = healthBar.rectTransform;
+        float inner = (HealthWidth - HealthPad * 2f) * shownHp;
+        fill.offsetMin = new Vector2(HealthPad, HealthPad);
+        fill.offsetMax = new Vector2(HealthPad + inner, -HealthPad);
+        healthBar.color = Color.Lerp(HealthLow, HealthFull, Mathf.InverseLerp(0.15f, 0.45f, shownHp));
+        healthBar.enabled = inner > 1f;
         if(hp <= 0){
             death.Death();
         }
